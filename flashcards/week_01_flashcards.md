@@ -89,6 +89,31 @@
 
 ---
 
+## Card 8: 🔴 EARLY EXIT — Size/Length Check (RECURRING MISS)
+```
+🔍 TRIGGER: ANY problem comparing two inputs (strings, arrays, lists)
+💡 RULE:    FIRST LINE of your solution = check if sizes differ
+📝 CODE:    if (s.length() != t.length()) return false;
+            if (a.length != b.length) return false;
+⚠️ WHY:    Missed this 3 times (May 12, Jun 3 recall, Jun 3 code)
+            Without it: "abc" vs "ab" returns TRUE (WRONG!)
+🧠 MANTRA: "Different size? INSTANT FALSE."
+```
+
+---
+
+## Card 9: Two Pointers (Opposite Ends)
+```
+🔍 TRIGGER: "Sorted array + find pair" or "two numbers that sum to X"
+💡 IDEA:   left=0, right=n-1. Sum too small → left++. Sum too big → right--.
+📝 CODE:   while (left < right) { sum = a[left]+a[right]; if sum==target return; }
+⏱️ TIME:   O(n)  |  SPACE: O(1)
+⚠️ EDGE:   1-indexed vs 0-indexed output, duplicates in sorted array
+🧠 KEY:    "Sorted input = free information. Don't waste it with HashMap."
+```
+
+---
+
 ## 🧠 Week 1 Summary Mantra
 ```
 ╔════════════════════════════════════════════════╗
@@ -98,6 +123,9 @@
 ║  Need SUBARRAY sum?       → Prefix sum          ║
 ║  Need to GROUP things?    → HashMap<key,list>    ║
 ║  Need TOP K by frequency? → Freq map + Bucket   ║
+║  SORTED + find pair?      → Two Pointers        ║
+║                                                ║
+║  🔴 COMPARING TWO INPUTS? → SIZE CHECK FIRST!  ║
 ╚════════════════════════════════════════════════╝
 ```
 

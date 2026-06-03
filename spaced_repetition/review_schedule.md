@@ -21,11 +21,9 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Two Sum (LC #1) | HashMap Complement | May 8 | May 12 | June 5 |
-| Contains Duplicate (LC #217) | HashSet Membership | May 8 | May 12 | June 5 |
-| Valid Anagram (LC #242) | Frequency Count int[26] | May 8 | May 12 | June 5 |
-| Group Anagrams (LC #49) | HashMap Grouping | May 8 | May 12 | June 5 |
-| Top K Frequent Elements (LC #347) | Freq Count + Bucket Sort | May 17 | May 17 | June 5 |
+| Contains Duplicate (LC #217) | HashSet Membership | May 8 | June 3 | June 4 |
+| Top K Frequent Elements (LC #347) | Freq Count + Bucket Sort | May 17 | June 3 | June 4 |
+| Two Sum II (LC #167) | Two Pointers (Opposite) | June 3 | June 3 | June 4 |
 
 ---
 
@@ -33,7 +31,9 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| _empty_ | — | — | — | — |
+| Two Sum (LC #1) | HashMap Complement | June 3 | June 3 | June 6 |
+| Valid Anagram (LC #242) | Frequency Count int[26] | June 3 | June 3 | June 6 |
+| Group Anagrams (LC #49) | HashMap Grouping | June 3 | June 3 | June 6 |
 
 ---
 
@@ -63,14 +63,14 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: June 5, 2026
+**Date**: June 3, 2026
 
-### Due Today:
-- Two Sum (LC #1) — Box 1
-- Contains Duplicate (LC #217) — Box 1
-- Valid Anagram (LC #242) — Box 1
-- Group Anagrams (LC #49) — Box 1
-- Top K Frequent Elements (LC #347) — Box 1
+### Completed Today:
+- ✅ Two Sum (LC #1) — Box 1 → **Box 2** (solid recall)
+- ⚠️ Contains Duplicate (LC #217) — **stays Box 1** (couldn't recall problem statement)
+- ✅ Valid Anagram (LC #242) — Box 1 → **Box 2** (solid, but missed length early-exit again)
+- ✅ Group Anagrams (LC #49) — Box 1 → **Box 2** (recalled optimal approach despite low confidence)
+- ❌ Top K Frequent Elements (LC #347) — **stays Box 1** (couldn't recall approach at all)
 
 ### Review Checklist:
 For each problem due:
@@ -88,11 +88,11 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 5 |
-| Box 1 (daily) | 5 |
-| Box 2 (3-day) | 0 |
+| Total problems in system | 6 |
+| Box 1 (daily) | 3 |
+| Box 2 (3-day) | 3 |
 | Box 3 (weekly) | 0 |
 | Box 4 (bi-weekly) | 0 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 0 |
-| Streak (consecutive days) | 0 (reset) |
+| Reviews completed today | 5 |
+| Streak (consecutive days) | 1 |

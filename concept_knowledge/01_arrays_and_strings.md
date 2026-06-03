@@ -26,6 +26,8 @@ Template:
 - "Frequency as array index (Bucket Sort) eliminates sorting entirely — O(n) instead of O(n log n)"
 - "When a bucket can hold multiple values, MUST use List[] not int[] — otherwise overwrites happen"
 - "Custom comparator `(a, b) -> map.get(b) - map.get(a)` sorts keys by their map values descending"
+- "When array is SORTED, that's a gift — don't waste it with HashMap. Use Two Pointers for O(1) space"
+- "Two Pointers on sorted: too small → move left right, too big → move right left"
 
 ---
 
@@ -49,6 +51,7 @@ Template:
 - `(List) map.values()` fails → use `new ArrayList<>(map.values())`
 - `int[] buckets` overwrites when multiple values share same index → use `List[]`
 - Missing inner loop bound check (`ptr >= k`) when iterating bucket contents → ArrayIndexOutOfBounds
+- 🔴 **RECURRING**: Missing length/size early-exit check when comparing two inputs (3 times!)
 
 ---
 
@@ -79,3 +82,4 @@ Template:
 - Frequency Count → Valid Anagram, Top K Frequent
 - Prefix Sum → Subarray Sum Equals K, Product of Array Except Self
 - HashMap Grouping → Group Anagrams
+- Two Pointers (Opposite Ends) → Two Sum II (sorted input, O(1) space)
