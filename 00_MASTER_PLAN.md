@@ -1,49 +1,123 @@
-# 🗺️ DSA MASTERY — 18-WEEK MASTER PLAN
+# 🗺️ DSA MASTERY — 17-WEEK MASTER PLAN (120 DAYS)
 
-> **May 18, 2026 → September 21, 2026** | 126 Days | ~220-250 Problems
+> **June 5, 2026 → October 2, 2026** | 120 Days | ~220-250 Problems
 > **Goal**: Identify patterns, think brute → better → optimal, implement clean code, solve any unseen hard.
+>
+> ⚠️ _Plan reset on May 21, 2026. 5 pre-plan problems (Two Sum, Contains Duplicate, Valid Anagram, Group Anagrams, Top K Frequent) are kept as prior knowledge._
 
 ---
 
-## How Each Session Works (Interview Simulation)
+## How Each Session Works
+
+### 📚 Phase A — Learn & Prepare (relaxed, collaborative)
 
 ```
 1. ⏰ Spaced Repetition Check (5 min)
    └─ Quick recall of due problems — just pattern + approach, no full code
 
-2. 🎯 New Problem Introduction
-   └─ I present the problem as an interviewer would
-   
-3. 🗣️ You Think Out Loud
-   └─ Share your first instinct — I guide with questions, never give answers directly
+2. 🧠 Concept Teaching (if needed)
+   └─ If the problem requires a new data structure or concept → teach it FIRST
+   └─ Collaborative, relaxed — ask questions, build understanding
+   └─ This is NOT the interview yet — this is preparation
+```
 
-4. 💪 Brute Force
-   └─ What's the simplest approach? Time & space complexity?
+### 🔴 Phase B — Interview Simulation (REAL PRESSURE)
 
-5. 🧠 Optimize
-   └─ What's redundant? Can we use a data structure to speed this up?
-   └─ Better approach? Optimal approach?
+> **⚠️ Once we enter Phase B, I become your interviewer. This is a REAL interview.**
+> You are sitting across from a senior engineer at a top tech company.
+> The clock is ticking. Every second of silence is noticed.
 
-6. 💻 Implementation
-   └─ FIRST: Create Java file in problems/week_XX/ with class, method stub, and driver code (5 test cases)
-   └─ User fills in ONLY the method body — everything else is ready
-   └─ Focus on: variable naming, edge cases, clean structure
+```
+3. 🎯 Problem Drop (the interview begins)
+   └─ I state the problem exactly as an interviewer would — concise, no hints
+   └─ I give you 1-2 examples and constraints
+   └─ ⏱️ TIMER STARTS NOW — you have a time limit:
+       • Easy: 15 minutes
+       • Medium: 25 minutes  
+       • Hard: 40 minutes
+   └─ I will remind you of time at 50% and 75% elapsed
+
+4. 🗣️ Clarifying Questions (you drive this)
+   └─ A good candidate asks clarifying questions BEFORE coding
+   └─ If you jump straight to code → I'll note: "Are you sure you understand the problem fully?"
+   └─ I answer your questions briefly, like a real interviewer would
+
+5. 💪 Approach Discussion (think out loud)
+   └─ "Walk me through your approach before you start coding"
+   └─ I expect: brute force idea → why it's suboptimal → better approach
+   └─ If you're silent too long → "What are you thinking?"
+   └─ If you're stuck → I give ONE nudge, not the answer
+   └─ If still stuck → I give a slightly bigger hint, but note it as an assist
+   └─ INTERVIEWER PROBES:
+       • "What's the time complexity of that?"
+       • "Can you do better?"
+       • "What if the input is 10^6 elements?"
+       • "Why did you choose that data structure?"
+
+6. 💻 Implementation (code under pressure)
+   └─ FIRST: I create the Java file with class, method stub, and driver code (5 test cases)
+   └─ You fill in ONLY the method body — everything else is ready
+   └─ I watch your code as you write it:
+       • If I see a bug forming → I stay SILENT (like a real interviewer)
+       • If you ask "does this look right?" → "What do you think? Walk me through it"
+       • I may ask mid-code: "What happens if the array is empty?"
    └─ After completion: run with `javac && java -ea` to verify
+   └─ If tests fail → "Looks like some cases failed. Can you debug it?"
+       • You get 3-5 minutes to debug — clock is still running
 
-7. 🔍 Dry Run
-   └─ Walk through a concrete example step by step
+7. 🔍 Dry Run (interviewer asks you to trace)
+   └─ "Walk me through your code with this input: [specific example]"
+   └─ I expect step-by-step variable tracking
+   └─ If you handwave → "Be more specific. What's the value of i at this point?"
 
-8. ⚠️ Edge Cases
-   └─ Empty input? Single element? Duplicates? Overflow? Negative numbers?
+8. ⚠️ Edge Cases (interviewer probes for thoroughness)
+   └─ "What edge cases should we test?"
+   └─ If you miss obvious ones → I'll ask pointed questions:
+       • "What if the input is empty?"
+       • "What about negative numbers?"
+       • "What if all elements are the same?"
+   └─ A great candidate proactively identifies edge cases
 
-9. 📦 Pattern Extraction
-   └─ "This problem taught us the _____ pattern"
-   └─ When will you see this again?
+9. ⏱️ TIME CALLED — Interview Performance Summary
+   └─ 🟢 HIRE / 🟡 LEAN HIRE / 🟠 LEAN NO HIRE / 🔴 NO HIRE
+   └─ Scoring:
+       • Approach clarity (did you think out loud?)
+       • Solution correctness (did tests pass first try?)
+       • Code quality (clean variable names, no dead code?)
+       • Time management (finished within limit?)
+       • Edge case awareness (did you identify them proactively?)
+       • Communication (did you explain your thinking?)
+       • Hints used (0 = great, 1 = okay, 2+ = needs work)
+```
 
-10. 📝 State Update
+### 📦 Phase C — Debrief & Learn (relaxed again)
+
+```
+10. 📦 Pattern Extraction
+    └─ "This problem taught us the _____ pattern"
+    └─ When will you see this again?
+
+11. 📝 State Update
     └─ Update CONVERSATION_STATE.md
     └─ Create/update flashcard
     └─ Add to spaced repetition
+```
+
+### 🎭 Interview Pressure Rules (NON-NEGOTIABLE)
+
+```
+• I do NOT give away the answer — ever. I nudge, I probe, I wait.
+• If you're struggling, I give at most 2 hints. After that: "Let's move on and revisit."
+• I track hints given per problem and note them in the session log.
+• I use intentional silence — if you stop talking, I wait 10+ seconds before prompting.
+• I ask follow-up questions that a real interviewer would:
+    - "Can you optimize this further?"
+    - "What if memory is constrained?"
+    - "How would you test this?"
+    - "What's the worst case?"
+• I give a HIRE/NO-HIRE rating after every problem — this is your feedback loop.
+• The goal is NOT to make you feel bad — it's to build pressure tolerance
+  so the real interview feels EASY by comparison.
 ```
 
 ---
@@ -66,7 +140,7 @@
 
 ---
 
-## Week 1: Arrays & Hashing (May 18 – May 24)
+## Week 1: Arrays & Hashing (June 5 – June 11)
 
 ### Core Concepts to Master
 - Arrays: memory layout, indexing, traversal, in-place modification
@@ -78,12 +152,12 @@
 
 | Day | Problem | Difficulty | Pattern | Approach Focus | Status |
 |-----|---------|-----------|---------|---------------|--------|
-| D1 | **Two Sum** (LC #1) | Easy | HashMap complement | Brute O(n²) → HashMap O(n) | ✅ Done |
-| D1 | **Contains Duplicate** (LC #217) | Easy | HashSet | Sort O(n log n) → HashSet O(n) | ✅ Done |
-| D2 | **Valid Anagram** (LC #242) | Easy | Frequency array | Sort → Frequency count (int[26]) | ✅ Done |
+| D1 | **Two Sum** (LC #1) | Easy | HashMap complement | Brute O(n²) → HashMap O(n) | 💾 Pre-plan |
+| D1 | **Contains Duplicate** (LC #217) | Easy | HashSet | Sort O(n log n) → HashSet O(n) | 💾 Pre-plan |
+| D2 | **Valid Anagram** (LC #242) | Easy | Frequency array | Sort → Frequency count (int[26]) | 💾 Pre-plan |
 | D2 | **Two Sum II (Sorted)** (LC #167) | Medium | Two pointers on sorted | Binary search → Two pointers | |
-| D3 | **Group Anagrams** (LC #49) | Medium | HashMap with sorted key | Brute → Sorted string key → Char count key | ✅ Done |
-| D3 | **Top K Frequent Elements** (LC #347) | Medium | HashMap + Heap/Bucket | Sort O(n log n) → Heap O(n log k) → Bucket O(n) | |
+| D3 | **Group Anagrams** (LC #49) | Medium | HashMap with sorted key | Brute → Sorted string key → Char count key | 💾 Pre-plan |
+| D3 | **Top K Frequent Elements** (LC #347) | Medium | HashMap + Heap/Bucket | Sort O(n log n) → Heap O(n log k) → Bucket O(n) | 💾 Pre-plan |
 | D4 | **Product of Array Except Self** (LC #238) | Medium | Prefix/Suffix | Division O(n) → Prefix+Suffix O(n) no division | |
 | D4 | **Longest Consecutive Sequence** (LC #128) | Medium | HashSet + sequence start | Sort O(n log n) → HashSet O(n) | |
 | D5 | **Encode and Decode Strings** (LC #271) | Medium | Delimiter design | Length-prefix encoding | |
@@ -99,7 +173,7 @@
 
 ---
 
-## Week 2: Two Pointers & Sorting (May 25 – May 31)
+## Week 2: Two Pointers & Sorting (June 12 – June 18)
 
 ### Core Concepts to Master
 - Two pointer technique: opposite ends, same direction
@@ -126,7 +200,7 @@
 
 ---
 
-## Week 3: Sliding Window (June 1 – June 7)
+## Week 3: Sliding Window (June 19 – June 25)
 
 ### Core Concepts to Master
 - Fixed-size window
@@ -153,7 +227,7 @@
 
 ---
 
-## Week 4: Stack & Queue (June 8 – June 14)
+## Week 4: Stack & Queue (June 26 – July 2)
 
 ### Core Concepts to Master
 - Stack for matching/nesting problems
@@ -180,7 +254,7 @@
 
 ---
 
-## Week 5: Linked List (June 15 – June 21)
+## Week 5: Linked List (July 3 – July 9)
 
 ### Core Concepts to Master
 - Singly vs doubly linked list
@@ -208,7 +282,7 @@
 
 ---
 
-## Week 6: Binary Search (June 22 – June 28)
+## Week 6: Binary Search (July 10 – July 16)
 
 ### Core Concepts to Master
 - Classic binary search (exact match)
@@ -242,7 +316,7 @@
 
 ---
 
-## Week 7: Binary Trees — DFS (June 29 – July 5)
+## Week 7: Binary Trees — DFS (July 17 – July 23)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -254,7 +328,7 @@
 | D6 | Review + spaced repetition | — | — |
 | D7 | Weekly challenge | — | — |
 
-## Week 8: Binary Trees — BFS + BST (July 6 – July 12)
+## Week 8: Binary Trees — BFS + BST (July 24 – July 30)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -265,7 +339,7 @@
 | D5 | **BST Iterator** (LC #173) + **Lowest Common Ancestor of BST** (LC #235) | Med/Med | Controlled inorder, BST property |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 9: Heap / Priority Queue (July 13 – July 19)
+## Week 9: Heap / Priority Queue (July 31 – August 6)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -276,7 +350,7 @@
 | D5 | **Reorganize String** (LC #767) + **K Closest in Sorted Array** (LC #658) | Med | Greedy with heap |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 10: Backtracking (July 20 – July 26)
+## Week 10: Backtracking (August 7 – August 13)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -287,7 +361,7 @@
 | D5 | **N-Queens** (LC #51) + **Sudoku Solver** (LC #37) | Hard | Constraint satisfaction |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 11: Graphs — BFS/DFS (July 27 – August 2)
+## Week 11: Graphs — BFS/DFS (August 14 – August 20)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -298,7 +372,7 @@
 | D5 | **Accounts Merge** (LC #721) + **Graph Valid Tree** (LC #261) | Med | Union-Find applications |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 12: Advanced Graphs + Union-Find (August 3 – August 9)
+## Week 12: Advanced Graphs + Union-Find (August 21 – August 27)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -318,7 +392,7 @@
 
 ---
 
-## Week 13: Dynamic Programming — 1D (August 10 – August 16)
+## Week 13: Dynamic Programming — 1D (August 28 – September 3)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -329,7 +403,7 @@
 | D5 | **Maximum Product Subarray** (LC #152) + **Partition Equal Subset Sum** (LC #416) | Med | Track min/max, 0/1 knapsack |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 14: Dynamic Programming — 2D & Strings (August 17 – August 23)
+## Week 14: Dynamic Programming — 2D & Strings (September 4 – September 10)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -340,7 +414,7 @@
 | D5 | **Burst Balloons** (LC #312) + **Regular Expression Matching** (LC #10) | Hard | Interval DP, string matching DP |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 15: Tries, Intervals & Greedy (August 24 – August 30)
+## Week 15: Tries, Intervals & Greedy (September 11 – September 17)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -351,7 +425,7 @@
 | D5 | **Jump Game** (LC #55) + **Jump Game II** (LC #45) + **Gas Station** (LC #134) | Med | Greedy proofs |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 16: Advanced Mixed Problems (August 31 – September 6)
+## Week 16: Advanced Mixed Problems (September 18 – September 24)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -362,7 +436,7 @@
 | D5 | Company-tagged hard problems (2-3 problems) | Hard | Mixed patterns |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 17: Mock Interview Marathon (September 7 – September 13)
+## Week 17: Mock Interview Marathon + Final Polish (September 25 – October 2)
 
 | Day | Focus |
 |-----|-------|
@@ -374,15 +448,14 @@
 | D6 | **Mock 6**: Full interview day simulation — 2 coding rounds back to back |
 | D7 | Review all mocks, identify final weak spots |
 
-## Week 18: Final Polish (September 14 – September 21)
+### Final Polish Days (Sep 29 – Oct 2)
 
 | Day | Focus |
 |-----|-------|
-| D1-D2 | **Weak Area Blitz**: Re-solve every problem from the struggle log |
-| D3-D4 | **Speed Drills**: 3 mediums per hour, pattern recognition in <2 min |
-| D5-D6 | **Final Mocks**: Full interview simulations |
+| D5 | **Weak Area Blitz**: Re-solve problems from the struggle log |
+| D6 | **Speed Drills**: 3 mediums per hour, pattern recognition in <2 min |
 | D7 | **Pattern Review**: Walk through entire pattern_index.md from memory |
-| D8-D10 | **Light review only** — Re-read flashcards, rest, build confidence |
+| D8 | **Light review only** — Re-read flashcards, rest, build confidence |
 
 ---
 
@@ -390,13 +463,13 @@
 
 | Date | Milestone | Success Criteria |
 |------|-----------|-----------------
-| May 24 (W1) | Arrays/Hashing solid | Solve any Easy <10 min, recognize HashMap patterns |
-| June 28 (W6) | Phase 1 complete | All basic patterns known, Mediums <25 min, code from logic |
-| July 26 (W10) | Backtracking + Trees done | Tree/graph medium <20 min, can write DFS/BFS from memory |
-| Aug 9 (W12) | Phase 2 complete | All patterns covered, can approach any Hard |
-| Aug 30 (W15) | DP + Advanced done | Solve DP mediums, recognize DP state/transition |
-| Sep 13 (W17) | Mock interviews done | 4 problems in 90 min consistently |
-| **Sep 21 (W18)** | **🎯 INTERVIEW READY** | **Solve any unseen hard with optimal approach** |
+| Jun 11 (W1) | Arrays/Hashing solid | Solve any Easy <10 min, recognize HashMap patterns |
+| Jul 16 (W6) | Phase 1 complete | All basic patterns known, Mediums <25 min, code from logic |
+| Aug 13 (W10) | Backtracking + Trees done | Tree/graph medium <20 min, can write DFS/BFS from memory |
+| Aug 27 (W12) | Phase 2 complete | All patterns covered, can approach any Hard |
+| Sep 17 (W15) | DP + Advanced done | Solve DP mediums, recognize DP state/transition |
+| Sep 24 (W16) | Advanced mixed done | Can tackle any Hard |
+| **Oct 2 (W17)** | **🎯 INTERVIEW READY** | **Solve any unseen hard with optimal approach** |
 
 ---
 

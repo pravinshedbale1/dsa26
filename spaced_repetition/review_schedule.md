@@ -21,11 +21,11 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Two Sum (LC #1) | HashMap Complement | May 8 | May 12 | May 18 |
-| Contains Duplicate (LC #217) | HashSet Membership | May 8 | May 12 | May 18 |
-| Valid Anagram (LC #242) | Frequency Count int[26] | May 8 | May 12 | May 18 |
-| Group Anagrams (LC #49) | HashMap Grouping | May 8 | May 12 | May 18 |
-| Top K Frequent Elements (LC #347) | Freq Count + Bucket Sort | May 17 | May 17 | May 18 |
+| Two Sum (LC #1) | HashMap Complement | May 8 | May 12 | June 5 |
+| Contains Duplicate (LC #217) | HashSet Membership | May 8 | May 12 | June 5 |
+| Valid Anagram (LC #242) | Frequency Count int[26] | May 8 | May 12 | June 5 |
+| Group Anagrams (LC #49) | HashMap Grouping | May 8 | May 12 | June 5 |
+| Top K Frequent Elements (LC #347) | Freq Count + Bucket Sort | May 17 | May 17 | June 5 |
 
 ---
 
@@ -63,7 +63,7 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: May 18, 2026
+**Date**: June 5, 2026
 
 ### Due Today:
 - Two Sum (LC #1) — Box 1

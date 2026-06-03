@@ -28,6 +28,18 @@
    - `pattern_library/pattern_index.md` — update if new pattern variation discovered
 9. **🔴 NEVER SKIP FLASHCARD/KNOWLEDGE UPDATES**: Flashcards, concept knowledge notes, and pattern library MUST be updated after each question or session. This is NON-NEGOTIABLE.
 
+### 🔴 INTERVIEW PRESSURE MODE (Rules 10-18) — NON-NEGOTIABLE
+
+10. **🎭 INTERVIEWER PERSONA**: During problem-solving (Phase B), I become a senior engineer interviewer. No hand-holding, no teaching, no friendly hints. I am evaluating you.
+11. **⏱️ ENFORCE TIME LIMITS**: Every problem has a hard timer — Easy: 15 min, Medium: 25 min, Hard: 40 min. I announce time at 50% and 75% elapsed. If time runs out, I call it.
+12. **🤫 INTENTIONAL SILENCE**: If the user goes quiet, I wait at least 10 seconds before prompting with "What are you thinking?" — silence is pressure, and they need to learn to fill it.
+13. **🚫 MAX 2 HINTS PER PROBLEM**: I give at most 2 hints per problem. After that: "Let's move on and revisit this one." Every hint is tracked and logged in the session entry.
+14. **🪞 STAY SILENT ON BUGS**: If I see the user writing a bug, I do NOT warn them. I let them hit it during testing. A real interviewer doesn't say "you have a bug on line 5."
+15. **❓ PROBE RELENTLESSLY**: I ask follow-up questions throughout — "What's the complexity?", "Can you do better?", "What if input is 10^6?", "Why that data structure?" — just like a real interviewer would.
+16. **📊 HIRE/NO-HIRE RATING**: After every problem, I give a verdict: 🟢 HIRE / 🟡 LEAN HIRE / 🟠 LEAN NO HIRE / 🔴 NO HIRE — with scores on: approach clarity, correctness, code quality, time management, edge cases, communication, hints used.
+17. **🔄 DEBUGGING UNDER PRESSURE**: If tests fail, I say "Looks like some cases failed. Can you debug it?" and give 3-5 minutes to fix — the clock keeps running.
+18. **💡 DEBRIEF AFTER, NOT DURING**: All teaching, pattern extraction, and friendly discussion happens AFTER the interview phase (Phase C). During Phase B, I am an interviewer, not a tutor.
+
 ---
 
 ## 📍 Current Position
@@ -36,21 +48,26 @@
 |-------|-------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 1 |
-| **Current Day** | Day 1 (May 18, 2026) |
+| **Current Day** | Day 1 (June 5, 2026) |
 | **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Top K Frequent ✅ → next: Product of Array Except Self |
-| **Session Count** | 3 |
-| **Total Problems Solved** | 5 |
-| **Plan Start Date** | May 18, 2026 (reset) |
+| **Current Problem** | Two Sum (LC #1) — starting fresh |
+| **Session Count** | 0 (reset — 3 pre-plan sessions archived below) |
+| **Total Problems Solved** | 0 (reset — 5 pre-plan solves archived below) |
+| **Plan Start Date** | June 5, 2026 |
 | **Original Start Date** | May 10, 2026 |
-| **Target Date** | September 21, 2026 |
-| **Days Remaining** | 127 |
+| **Target Date** | October 2, 2026 |
+| **Days Remaining** | 120 |
 
 ---
 
 ## 🧠 What We've Learned So Far
 
 ### Session Log
+
+---
+
+<details>
+<summary>📂 ARCHIVED PRE-PLAN SESSIONS (May 8–17, 2026) — Click to expand</summary>
 
 ### Session #1 — May 8, 2026 — Arrays & Hashing (Day 1)
 **Duration**: ~45 min
@@ -168,6 +185,14 @@ TEMPLATE for each session entry:
 - What we'll cover next
 -->
 
+</details>
+
+---
+
+### New Plan Sessions (Starting June 1, 2026)
+
+_No sessions yet — plan starts June 1, 2026_
+
 ---
 
 ## 🔴 Struggle Log
@@ -233,11 +258,11 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Two Sum (LC #1) | Box 1 | May 12 | May 18 | 📦 Review on Day 1 |
-| Contains Duplicate (LC #217) | Box 1 | May 12 | May 18 | 📦 Review on Day 1 |
-| Valid Anagram (LC #242) | Box 1 | May 12 | May 18 | 📦 Review on Day 1 |
-| Group Anagrams (LC #49) | Box 1 | May 12 | May 18 | 📦 Review on Day 1 |
-| Top K Frequent Elements (LC #347) | Box 1 | May 17 | May 18 | 📦 Review on Day 1 |
+| Two Sum (LC #1) | Box 1 | May 12 | June 5 | 📦 Review on Day 1 |
+| Contains Duplicate (LC #217) | Box 1 | May 12 | June 5 | 📦 Review on Day 1 |
+| Valid Anagram (LC #242) | Box 1 | May 12 | June 5 | 📦 Review on Day 1 |
+| Group Anagrams (LC #49) | Box 1 | May 12 | June 5 | 📦 Review on Day 1 |
+| Top K Frequent Elements (LC #347) | Box 1 | May 17 | June 5 | 📦 Review on Day 1 |
 
 ---
 
@@ -257,23 +282,22 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next Session**: Session #4
-**Date**: May 18, 2026
-**Topic**: Arrays & Hashing — Product of Array Except Self
+**Next Session**: Session #1 (New Plan)
+**Date**: June 5, 2026
+**Topic**: Arrays & Hashing — Day 1 (Re-solve + New Problems)
 **Plan**:
-1. ⏰ Spaced repetition recall (5 min): All 5 problems
+1. ⏰ Spaced repetition recall (5 min): All 5 archived problems
    - For each: name the pattern, state the optimal approach, time/space complexity
    - NO code, just verbal recall
-2. Problem #6: **Product of Array Except Self** (LC #238, Medium) — Prefix/Suffix pattern
-   - Key: build product without using division
-   - Two approaches: Division O(n) → Prefix+Suffix O(n) no division
-3. Problem #7: **Longest Consecutive Sequence** (LC #128, Medium) — HashSet + sequence detection
-4. Extract Prefix/Suffix pattern
-5. Update flashcards and spaced repetition
+2. Problem #1: **Two Sum** (LC #1, Easy) — Re-solve from scratch to verify mastery
+3. Problem #2: **Contains Duplicate** (LC #217, Easy) — Re-solve from scratch
+4. Problem #3: **Valid Anagram** (LC #242, Easy) — Re-solve from scratch
+5. If time permits: **Two Sum II Sorted** (LC #167, Medium) — Two pointers on sorted
+6. Update flashcards and spaced repetition
 
 **Focus**:
-- Prefix/Suffix array pattern — builds foundation for many future problems
-- Practice breaking problems into sub-steps before coding
+- Verify that pre-plan knowledge is solid
+- Build momentum for the fresh 120-day plan
 
 ---
 
