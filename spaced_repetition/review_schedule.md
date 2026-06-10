@@ -21,9 +21,7 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Contains Duplicate (LC #217) | HashSet Membership | May 8 | June 3 | June 4 |
-| Top K Frequent Elements (LC #347) | Freq Count + Bucket Sort | May 17 | June 3 | June 4 |
-| Two Sum II (LC #167) | Two Pointers (Opposite) | June 3 | June 3 | June 4 |
+| Product of Array Except Self (LC #238) | Prefix/Suffix Product | June 10 | June 10 | June 11 |
 
 ---
 
@@ -31,9 +29,12 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Two Sum (LC #1) | HashMap Complement | June 3 | June 3 | June 6 |
-| Valid Anagram (LC #242) | Frequency Count int[26] | June 3 | June 3 | June 6 |
-| Group Anagrams (LC #49) | HashMap Grouping | June 3 | June 3 | June 6 |
+| Two Sum (LC #1) | HashMap Complement | June 3 | June 3 | June 13 |
+| Valid Anagram (LC #242) | Frequency Count int[26] | June 3 | June 3 | June 13 |
+| Group Anagrams (LC #49) | HashMap Grouping | June 3 | June 3 | June 13 |
+| Contains Duplicate (LC #217) | HashSet Membership | June 4 | June 4 | June 13 |
+| Two Sum II (LC #167) | Two Pointers (Opposite) | June 4 | June 4 | June 13 |
+| Top K Frequent Elements (LC #347) | Freq Count + Bucket Sort | June 10 | June 10 | June 13 |
 
 ---
 
@@ -63,9 +64,13 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: June 3, 2026
+**Date**: June 10, 2026
 
-### Completed Today:
+### Due Today:
+- 📦 Box 1: Top K Frequent Elements (LC #347) — daily review
+- 📦 Box 2: Two Sum, Valid Anagram, Group Anagrams, Contains Duplicate, Two Sum II — 3-day review due June 13
+
+### Previously Completed (June 3):
 - ✅ Two Sum (LC #1) — Box 1 → **Box 2** (solid recall)
 - ⚠️ Contains Duplicate (LC #217) — **stays Box 1** (couldn't recall problem statement)
 - ✅ Valid Anagram (LC #242) — Box 1 → **Box 2** (solid, but missed length early-exit again)
@@ -88,11 +93,11 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 6 |
-| Box 1 (daily) | 3 |
-| Box 2 (3-day) | 3 |
+| Total problems in system | 7 |
+| Box 1 (daily) | 1 |
+| Box 2 (3-day) | 6 |
 | Box 3 (weekly) | 0 |
 | Box 4 (bi-weekly) | 0 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 5 |
+| Reviews completed today | 2 |
 | Streak (consecutive days) | 1 |

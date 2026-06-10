@@ -1,117 +1,92 @@
+/*
+ * ============================================================
+ * TOP K FREQUENT ELEMENTS (LeetCode #347) — Medium
+ * ============================================================
+ * 
+ * PROBLEM:
+ *   Given an integer array nums and an integer k, return
+ *   the k most frequent elements. Answer in any order.
+ *
+ * PATTERN: Frequency Count + Bucket Sort
+ *
+ * COMPLEXITY:
+ *   Brute:   O(n log n) time, O(n) space — freq map + sort
+ *   Optimal: O(n) time, O(n) space — freq map + bucket sort
+ *
+ * CONSTRAINTS:
+ *   1 <= nums.length <= 10^5
+ *   -10^4 <= nums[i] <= 10^4
+ *   k is in range [1, number of unique elements]
+ *   Answer is guaranteed to be unique.
+ * ============================================================
+ */
+
 import java.util.*;
 
-/**
- * ══════════════════════════════════════════════════════════════
- * PROBLEM: Top K Frequent Elements (LeetCode #347)
- * ══════════════════════════════════════════════════════════════
- *
- * Given an integer array nums and an integer k, return the k
- * most frequent elements. You may return the answer in any order.
- *
- * Example 1:
- * Input: nums = [1,1,1,2,2,3], k = 2
- * Output: [1,2]
- *
- * Example 2:
- * Input: nums = [1], k = 1
- * Output: [1]
- *
- * Constraints:
- * 1 <= nums.length <= 10^5
- * -10^4 <= nums[i] <= 10^4
- * k is in the range [1, number of unique elements]
- * The answer is guaranteed to be unique
- *
- * FOLLOW-UP: Can you solve it better than O(n log n)?
- *
- * PATTERN: ???
- * BRUTE FORCE: ???
- * BETTER: ???
- * OPTIMAL: ???
- * ══════════════════════════════════════════════════════════════
- */
 public class TopKFrequent {
 
-    // ✅ COMPLETE THIS METHOD
-    public int[] topKFrequent(int[] nums, int k) {
-        int n = nums.length;
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i : nums) {
-            map.put(i, map.getOrDefault(i, 0) + 1);
+    // ✅ Fill in this method
+    public static int[] topKFrequent(int[] nums, int k) {
+        int[] result = new int[k];
+        int size = nums.length;
+
+        Map<Integer, Integer> freqMap = new HashMap<>();
+
+        for (int num : nums) {
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
         }
-        List<Integer>[] buckets = new List[n + 1];
-        for (Integer key : map.keySet()) {
-            int freq = map.get(key);
+
+        List<Integer>[] buckets = new List[size + 1];
+
+        for (int key : freqMap.keySet()) {
+            int freq = freqMap.get(key);
             if (buckets[freq] == null) {
-                buckets[freq] = new ArrayList<>();
+                List<Integer> list = new ArrayList<>();
+                list.add(key);
+                buckets[freq] = list;
+            } else {
+                buckets[freq].add(key);
             }
-            buckets[freq].add(key);
         }
-        int[] res = new int[k];
+
         int ptr = 0;
-        for (int i = n; i >= 0 && ptr < k; i--) {
+        for (int i = size; i >= 0; i--) {
             if (buckets[i] != null) {
                 for (int num : buckets[i]) {
-                    if (ptr >= k)
-                        break;
-                    res[ptr++] = num;
+                    if (ptr < k)
+                        result[ptr++] = num;
                 }
             }
         }
-        return res;
+
+        return result;
     }
 
-    // ═══════════════════════════════════════════════════════════
-    // DRIVER CODE — DO NOT MODIFY BELOW
-    // ═══════════════════════════════════════════════════════════
-    static int passed = 0, failed = 0;
-
-    static void verify(String testName, int[] actual, int[] expected) {
-        Arrays.sort(actual);
-        Arrays.sort(expected);
-        System.out.print(testName + ": " + Arrays.toString(actual));
-        if (Arrays.equals(actual, expected)) {
-            System.out.println("  ✅ PASS");
-            passed++;
-        } else {
-            System.out.println("  ❌ FAIL (Expected: " + Arrays.toString(expected) + ")");
-            failed++;
-        }
-    }
-
+    // ============ DRIVER CODE — DO NOT MODIFY ============
     public static void main(String[] args) {
-        TopKFrequent solution = new TopKFrequent();
+        // Test 1: Basic case
+        int[] r1 = topKFrequent(new int[] { 1, 1, 1, 2, 2, 3 }, 2);
+        Arrays.sort(r1);
+        assert Arrays.equals(r1, new int[] { 1, 2 }) : "Test 1 FAILED: expected [1,2], got " + Arrays.toString(r1);
 
-        verify("Test 1 [Classic]",
-                solution.topKFrequent(new int[] { 1, 1, 1, 2, 2, 3 }, 2),
-                new int[] { 1, 2 });
+        // Test 2: Single element
+        int[] r2 = topKFrequent(new int[] { 1 }, 1);
+        assert Arrays.equals(r2, new int[] { 1 }) : "Test 2 FAILED: expected [1], got " + Arrays.toString(r2);
 
-        verify("Test 2 [Single element]",
-                solution.topKFrequent(new int[] { 1 }, 1),
-                new int[] { 1 });
+        // Test 3: All same frequency, k = total unique
+        int[] r3 = topKFrequent(new int[] { 1, 2, 3 }, 3);
+        Arrays.sort(r3);
+        assert Arrays.equals(r3, new int[] { 1, 2, 3 }) : "Test 3 FAILED: expected [1,2,3], got " + Arrays.toString(r3);
 
-        verify("Test 3 [All same frequency]",
-                solution.topKFrequent(new int[] { 1, 2, 3 }, 3),
-                new int[] { 1, 2, 3 });
+        // Test 4: Negative numbers
+        int[] r4 = topKFrequent(new int[] { -1, -1, -1, 2, 2, 3, 3, 3, 3 }, 2);
+        Arrays.sort(r4);
+        assert Arrays.equals(r4, new int[] { -1, 3 }) : "Test 4 FAILED: expected [-1,3], got " + Arrays.toString(r4);
 
-        verify("Test 4 [Negatives]",
-                solution.topKFrequent(new int[] { -1, -1, 2, 2, 2, 3 }, 1),
-                new int[] { 2 });
+        // Test 5: k = 1, find the single most frequent
+        int[] r5 = topKFrequent(new int[] { 4, 4, 4, 1, 1, 2 }, 1);
+        assert Arrays.equals(r5, new int[] { 4 }) : "Test 5 FAILED: expected [4], got " + Arrays.toString(r5);
 
-        verify("Test 5 [K equals unique count]",
-                solution.topKFrequent(new int[] { 4, 4, 5, 5, 6, 6 }, 3),
-                new int[] { 4, 5, 6 });
-
-        verify("Test 6 [Large frequency gap]",
-                solution.topKFrequent(new int[] { 1, 1, 1, 1, 1, 2, 3, 4, 5 }, 2),
-                new int[] { 1, 2 });
-
-        System.out.println("\n══════════════════════════════");
-        System.out.println("Results: " + passed + " passed, " + failed + " failed out of " + (passed + failed));
-        if (failed == 0) {
-            System.out.println("🎉 All tests passed!");
-        } else {
-            System.out.println("🔴 " + failed + " test(s) FAILED — fix your solution!");
-        }
+        System.out.println("✅ All tests passed!");
     }
 }

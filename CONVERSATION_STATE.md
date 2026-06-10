@@ -53,18 +53,18 @@
 ## 📍 Current Position
 
 | Field | Value |
-|-------|-------|
+|-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 1 |
-| **Current Day** | Day 1 (June 3, 2026) |
+| **Current Day** | Day 1 (June 10, 2026) |
 | **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Session complete |
-| **Session Count** | 1 |
-| **Total Problems Solved** | 4 (3 re-solves + 1 new) |
-| **Plan Start Date** | June 3, 2026 |
+| **Current Problem** | Product Except Self ✅ — ready for next |
+| **Session Count** | 2 |
+| **Total Problems Solved** | 6 (4 re-solves + 2 new) |
+| **Plan Start Date** | June 10, 2026 |
 | **Original Start Date** | May 10, 2026 |
-| **Target Date** | October 2, 2026 |
-| **Days Remaining** | 121 |
+| **Target Date** | October 7, 2026 |
+| **Days Remaining** | 119 |
 
 ---
 
@@ -177,22 +177,6 @@ TEMPLATE for each session entry:
 - Point 1
 - Point 2
 
-**Aha Moments**:
-- "I realized that..."
-
-**Struggles**:
-- Specific area where I got stuck
-
-**Code Implementation Notes**:
-- What worked / what was hard to translate to code
-
-**Pattern Extracted**:
-- Pattern name → when to use it
-
-**Next Session Preview**:
-- What we'll cover next
--->
-
 </details>
 
 ---
@@ -221,6 +205,37 @@ TEMPLATE for each session entry:
 - Valid Anagram: length early-exit is a recurring miss (May 12 recall, today's recall, AND today's code)
 - Top K Frequent: Bucket sort concept completely forgotten — needs full re-solve
 - 🔴 NEW RULE FOR SELF: Before ANY comparison function, first line = size check
+
+### Session #2 — June 10, 2026 — Arrays & Hashing (Top K Frequent Re-solve)
+**Status**: ✅ COMPLETE
+**Duration**: ~30 min
+
+**Spaced Repetition Recall**:
+- Top K Frequent Elements (LC #347): ✅ Pattern fully recalled — went straight to bucket sort → Box 2
+
+**Problems Covered**:
+- Top K Frequent Elements (LC #347): ✅ Re-solve — 🟢 HIRE. Zero bugs, zero hints. Used `List[]` correctly (fixed previous `int[]` mistake). Added `ptr < k` guard after probing.
+
+**Key Improvements Over May 17**:
+- Used `List[]` instead of `int[]` — remembered that multiple elements can share a frequency
+- `size + 1` reasoning explained perfectly (max freq = array length)
+- Complexity analysis: O(n) time, O(n) space — articulated clearly
+- Zero hints used (was 2+ hints on May 17)
+
+**Pattern Confirmed**:
+- Frequency Count + Bucket Sort → "top K by frequency" in O(n)
+- Key insight locked in: **frequency as array index** eliminates sorting
+
+**Problems Covered (continued)**:
+- Product of Array Except Self (LC #238): ✅ NEW — 🟢 HIRE. Solved two-array version first (zero bugs), then optimized to O(1) space with running variable. Self-debugged the optimization (2 attempts). Zero hints.
+
+**Key Concepts Learned**:
+- **Prefix/Suffix pattern**: when you need "everything except current", build from both directions
+- **Space optimization trick**: use output array for one direction + running variable for the other
+- Base case for products: **1** (multiplicative identity), not the element itself
+
+**Pattern Extracted**:
+- Prefix/Suffix Product → O(n) time, O(1) extra space for "product except self" type problems
 
 ---
 
@@ -258,8 +273,9 @@ TEMPLATE for each session entry:
 | 1 | HashMap/HashSet Lookup | 4 | May 12 | Two Sum + Contains Duplicate — clean recall |
 | 2 | Frequency Counting | 4 | May 17 | Valid Anagram + Top K Frequent — used in both |
 | — | HashMap Grouping | 3 | May 12 | Group Anagrams — recalled well, complexity needs work |
-| — | Bucket Sort (Freq as Index) | 2 | June 3 | Couldn’t recall at all during spaced rep — needs full re-solve |
+| — | Bucket Sort (Freq as Index) | 4 | June 10 | Top K Frequent — clean re-solve, zero hints |
 | 3 | Two Pointers (Opposite Ends) | 4 | June 3 | Two Sum II — clean first solve, explained reasoning well |
+| — | Prefix/Suffix | 4 | June 10 | Product Except Self — solved + optimized to O(1) space |
 | 4 | Two Pointers (Same Direction) | — | — | — |
 | 5 | Sliding Window (Fixed) | — | — | — |
 | 6 | Sliding Window (Variable) | — | — | — |
@@ -288,11 +304,12 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Two Sum (LC #1) | Box 2 | June 3 | June 6 | ✅ Recalled → promoted |
-| Contains Duplicate (LC #217) | Box 1 | June 3 | June 4 | ⚠️ Shaky → stays Box 1 |
-| Valid Anagram (LC #242) | Box 2 | June 3 | June 6 | ✅ Recalled → promoted |
-| Group Anagrams (LC #49) | Box 2 | June 3 | June 6 | ✅ Recalled → promoted |
-| Top K Frequent Elements (LC #347) | Box 1 | June 3 | June 4 | ❌ Failed → stays Box 1 |
+| Top K Frequent Elements (LC #347) | Box 2 | June 10 | June 13 | ✅ Re-solved cleanly → promoted |
+| Two Sum (LC #1) | Box 2 | June 3 | June 13 | ✅ Recalled → promoted |
+| Contains Duplicate (LC #217) | Box 2 | June 4 | June 13 | ✅ Promoted on re-solve |
+| Valid Anagram (LC #242) | Box 2 | June 3 | June 13 | ✅ Recalled → promoted |
+| Group Anagrams (LC #49) | Box 2 | June 3 | June 13 | ✅ Recalled → promoted |
+| Two Sum II (LC #167) | Box 2 | June 4 | June 13 | ✅ New solve → Box 2 |
 
 ---
 
@@ -312,17 +329,15 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next Session**: Session #2
-**Topic**: Arrays & Hashing — Day 2
+**Next Session**: Session #3 (June 11)
+**Topic**: Arrays & Hashing — Week 1 continues
 **Plan**:
-1. ⏰ Spaced repetition recall: Contains Duplicate, Top K Frequent, Two Sum II (Box 1 — due tomorrow)
-2. Problem #1: **Product of Array Except Self** (LC #238, Medium) — Prefix/Suffix pattern (NEW)
-3. Problem #2: **Longest Consecutive Sequence** (LC #128, Medium) — HashSet + sequence start (NEW)
-4. If time: re-solve **Top K Frequent Elements** (LC #347) from scratch (failed recall today)
+1. ⏰ Spaced repetition recall: Product of Array Except Self (Box 1 — due tomorrow)
+2. Problem #1: **Longest Consecutive Sequence** (LC #128, Medium) — HashSet + sequence start (NEW)
+3. Problem #2: **Encode and Decode Strings** (LC #271, Medium) — Delimiter design (NEW)
 
 **Focus**:
-- Learn Prefix/Suffix pattern
-- Lock in Top K Frequent (couldn't recall today)
+- Learn HashSet sequence detection pattern
 - Keep practicing 🔴 length early-exit habit
 
 ---

@@ -1,9 +1,9 @@
 # 🗺️ DSA MASTERY — 17-WEEK MASTER PLAN (120 DAYS)
 
-> **June 5, 2026 → October 2, 2026** | 120 Days | ~220-250 Problems
+> **June 10, 2026 → October 7, 2026** | 120 Days | ~220-250 Problems
 > **Goal**: Identify patterns, think brute → better → optimal, implement clean code, solve any unseen hard.
 >
-> ⚠️ _Plan reset on May 21, 2026. 5 pre-plan problems (Two Sum, Contains Duplicate, Valid Anagram, Group Anagrams, Top K Frequent) are kept as prior knowledge._
+> ⚠️ _Plan reset on June 10, 2026. 5 pre-plan problems (Two Sum, Contains Duplicate, Valid Anagram, Group Anagrams, Top K Frequent) + Two Sum II are kept as prior knowledge._
 
 ---
 
@@ -140,7 +140,7 @@
 
 ---
 
-## Week 1: Arrays & Hashing (June 5 – June 11)
+## Week 1: Arrays & Hashing (June 10 – June 16)
 
 ### Core Concepts to Master
 - Arrays: memory layout, indexing, traversal, in-place modification
@@ -173,7 +173,7 @@
 
 ---
 
-## Week 2: Two Pointers & Sorting (June 12 – June 18)
+## Week 2: Two Pointers & Sorting (June 17 – June 23)
 
 ### Core Concepts to Master
 - Two pointer technique: opposite ends, same direction
@@ -200,7 +200,7 @@
 
 ---
 
-## Week 3: Sliding Window (June 19 – June 25)
+## Week 3: Sliding Window (June 24 – June 30)
 
 ### Core Concepts to Master
 - Fixed-size window
@@ -227,7 +227,7 @@
 
 ---
 
-## Week 4: Stack & Queue (June 26 – July 2)
+## Week 4: Stack & Queue (July 1 – July 7)
 
 ### Core Concepts to Master
 - Stack for matching/nesting problems
@@ -254,7 +254,7 @@
 
 ---
 
-## Week 5: Linked List (July 3 – July 9)
+## Week 5: Linked List (July 8 – July 14)
 
 ### Core Concepts to Master
 - Singly vs doubly linked list
@@ -282,7 +282,7 @@
 
 ---
 
-## Week 6: Binary Search (July 10 – July 16)
+## Week 6: Binary Search (July 15 – July 21)
 
 ### Core Concepts to Master
 - Classic binary search (exact match)
@@ -316,7 +316,7 @@
 
 ---
 
-## Week 7: Binary Trees — DFS (July 17 – July 23)
+## Week 7: Binary Trees — DFS (July 22 – July 28)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -328,7 +328,7 @@
 | D6 | Review + spaced repetition | — | — |
 | D7 | Weekly challenge | — | — |
 
-## Week 8: Binary Trees — BFS + BST (July 24 – July 30)
+## Week 8: Binary Trees — BFS + BST (July 29 – August 4)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -339,7 +339,7 @@
 | D5 | **BST Iterator** (LC #173) + **Lowest Common Ancestor of BST** (LC #235) | Med/Med | Controlled inorder, BST property |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 9: Heap / Priority Queue (July 31 – August 6)
+## Week 9: Heap / Priority Queue (August 5 – August 11)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -350,7 +350,7 @@
 | D5 | **Reorganize String** (LC #767) + **K Closest in Sorted Array** (LC #658) | Med | Greedy with heap |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 10: Backtracking (August 7 – August 13)
+## Week 10: Backtracking (August 12 – August 18)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -361,7 +361,7 @@
 | D5 | **N-Queens** (LC #51) + **Sudoku Solver** (LC #37) | Hard | Constraint satisfaction |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 11: Graphs — BFS/DFS (August 14 – August 20)
+## Week 11: Graphs — BFS/DFS (August 19 – August 25)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -372,7 +372,7 @@
 | D5 | **Accounts Merge** (LC #721) + **Graph Valid Tree** (LC #261) | Med | Union-Find applications |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 12: Advanced Graphs + Union-Find (August 21 – August 27)
+## Week 12: Advanced Graphs + Union-Find (August 26 – September 1)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -392,7 +392,7 @@
 
 ---
 
-## Week 13: Dynamic Programming — 1D (August 28 – September 3)
+## Week 13: Dynamic Programming — 1D (September 2 – September 8)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -403,7 +403,7 @@
 | D5 | **Maximum Product Subarray** (LC #152) + **Partition Equal Subset Sum** (LC #416) | Med | Track min/max, 0/1 knapsack |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 14: Dynamic Programming — 2D & Strings (September 4 – September 10)
+## Week 14: Dynamic Programming — 2D & Strings (September 9 – September 15)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -414,7 +414,7 @@
 | D5 | **Burst Balloons** (LC #312) + **Regular Expression Matching** (LC #10) | Hard | Interval DP, string matching DP |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 15: Tries, Intervals & Greedy (September 11 – September 17)
+## Week 15: Tries, Intervals & Greedy (September 16 – September 22)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -425,7 +425,7 @@
 | D5 | **Jump Game** (LC #55) + **Jump Game II** (LC #45) + **Gas Station** (LC #134) | Med | Greedy proofs |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 16: Advanced Mixed Problems (September 18 – September 24)
+## Week 16: Advanced Mixed Problems (September 23 – September 29)
 
 | Day | Problem | Difficulty | Pattern |
 |-----|---------|-----------|---------|
@@ -436,7 +436,7 @@
 | D5 | Company-tagged hard problems (2-3 problems) | Hard | Mixed patterns |
 | D6-D7 | Review + challenge | — | — |
 
-## Week 17: Mock Interview Marathon + Final Polish (September 25 – October 2)
+## Week 17: Mock Interview Marathon + Final Polish (September 30 – October 7)
 
 | Day | Focus |
 |-----|-------|
@@ -448,7 +448,7 @@
 | D6 | **Mock 6**: Full interview day simulation — 2 coding rounds back to back |
 | D7 | Review all mocks, identify final weak spots |
 
-### Final Polish Days (Sep 29 – Oct 2)
+### Final Polish Days (Oct 4 – Oct 7)
 
 | Day | Focus |
 |-----|-------|
@@ -463,13 +463,13 @@
 
 | Date | Milestone | Success Criteria |
 |------|-----------|-----------------
-| Jun 11 (W1) | Arrays/Hashing solid | Solve any Easy <10 min, recognize HashMap patterns |
-| Jul 16 (W6) | Phase 1 complete | All basic patterns known, Mediums <25 min, code from logic |
-| Aug 13 (W10) | Backtracking + Trees done | Tree/graph medium <20 min, can write DFS/BFS from memory |
-| Aug 27 (W12) | Phase 2 complete | All patterns covered, can approach any Hard |
-| Sep 17 (W15) | DP + Advanced done | Solve DP mediums, recognize DP state/transition |
-| Sep 24 (W16) | Advanced mixed done | Can tackle any Hard |
-| **Oct 2 (W17)** | **🎯 INTERVIEW READY** | **Solve any unseen hard with optimal approach** |
+| Jun 16 (W1) | Arrays/Hashing solid | Solve any Easy <10 min, recognize HashMap patterns |
+| Jul 21 (W6) | Phase 1 complete | All basic patterns known, Mediums <25 min, code from logic |
+| Aug 18 (W10) | Backtracking + Trees done | Tree/graph medium <20 min, can write DFS/BFS from memory |
+| Sep 1 (W12) | Phase 2 complete | All patterns covered, can approach any Hard |
+| Sep 22 (W15) | DP + Advanced done | Solve DP mediums, recognize DP state/transition |
+| Sep 29 (W16) | Advanced mixed done | Can tackle any Hard |
+| **Oct 7 (W17)** | **🎯 INTERVIEW READY** | **Solve any unseen hard with optimal approach** |
 
 ---
 
