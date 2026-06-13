@@ -56,14 +56,14 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 1 |
-| **Current Day** | Day 1 (June 10, 2026) |
+| **Current Day** | Day 1 (June 15, 2026) |
 | **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Product Except Self ✅ — ready for next |
-| **Session Count** | 2 |
-| **Total Problems Solved** | 6 (4 re-solves + 2 new) |
-| **Plan Start Date** | June 10, 2026 |
+| **Current Problem** | Ready to begin Week 1 |
+| **Session Count** | 0 |
+| **Total Problems Solved** | 0 |
+| **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
-| **Target Date** | October 7, 2026 |
+| **Target Date** | October 11, 2026 |
 | **Days Remaining** | 119 |
 
 ---
@@ -181,7 +181,15 @@ TEMPLATE for each session entry:
 
 ---
 
-### New Plan Sessions (Starting June 3, 2026)
+### New Plan Sessions (Starting June 15, 2026)
+
+> ⚠️ _Progress reset on June 15, 2026. Previous sessions archived below._
+
+_No sessions yet — starting fresh on June 15._
+
+---
+
+#### 📂 Pre-Reset Sessions (June 3–10, 2026)
 
 ### Session #1 — June 3, 2026 — Arrays & Hashing (Day 1)
 **Status**: ✅ COMPLETE
@@ -304,12 +312,7 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Top K Frequent Elements (LC #347) | Box 2 | June 10 | June 13 | ✅ Re-solved cleanly → promoted |
-| Two Sum (LC #1) | Box 2 | June 3 | June 13 | ✅ Recalled → promoted |
-| Contains Duplicate (LC #217) | Box 2 | June 4 | June 13 | ✅ Promoted on re-solve |
-| Valid Anagram (LC #242) | Box 2 | June 3 | June 13 | ✅ Recalled → promoted |
-| Group Anagrams (LC #49) | Box 2 | June 3 | June 13 | ✅ Recalled → promoted |
-| Two Sum II (LC #167) | Box 2 | June 4 | June 13 | ✅ New solve → Box 2 |
+| _Reset — no reviews due yet_ | — | — | — | — |
 
 ---
 
@@ -329,15 +332,16 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next Session**: Session #3 (June 11)
-**Topic**: Arrays & Hashing — Week 1 continues
+**Next Session**: Session #1 (June 15)
+**Topic**: Arrays & Hashing — Week 1 Day 1
 **Plan**:
-1. ⏰ Spaced repetition recall: Product of Array Except Self (Box 1 — due tomorrow)
-2. Problem #1: **Longest Consecutive Sequence** (LC #128, Medium) — HashSet + sequence start (NEW)
-3. Problem #2: **Encode and Decode Strings** (LC #271, Medium) — Delimiter design (NEW)
+1. 🧠 Quick recall check: 7 prior problems (pattern + approach only)
+2. Problem #1: **Two Sum** (LC #1, Easy) — HashMap complement (re-solve under interview pressure)
+3. Problem #2: **Contains Duplicate** (LC #217, Easy) — HashSet membership (re-solve under interview pressure)
 
 **Focus**:
-- Learn HashSet sequence detection pattern
+- Fresh start with clean interview simulation
+- Establish rhythm for the new schedule
 - Keep practicing 🔴 length early-exit habit
 
 ---
@@ -346,7 +350,7 @@ TEMPLATE for each session entry:
 
 | Week | Problems Solved | New Patterns | Avg Confidence | Key Achievement |
 |------|----------------|-------------|----------------|-----------------|
-| W1 | 4 (3 re-solves + 1 new) | 3 | 4.5 | HashMap/HashSet + Two Pointers |
+| W1 | — | — | — | — |
 | W3 | — | — | — | — |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |

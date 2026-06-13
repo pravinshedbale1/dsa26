@@ -2,6 +2,8 @@
 
 > **System**: Leitner Box (5 levels)
 > **Rule**: Correct recall → move up one box. Incorrect → back to Box 1.
+>
+> ⚠️ _Reset on June 15, 2026. Problems will be re-added as solved in the new plan._
 
 ---
 
@@ -21,7 +23,7 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Product of Array Except Self (LC #238) | Prefix/Suffix Product | June 10 | June 10 | June 11 |
+| _empty_ | — | — | — | — |
 
 ---
 
@@ -29,12 +31,7 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Two Sum (LC #1) | HashMap Complement | June 3 | June 3 | June 13 |
-| Valid Anagram (LC #242) | Frequency Count int[26] | June 3 | June 3 | June 13 |
-| Group Anagrams (LC #49) | HashMap Grouping | June 3 | June 3 | June 13 |
-| Contains Duplicate (LC #217) | HashSet Membership | June 4 | June 4 | June 13 |
-| Two Sum II (LC #167) | Two Pointers (Opposite) | June 4 | June 4 | June 13 |
-| Top K Frequent Elements (LC #347) | Freq Count + Bucket Sort | June 10 | June 10 | June 13 |
+| _empty_ | — | — | — | — |
 
 ---
 
@@ -64,18 +61,10 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: June 10, 2026
+**Date**: June 15, 2026
 
 ### Due Today:
-- 📦 Box 1: Top K Frequent Elements (LC #347) — daily review
-- 📦 Box 2: Two Sum, Valid Anagram, Group Anagrams, Contains Duplicate, Two Sum II — 3-day review due June 13
-
-### Previously Completed (June 3):
-- ✅ Two Sum (LC #1) — Box 1 → **Box 2** (solid recall)
-- ⚠️ Contains Duplicate (LC #217) — **stays Box 1** (couldn't recall problem statement)
-- ✅ Valid Anagram (LC #242) — Box 1 → **Box 2** (solid, but missed length early-exit again)
-- ✅ Group Anagrams (LC #49) — Box 1 → **Box 2** (recalled optimal approach despite low confidence)
-- ❌ Top K Frequent Elements (LC #347) — **stays Box 1** (couldn't recall approach at all)
+- _No reviews due — fresh start_
 
 ### Review Checklist:
 For each problem due:
@@ -93,11 +82,11 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 7 |
-| Box 1 (daily) | 1 |
-| Box 2 (3-day) | 6 |
+| Total problems in system | 0 |
+| Box 1 (daily) | 0 |
+| Box 2 (3-day) | 0 |
 | Box 3 (weekly) | 0 |
 | Box 4 (bi-weekly) | 0 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 2 |
-| Streak (consecutive days) | 1 |
+| Reviews completed today | 0 |
+| Streak (consecutive days) | 0 |
