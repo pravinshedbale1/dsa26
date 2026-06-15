@@ -56,11 +56,11 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 1 |
-| **Current Day** | Day 1 (June 15, 2026) |
+| **Current Day** | Day 1 (June 15, 2026) — IN PROGRESS |
 | **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Ready to begin Week 1 |
-| **Session Count** | 0 |
-| **Total Problems Solved** | 0 |
+| **Current Problem** | Day 1 complete ✅ (Two Sum + Contains Duplicate) |
+| **Session Count** | 1 |
+| **Total Problems Solved** | 2 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
@@ -185,7 +185,31 @@ TEMPLATE for each session entry:
 
 > ⚠️ _Progress reset on June 15, 2026. Previous sessions archived below._
 
-_No sessions yet — starting fresh on June 15._
+### Session #1 — June 15, 2026 — Arrays & Hashing (Week 1, Day 1)
+**Status**: 🟡 IN PROGRESS
+**Duration**: ~20 min so far
+
+**Spaced Repetition Recall Results (7 prior problems)**:
+- Two Sum (LC #1): ✅ Perfect — pattern, approach, complexity all correct
+- Contains Duplicate (LC #217): ✅ Perfect — remembered `!set.add()` idiom
+- Valid Anagram (LC #242): ✅ Perfect — 🎉 **LENGTH EARLY-EXIT MENTIONED FIRST** (fixed recurring miss!)
+- Group Anagrams (LC #49): ✅ Solid — minor: brute TC should be O(n·m log m) not O(n log m)
+- Top K Frequent (LC #347): ✅ Solid — bucket sort locked in. Minor: brute = sort by freq, not raw array sort
+- Two Sum II (LC #167): ✅ Perfect — great trade-off reasoning (sorted → two ptr saves space)
+- Product Except Self (LC #238): ✅ Solid — minor: brute is O(n²) not O(n³), naming mix-up in optimization
+
+**Recall Verdict**: 7/7 recalled. Strong retention across all prior problems.
+
+**Problems Covered**:
+- Two Sum (LC #1): ✅ Re-solve — 🟡 LEAN HIRE. Had initial compile error (missing brace) + Test 1 returned [0,0] (bug: wrote to `nums` instead of `result`). Debugged and fixed. Zero hints. Code quality clean (`complementPair` naming, proper HashMap usage).
+- Contains Duplicate (LC #217): ✅ Re-solve — 🟢 HIRE. Flawless. First-try pass on all 5 tests, zero bugs, zero hints. Idiomatic `!set.add(n)`. ~3 min.
+
+**Key Observations**:
+- Spaced repetition recall is excellent — all 7 patterns retained
+- Valid Anagram length early-exit habit is FINALLY locked in ✅
+- Two Sum had a typo bug (`nums` instead of `result`) — need to double-check target variables
+- Contains Duplicate was flawless — this is the standard to aim for
+- Day 1 complete! Ready for Day 2 (Valid Anagram + Two Sum II)
 
 ---
 
@@ -312,7 +336,8 @@ _No sessions yet — starting fresh on June 15._
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| _Reset — no reviews due yet_ | — | — | — | — |
+| Two Sum (LC #1) | Box 1 | June 15 | June 16 | ✅ Solved today |
+| Contains Duplicate (LC #217) | Box 1 | June 15 | June 16 | ✅ Solved today |
 
 ---
 
@@ -332,17 +357,17 @@ _No sessions yet — starting fresh on June 15._
 
 ## ⏭️ Next Session Plan
 
-**Next Session**: Session #1 (June 15)
-**Topic**: Arrays & Hashing — Week 1 Day 1
+**Next**: Session #2 (June 16) — Day 2
+**Topic**: Arrays & Hashing — Week 1 Day 2
 **Plan**:
-1. 🧠 Quick recall check: 7 prior problems (pattern + approach only)
-2. Problem #1: **Two Sum** (LC #1, Easy) — HashMap complement (re-solve under interview pressure)
-3. Problem #2: **Contains Duplicate** (LC #217, Easy) — HashSet membership (re-solve under interview pressure)
+1. ⏰ Spaced repetition check: Two Sum + Contains Duplicate (pattern + approach recall)
+2. Problem #1: **Valid Anagram** (LC #242, Easy) — Frequency array (re-solve, prove early-exit is locked in)
+3. Problem #2: **Two Sum II** (LC #167, Medium) — Two pointers on sorted (re-solve)
 
 **Focus**:
-- Fresh start with clean interview simulation
-- Establish rhythm for the new schedule
-- Keep practicing 🔴 length early-exit habit
+- First-try correctness on every problem — aim for 🟢 HIRE on both
+- Double-check target variables before running (lesson from Two Sum typo)
+- Keep reinforcing length early-exit habit
 
 ---
 

@@ -152,8 +152,8 @@
 
 | Day | Problem | Difficulty | Pattern | Approach Focus | Status |
 |-----|---------|-----------|---------|---------------|--------|
-| D1 | **Two Sum** (LC #1) | Easy | HashMap complement | Brute O(n²) → HashMap O(n) | 💾 Pre-plan |
-| D1 | **Contains Duplicate** (LC #217) | Easy | HashSet | Sort O(n log n) → HashSet O(n) | 💾 Pre-plan |
+| D1 | **Two Sum** (LC #1) | Easy | HashMap complement | Brute O(n²) → HashMap O(n) | ✅ Solved (Jun 15) |
+| D1 | **Contains Duplicate** (LC #217) | Easy | HashSet | Sort O(n log n) → HashSet O(n) | ✅ Solved (Jun 15) |
 | D2 | **Valid Anagram** (LC #242) | Easy | Frequency array | Sort → Frequency count (int[26]) | 💾 Pre-plan |
 | D2 | **Two Sum II (Sorted)** (LC #167) | Medium | Two pointers on sorted | Binary search → Two pointers | 💾 Pre-plan |
 | D3 | **Group Anagrams** (LC #49) | Medium | HashMap with sorted key | Brute → Sorted string key → Char count key | 💾 Pre-plan |

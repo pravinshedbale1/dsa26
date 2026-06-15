@@ -29,6 +29,8 @@
 | 7 | Jun 3 | Contains Duplicate (re-solve) | 217 | Easy | HashSet Membership | HashSet O(n)/O(n) | O(n) | O(n) | ✅ | 5 | Box 2 | Flawless. !set.add(n) idiom. ~2 min. |
 | 8 | Jun 3 | Valid Anagram (re-solve) | 242 | Easy | Frequency Count (int[26]) | Freq array O(n)/O(1) | O(n) | O(1) | ⚡ | 4 | Box 2 | Missed length early-exit AGAIN (3rd time). Fixed after probe. |
 | 9 | Jun 3 | Two Sum II (NEW) | 167 | Medium | Two Pointers (Opposite) | Brute O(n²)/O(1) → Two Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 4 | Box 1 | First two-pointer problem. Clean implementation, zero bugs. |
+| 10 | Jun 15 | Two Sum (re-solve, new plan) | 1 | Easy | HashMap Complement | Optimal O(n)/O(n) | O(n) | O(n) | ⚡ | 4 | Box 1 | 🟡 LEAN HIRE. Initial bug (returned [0,0]) debugged. Zero hints. Clean variable names. |
+| 11 | Jun 15 | Contains Duplicate (re-solve, new plan) | 217 | Easy | HashSet Membership | HashSet O(n)/O(n) | O(n) | O(n) | ✅ | 5 | Box 1 | 🟢 HIRE. Flawless first-try. !set.add(n) idiom. ~3 min. Zero bugs, zero hints. |
 
 ---
 
@@ -36,6 +38,6 @@
 
 | Week | Problems Solved | ✅ | ⚡ | 🔄 | ❌ | Avg Confidence | Top Pattern |
 |------|----------------|----|----|----|----|----------------|------------|
-| W1 | 3 (re-solves) | 2 | 1 | 0 | 0 | 4.7 | HashMap/HashSet |
-| W2 | — | — | — | — | — | — | — |
+| Pre-plan | 3 (re-solves) + 1 new | 2 | 1 | 0 | 0 | 4.7 | HashMap/HashSet |
+| W1 D1 | 2 (complete) | 1 | 1 | 0 | 0 | 4.5 | HashMap/HashSet |
 | ... | — | — | — | — | — | — | — |

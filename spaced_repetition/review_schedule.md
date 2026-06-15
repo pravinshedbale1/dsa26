@@ -23,7 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| _empty_ | — | — | — | — |
+| Two Sum (LC #1) | HashMap Complement | Jun 15 | Jun 15 | Jun 16 |
+| Contains Duplicate (LC #217) | HashSet Membership | Jun 15 | Jun 15 | Jun 16 |
 
 ---
 
@@ -64,7 +65,12 @@
 **Date**: June 15, 2026
 
 ### Due Today:
-- _No reviews due — fresh start_
+- ✅ Two Sum (LC #1) — Solved (LEAN HIRE)
+- ✅ Contains Duplicate (LC #217) — Solved (HIRE)
+
+### Completed Reviews:
+- Two Sum: ✅ pattern recalled, solved with 1 initial bug, zero hints
+- Contains Duplicate: ✅ flawless first-try, `!set.add(n)` idiom
 
 ### Review Checklist:
 For each problem due:
@@ -82,11 +88,11 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 0 |
-| Box 1 (daily) | 0 |
+| Total problems in system | 2 |
+| Box 1 (daily) | 2 |
 | Box 2 (3-day) | 0 |
 | Box 3 (weekly) | 0 |
 | Box 4 (bi-weekly) | 0 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 0 |
-| Streak (consecutive days) | 0 |
+| Reviews completed today | 2 |
+| Streak (consecutive days) | 1 |
