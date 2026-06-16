@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 1 |
-| **Current Day** | Day 1 (June 15, 2026) — IN PROGRESS |
+| **Current Day** | Day 2 (June 17, 2026) — COMPLETE ✅ |
 | **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Day 1 complete ✅ (Two Sum + Contains Duplicate) |
-| **Session Count** | 1 |
-| **Total Problems Solved** | 2 (new plan) |
+| **Current Problem** | Day 2 complete ✅ (Valid Anagram + Two Sum II) |
+| **Session Count** | 2 |
+| **Total Problems Solved** | 4 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 119 |
+| **Days Remaining** | 117 |
 
 ---
 
@@ -186,8 +186,8 @@ TEMPLATE for each session entry:
 > ⚠️ _Progress reset on June 15, 2026. Previous sessions archived below._
 
 ### Session #1 — June 15, 2026 — Arrays & Hashing (Week 1, Day 1)
-**Status**: 🟡 IN PROGRESS
-**Duration**: ~20 min so far
+**Status**: ✅ COMPLETE
+**Duration**: ~20 min
 
 **Spaced Repetition Recall Results (7 prior problems)**:
 - Two Sum (LC #1): ✅ Perfect — pattern, approach, complexity all correct
@@ -210,6 +210,24 @@ TEMPLATE for each session entry:
 - Two Sum had a typo bug (`nums` instead of `result`) — need to double-check target variables
 - Contains Duplicate was flawless — this is the standard to aim for
 - Day 1 complete! Ready for Day 2 (Valid Anagram + Two Sum II)
+
+### Session #2 — June 17, 2026 — Arrays & Hashing (Week 1, Day 2)
+**Status**: ✅ COMPLETE
+**Duration**: ~15 min
+
+**Spaced Repetition Recall Results (2 Box 1 problems)**:
+- Two Sum (LC #1): ✅ Perfect — pattern, approach, complexity recalled instantly → **Promoted to Box 2**
+- Contains Duplicate (LC #217): ✅ Perfect — pattern, `!set.add()` idiom, complexity → **Promoted to Box 2**
+
+**Problems Covered**:
+- Valid Anagram (LC #242): ✅ Re-solve — 🟢 HIRE. Length early-exit FIRST LINE ✅. All 5 tests passed first try. Zero bugs, zero hints. ~5 min. **Length early-exit struggle officially RESOLVED** (3 consecutive sessions with it).
+- Two Sum II (LC #167): ✅ Re-solve — 🟡 LEAN HIRE. Correct approach, clean code. Initial bug: returned 0-indexed `[0,1]` instead of 1-indexed `[1,2]`. Self-debugged and fixed. Zero hints. ~5 min.
+
+**Key Observations**:
+- Length early-exit is now habit — 🟢 RESOLVED after 3 consecutive correct sessions
+- New attention pattern needed: re-read output specification before returning (0-indexed vs 1-indexed)
+- Both spaced repetition problems promoted to Box 2 — strong retention
+- Day 2 complete! Ready for Day 3 (Group Anagrams + Top K Frequent)
 
 ---
 
@@ -281,7 +299,8 @@ TEMPLATE for each session entry:
 | May 17 | Approaching new problems | Felt lost on Top K — couldn't see next step from freq map | 🔴 Active |
 | May 17 | Array vs List for buckets | Used int[] when multiple values per bucket needed List[] | 🟡 Improving |
 | May 17 | Inner loop bounds | Forgot to guard inner loop with ptr >= k check | 🟡 Improving |
-| Jun 3 | **Length early-exit** | **Missed s.length()!=t.length() check in Valid Anagram — 3rd time** | 🔴 Active (recurring!) |
+| Jun 3 | **Length early-exit** | **Missed s.length()!=t.length() check in Valid Anagram — 3rd time** | 🟢 Resolved (Jun 17 — 3 consecutive correct sessions) |
+| Jun 17 | **Output spec (0-indexed vs 1-indexed)** | Returned 0-indexed [0,1] on Two Sum II instead of 1-indexed [1,2] | 🟡 Improving |
 
 <!-- Status: 🔴 Active | 🟡 Improving | 🟢 Resolved -->
 
@@ -336,8 +355,10 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Two Sum (LC #1) | Box 1 | June 15 | June 16 | ✅ Solved today |
-| Contains Duplicate (LC #217) | Box 1 | June 15 | June 16 | ✅ Solved today |
+| Two Sum (LC #1) | Box 2 | June 17 | June 20 | ✅ Promoted to Box 2 |
+| Contains Duplicate (LC #217) | Box 2 | June 17 | June 20 | ✅ Promoted to Box 2 |
+| Valid Anagram (LC #242) | Box 1 | June 17 | June 18 | ✅ Solved today |
+| Two Sum II (LC #167) | Box 1 | June 17 | June 18 | ✅ Solved today |
 
 ---
 
@@ -357,17 +378,17 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #2 (June 16) — Day 2
-**Topic**: Arrays & Hashing — Week 1 Day 2
+**Next**: Session #3 (June 17/18) — Day 3
+**Topic**: Arrays & Hashing — Week 1 Day 3
 **Plan**:
-1. ⏰ Spaced repetition check: Two Sum + Contains Duplicate (pattern + approach recall)
-2. Problem #1: **Valid Anagram** (LC #242, Easy) — Frequency array (re-solve, prove early-exit is locked in)
-3. Problem #2: **Two Sum II** (LC #167, Medium) — Two pointers on sorted (re-solve)
+1. ⏰ Spaced repetition check: Valid Anagram + Two Sum II (Box 1 — due tomorrow)
+2. Problem #1: **Group Anagrams** (LC #49, Medium) — HashMap grouping (re-solve)
+3. Problem #2: **Top K Frequent Elements** (LC #347, Medium) — Bucket sort (re-solve)
 
 **Focus**:
-- First-try correctness on every problem — aim for 🟢 HIRE on both
-- Double-check target variables before running (lesson from Two Sum typo)
-- Keep reinforcing length early-exit habit
+- First-try 🟢 HIRE on both — these are re-solves, should be clean
+- Re-read output specification before returning (lesson from Two Sum II 1-indexing bug)
+- Prove bucket sort is fully locked in (was a struggle in May, clean in June 10)
 
 ---
 

@@ -23,8 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Two Sum (LC #1) | HashMap Complement | Jun 15 | Jun 15 | Jun 16 |
-| Contains Duplicate (LC #217) | HashSet Membership | Jun 15 | Jun 15 | Jun 16 |
+| Valid Anagram (LC #242) | Frequency Count (int[26]) | Jun 17 | Jun 17 | Jun 18 |
+| Two Sum II (LC #167) | Two Pointers (Opposite) | Jun 17 | Jun 17 | Jun 18 |
 
 ---
 
@@ -32,7 +32,8 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| _empty_ | — | — | — | — |
+| Two Sum (LC #1) | HashMap Complement | Jun 17 | Jun 17 | Jun 20 |
+| Contains Duplicate (LC #217) | HashSet Membership | Jun 17 | Jun 17 | Jun 20 |
 
 ---
 
@@ -62,15 +63,15 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: June 15, 2026
+**Date**: June 17, 2026
 
 ### Due Today:
-- ✅ Two Sum (LC #1) — Solved (LEAN HIRE)
-- ✅ Contains Duplicate (LC #217) — Solved (HIRE)
+- ✅ Two Sum (LC #1) — Recalled perfectly (pattern + approach + complexity) → Promoted to Box 2
+- ✅ Contains Duplicate (LC #217) — Recalled perfectly (pattern + idiom + complexity) → Promoted to Box 2
 
 ### Completed Reviews:
-- Two Sum: ✅ pattern recalled, solved with 1 initial bug, zero hints
-- Contains Duplicate: ✅ flawless first-try, `!set.add(n)` idiom
+- Two Sum: ✅ pattern + approach + complexity recalled instantly
+- Contains Duplicate: ✅ pattern + `!set.add()` idiom + complexity recalled instantly
 
 ### Review Checklist:
 For each problem due:
@@ -88,11 +89,11 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 2 |
+| Total problems in system | 4 |
 | Box 1 (daily) | 2 |
-| Box 2 (3-day) | 0 |
+| Box 2 (3-day) | 2 |
 | Box 3 (weekly) | 0 |
 | Box 4 (bi-weekly) | 0 |
 | Box 5 (mastered) | 0 |
 | Reviews completed today | 2 |
-| Streak (consecutive days) | 1 |
+| Streak (consecutive days) | 2 |

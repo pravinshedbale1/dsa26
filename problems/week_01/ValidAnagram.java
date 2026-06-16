@@ -8,12 +8,6 @@
  *   anagram of s, and false otherwise.
  *   An anagram uses all original letters exactly once.
  *
- * PATTERN: Frequency Counting (int[26])
- *
- * COMPLEXITY:
- *   Sort:    O(n log n) time, O(n) space
- *   Optimal: O(n) time, O(1) space
- *
  * CONSTRAINTS:
  *   1 <= s.length, t.length <= 5 * 10^4
  *   s and t consist of lowercase English letters.
@@ -26,19 +20,22 @@ public class ValidAnagram {
 
     // ✅ Fill in this method
     public static boolean isAnagram(String s, String t) {
-        // YOUR CODE HERE
+        int[] freqArr = new int[26];
         if (s.length() != t.length()) {
             return false;
         }
-        int[] freq = new int[26];
+
+        // create a freq array
         for (char ch : s.toCharArray()) {
-            freq[ch - 'a']++;
+            freqArr[ch - 'a']++;
         }
+
+        // for second string decrement each count
         for (char ch : t.toCharArray()) {
-            if (freq[ch - 'a'] == 0) {
+            if (freqArr[ch - 'a'] == 0) {
                 return false;
             }
-            freq[ch - 'a']--;
+            freqArr[ch - 'a']--;
         }
         return true;
     }

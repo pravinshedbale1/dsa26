@@ -31,6 +31,8 @@
 | 9 | Jun 3 | Two Sum II (NEW) | 167 | Medium | Two Pointers (Opposite) | Brute O(n²)/O(1) → Two Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 4 | Box 1 | First two-pointer problem. Clean implementation, zero bugs. |
 | 10 | Jun 15 | Two Sum (re-solve, new plan) | 1 | Easy | HashMap Complement | Optimal O(n)/O(n) | O(n) | O(n) | ⚡ | 4 | Box 1 | 🟡 LEAN HIRE. Initial bug (returned [0,0]) debugged. Zero hints. Clean variable names. |
 | 11 | Jun 15 | Contains Duplicate (re-solve, new plan) | 217 | Easy | HashSet Membership | HashSet O(n)/O(n) | O(n) | O(n) | ✅ | 5 | Box 1 | 🟢 HIRE. Flawless first-try. !set.add(n) idiom. ~3 min. Zero bugs, zero hints. |
+| 12 | Jun 17 | Valid Anagram (re-solve) | 242 | Easy | Frequency Count (int[26]) | Freq array O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. Length early-exit FIRST LINE. All tests first try. Zero bugs, zero hints. ~5 min. |
+| 13 | Jun 17 | Two Sum II (re-solve) | 167 | Medium | Two Pointers (Opposite) | Two Ptr O(n)/O(1) | O(n) | O(1) | ⚡ | 4 | Box 1 | 🟡 LEAN HIRE. Initial 0-indexed bug, self-debugged. Zero hints. ~5 min. |
 
 ---
 
@@ -40,4 +42,5 @@
 |------|----------------|----|----|----|----|----------------|------------|
 | Pre-plan | 3 (re-solves) + 1 new | 2 | 1 | 0 | 0 | 4.7 | HashMap/HashSet |
 | W1 D1 | 2 (complete) | 1 | 1 | 0 | 0 | 4.5 | HashMap/HashSet |
+| W1 D2 | 2 (complete) | 1 | 1 | 0 | 0 | 4.5 | Frequency Count / Two Pointers |
 | ... | — | — | — | — | — | — | — |

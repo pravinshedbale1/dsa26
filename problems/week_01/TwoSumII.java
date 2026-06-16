@@ -9,12 +9,6 @@
  *   Return [index1, index2] where 1 <= index1 < index2.
  *   Must use O(1) extra space.
  *
- * PATTERN: Two Pointers (Opposite Ends)
- *
- * COMPLEXITY:
- *   Brute:   O(n²) time, O(1) space
- *   Optimal: O(n) time, O(1) space
- *
  * CONSTRAINTS:
  *   2 <= numbers.length <= 3 * 10^4
  *   -1000 <= numbers[i] <= 1000
@@ -29,21 +23,23 @@ public class TwoSumII {
 
     // ✅ Fill in this method
     public static int[] twoSum(int[] numbers, int target) {
-        // YOUR CODE HERE
         int left = 0;
         int right = numbers.length - 1;
-
+        int[] result = new int[2];
         while (left < right) {
             int sum = numbers[left] + numbers[right];
             if (sum == target) {
-                return new int[] { left + 1, right + 1 };
+                result[0] = left + 1;
+                result[1] = right + 1;
+                break;
             } else if (sum < target) {
                 left++;
             } else {
                 right--;
             }
         }
-        return new int[] {};
+
+        return result;
     }
 
     // ============ DRIVER CODE — DO NOT MODIFY ============
