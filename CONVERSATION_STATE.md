@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 1 |
-| **Current Day** | Day 2 (June 17, 2026) — COMPLETE ✅ |
+| **Current Day** | Day 3 (June 17, 2026) — COMPLETE ✅ |
 | **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Day 2 complete ✅ (Valid Anagram + Two Sum II) |
-| **Session Count** | 2 |
-| **Total Problems Solved** | 4 (new plan) |
+| **Current Problem** | Day 3 complete ✅ (Group Anagrams + Top K Frequent) |
+| **Session Count** | 3 |
+| **Total Problems Solved** | 6 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 117 |
+| **Days Remaining** | 116 |
 
 ---
 
@@ -229,6 +229,22 @@ TEMPLATE for each session entry:
 - Both spaced repetition problems promoted to Box 2 — strong retention
 - Day 2 complete! Ready for Day 3 (Group Anagrams + Top K Frequent)
 
+### Session #3 — June 17, 2026 — Arrays & Hashing (Week 1, Day 3)
+**Status**: ✅ COMPLETE
+**Duration**: ~20 min
+
+**Problems Covered**:
+- Group Anagrams (LC #49): ✅ Re-solve — 🟢 HIRE. Freq key approach with helper function. All 5 tests first try. Zero bugs, zero hints. ~6 min. Used `Arrays.toString(freqArr)` correctly (fixed May 8 `arr.toString()` mistake permanently).
+- Top K Frequent Elements (LC #347): ✅ Re-solve — 🟢 HIRE. Bucket sort approach. All 5 tests first try. Zero bugs, zero hints. ~16 min. Used `List[]` correctly (fixed May 17 `int[]` mistake permanently). Minor: inner loop missing `ptr < k` guard (safe due to constraint but not defensive).
+
+**Key Observations**:
+- Both problems 🟢 HIRE — massive improvement from original solves
+- Group Anagrams: May 8 had 3 bugs → today zero bugs. Pattern fully locked in.
+- Top K Frequent: May 17 had 2 bugs + hints → today zero bugs, zero hints. Bucket sort locked in.
+- HashMap grouping + Bucket sort patterns both at confidence 5
+- Minor improvement area: add defensive `ptr < k` guard in inner loops
+- Day 3 complete! Ready for Day 4 (Product of Array Except Self + Longest Consecutive Sequence)
+
 ---
 
 #### 📂 Pre-Reset Sessions (June 3–10, 2026)
@@ -321,11 +337,11 @@ TEMPLATE for each session entry:
 
 | # | Pattern | Confidence (1-5) | Last Practiced | Notes |
 |---|---------|------------------|----------------|-------|
-| 1 | HashMap/HashSet Lookup | 4 | May 12 | Two Sum + Contains Duplicate — clean recall |
-| 2 | Frequency Counting | 4 | May 17 | Valid Anagram + Top K Frequent — used in both |
-| — | HashMap Grouping | 3 | May 12 | Group Anagrams — recalled well, complexity needs work |
-| — | Bucket Sort (Freq as Index) | 4 | June 10 | Top K Frequent — clean re-solve, zero hints |
-| 3 | Two Pointers (Opposite Ends) | 4 | June 3 | Two Sum II — clean first solve, explained reasoning well |
+| 1 | HashMap/HashSet Lookup | 5 | June 17 | Two Sum + Contains Duplicate — all HIRE level |
+| 2 | Frequency Counting | 5 | June 17 | Valid Anagram + Group Anagrams + Top K Frequent — all locked in |
+| — | HashMap Grouping | 5 | June 17 | Group Anagrams — 🟢 HIRE, zero bugs, freq key approach |
+| — | Bucket Sort (Freq as Index) | 5 | June 17 | Top K Frequent — 🟢 HIRE, zero bugs, zero hints. Locked in. |
+| 3 | Two Pointers (Opposite Ends) | 4 | June 17 | Two Sum II — clean re-solve |
 | — | Prefix/Suffix | 4 | June 10 | Product Except Self — solved + optimized to O(1) space |
 | 4 | Two Pointers (Same Direction) | — | — | — |
 | 5 | Sliding Window (Fixed) | — | — | — |
@@ -355,10 +371,12 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Two Sum (LC #1) | Box 2 | June 17 | June 20 | ✅ Promoted to Box 2 |
-| Contains Duplicate (LC #217) | Box 2 | June 17 | June 20 | ✅ Promoted to Box 2 |
-| Valid Anagram (LC #242) | Box 1 | June 17 | June 18 | ✅ Solved today |
-| Two Sum II (LC #167) | Box 1 | June 17 | June 18 | ✅ Solved today |
+| Two Sum (LC #1) | Box 2 | June 17 | June 20 | ⏳ Due Jun 20 |
+| Contains Duplicate (LC #217) | Box 2 | June 17 | June 20 | ⏳ Due Jun 20 |
+| Valid Anagram (LC #242) | Box 1 | June 17 | June 18 | ⏳ Due Jun 18 |
+| Two Sum II (LC #167) | Box 1 | June 17 | June 18 | ⏳ Due Jun 18 |
+| Group Anagrams (LC #49) | Box 1 | June 17 | June 18 | 🆕 Added today |
+| Top K Frequent (LC #347) | Box 1 | June 17 | June 18 | 🆕 Added today |
 
 ---
 
@@ -378,17 +396,17 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #3 (June 17/18) — Day 3
-**Topic**: Arrays & Hashing — Week 1 Day 3
+**Next**: Session #4 (June 18) — Day 4
+**Topic**: Arrays & Hashing — Week 1 Day 4
 **Plan**:
-1. ⏰ Spaced repetition check: Valid Anagram + Two Sum II (Box 1 — due tomorrow)
-2. Problem #1: **Group Anagrams** (LC #49, Medium) — HashMap grouping (re-solve)
-3. Problem #2: **Top K Frequent Elements** (LC #347, Medium) — Bucket sort (re-solve)
+1. ⏰ Spaced repetition check: Valid Anagram + Two Sum II (Box 1 — due Jun 18)
+2. Problem #1: **Product of Array Except Self** (LC #238, Medium) — Prefix/Suffix (re-solve)
+3. Problem #2: **Longest Consecutive Sequence** (LC #128, Medium) — HashSet + sequence start (NEW)
 
 **Focus**:
-- First-try 🟢 HIRE on both — these are re-solves, should be clean
-- Re-read output specification before returning (lesson from Two Sum II 1-indexing bug)
-- Prove bucket sort is fully locked in (was a struggle in May, clean in June 10)
+- Product Except Self is a re-solve — aim for 🟢 HIRE, O(1) space optimization
+- Longest Consecutive Sequence is NEW — may need concept teaching in Phase A
+- Continue adding defensive guards in inner loops (lesson from Top K Frequent)
 
 ---
 

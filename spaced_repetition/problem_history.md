@@ -33,6 +33,8 @@
 | 11 | Jun 15 | Contains Duplicate (re-solve, new plan) | 217 | Easy | HashSet Membership | HashSet O(n)/O(n) | O(n) | O(n) | ✅ | 5 | Box 1 | 🟢 HIRE. Flawless first-try. !set.add(n) idiom. ~3 min. Zero bugs, zero hints. |
 | 12 | Jun 17 | Valid Anagram (re-solve) | 242 | Easy | Frequency Count (int[26]) | Freq array O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. Length early-exit FIRST LINE. All tests first try. Zero bugs, zero hints. ~5 min. |
 | 13 | Jun 17 | Two Sum II (re-solve) | 167 | Medium | Two Pointers (Opposite) | Two Ptr O(n)/O(1) | O(n) | O(1) | ⚡ | 4 | Box 1 | 🟡 LEAN HIRE. Initial 0-indexed bug, self-debugged. Zero hints. ~5 min. |
+| 14 | Jun 17 | Group Anagrams (re-solve) | 49 | Medium | HashMap Grouping (Freq Key) | Freq key O(n·k)/O(n·k) | O(n·k) | O(n·k) | ✅ | 5 | Box 1 | 🟢 HIRE. All 5 tests first try. Zero bugs, zero hints. ~6 min. Arrays.toString() correct. |
+| 15 | Jun 17 | Top K Frequent (re-solve) | 347 | Medium | Freq Count + Bucket Sort | Bucket Sort O(n)/O(n) | O(n) | O(n) | ✅ | 5 | Box 1 | 🟢 HIRE. All 5 tests first try. Zero bugs, zero hints. ~16 min. List[] correct. Minor: missing inner ptr guard. |
 
 ---
 
@@ -43,4 +45,5 @@
 | Pre-plan | 3 (re-solves) + 1 new | 2 | 1 | 0 | 0 | 4.7 | HashMap/HashSet |
 | W1 D1 | 2 (complete) | 1 | 1 | 0 | 0 | 4.5 | HashMap/HashSet |
 | W1 D2 | 2 (complete) | 1 | 1 | 0 | 0 | 4.5 | Frequency Count / Two Pointers |
+| W1 D3 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | HashMap Grouping / Bucket Sort |
 | ... | — | — | — | — | — | — | — |

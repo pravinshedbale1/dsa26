@@ -156,8 +156,8 @@
 | D1 | **Contains Duplicate** (LC #217) | Easy | HashSet | Sort O(n log n) → HashSet O(n) | ✅ Solved (Jun 15) |
 | D2 | **Valid Anagram** (LC #242) | Easy | Frequency array | Sort → Frequency count (int[26]) | ✅ Solved (Jun 17) |
 | D2 | **Two Sum II (Sorted)** (LC #167) | Medium | Two pointers on sorted | Binary search → Two pointers | ✅ Solved (Jun 17) |
-| D3 | **Group Anagrams** (LC #49) | Medium | HashMap with sorted key | Brute → Sorted string key → Char count key | 💾 Pre-plan |
-| D3 | **Top K Frequent Elements** (LC #347) | Medium | HashMap + Heap/Bucket | Sort O(n log n) → Heap O(n log k) → Bucket O(n) | 💾 Pre-plan |
+| D3 | **Group Anagrams** (LC #49) | Medium | HashMap with sorted key | Brute → Sorted string key → Char count key | ✅ Solved (Jun 17) |
+| D3 | **Top K Frequent Elements** (LC #347) | Medium | HashMap + Heap/Bucket | Sort O(n log n) → Heap O(n log k) → Bucket O(n) | ✅ Solved (Jun 17) |
 | D4 | **Product of Array Except Self** (LC #238) | Medium | Prefix/Suffix | Division O(n) → Prefix+Suffix O(n) no division | 💾 Pre-plan |
 | D4 | **Longest Consecutive Sequence** (LC #128) | Medium | HashSet + sequence start | Sort O(n log n) → HashSet O(n) | |
 | D5 | **Encode and Decode Strings** (LC #271) | Medium | Delimiter design | Length-prefix encoding | |

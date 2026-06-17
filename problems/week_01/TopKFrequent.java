@@ -4,20 +4,22 @@
  * ============================================================
  * 
  * PROBLEM:
- *   Given an integer array nums and an integer k, return
- *   the k most frequent elements. Answer in any order.
- *
- * PATTERN: Frequency Count + Bucket Sort
- *
- * COMPLEXITY:
- *   Brute:   O(n log n) time, O(n) space — freq map + sort
- *   Optimal: O(n) time, O(n) space — freq map + bucket sort
+ *   Given an integer array nums and an integer k, return the
+ *   k most frequent elements. You may return the answer in
+ *   any order.
  *
  * CONSTRAINTS:
  *   1 <= nums.length <= 10^5
  *   -10^4 <= nums[i] <= 10^4
- *   k is in range [1, number of unique elements]
- *   Answer is guaranteed to be unique.
+ *   k is in the range [1, number of unique elements]
+ *   It is guaranteed that the answer is unique.
+ *
+ * EXAMPLES:
+ *   Input:  nums = [1,1,1,2,2,3], k = 2
+ *   Output: [1,2]
+ *
+ *   Input:  nums = [1], k = 1
+ *   Output: [1]
  * ============================================================
  */
 
@@ -27,34 +29,40 @@ public class TopKFrequent {
 
     // ✅ Fill in this method
     public static int[] topKFrequent(int[] nums, int k) {
-        int[] result = new int[k];
         int size = nums.length;
-
         Map<Integer, Integer> freqMap = new HashMap<>();
-
-        for (int num : nums) {
-            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
-        }
-
-        List<Integer>[] buckets = new List[size + 1];
-
-        for (int key : freqMap.keySet()) {
-            int freq = freqMap.get(key);
-            if (buckets[freq] == null) {
-                List<Integer> list = new ArrayList<>();
-                list.add(key);
-                buckets[freq] = list;
+        for (int n : nums) {
+            if (freqMap.containsKey(n)) {
+                freqMap.put(n, freqMap.get(n) + 1);
             } else {
-                buckets[freq].add(key);
+                freqMap.put(n, 1);
             }
         }
 
+        List[] buckets = new List[size + 1];
+
+        for (int n : freqMap.keySet()) {
+            int key = freqMap.get(n);
+            int value = n;
+
+            if (buckets[key] == null) {
+                List<Integer> list = new ArrayList<>();
+                list.add(value);
+                buckets[key] = list;
+            } else {
+                buckets[key].add(value);
+            }
+        }
+
+        int[] result = new int[k];
         int ptr = 0;
-        for (int i = size; i >= 0; i--) {
-            if (buckets[i] != null) {
-                for (int num : buckets[i]) {
-                    if (ptr < k)
-                        result[ptr++] = num;
+
+        for (int i = size; i >= 1 && ptr < k; i--) {
+            List<Integer> list = buckets[i];
+            if (list != null) {
+                for (int n : list) {
+                    result[ptr] = n;
+                    ptr++;
                 }
             }
         }
@@ -62,31 +70,45 @@ public class TopKFrequent {
         return result;
     }
 
-    // ============ DRIVER CODE — DO NOT MODIFY ============
+    // ─── Driver Code ──────────────────────────────────────────
     public static void main(String[] args) {
-        // Test 1: Basic case
+
+        // Test 1: Standard case
         int[] r1 = topKFrequent(new int[] { 1, 1, 1, 2, 2, 3 }, 2);
-        Arrays.sort(r1);
-        assert Arrays.equals(r1, new int[] { 1, 2 }) : "Test 1 FAILED: expected [1,2], got " + Arrays.toString(r1);
+        assert arraysEqualUnordered(r1, new int[] { 1, 2 }) : "Test 1 FAILED — got " + Arrays.toString(r1);
+        System.out.println("Test 1 PASSED ✅  result=" + Arrays.toString(r1));
 
         // Test 2: Single element
         int[] r2 = topKFrequent(new int[] { 1 }, 1);
-        assert Arrays.equals(r2, new int[] { 1 }) : "Test 2 FAILED: expected [1], got " + Arrays.toString(r2);
+        assert arraysEqualUnordered(r2, new int[] { 1 }) : "Test 2 FAILED — got " + Arrays.toString(r2);
+        System.out.println("Test 2 PASSED ✅  result=" + Arrays.toString(r2));
 
-        // Test 3: All same frequency, k = total unique
+        // Test 3: All same frequency, k equals unique count
         int[] r3 = topKFrequent(new int[] { 1, 2, 3 }, 3);
-        Arrays.sort(r3);
-        assert Arrays.equals(r3, new int[] { 1, 2, 3 }) : "Test 3 FAILED: expected [1,2,3], got " + Arrays.toString(r3);
+        assert arraysEqualUnordered(r3, new int[] { 1, 2, 3 }) : "Test 3 FAILED — got " + Arrays.toString(r3);
+        System.out.println("Test 3 PASSED ✅  result=" + Arrays.toString(r3));
 
         // Test 4: Negative numbers
-        int[] r4 = topKFrequent(new int[] { -1, -1, -1, 2, 2, 3, 3, 3, 3 }, 2);
-        Arrays.sort(r4);
-        assert Arrays.equals(r4, new int[] { -1, 3 }) : "Test 4 FAILED: expected [-1,3], got " + Arrays.toString(r4);
+        int[] r4 = topKFrequent(new int[] { -1, -1, 2, 2, 2, 3 }, 2);
+        assert arraysEqualUnordered(r4, new int[] { 2, -1 }) : "Test 4 FAILED — got " + Arrays.toString(r4);
+        System.out.println("Test 4 PASSED ✅  result=" + Arrays.toString(r4));
 
-        // Test 5: k = 1, find the single most frequent
-        int[] r5 = topKFrequent(new int[] { 4, 4, 4, 1, 1, 2 }, 1);
-        assert Arrays.equals(r5, new int[] { 4 }) : "Test 5 FAILED: expected [4], got " + Arrays.toString(r5);
+        // Test 5: k = 1, clear winner
+        int[] r5 = topKFrequent(new int[] { 4, 4, 4, 1, 1, 2, 2, 2, 2 }, 1);
+        assert arraysEqualUnordered(r5, new int[] { 2 }) : "Test 5 FAILED — got " + Arrays.toString(r5);
+        System.out.println("Test 5 PASSED ✅  result=" + Arrays.toString(r5));
 
-        System.out.println("✅ All tests passed!");
+        System.out.println("\n🎉 All tests passed!");
+    }
+
+    // Helper: compare two arrays ignoring order
+    private static boolean arraysEqualUnordered(int[] a, int[] b) {
+        if (a.length != b.length)
+            return false;
+        int[] aSorted = a.clone();
+        Arrays.sort(aSorted);
+        int[] bSorted = b.clone();
+        Arrays.sort(bSorted);
+        return Arrays.equals(aSorted, bSorted);
     }
 }
