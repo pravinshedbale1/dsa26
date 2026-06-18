@@ -23,10 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Valid Anagram (LC #242) | Frequency Count (int[26]) | Jun 17 | Jun 17 | Jun 18 |
-| Two Sum II (LC #167) | Two Pointers (Opposite) | Jun 17 | Jun 17 | Jun 18 |
-| Group Anagrams (LC #49) | HashMap Grouping (Freq Key) | Jun 17 | Jun 17 | Jun 18 |
-| Top K Frequent (LC #347) | Freq Count + Bucket Sort | Jun 17 | Jun 17 | Jun 18 |
+| Product Except Self (LC #238) | Prefix/Suffix Product | Jun 18 | Jun 18 | Jun 19 |
+| Longest Consecutive Sequence (LC #128) | HashSet + Sequence Start | Jun 18 | Jun 18 | Jun 19 |
 
 ---
 
@@ -36,6 +34,10 @@
 |---------|---------|------------|-------------|-------------|
 | Two Sum (LC #1) | HashMap Complement | Jun 17 | Jun 17 | Jun 20 |
 | Contains Duplicate (LC #217) | HashSet Membership | Jun 17 | Jun 17 | Jun 20 |
+| Valid Anagram (LC #242) | Frequency Count (int[26]) | Jun 18 | Jun 18 | Jun 21 |
+| Two Sum II (LC #167) | Two Pointers (Opposite) | Jun 18 | Jun 18 | Jun 21 |
+| Group Anagrams (LC #49) | HashMap Grouping (Freq Key) | Jun 18 | Jun 18 | Jun 21 |
+| Top K Frequent (LC #347) | Freq Count + Bucket Sort | Jun 18 | Jun 18 | Jun 21 |
 
 ---
 
@@ -65,17 +67,17 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: June 17, 2026
+**Date**: June 18, 2026
 
 ### Due Today:
-- ✅ Two Sum (LC #1) — Recalled perfectly → Promoted to Box 2
-- ✅ Contains Duplicate (LC #217) — Recalled perfectly → Promoted to Box 2
+- ✅ Valid Anagram (LC #242) — Recalled perfectly → Promoted to Box 2
+- ✅ Two Sum II (LC #167) — Recalled perfectly → Promoted to Box 2
+- ✅ Group Anagrams (LC #49) — Recalled perfectly → Promoted to Box 2
+- ✅ Top K Frequent (LC #347) — Recalled perfectly → Promoted to Box 2
 
 ### Problems Solved Today:
-- ✅ Valid Anagram (LC #242) — 🟢 HIRE, re-solve
-- ✅ Two Sum II (LC #167) — 🟡 LEAN HIRE, re-solve
-- ✅ Group Anagrams (LC #49) — 🟢 HIRE, re-solve
-- ✅ Top K Frequent (LC #347) — 🟢 HIRE, re-solve
+- ✅ Product Except Self (LC #238) — 🟢 HIRE, re-solve, zero bugs, zero hints
+- ✅ Longest Consecutive Sequence (LC #128) — 🟢 HIRE, NEW, zero bugs, zero hints
 
 ### Review Checklist:
 For each problem due:
@@ -93,12 +95,12 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 6 |
-| Box 1 (daily) | 4 |
-| Box 2 (3-day) | 2 |
+| Total problems in system | 8 |
+| Box 1 (daily) | 2 |
+| Box 2 (3-day) | 6 |
 | Box 3 (weekly) | 0 |
 | Box 4 (bi-weekly) | 0 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 2 |
-| Problems solved today | 4 |
-| Streak (consecutive days) | 2 |
+| Reviews completed today | 4 |
+| Problems solved today | 2 |
+| Streak (consecutive days) | 3 |

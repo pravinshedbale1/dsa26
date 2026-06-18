@@ -35,6 +35,8 @@
 | 13 | Jun 17 | Two Sum II (re-solve) | 167 | Medium | Two Pointers (Opposite) | Two Ptr O(n)/O(1) | O(n) | O(1) | ⚡ | 4 | Box 1 | 🟡 LEAN HIRE. Initial 0-indexed bug, self-debugged. Zero hints. ~5 min. |
 | 14 | Jun 17 | Group Anagrams (re-solve) | 49 | Medium | HashMap Grouping (Freq Key) | Freq key O(n·k)/O(n·k) | O(n·k) | O(n·k) | ✅ | 5 | Box 1 | 🟢 HIRE. All 5 tests first try. Zero bugs, zero hints. ~6 min. Arrays.toString() correct. |
 | 15 | Jun 17 | Top K Frequent (re-solve) | 347 | Medium | Freq Count + Bucket Sort | Bucket Sort O(n)/O(n) | O(n) | O(n) | ✅ | 5 | Box 1 | 🟢 HIRE. All 5 tests first try. Zero bugs, zero hints. ~16 min. List[] correct. Minor: missing inner ptr guard. |
+| 16 | Jun 18 | Product Except Self (re-solve) | 238 | Medium | Prefix/Suffix Product | Two-array O(n)/O(n) → Optimal O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. All 5 tests first try. Zero bugs, zero hints. ~11 min. O(1) space optimization flawless. |
+| 17 | Jun 18 | Longest Consecutive Sequence (NEW) | 128 | Medium | HashSet + Sequence Start | Sort O(n log n) → HashSet O(n)/O(n) | O(n) | O(n) | ✅ | 4 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests first try. Zero bugs, zero hints. ~10 min. Iterated set not nums (smart). |
 
 ---
 
@@ -46,4 +48,5 @@
 | W1 D1 | 2 (complete) | 1 | 1 | 0 | 0 | 4.5 | HashMap/HashSet |
 | W1 D2 | 2 (complete) | 1 | 1 | 0 | 0 | 4.5 | Frequency Count / Two Pointers |
 | W1 D3 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | HashMap Grouping / Bucket Sort |
+| W1 D4 | 2 (complete) | 2 | 0 | 0 | 0 | 4.5 | Prefix/Suffix / HashSet Sequence |
 | ... | — | — | — | — | — | — | — |

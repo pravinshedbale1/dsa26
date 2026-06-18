@@ -35,6 +35,7 @@
 | 24 | "Overlapping subproblems + optimal substructure" | Dynamic Programming | **DP** | Define state → recurrence → base case |
 | 25 | "Prefix lookup / autocomplete" | Trie | **Trie** | TrieNode with children[26] |
 | 26 | "Overlapping intervals" | Sort by start + merge | **Interval Merge** | Compare curr.start with prev.end |
+| 27 | "Longest consecutive sequence" in O(n) | HashSet + only count from starts | **Sequence Start Detection** | `if (!set.contains(n-1))` → count forward |
 
 ---
 

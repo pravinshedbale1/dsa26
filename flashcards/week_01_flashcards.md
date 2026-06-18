@@ -114,6 +114,37 @@
 
 ---
 
+## Card 10: Prefix/Suffix Product
+```
+🔍 TRIGGER: "Product of all elements except self" or "everything except current"
+💡 IDEA:   Build prefix products left→right into answer array,
+           then multiply suffix products right→left using a running variable
+📝 CODE:   answer[0] = 1; answer[i] = answer[i-1] * nums[i-1]
+           product = 1; answer[i] *= product; product *= nums[i]
+⏱️ TIME:   O(n)  |  SPACE: O(1) extra (output doesn't count)
+⚠️ EDGE:   Zeros (make everything except zero's position = 0)
+           Base case is 1 (multiplicative identity), NOT the element
+🧠 KEY:    "Two passes, not two arrays. Output array does double duty."
+```
+
+---
+
+## Card 11: HashSet + Sequence Start Detection
+```
+🔍 TRIGGER: "Longest consecutive sequence" in unsorted data, O(n)
+💡 IDEA:   Dump into HashSet. Only count from SEQUENCE STARTS (num-1 not in set).
+           Count forward: num+1, num+2... until chain breaks.
+📝 CODE:   if (!set.contains(n - 1)) { count forward... }
+⏱️ TIME:   O(n)  |  SPACE: O(n)
+⚠️ EDGE:   Duplicates (iterate set not nums!), empty array
+🧠 KEY:    "Inner while loop total across ALL iterations = n.
+           Each element is visited at most twice. This is AMORTIZED O(n)."
+⚠️ TRAP:   Looks O(n²) because of nested loop — but it's NOT.
+           Same amortized pattern as sliding window and two pointers.
+```
+
+---
+
 ## 🧠 Week 1 Summary Mantra
 ```
 ╔════════════════════════════════════════════════╗
@@ -124,6 +155,8 @@
 ║  Need to GROUP things?    → HashMap<key,list>    ║
 ║  Need TOP K by frequency? → Freq map + Bucket   ║
 ║  SORTED + find pair?      → Two Pointers        ║
+║  Everything EXCEPT self?  → Prefix/Suffix       ║
+║  Consecutive sequence?    → HashSet + Start Detect║
 ║                                                ║
 ║  🔴 COMPARING TWO INPUTS? → SIZE CHECK FIRST!  ║
 ╚════════════════════════════════════════════════╝

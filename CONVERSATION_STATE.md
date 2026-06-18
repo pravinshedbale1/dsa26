@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 1 |
-| **Current Day** | Day 3 (June 17, 2026) — COMPLETE ✅ |
+| **Current Day** | Day 4 (June 18, 2026) — COMPLETE ✅ |
 | **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Day 3 complete ✅ (Group Anagrams + Top K Frequent) |
-| **Session Count** | 3 |
-| **Total Problems Solved** | 6 (new plan) |
+| **Current Problem** | Day 4 complete ✅ (Product Except Self + Longest Consecutive Sequence) |
+| **Session Count** | 4 |
+| **Total Problems Solved** | 8 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 116 |
+| **Days Remaining** | 115 |
 
 ---
 
@@ -245,6 +245,28 @@ TEMPLATE for each session entry:
 - Minor improvement area: add defensive `ptr < k` guard in inner loops
 - Day 3 complete! Ready for Day 4 (Product of Array Except Self + Longest Consecutive Sequence)
 
+### Session #4 — June 18, 2026 — Arrays & Hashing (Week 1, Day 4)
+**Status**: ✅ COMPLETE
+**Duration**: ~35 min
+
+**Spaced Repetition Recall Results (4 Box 1 problems)**:
+- Valid Anagram (LC #242): ✅ Perfect — pattern, approach, complexity recalled. Note: said SC O(n) instead of O(1) for int[26]. Corrected. → **Promoted to Box 2**
+- Two Sum II (LC #167): ✅ Perfect — pattern, pointer movement, complexity all correct → **Promoted to Box 2**
+- Group Anagrams (LC #49): ✅ Perfect — freq key approach, both options explained, complexity correct → **Promoted to Box 2**
+- Top K Frequent (LC #347): ✅ Solid — approach correct, but said TC is O(m·n) instead of O(n). Corrected. → **Promoted to Box 2**
+
+**Problems Covered**:
+- Product Except Self (LC #238): ✅ Re-solve — 🟢 HIRE. O(1) space optimization flawless. All 5 tests first try. Zero bugs, zero hints. ~11 min. Massive improvement from Jun 10 (2 debug iterations → zero).
+- Longest Consecutive Sequence (LC #128): ✅ NEW — 🟢 HIRE. First time seeing this problem. All 5 tests first try. Zero bugs, zero hints. ~10 min. Concept teach needed for O(n) amortized analysis.
+
+**Key Observations**:
+- **4-problem HIRE streak** continues (6 total: Group Anagrams, Top K, Product Except Self, Longest Consecutive)
+- Recall minor issues: said O(n) space for int[26] (should be O(1)), said O(m·n) for bucket sort (should be O(n)). Know the approaches but complexity articulation needs sharpening.
+- Longest Consecutive: initially didn't understand why nested loop is O(n). Needed concrete step-by-step example. Now understood — **amortized analysis** concept clicked.
+- Smart code decision: iterated over `set` instead of `nums` to naturally handle duplicates.
+- **New session rule**: Track nuance notes (complexity reasoning, exact mistakes, conceptual gaps) in analysis markdown files for reference.
+- Day 4 complete! Ready for Day 5 (Encode and Decode Strings + Valid Sudoku)
+
 ---
 
 #### 📂 Pre-Reset Sessions (June 3–10, 2026)
@@ -342,7 +364,8 @@ TEMPLATE for each session entry:
 | — | HashMap Grouping | 5 | June 17 | Group Anagrams — 🟢 HIRE, zero bugs, freq key approach |
 | — | Bucket Sort (Freq as Index) | 5 | June 17 | Top K Frequent — 🟢 HIRE, zero bugs, zero hints. Locked in. |
 | 3 | Two Pointers (Opposite Ends) | 4 | June 17 | Two Sum II — clean re-solve |
-| — | Prefix/Suffix | 4 | June 10 | Product Except Self — solved + optimized to O(1) space |
+| — | Prefix/Suffix | 5 | June 18 | Product Except Self — 🟢 HIRE, O(1) space optimization flawless |
+| — | HashSet + Sequence Start | 4 | June 18 | Longest Consecutive Sequence — 🟢 HIRE, NEW, amortized O(n) understood |
 | 4 | Two Pointers (Same Direction) | — | — | — |
 | 5 | Sliding Window (Fixed) | — | — | — |
 | 6 | Sliding Window (Variable) | — | — | — |
@@ -373,10 +396,12 @@ TEMPLATE for each session entry:
 |---------|-----------|---------------|----------|--------|
 | Two Sum (LC #1) | Box 2 | June 17 | June 20 | ⏳ Due Jun 20 |
 | Contains Duplicate (LC #217) | Box 2 | June 17 | June 20 | ⏳ Due Jun 20 |
-| Valid Anagram (LC #242) | Box 1 | June 17 | June 18 | ⏳ Due Jun 18 |
-| Two Sum II (LC #167) | Box 1 | June 17 | June 18 | ⏳ Due Jun 18 |
-| Group Anagrams (LC #49) | Box 1 | June 17 | June 18 | 🆕 Added today |
-| Top K Frequent (LC #347) | Box 1 | June 17 | June 18 | 🆕 Added today |
+| Valid Anagram (LC #242) | Box 2 | June 18 | June 21 | ⏳ Due Jun 21 |
+| Two Sum II (LC #167) | Box 2 | June 18 | June 21 | ⏳ Due Jun 21 |
+| Group Anagrams (LC #49) | Box 2 | June 18 | June 21 | ⏳ Due Jun 21 |
+| Top K Frequent (LC #347) | Box 2 | June 18 | June 21 | ⏳ Due Jun 21 |
+| Product Except Self (LC #238) | Box 1 | June 18 | June 19 | 🆕 Added today |
+| Longest Consecutive Sequence (LC #128) | Box 1 | June 18 | June 19 | 🆕 Added today |
 
 ---
 
@@ -396,17 +421,17 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #4 (June 18) — Day 4
-**Topic**: Arrays & Hashing — Week 1 Day 4
+**Next**: Session #5 (June 19) — Day 5
+**Topic**: Arrays & Hashing — Week 1 Day 5
 **Plan**:
-1. ⏰ Spaced repetition check: Valid Anagram + Two Sum II (Box 1 — due Jun 18)
-2. Problem #1: **Product of Array Except Self** (LC #238, Medium) — Prefix/Suffix (re-solve)
-3. Problem #2: **Longest Consecutive Sequence** (LC #128, Medium) — HashSet + sequence start (NEW)
+1. ⏰ Spaced repetition check: Product Except Self + Longest Consecutive Sequence (Box 1 — due Jun 19)
+2. Problem #1: **Encode and Decode Strings** (LC #271, Medium) — Delimiter/length-prefix design (NEW)
+3. Problem #2: **Valid Sudoku** (LC #36, Medium) — HashSet per row/col/box (NEW)
 
 **Focus**:
-- Product Except Self is a re-solve — aim for 🟢 HIRE, O(1) space optimization
-- Longest Consecutive Sequence is NEW — may need concept teaching in Phase A
-- Continue adding defensive guards in inner loops (lesson from Top K Frequent)
+- Both are NEW problems — may need concept teach in Phase A
+- Sharpen complexity articulation (today's recall had minor TC/SC mistakes)
+- Continue the HIRE streak! 🔥
 
 ---
 

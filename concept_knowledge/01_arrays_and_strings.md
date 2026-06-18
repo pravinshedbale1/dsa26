@@ -28,6 +28,11 @@ Template:
 - "Custom comparator `(a, b) -> map.get(b) - map.get(a)` sorts keys by their map values descending"
 - "When array is SORTED, that's a gift — don't waste it with HashMap. Use Two Pointers for O(1) space"
 - "Two Pointers on sorted: too small → move left right, too big → move right left"
+- "Prefix/Suffix base case is 1 (multiplicative identity) — NOT the element itself"
+- "Two passes, not two arrays — use output array for prefix, running variable for suffix → O(1) extra space"
+- "Nested loop ≠ always O(n²). If inner loop total across ALL outer iterations = n, it's AMORTIZED O(n)"
+- "Iterate over HashSet instead of input array to naturally handle duplicates without extra logic"
+- "Sequence start detection: num-1 NOT in set means this is the beginning of a chain — only count from here"
 
 ---
 
@@ -81,5 +86,7 @@ Template:
 - HashMap Complement → Two Sum
 - Frequency Count → Valid Anagram, Top K Frequent
 - Prefix Sum → Subarray Sum Equals K, Product of Array Except Self
+- Prefix/Suffix Product → Product of Array Except Self (O(1) space trick)
 - HashMap Grouping → Group Anagrams
 - Two Pointers (Opposite Ends) → Two Sum II (sorted input, O(1) space)
+- HashSet + Sequence Start → Longest Consecutive Sequence (amortized O(n))
