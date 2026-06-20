@@ -36,6 +36,8 @@
 | 25 | "Prefix lookup / autocomplete" | Trie | **Trie** | TrieNode with children[26] |
 | 26 | "Overlapping intervals" | Sort by start + merge | **Interval Merge** | Compare curr.start with prev.end |
 | 27 | "Longest consecutive sequence" in O(n) | HashSet + only count from starts | **Sequence Start Detection** | `if (!set.contains(n-1))` → count forward |
+| 28 | "Encode/decode list of strings" with any chars | Prepend length + delimiter before each string | **Length-Prefix Encoding** | `len#string` — read length, then read exactly that many chars |
+| 29 | "Validate grid rows/cols/boxes" for duplicates | HashSet per row, col, and box; box = (r/3)*3+(c/3) | **HashSet Validation** | `!rows[r].add(v) \|\| !cols[c].add(v) \|\| !boxes[idx].add(v)` |
 
 ---
 

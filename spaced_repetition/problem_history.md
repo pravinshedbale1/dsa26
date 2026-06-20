@@ -37,6 +37,8 @@
 | 15 | Jun 17 | Top K Frequent (re-solve) | 347 | Medium | Freq Count + Bucket Sort | Bucket Sort O(n)/O(n) | O(n) | O(n) | ✅ | 5 | Box 1 | 🟢 HIRE. All 5 tests first try. Zero bugs, zero hints. ~16 min. List[] correct. Minor: missing inner ptr guard. |
 | 16 | Jun 18 | Product Except Self (re-solve) | 238 | Medium | Prefix/Suffix Product | Two-array O(n)/O(n) → Optimal O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. All 5 tests first try. Zero bugs, zero hints. ~11 min. O(1) space optimization flawless. |
 | 17 | Jun 18 | Longest Consecutive Sequence (NEW) | 128 | Medium | HashSet + Sequence Start | Sort O(n log n) → HashSet O(n)/O(n) | O(n) | O(n) | ✅ | 4 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests first try. Zero bugs, zero hints. ~10 min. Iterated set not nums (smart). |
+| 18 | Jun 20 | Encode and Decode Strings (NEW) | 271 | Medium | Length-Prefix Encoding | Length-prefix O(n)/O(n) | O(n) | O(n) | ⚡ | 4 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests first run. 1 hint (decode structure). Cleaned up nits (unused var, debug print). |
+| 19 | Jun 20 | Valid Sudoku (NEW) | 36 | Medium | HashSet per Row/Col/Box | HashSet O(81)/O(81) = O(1)/O(1) | O(1) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests first try. Zero bugs, zero hints. ~15 min. Elegant !set.add() triple check. Box index formula derived independently. |
 
 ---
 
@@ -49,4 +51,5 @@
 | W1 D2 | 2 (complete) | 1 | 1 | 0 | 0 | 4.5 | Frequency Count / Two Pointers |
 | W1 D3 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | HashMap Grouping / Bucket Sort |
 | W1 D4 | 2 (complete) | 2 | 0 | 0 | 0 | 4.5 | Prefix/Suffix / HashSet Sequence |
+| W1 D5 | 2 (complete) | 1 | 1 | 0 | 0 | 4.5 | Length-Prefix / HashSet Validation |
 | ... | — | — | — | — | — | — | — |

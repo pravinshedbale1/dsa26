@@ -145,6 +145,37 @@
 
 ---
 
+## Card 12: Length-Prefix Encoding
+```
+🔍 TRIGGER: "Encode/decode list of strings" or "serialize strings with ANY chars"
+💡 IDEA:   Prepend each string with its length + delimiter.
+           Decode by reading length, then reading exactly that many chars.
+📝 CODE:   Encode: sb.append(str.length() + "#" + str)
+           Decode: hashPos = s.indexOf('#', i); len = parseInt(s.substring(i, hashPos));
+                   str = s.substring(hashPos+1, hashPos+len+1); i = hashPos+len+1;
+⏱️ TIME:   O(n)  |  SPACE: O(n)  where n = total characters
+⚠️ EDGE:   Empty strings (length=0), strings containing the delimiter #
+🧠 KEY:    "Count, don't scan. Length-prefix makes delimiter ambiguity impossible."
+           Same principle as HTTP Content-Length, TCP, Protocol Buffers.
+```
+
+---
+
+## Card 13: HashSet Validation (Row/Col/Box)
+```
+🔍 TRIGGER: "Validate a grid" or "check rows/columns/boxes for duplicates"
+💡 IDEA:   HashSet per row (9), per col (9), per box (9). One pass.
+           Box index from (r,c): boxIndex = (r/3)*3 + (c/3)
+📝 CODE:   if (!rows[r].add(val) || !cols[c].add(val) || !boxes[boxIdx].add(val))
+               return false;
+⏱️ TIME:   O(1)  |  SPACE: O(1)  (fixed 9×9 board)
+⚠️ EDGE:   Skip '.' cells, empty board is valid
+🧠 KEY:    "Integer division collapses 3 indices into 1. r/3 maps 0,1,2→0 and 3,4,5→1."
+           Reuses !set.add() idiom from Contains Duplicate.
+```
+
+---
+
 ## 🧠 Week 1 Summary Mantra
 ```
 ╔════════════════════════════════════════════════╗
@@ -157,6 +188,8 @@
 ║  SORTED + find pair?      → Two Pointers        ║
 ║  Everything EXCEPT self?  → Prefix/Suffix       ║
 ║  Consecutive sequence?    → HashSet + Start Detect║
+║  Encode/Decode strings?   → Length-Prefix        ║
+║  Validate grid?           → HashSet per Row/Col/Box║
 ║                                                ║
 ║  🔴 COMPARING TWO INPUTS? → SIZE CHECK FIRST!  ║
 ╚════════════════════════════════════════════════╝

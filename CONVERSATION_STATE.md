@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 1 |
-| **Current Day** | Day 4 (June 18, 2026) — COMPLETE ✅ |
+| **Current Day** | Day 5 (June 20, 2026) — COMPLETE ✅ |
 | **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Day 4 complete ✅ (Product Except Self + Longest Consecutive Sequence) |
-| **Session Count** | 4 |
-| **Total Problems Solved** | 8 (new plan) |
+| **Current Problem** | Day 5 complete ✅ (Encode and Decode Strings + Valid Sudoku) |
+| **Session Count** | 5 |
+| **Total Problems Solved** | 10 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 115 |
+| **Days Remaining** | 113 |
 
 ---
 
@@ -267,6 +267,29 @@ TEMPLATE for each session entry:
 - **New session rule**: Track nuance notes (complexity reasoning, exact mistakes, conceptual gaps) in analysis markdown files for reference.
 - Day 4 complete! Ready for Day 5 (Encode and Decode Strings + Valid Sudoku)
 
+### Session #5 — June 20, 2026 — Arrays & Hashing (Week 1, Day 5)
+**Status**: ✅ COMPLETE
+**Duration**: ~45 min
+
+**Spaced Repetition Recall Results (4 problems due)**:
+- Product Except Self (LC #238): ✅ Perfect — pattern, approach (running postfix variable), complexity all correct → **Promoted to Box 2**
+- Longest Consecutive Sequence (LC #128): ✅ Solid — approach correct, amortized reasoning slightly vague but corrected → **Promoted to Box 2**
+- Two Sum (LC #1): ✅ Correct — initially misread as Two Sum II (reading error, not knowledge gap). Corrected and recalled HashMap complement approach → **Promoted to Box 3**
+- Contains Duplicate (LC #217): ✅ Perfect — `!set.add()` idiom recalled instantly → **Promoted to Box 3**
+
+**Problems Covered**:
+- Encode and Decode Strings (LC #271): ⚡ NEW — 🟢 HIRE. Needed concept teach (length-prefix pattern). Encode solved independently. Decode needed 1 hint (pointer-based traversal with indexOf). All 5 tests first run. Minor nits cleaned (unused `char[] chars`, debug print).
+- Valid Sudoku (LC #36): ✅ NEW — 🟢 HIRE. Concept teach on box index formula `(r/3)*3 + (c/3)`. All 5 tests first try. Zero bugs, zero hints. ~15 min. Elegant `!set.add()` triple-check in one boolean expression. Initialized HashSet arrays in loop (avoided NullPointerException without being warned).
+
+**Key Observations**:
+- **8-problem 🟢 HIRE streak** (Group Anagrams, Top K, Product Except Self, Longest Consecutive, Encode/Decode, Valid Sudoku)
+- Pattern transfer in action: reused `!set.add()` idiom from Contains Duplicate in Valid Sudoku's triple-check
+- Length-prefix is a design/serialization pattern — different flavor from algorithmic patterns. Good exposure.
+- Box index formula `(r/3)*3 + (c/3)` derived independently after hint about integer division
+- Recall: Two Sum vs Two Sum II misread — reminder to read problem titles carefully in interviews
+- Amortized O(n) reasoning for Longest Consecutive Sequence tightened: "each element consumed by exactly one sequence"
+- Day 5 complete! Week 1 Arrays & Hashing approaching completion. Ready for Day 6.
+
 ---
 
 #### 📂 Pre-Reset Sessions (June 3–10, 2026)
@@ -366,6 +389,8 @@ TEMPLATE for each session entry:
 | 3 | Two Pointers (Opposite Ends) | 4 | June 17 | Two Sum II — clean re-solve |
 | — | Prefix/Suffix | 5 | June 18 | Product Except Self — 🟢 HIRE, O(1) space optimization flawless |
 | — | HashSet + Sequence Start | 4 | June 18 | Longest Consecutive Sequence — 🟢 HIRE, NEW, amortized O(n) understood |
+| — | Length-Prefix Encoding | 4 | June 20 | Encode and Decode Strings — 🟢 HIRE, NEW, 1 hint on decode |
+| — | HashSet Validation (Row/Col/Box) | 5 | June 20 | Valid Sudoku — 🟢 HIRE, NEW, zero hints, box index derived |
 | 4 | Two Pointers (Same Direction) | — | — | — |
 | 5 | Sliding Window (Fixed) | — | — | — |
 | 6 | Sliding Window (Variable) | — | — | — |
@@ -421,17 +446,16 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #5 (June 19) — Day 5
-**Topic**: Arrays & Hashing — Week 1 Day 5
+**Next**: Session #6 (June 21) — Day 6
+**Topic**: Arrays & Hashing — Week 1 Day 6
 **Plan**:
-1. ⏰ Spaced repetition check: Product Except Self + Longest Consecutive Sequence (Box 1 — due Jun 19)
-2. Problem #1: **Encode and Decode Strings** (LC #271, Medium) — Delimiter/length-prefix design (NEW)
-3. Problem #2: **Valid Sudoku** (LC #36, Medium) — HashSet per row/col/box (NEW)
+1. ⏰ Spaced repetition check: Encode and Decode Strings + Valid Sudoku (Box 1 — due Jun 21) + Valid Anagram, Two Sum II, Group Anagrams, Top K Frequent (Box 2 — due Jun 21)
+2. Problem #1: TBD — check master plan for Week 1 Day 6 problems
+3. Problem #2: TBD
 
 **Focus**:
-- Both are NEW problems — may need concept teach in Phase A
-- Sharpen complexity articulation (today's recall had minor TC/SC mistakes)
-- Continue the HIRE streak! 🔥
+- Continue the HIRE streak! 🔥 (currently 8 in a row)
+- Week 1 nearing completion — may start Week 2 (Two Pointers / Sliding Window) soon
 
 ---
 
