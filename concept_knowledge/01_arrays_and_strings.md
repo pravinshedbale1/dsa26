@@ -33,6 +33,10 @@ Template:
 - "Nested loop ≠ always O(n²). If inner loop total across ALL outer iterations = n, it's AMORTIZED O(n)"
 - "Iterate over HashSet instead of input array to naturally handle duplicates without extra logic"
 - "Sequence start detection: num-1 NOT in set means this is the beginning of a chain — only count from here"
+- "Prefix Sum + HashMap = Two Sum pattern applied to running sums. prefixSum[j] - k in map? → subarray found"
+- "Must initialize HashMap with {0: 1} — otherwise subarrays starting at index 0 are missed"
+- "HashMap stores count (not just existence) because multiple prefix sums can have the same value → each creates a valid subarray"
+- "Don't need a prefixSum array — a running sum variable is sufficient. Saves O(n) space (though HashMap is still O(n))"
 
 ---
 
@@ -90,3 +94,4 @@ Template:
 - HashMap Grouping → Group Anagrams
 - Two Pointers (Opposite Ends) → Two Sum II (sorted input, O(1) space)
 - HashSet + Sequence Start → Longest Consecutive Sequence (amortized O(n))
+- Prefix Sum + HashMap → Subarray Sum Equals K (count subarrays with sum = k, O(n))

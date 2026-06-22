@@ -23,8 +23,7 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Encode and Decode Strings (LC #271) | Length-Prefix Encoding | Jun 20 | Jun 20 | Jun 21 |
-| Valid Sudoku (LC #36) | HashSet per Row/Col/Box | Jun 20 | Jun 20 | Jun 21 |
+| Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jun 21 | Jun 21 | Jun 22 |
 
 ---
 
@@ -32,12 +31,10 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Valid Anagram (LC #242) | Frequency Count (int[26]) | Jun 18 | Jun 18 | Jun 21 |
-| Two Sum II (LC #167) | Two Pointers (Opposite) | Jun 18 | Jun 18 | Jun 21 |
-| Group Anagrams (LC #49) | HashMap Grouping (Freq Key) | Jun 18 | Jun 18 | Jun 21 |
-| Top K Frequent (LC #347) | Freq Count + Bucket Sort | Jun 18 | Jun 18 | Jun 21 |
 | Product Except Self (LC #238) | Prefix/Suffix Product | Jun 20 | Jun 20 | Jun 23 |
 | Longest Consecutive Sequence (LC #128) | HashSet + Sequence Start | Jun 20 | Jun 20 | Jun 23 |
+| Encode and Decode Strings (LC #271) | Length-Prefix Encoding | Jun 21 | Jun 21 | Jun 24 |
+| Valid Sudoku (LC #36) | HashSet per Row/Col/Box | Jun 21 | Jun 21 | Jun 24 |
 
 ---
 
@@ -47,6 +44,10 @@
 |---------|---------|------------|-------------|-------------|
 | Two Sum (LC #1) | HashMap Complement | Jun 20 | Jun 20 | Jun 27 |
 | Contains Duplicate (LC #217) | HashSet Membership | Jun 20 | Jun 20 | Jun 27 |
+| Valid Anagram (LC #242) | Frequency Count (int[26]) | Jun 21 | Jun 21 | Jun 28 |
+| Two Sum II (LC #167) | Two Pointers (Opposite) | Jun 21 | Jun 21 | Jun 28 |
+| Group Anagrams (LC #49) | HashMap Grouping (Freq Key) | Jun 21 | Jun 21 | Jun 28 |
+| Top K Frequent (LC #347) | Freq Count + Bucket Sort | Jun 21 | Jun 21 | Jun 28 |
 
 ---
 
@@ -68,17 +69,18 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: June 20, 2026
+**Date**: June 21, 2026
 
 ### Due Today:
-- ✅ Product Except Self (LC #238) — Recalled perfectly → Promoted to Box 2
-- ✅ Longest Consecutive Sequence (LC #128) — Recalled solidly (amortized reasoning sharpened) → Promoted to Box 2
-- ✅ Two Sum (LC #1) — Recalled correctly (initial misread of problem title, not knowledge gap) → Promoted to Box 3
-- ✅ Contains Duplicate (LC #217) — Recalled perfectly, `!set.add()` idiom remembered → Promoted to Box 3
+- ✅ Encode and Decode Strings (LC #271) — Recalled solidly → Promoted to Box 2
+- ✅ Valid Sudoku (LC #36) — Recalled solidly (minor SC correction: O(n²) not O(n)) → Promoted to Box 2
+- ✅ Valid Anagram (LC #242) — Recalled perfectly, length early-exit 4th consecutive ✅ → Promoted to Box 3
+- ✅ Two Sum II (LC #167) — Recalled perfectly → Promoted to Box 3
+- ✅ Group Anagrams (LC #49) — Recalled perfectly, went straight to optimal freq key → Promoted to Box 3
+- ✅ Top K Frequent (LC #347) — Recalled perfectly, n+1 size reasoning correct → Promoted to Box 3
 
 ### Problems Solved Today:
-- ✅ Encode and Decode Strings (LC #271) — 🟢 HIRE, NEW, 1 hint, all 5 tests first run
-- ✅ Valid Sudoku (LC #36) — 🟢 HIRE, NEW, zero hints, all 5 tests first try
+- ✅ Subarray Sum Equals K (LC #560) — 🟢 HIRE, NEW, zero hints, all 5 tests passed (caught incorrect test case!)
 
 ### Review Checklist:
 For each problem due:
@@ -96,12 +98,12 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 10 |
-| Box 1 (daily) | 2 |
-| Box 2 (3-day) | 6 |
-| Box 3 (weekly) | 2 |
+| Total problems in system | 11 |
+| Box 1 (daily) | 1 |
+| Box 2 (3-day) | 4 |
+| Box 3 (weekly) | 6 |
 | Box 4 (bi-weekly) | 0 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 4 |
-| Problems solved today | 2 |
-| Streak (consecutive days) | 4 |
+| Reviews completed today | 6 |
+| Problems solved today | 1 |
+| Streak (consecutive days) | 5 |

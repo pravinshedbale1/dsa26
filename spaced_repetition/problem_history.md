@@ -39,6 +39,7 @@
 | 17 | Jun 18 | Longest Consecutive Sequence (NEW) | 128 | Medium | HashSet + Sequence Start | Sort O(n log n) → HashSet O(n)/O(n) | O(n) | O(n) | ✅ | 4 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests first try. Zero bugs, zero hints. ~10 min. Iterated set not nums (smart). |
 | 18 | Jun 20 | Encode and Decode Strings (NEW) | 271 | Medium | Length-Prefix Encoding | Length-prefix O(n)/O(n) | O(n) | O(n) | ⚡ | 4 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests first run. 1 hint (decode structure). Cleaned up nits (unused var, debug print). |
 | 19 | Jun 20 | Valid Sudoku (NEW) | 36 | Medium | HashSet per Row/Col/Box | HashSet O(81)/O(81) = O(1)/O(1) | O(1) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests first try. Zero bugs, zero hints. ~15 min. Elegant !set.add() triple check. Box index formula derived independently. |
+| 20 | Jun 21 | Subarray Sum Equals K (NEW) | 560 | Medium | Prefix Sum + HashMap | Brute O(n²)/O(1) → Optimal O(n)/O(n) | O(n) | O(n) | ✅ | 4 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests passed (caught incorrect test case!). Zero hints. Concept teach on prefix sum first. Used prefixSum array instead of running variable (minor optimization). |
 
 ---
 
@@ -52,4 +53,5 @@
 | W1 D3 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | HashMap Grouping / Bucket Sort |
 | W1 D4 | 2 (complete) | 2 | 0 | 0 | 0 | 4.5 | Prefix/Suffix / HashSet Sequence |
 | W1 D5 | 2 (complete) | 1 | 1 | 0 | 0 | 4.5 | Length-Prefix / HashSet Validation |
+| W1 D6 | 1 (complete) | 1 | 0 | 0 | 0 | 4.0 | Prefix Sum + HashMap |
 | ... | — | — | — | — | — | — | — |

@@ -38,6 +38,7 @@
 | 27 | "Longest consecutive sequence" in O(n) | HashSet + only count from starts | **Sequence Start Detection** | `if (!set.contains(n-1))` → count forward |
 | 28 | "Encode/decode list of strings" with any chars | Prepend length + delimiter before each string | **Length-Prefix Encoding** | `len#string` — read length, then read exactly that many chars |
 | 29 | "Validate grid rows/cols/boxes" for duplicates | HashSet per row, col, and box; box = (r/3)*3+(c/3) | **HashSet Validation** | `!rows[r].add(v) \|\| !cols[c].add(v) \|\| !boxes[idx].add(v)` |
+| 30 | "Count subarrays with sum = K" | Prefix sum + HashMap\<sum, count\>; check if (currentSum - k) in map | **Prefix Sum + HashMap** | `map.put(0,1); if (map.containsKey(sum-k)) count += map.get(sum-k)` |
 
 ---
 

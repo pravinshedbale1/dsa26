@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 1 |
-| **Current Day** | Day 5 (June 20, 2026) — COMPLETE ✅ |
+| **Current Day** | Day 6 (June 21, 2026) — COMPLETE ✅ |
 | **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Day 5 complete ✅ (Encode and Decode Strings + Valid Sudoku) |
-| **Session Count** | 5 |
-| **Total Problems Solved** | 10 (new plan) |
+| **Current Problem** | Day 6 complete ✅ (Subarray Sum Equals K) |
+| **Session Count** | 6 |
+| **Total Problems Solved** | 11 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 113 |
+| **Days Remaining** | 112 |
 
 ---
 
@@ -290,6 +290,30 @@ TEMPLATE for each session entry:
 - Amortized O(n) reasoning for Longest Consecutive Sequence tightened: "each element consumed by exactly one sequence"
 - Day 5 complete! Week 1 Arrays & Hashing approaching completion. Ready for Day 6.
 
+### Session #6 — June 21, 2026 — Arrays & Hashing (Week 1, Day 6)
+**Status**: ✅ COMPLETE
+**Duration**: ~30 min
+
+**Spaced Repetition Recall Results (6 problems due)**:
+- Encode and Decode Strings (LC #271): ✅ Solid — length-prefix pattern, encode/decode steps, O(n) indexOf reasoning → **Promoted to Box 2**
+- Valid Sudoku (LC #36): ✅ Solid — HashSet per row/col/box, box formula correct. Minor: said SC O(n) instead of O(n²) → **Promoted to Box 2**
+- Valid Anagram (LC #242): ✅ Perfect — length early-exit FIRST (4th consecutive!) → **Promoted to Box 3**
+- Two Sum II (LC #167): ✅ Perfect — two pointer approach and complexity correct → **Promoted to Box 3**
+- Group Anagrams (LC #49): ✅ Perfect — went straight to optimal freq key approach → **Promoted to Box 3**
+- Top K Frequent (LC #347): ✅ Perfect — bucket sort, n+1 size reasoning explained → **Promoted to Box 3**
+
+**Problems Covered**:
+- Subarray Sum Equals K (LC #560): ✅ NEW — 🟢 HIRE. Concept teach on prefix sum + HashMap first. All 5 tests passed. Zero hints. Caught incorrect test case expectation (6, not 4). Used prefixSum array (minor: could use running variable). Clean implementation.
+
+**Key Observations**:
+- **9-problem 🟢 HIRE streak** continues! (Group Anagrams, Top K, Product Except Self, Longest Consecutive, Encode/Decode, Valid Sudoku, Subarray Sum Equals K)
+- Spaced repetition: 6/6 recalled. All promoted. Zero in Box 1 (before new problem).
+- New pattern learned: Prefix Sum + HashMap = Two Sum pattern applied to running sums
+- Key insights locked in: {0:1} initialization, HashMap count vs existence, running sum optimization
+- Caught interviewer's incorrect test case — strong debugging instinct
+- Minor optimization available: replace prefixSum array with running variable (still O(n) SC due to HashMap)
+- Day 6 complete! Ready for Day 7 (Weekly Challenge).
+
 ---
 
 #### 📂 Pre-Reset Sessions (June 3–10, 2026)
@@ -389,8 +413,9 @@ TEMPLATE for each session entry:
 | 3 | Two Pointers (Opposite Ends) | 4 | June 17 | Two Sum II — clean re-solve |
 | — | Prefix/Suffix | 5 | June 18 | Product Except Self — 🟢 HIRE, O(1) space optimization flawless |
 | — | HashSet + Sequence Start | 4 | June 18 | Longest Consecutive Sequence — 🟢 HIRE, NEW, amortized O(n) understood |
-| — | Length-Prefix Encoding | 4 | June 20 | Encode and Decode Strings — 🟢 HIRE, NEW, 1 hint on decode |
-| — | HashSet Validation (Row/Col/Box) | 5 | June 20 | Valid Sudoku — 🟢 HIRE, NEW, zero hints, box index derived |
+| — | Length-Prefix Encoding | 4 | June 21 | Encode and Decode Strings — Recalled solidly in spaced rep |
+| — | HashSet Validation (Row/Col/Box) | 5 | June 21 | Valid Sudoku — Recalled solidly in spaced rep |
+| — | Prefix Sum + HashMap | 4 | June 21 | Subarray Sum Equals K — 🟢 HIRE, NEW, zero hints |
 | 4 | Two Pointers (Same Direction) | — | — | — |
 | 5 | Sliding Window (Fixed) | — | — | — |
 | 6 | Sliding Window (Variable) | — | — | — |
@@ -419,14 +444,17 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Two Sum (LC #1) | Box 2 | June 17 | June 20 | ⏳ Due Jun 20 |
-| Contains Duplicate (LC #217) | Box 2 | June 17 | June 20 | ⏳ Due Jun 20 |
-| Valid Anagram (LC #242) | Box 2 | June 18 | June 21 | ⏳ Due Jun 21 |
-| Two Sum II (LC #167) | Box 2 | June 18 | June 21 | ⏳ Due Jun 21 |
-| Group Anagrams (LC #49) | Box 2 | June 18 | June 21 | ⏳ Due Jun 21 |
-| Top K Frequent (LC #347) | Box 2 | June 18 | June 21 | ⏳ Due Jun 21 |
-| Product Except Self (LC #238) | Box 1 | June 18 | June 19 | 🆕 Added today |
-| Longest Consecutive Sequence (LC #128) | Box 1 | June 18 | June 19 | 🆕 Added today |
+| Subarray Sum Equals K (LC #560) | Box 1 | June 21 | June 22 | 🆕 Added today |
+| Product Except Self (LC #238) | Box 2 | June 20 | June 23 | ⏳ Due Jun 23 |
+| Longest Consecutive Sequence (LC #128) | Box 2 | June 20 | June 23 | ⏳ Due Jun 23 |
+| Encode and Decode Strings (LC #271) | Box 2 | June 21 | June 24 | ⏳ Due Jun 24 |
+| Valid Sudoku (LC #36) | Box 2 | June 21 | June 24 | ⏳ Due Jun 24 |
+| Two Sum (LC #1) | Box 3 | June 20 | June 27 | ⏳ Due Jun 27 |
+| Contains Duplicate (LC #217) | Box 3 | June 20 | June 27 | ⏳ Due Jun 27 |
+| Valid Anagram (LC #242) | Box 3 | June 21 | June 28 | ⏳ Due Jun 28 |
+| Two Sum II (LC #167) | Box 3 | June 21 | June 28 | ⏳ Due Jun 28 |
+| Group Anagrams (LC #49) | Box 3 | June 21 | June 28 | ⏳ Due Jun 28 |
+| Top K Frequent (LC #347) | Box 3 | June 21 | June 28 | ⏳ Due Jun 28 |
 
 ---
 
@@ -446,16 +474,20 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #6 (June 21) — Day 6
-**Topic**: Arrays & Hashing — Week 1 Day 6
+**Next**: Session #7 (June 22) — Day 7
+**Topic**: Arrays & Hashing — Week 1 Day 7 (🔥 Weekly Challenge)
 **Plan**:
-1. ⏰ Spaced repetition check: Encode and Decode Strings + Valid Sudoku (Box 1 — due Jun 21) + Valid Anagram, Two Sum II, Group Anagrams, Top K Frequent (Box 2 — due Jun 21)
-2. Problem #1: TBD — check master plan for Week 1 Day 6 problems
-3. Problem #2: TBD
+1. ⏰ Spaced repetition check: Subarray Sum Equals K (Box 1 — due Jun 22)
+2. 🔥 **Weekly Challenge**: Solve 2 UNSEEN problems using ONLY patterns learned in Week 1
+   - These will be problems you've never seen before
+   - You must identify the pattern and solve them under timed conditions
+   - This tests true pattern recognition, not memorization
+3. Week 1 wrap-up: review all patterns, update confidence scores
 
 **Focus**:
-- Continue the HIRE streak! 🔥 (currently 8 in a row)
-- Week 1 nearing completion — may start Week 2 (Two Pointers / Sliding Window) soon
+- Continue the HIRE streak! 🔥 (currently 9 in a row)
+- Pattern recognition on unseen problems is the real test
+- Week 1 completion! 🎉 Ready to start Week 2 (Two Pointers & Sorting)
 
 ---
 
