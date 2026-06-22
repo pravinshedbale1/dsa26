@@ -23,7 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jun 21 | Jun 21 | Jun 22 |
+| Contiguous Array (LC #525) | Prefix Sum + HashMap (Max Length Variant) | Jun 22 | Jun 22 | Jun 23 |
+| Sort Characters By Frequency (LC #451) | Freq Count + Bucket Sort | Jun 22 | Jun 22 | Jun 23 |
 
 ---
 
@@ -31,6 +32,7 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
+| Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jun 22 | Jun 22 | Jun 25 |
 | Product Except Self (LC #238) | Prefix/Suffix Product | Jun 20 | Jun 20 | Jun 23 |
 | Longest Consecutive Sequence (LC #128) | HashSet + Sequence Start | Jun 20 | Jun 20 | Jun 23 |
 | Encode and Decode Strings (LC #271) | Length-Prefix Encoding | Jun 21 | Jun 21 | Jun 24 |
@@ -69,18 +71,14 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: June 21, 2026
+**Date**: June 22, 2026
 
 ### Due Today:
-- ✅ Encode and Decode Strings (LC #271) — Recalled solidly → Promoted to Box 2
-- ✅ Valid Sudoku (LC #36) — Recalled solidly (minor SC correction: O(n²) not O(n)) → Promoted to Box 2
-- ✅ Valid Anagram (LC #242) — Recalled perfectly, length early-exit 4th consecutive ✅ → Promoted to Box 3
-- ✅ Two Sum II (LC #167) — Recalled perfectly → Promoted to Box 3
-- ✅ Group Anagrams (LC #49) — Recalled perfectly, went straight to optimal freq key → Promoted to Box 3
-- ✅ Top K Frequent (LC #347) — Recalled perfectly, n+1 size reasoning correct → Promoted to Box 3
+- ✅ Subarray Sum Equals K (LC #560) — Recalled solidly (minor: said k-sum instead of sum-k, corrected). {0:1} reasoning slightly imprecise but correct intent. → Promoted to Box 2
 
 ### Problems Solved Today:
-- ✅ Subarray Sum Equals K (LC #560) — 🟢 HIRE, NEW, zero hints, all 5 tests passed (caught incorrect test case!)
+- ✅ Contiguous Array (LC #525) — 🟡 LEAN HIRE, NEW (UNSEEN CHALLENGE), zero hints, zero bugs, all 5 tests first try. Approach took ~30 min (over 25 min limit).
+- ✅ Sort Characters By Frequency (LC #451) — 🟢 HIRE, NEW (UNSEEN CHALLENGE), zero hints, zero bugs, all 5 first try. ~3 min. Bucket sort pattern transfer.
 
 ### Review Checklist:
 For each problem due:
@@ -98,12 +96,12 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 11 |
-| Box 1 (daily) | 1 |
-| Box 2 (3-day) | 4 |
+| Total problems in system | 13 |
+| Box 1 (daily) | 2 |
+| Box 2 (3-day) | 5 |
 | Box 3 (weekly) | 6 |
 | Box 4 (bi-weekly) | 0 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 6 |
-| Problems solved today | 1 |
-| Streak (consecutive days) | 5 |
+| Reviews completed today | 1 |
+| Problems solved today | 2 |
+| Streak (consecutive days) | 6 |

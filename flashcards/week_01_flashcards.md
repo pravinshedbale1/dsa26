@@ -176,6 +176,23 @@
 
 ---
 
+## Card 14: Prefix Sum + HashMap — Max Length Variant (Transform & Sum-to-Zero)
+```
+🔍 TRIGGER: "Longest subarray with equal X and Y" or "equal number of two things"
+💡 IDEA:   Transform one value to -1, other to +1 → "subarray sum = 0"
+          Same prefix sum at two indices → subarray between sums to 0
+📝 CODE:   map.put(0, -1); // handles subarray from index 0
+          sum += (nums[i] == 0 ? -1 : 1);
+          if (map.containsKey(sum)) maxLen = max(maxLen, i - map.get(sum));
+          else map.put(sum, i); // ONLY first occurrence!
+⏱️ TIME:   O(n)  |  SPACE: O(n)
+⚠️ KEY:    Two variants of Prefix Sum + HashMap:
+          • COUNT subarrays: store sum→count, init {0:1}, always update
+          • MAX LENGTH: store sum→first_index, init {0:-1}, NEVER overwrite
+```
+
+---
+
 ## 🧠 Week 1 Summary Mantra
 ```
 ╔════════════════════════════════════════════════╗
@@ -190,6 +207,7 @@
 ║  Consecutive sequence?    → HashSet + Start Detect║
 ║  Encode/Decode strings?   → Length-Prefix        ║
 ║  Validate grid?           → HashSet per Row/Col/Box║
+║  Equal count of 2 things? → Transform + PrefixSum║
 ║                                                ║
 ║  🔴 COMPARING TWO INPUTS? → SIZE CHECK FIRST!  ║
 ╚════════════════════════════════════════════════╝

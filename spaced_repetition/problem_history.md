@@ -40,6 +40,8 @@
 | 18 | Jun 20 | Encode and Decode Strings (NEW) | 271 | Medium | Length-Prefix Encoding | Length-prefix O(n)/O(n) | O(n) | O(n) | ⚡ | 4 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests first run. 1 hint (decode structure). Cleaned up nits (unused var, debug print). |
 | 19 | Jun 20 | Valid Sudoku (NEW) | 36 | Medium | HashSet per Row/Col/Box | HashSet O(81)/O(81) = O(1)/O(1) | O(1) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests first try. Zero bugs, zero hints. ~15 min. Elegant !set.add() triple check. Box index formula derived independently. |
 | 20 | Jun 21 | Subarray Sum Equals K (NEW) | 560 | Medium | Prefix Sum + HashMap | Brute O(n²)/O(1) → Optimal O(n)/O(n) | O(n) | O(n) | ✅ | 4 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests passed (caught incorrect test case!). Zero hints. Concept teach on prefix sum first. Used prefixSum array instead of running variable (minor optimization). |
+| 21 | Jun 22 | Contiguous Array (NEW, UNSEEN) | 525 | Medium | Prefix Sum + HashMap (Max Length) | Brute O(n³)/O(1) → Optimal O(n)/O(n) | O(n) | O(n) | ✅ | 4 | Box 1 | 🟡 LEAN HIRE. UNSEEN weekly challenge. Zero hints, zero bugs, all 5 first try. Key: treat 0 as -1 → subarray sum=0. Store first occurrence only. ~45 min (over 25 min limit). |
+| 22 | Jun 22 | Sort Characters By Frequency (NEW, UNSEEN) | 451 | Medium | Freq Count + Bucket Sort | Sort O(n log n) → Bucket Sort O(n)/O(n) | O(n) | O(n) | ✅ | 5 | Box 1 | 🟢 HIRE. UNSEEN weekly challenge. Zero hints, zero bugs, all 5 first try. ~3 min. Instant pattern transfer from Top K Frequent. StringBuilder, null-check buckets, getOrDefault. |
 
 ---
 
@@ -54,4 +56,6 @@
 | W1 D4 | 2 (complete) | 2 | 0 | 0 | 0 | 4.5 | Prefix/Suffix / HashSet Sequence |
 | W1 D5 | 2 (complete) | 1 | 1 | 0 | 0 | 4.5 | Length-Prefix / HashSet Validation |
 | W1 D6 | 1 (complete) | 1 | 0 | 0 | 0 | 4.0 | Prefix Sum + HashMap |
+| W1 D7 | 2 (complete) 🎉 | 2 | 0 | 0 | 0 | 4.5 | Prefix Sum variant + Bucket Sort |
+| **W1 TOTAL** | **13** | **11** | **2** | **0** | **0** | **4.6** | **All Arrays & Hashing patterns** |
 | ... | — | — | — | — | — | — | — |

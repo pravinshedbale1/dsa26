@@ -55,16 +55,16 @@
 | Field | Value |
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
-| **Current Week** | Week 1 |
-| **Current Day** | Day 6 (June 21, 2026) — COMPLETE ✅ |
-| **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Day 6 complete ✅ (Subarray Sum Equals K) |
-| **Session Count** | 6 |
-| **Total Problems Solved** | 11 (new plan) |
+| **Current Week** | Week 1 — COMPLETE ✅ 🎉 |
+| **Current Day** | Day 7 (June 22, 2026) — COMPLETE ✅ |
+| **Current Topic** | Arrays & Hashing — Weekly Challenge DONE |
+| **Current Problem** | Weekly Challenge 2/2 complete (Sort Chars By Frequency) |
+| **Session Count** | 7 |
+| **Total Problems Solved** | 13 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 112 |
+| **Days Remaining** | 111 |
 
 ---
 
@@ -314,6 +314,25 @@ TEMPLATE for each session entry:
 - Minor optimization available: replace prefixSum array with running variable (still O(n) SC due to HashMap)
 - Day 6 complete! Ready for Day 7 (Weekly Challenge).
 
+### Session #7 — June 22, 2026 — Arrays & Hashing (Week 1, Day 7 — 🔥 Weekly Challenge)
+**Status**: ✅ COMPLETE
+**Duration**: ~50 min total
+
+**Spaced Repetition Recall Results (1 problem due)**:
+- Subarray Sum Equals K (LC #560): ✅ Solid — pattern, approach, complexity recalled. Minor: said `k - sum` instead of `sum - k` (corrected). {0:1} reasoning slightly imprecise but correct intent. → **Promoted to Box 2**
+
+**Problems Covered**:
+- Contiguous Array (LC #525): ✅ NEW (UNSEEN CHALLENGE) — 🟡 LEAN HIRE. Zero hints, zero bugs, all 5 tests first try. Key insight: treat 0 as -1, reduces to "subarray sum = 0" (Prefix Sum + HashMap variant). Knew to store first occurrence only (max length vs count). Clean ternary, proper `else` for first-occurrence-only logic. **However**, took ~45 min (limit 25 min) — approach formulation was slow.
+- Sort Characters By Frequency (LC #451): ✅ NEW (UNSEEN CHALLENGE) — 🟢 HIRE. Zero hints, zero bugs, all 5 tests first try. **~3 minutes**. Instantly connected to Top K Frequent bucket sort pattern. Clean StringBuilder, null-check on buckets, getOrDefault. Perfect pattern transfer.
+
+**Key Observations**:
+- **Pattern transfer proven**: Both unseen problems solved using Week 1 patterns independently
+- Contiguous Array: Prefix Sum + HashMap variant (transform 0→-1, store first occurrence for max length)
+- Sort Chars By Frequency: Bucket sort pattern transfer from Top K Frequent (~3 min, flawless)
+- HIRE streak: 10 (including Sort Chars By Freq). Contiguous Array was LEAN HIRE due to time only.
+- Time management split: Problem 1 slow (~45 min), Problem 2 blazing fast (~3 min). Speed correlates with pattern familiarity.
+- 🎉 **WEEK 1 COMPLETE!** Arrays & Hashing mastered. Ready for Week 2 (Two Pointers & Sorting).
+
 ---
 
 #### 📂 Pre-Reset Sessions (June 3–10, 2026)
@@ -415,7 +434,7 @@ TEMPLATE for each session entry:
 | — | HashSet + Sequence Start | 4 | June 18 | Longest Consecutive Sequence — 🟢 HIRE, NEW, amortized O(n) understood |
 | — | Length-Prefix Encoding | 4 | June 21 | Encode and Decode Strings — Recalled solidly in spaced rep |
 | — | HashSet Validation (Row/Col/Box) | 5 | June 21 | Valid Sudoku — Recalled solidly in spaced rep |
-| — | Prefix Sum + HashMap | 4 | June 21 | Subarray Sum Equals K — 🟢 HIRE, NEW, zero hints |
+| — | Prefix Sum + HashMap | 5 | June 22 | Subarray Sum Equals K + Contiguous Array — pattern transfer proven on unseen problem |
 | 4 | Two Pointers (Same Direction) | — | — | — |
 | 5 | Sliding Window (Fixed) | — | — | — |
 | 6 | Sliding Window (Variable) | — | — | — |
@@ -444,7 +463,8 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Subarray Sum Equals K (LC #560) | Box 1 | June 21 | June 22 | 🆕 Added today |
+| Contiguous Array (LC #525) | Box 1 | June 22 | June 23 | 🆕 Added today |
+| Subarray Sum Equals K (LC #560) | Box 2 | June 22 | June 25 | ✅ Promoted today |
 | Product Except Self (LC #238) | Box 2 | June 20 | June 23 | ⏳ Due Jun 23 |
 | Longest Consecutive Sequence (LC #128) | Box 2 | June 20 | June 23 | ⏳ Due Jun 23 |
 | Encode and Decode Strings (LC #271) | Box 2 | June 21 | June 24 | ⏳ Due Jun 24 |
@@ -474,20 +494,18 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #7 (June 22) — Day 7
-**Topic**: Arrays & Hashing — Week 1 Day 7 (🔥 Weekly Challenge)
+**Next**: Session #8 (June 23) — Week 2, Day 1
+**Topic**: Two Pointers & Sorting
 **Plan**:
-1. ⏰ Spaced repetition check: Subarray Sum Equals K (Box 1 — due Jun 22)
-2. 🔥 **Weekly Challenge**: Solve 2 UNSEEN problems using ONLY patterns learned in Week 1
-   - These will be problems you've never seen before
-   - You must identify the pattern and solve them under timed conditions
-   - This tests true pattern recognition, not memorization
-3. Week 1 wrap-up: review all patterns, update confidence scores
+1. ⏰ Spaced repetition check: Contiguous Array (Box 1), Product Except Self (Box 2), Longest Consecutive (Box 2)
+2. 🧠 Concept teach: Two Pointers (same direction) + Sorting as preprocessing
+3. 🎯 **Valid Palindrome** (LC #125) — Easy, two pointers inward
+4. 🎯 **Two Sum II** (LC #167) — Re-solve with deeper two-pointer understanding
 
 **Focus**:
-- Continue the HIRE streak! 🔥 (currently 9 in a row)
-- Pattern recognition on unseen problems is the real test
-- Week 1 completion! 🎉 Ready to start Week 2 (Two Pointers & Sorting)
+- Week 2 begins! New pattern family: Two Pointers & Sorting
+- Build on the opposite-ends two-pointer from Two Sum II
+- Spaced rep: 3 problems due Jun 23
 
 ---
 
@@ -495,7 +513,7 @@ TEMPLATE for each session entry:
 
 | Week | Problems Solved | New Patterns | Avg Confidence | Key Achievement |
 |------|----------------|-------------|----------------|-----------------|
-| W1 | — | — | — | — |
+| W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
 | W3 | — | — | — | — |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |

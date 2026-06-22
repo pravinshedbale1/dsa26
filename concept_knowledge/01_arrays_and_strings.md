@@ -37,6 +37,9 @@ Template:
 - "Must initialize HashMap with {0: 1} — otherwise subarrays starting at index 0 are missed"
 - "HashMap stores count (not just existence) because multiple prefix sums can have the same value → each creates a valid subarray"
 - "Don't need a prefixSum array — a running sum variable is sufficient. Saves O(n) space (though HashMap is still O(n))"
+- "Transform-and-reduce: 'equal 0s and 1s' becomes 'subarray sums to 0' by treating 0 as -1. Reduce unfamiliar problem to known pattern!"
+- "Two variants of Prefix Sum + HashMap: COUNT subarrays (store count, init {0:1}, always update) vs MAX LENGTH (store first index, init {0:-1}, never overwrite)"
+- "For max length: only store FIRST occurrence of each sum — overwriting gives shorter subarrays"
 
 ---
 
@@ -95,3 +98,4 @@ Template:
 - Two Pointers (Opposite Ends) → Two Sum II (sorted input, O(1) space)
 - HashSet + Sequence Start → Longest Consecutive Sequence (amortized O(n))
 - Prefix Sum + HashMap → Subarray Sum Equals K (count subarrays with sum = k, O(n))
+- Transform + Prefix Sum → Contiguous Array (max length with equal 0s/1s, treat 0 as -1)
