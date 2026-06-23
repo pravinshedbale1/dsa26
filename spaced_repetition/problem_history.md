@@ -42,6 +42,8 @@
 | 20 | Jun 21 | Subarray Sum Equals K (NEW) | 560 | Medium | Prefix Sum + HashMap | Brute O(n²)/O(1) → Optimal O(n)/O(n) | O(n) | O(n) | ✅ | 4 | Box 1 | 🟢 HIRE. NEW problem. All 5 tests passed (caught incorrect test case!). Zero hints. Concept teach on prefix sum first. Used prefixSum array instead of running variable (minor optimization). |
 | 21 | Jun 22 | Contiguous Array (NEW, UNSEEN) | 525 | Medium | Prefix Sum + HashMap (Max Length) | Brute O(n³)/O(1) → Optimal O(n)/O(n) | O(n) | O(n) | ✅ | 4 | Box 1 | 🟡 LEAN HIRE. UNSEEN weekly challenge. Zero hints, zero bugs, all 5 first try. Key: treat 0 as -1 → subarray sum=0. Store first occurrence only. ~45 min (over 25 min limit). |
 | 22 | Jun 22 | Sort Characters By Frequency (NEW, UNSEEN) | 451 | Medium | Freq Count + Bucket Sort | Sort O(n log n) → Bucket Sort O(n)/O(n) | O(n) | O(n) | ✅ | 5 | Box 1 | 🟢 HIRE. UNSEEN weekly challenge. Zero hints, zero bugs, all 5 first try. ~3 min. Instant pattern transfer from Top K Frequent. StringBuilder, null-check buckets, getOrDefault. |
+| 23 | Jun 23 | Valid Palindrome (NEW) | 125 | Easy | Two Pointers (Opposite Ends) | Two Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. Two pointers inward, skip non-alphanumeric with continue. All 5 tests first try. Zero bugs, zero hints. ~6 min. Clean Character.isLetterOrDigit() + toLowerCase(). |
+| 24 | Jun 23 | 3Sum (NEW) | 15 | Medium | Sort + Fix One + Two Pointers | Brute O(n³) → Sort + 2ptr O(n²)/O(k) | O(n²) | O(k) | ⚡ | 3 | Box 1 | 🟡 LEAN HIRE. NEW. 2 hints: k scope outside loop, extra j++/k-- outside if/else. Approach correct, code structure struggled. Dup skip for i independent, j/k needed guidance. All 5 tests after fixes. ~20 min. |
 
 ---
 
@@ -58,4 +60,6 @@
 | W1 D6 | 1 (complete) | 1 | 0 | 0 | 0 | 4.0 | Prefix Sum + HashMap |
 | W1 D7 | 2 (complete) 🎉 | 2 | 0 | 0 | 0 | 4.5 | Prefix Sum variant + Bucket Sort |
 | **W1 TOTAL** | **13** | **11** | **2** | **0** | **0** | **4.6** | **All Arrays & Hashing patterns** |
+| W2 D1 | 2 (complete) | 1 | 1 | 0 | 0 | 4.0 | Two Pointers (Opposite) / Sort+2ptr |
 | ... | — | — | — | — | — | — | — |
+

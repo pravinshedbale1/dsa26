@@ -55,16 +55,16 @@
 | Field | Value |
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
-| **Current Week** | Week 1 — COMPLETE ✅ 🎉 |
-| **Current Day** | Day 7 (June 22, 2026) — COMPLETE ✅ |
-| **Current Topic** | Arrays & Hashing — Weekly Challenge DONE |
-| **Current Problem** | Weekly Challenge 2/2 complete (Sort Chars By Frequency) |
-| **Session Count** | 7 |
-| **Total Problems Solved** | 13 (new plan) |
+| **Current Week** | Week 2 — Two Pointers & Sorting |
+| **Current Day** | Day 1 (June 23, 2026) — COMPLETE ✅ |
+| **Current Topic** | Two Pointers & Sorting |
+| **Current Problem** | 3Sum (LC #15) — DONE |
+| **Session Count** | 8 |
+| **Total Problems Solved** | 15 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 111 |
+| **Days Remaining** | 110 |
 
 ---
 
@@ -333,6 +333,33 @@ TEMPLATE for each session entry:
 - Time management split: Problem 1 slow (~45 min), Problem 2 blazing fast (~3 min). Speed correlates with pattern familiarity.
 - 🎉 **WEEK 1 COMPLETE!** Arrays & Hashing mastered. Ready for Week 2 (Two Pointers & Sorting).
 
+### Session #8 — June 23, 2026 — Two Pointers & Sorting (Week 2, Day 1)
+**Status**: ✅ COMPLETE
+**Duration**: ~30 min
+
+**Spaced Repetition Recall Results (4 problems due)**:
+- Contiguous Array (LC #525): ✅ Solid — pattern, approach (0→-1, first occurrence), complexity recalled. Said "complement search" instead of "Prefix Sum + HashMap" but understood the mechanic. → **Promoted to Box 2**
+- Product Except Self (LC #238): ✅ Perfect — pattern, O(1) space approach (prefix into answer array, running suffix variable), complexity all correct → **Promoted to Box 3**
+- Longest Consecutive Sequence (LC #128): ✅ Solid — HashSet, sequence start detection, amortized reasoning ("somebody else will pick it up") → **Promoted to Box 3**
+- Sort Characters By Frequency (LC #451): ✅ Perfect — bucket sort, List[] of size n+1, iterate right-to-left, complexity correct → **Promoted to Box 2**
+
+**Concept Teach**: Two Pointers & Sorting
+- Reviewed why opposite-end two pointers work: sorted data gives monotonic guarantee
+- Key insight: "moving a pointer eliminates an entire row/column of possibilities"
+- Introduced the two-pointer family: opposite ends, same direction (read/write), sort as preprocessing
+
+**Problems Covered**:
+- Valid Palindrome (LC #125): ✅ NEW — 🟢 HIRE. Two pointers inward, skip non-alphanumeric with `continue`. All 5 tests first try. Zero bugs, zero hints. ~6 min. Clean `Character.isLetterOrDigit()` and `Character.toLowerCase()` usage.
+- 3Sum (LC #15): ⚡ NEW — 🟡 LEAN HIRE. Sort + fix one + two pointers. 2 hints used: (1) `k` initialized outside for loop instead of inside, (2) extra `j++/k--` outside if/else causing double movement. Approach explained correctly before coding. Duplicate skipping for `i` done independently, for `j`/`k` needed guidance on placement (inside else block, after finding triplet). All 5 tests passed after fixes. ~20 min.
+
+**Key Observations**:
+- **Spaced rep 4/4 recalled**, all promoted. Zero Box 1 problems remaining.
+- Valid Palindrome: Flawless. Skip-with-continue pattern is clean and reusable.
+- 3Sum: Algorithm knowledge was solid — struggled with **code structure** (where pointer movements go). Two bugs were structural, not algorithmic.
+- **New struggle pattern identified**: placing shared vs branch-specific logic in if/else blocks. Rule: each branch should be self-contained.
+- Duplicate skipping placement: only skip AFTER recording a result, not before computing.
+- Week 2 Day 1 complete! Ready for Day 2 (Container With Most Water + more two-pointer).
+
 ---
 
 #### 📂 Pre-Reset Sessions (June 3–10, 2026)
@@ -405,6 +432,9 @@ TEMPLATE for each session entry:
 | May 17 | Inner loop bounds | Forgot to guard inner loop with ptr >= k check | 🟡 Improving |
 | Jun 3 | **Length early-exit** | **Missed s.length()!=t.length() check in Valid Anagram — 3rd time** | 🟢 Resolved (Jun 17 — 3 consecutive correct sessions) |
 | Jun 17 | **Output spec (0-indexed vs 1-indexed)** | Returned 0-indexed [0,1] on Two Sum II instead of 1-indexed [1,2] | 🟡 Improving |
+| Jun 23 | **Variable scope in loops** | `k` initialized outside for loop — not reset per iteration of `i` in 3Sum | 🟡 New |
+| Jun 23 | **If/else branch structure** | Extra `j++/k--` outside if/else caused double pointer movement | 🟡 New |
+| Jun 23 | **Duplicate skip placement** | Put j/k duplicate skip at top of while loop instead of inside else block after finding triplet | 🟡 New |
 
 <!-- Status: 🔴 Active | 🟡 Improving | 🟢 Resolved -->
 
@@ -429,12 +459,13 @@ TEMPLATE for each session entry:
 | 2 | Frequency Counting | 5 | June 17 | Valid Anagram + Group Anagrams + Top K Frequent — all locked in |
 | — | HashMap Grouping | 5 | June 17 | Group Anagrams — 🟢 HIRE, zero bugs, freq key approach |
 | — | Bucket Sort (Freq as Index) | 5 | June 17 | Top K Frequent — 🟢 HIRE, zero bugs, zero hints. Locked in. |
-| 3 | Two Pointers (Opposite Ends) | 4 | June 17 | Two Sum II — clean re-solve |
+| 3 | Two Pointers (Opposite Ends) | 5 | June 23 | Valid Palindrome 🟢 HIRE — skip non-alphanumeric with continue, clean |
 | — | Prefix/Suffix | 5 | June 18 | Product Except Self — 🟢 HIRE, O(1) space optimization flawless |
 | — | HashSet + Sequence Start | 4 | June 18 | Longest Consecutive Sequence — 🟢 HIRE, NEW, amortized O(n) understood |
 | — | Length-Prefix Encoding | 4 | June 21 | Encode and Decode Strings — Recalled solidly in spaced rep |
 | — | HashSet Validation (Row/Col/Box) | 5 | June 21 | Valid Sudoku — Recalled solidly in spaced rep |
 | — | Prefix Sum + HashMap | 5 | June 22 | Subarray Sum Equals K + Contiguous Array — pattern transfer proven on unseen problem |
+| — | Sort + Fix One + Two Pointers | 3 | June 23 | 3Sum 🟡 LEAN HIRE — algorithm solid, code structure needed 2 hints |
 | 4 | Two Pointers (Same Direction) | — | — | — |
 | 5 | Sliding Window (Fixed) | — | — | — |
 | 6 | Sliding Window (Variable) | — | — | — |
@@ -463,10 +494,13 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Contiguous Array (LC #525) | Box 1 | June 22 | June 23 | 🆕 Added today |
-| Subarray Sum Equals K (LC #560) | Box 2 | June 22 | June 25 | ✅ Promoted today |
-| Product Except Self (LC #238) | Box 2 | June 20 | June 23 | ⏳ Due Jun 23 |
-| Longest Consecutive Sequence (LC #128) | Box 2 | June 20 | June 23 | ⏳ Due Jun 23 |
+| Valid Palindrome (LC #125) | Box 1 | June 23 | June 24 | 🆕 Added today |
+| 3Sum (LC #15) | Box 1 | June 23 | June 24 | 🆕 Added today |
+| Contiguous Array (LC #525) | Box 2 | June 23 | June 26 | ✅ Promoted today |
+| Sort Characters By Frequency (LC #451) | Box 2 | June 23 | June 26 | ✅ Promoted today |
+| Subarray Sum Equals K (LC #560) | Box 2 | June 22 | June 25 | ⏳ Due Jun 25 |
+| Product Except Self (LC #238) | Box 3 | June 23 | June 30 | ✅ Promoted today |
+| Longest Consecutive Sequence (LC #128) | Box 3 | June 23 | June 30 | ✅ Promoted today |
 | Encode and Decode Strings (LC #271) | Box 2 | June 21 | June 24 | ⏳ Due Jun 24 |
 | Valid Sudoku (LC #36) | Box 2 | June 21 | June 24 | ⏳ Due Jun 24 |
 | Two Sum (LC #1) | Box 3 | June 20 | June 27 | ⏳ Due Jun 27 |
@@ -494,18 +528,17 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #8 (June 23) — Week 2, Day 1
+**Next**: Session #9 (June 24) — Week 2, Day 2
 **Topic**: Two Pointers & Sorting
 **Plan**:
-1. ⏰ Spaced repetition check: Contiguous Array (Box 1), Product Except Self (Box 2), Longest Consecutive (Box 2)
-2. 🧠 Concept teach: Two Pointers (same direction) + Sorting as preprocessing
-3. 🎯 **Valid Palindrome** (LC #125) — Easy, two pointers inward
-4. 🎯 **Two Sum II** (LC #167) — Re-solve with deeper two-pointer understanding
+1. ⏰ Spaced repetition check: Valid Palindrome (Box 1), 3Sum (Box 1), Encode/Decode Strings (Box 2), Valid Sudoku (Box 2)
+2. 🎯 **Container With Most Water** (LC #11) — Medium, greedy two pointers (shrink shorter side)
+3. 🎯 **Trapping Rain Water** (LC #42) — Hard, two pointers / prefix max arrays
 
 **Focus**:
-- Week 2 begins! New pattern family: Two Pointers & Sorting
-- Build on the opposite-ends two-pointer from Two Sum II
-- Spaced rep: 3 problems due Jun 23
+- Reinforce two-pointer technique on non-sum problems (area, water)
+- 3Sum code structure: practice self-contained if/else branches
+- Spaced rep: 4 problems due Jun 24
 
 ---
 
@@ -514,6 +547,7 @@ TEMPLATE for each session entry:
 | Week | Problems Solved | New Patterns | Avg Confidence | Key Achievement |
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
+| W2 | 2 (in progress) | 2 | 4.0 | Valid Palindrome 🟢 HIRE, 3Sum 🟡 LEAN HIRE. Two-pointer family expanding. |
 | W3 | — | — | — | — |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |

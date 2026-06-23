@@ -23,8 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Contiguous Array (LC #525) | Prefix Sum + HashMap (Max Length Variant) | Jun 22 | Jun 22 | Jun 23 |
-| Sort Characters By Frequency (LC #451) | Freq Count + Bucket Sort | Jun 22 | Jun 22 | Jun 23 |
+| Valid Palindrome (LC #125) | Two Pointers (Opposite Ends) | Jun 23 | Jun 23 | Jun 24 |
+| 3Sum (LC #15) | Sort + Fix One + Two Pointers | Jun 23 | Jun 23 | Jun 24 |
 
 ---
 
@@ -32,9 +32,9 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
+| Contiguous Array (LC #525) | Prefix Sum + HashMap (Max Length Variant) | Jun 23 | Jun 23 | Jun 26 |
+| Sort Characters By Frequency (LC #451) | Freq Count + Bucket Sort | Jun 23 | Jun 23 | Jun 26 |
 | Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jun 22 | Jun 22 | Jun 25 |
-| Product Except Self (LC #238) | Prefix/Suffix Product | Jun 20 | Jun 20 | Jun 23 |
-| Longest Consecutive Sequence (LC #128) | HashSet + Sequence Start | Jun 20 | Jun 20 | Jun 23 |
 | Encode and Decode Strings (LC #271) | Length-Prefix Encoding | Jun 21 | Jun 21 | Jun 24 |
 | Valid Sudoku (LC #36) | HashSet per Row/Col/Box | Jun 21 | Jun 21 | Jun 24 |
 
@@ -44,6 +44,8 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
+| Product Except Self (LC #238) | Prefix/Suffix Product | Jun 23 | Jun 23 | Jun 30 |
+| Longest Consecutive Sequence (LC #128) | HashSet + Sequence Start | Jun 23 | Jun 23 | Jun 30 |
 | Two Sum (LC #1) | HashMap Complement | Jun 20 | Jun 20 | Jun 27 |
 | Contains Duplicate (LC #217) | HashSet Membership | Jun 20 | Jun 20 | Jun 27 |
 | Valid Anagram (LC #242) | Frequency Count (int[26]) | Jun 21 | Jun 21 | Jun 28 |
@@ -71,14 +73,17 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: June 22, 2026
+**Date**: June 23, 2026
 
 ### Due Today:
-- ✅ Subarray Sum Equals K (LC #560) — Recalled solidly (minor: said k-sum instead of sum-k, corrected). {0:1} reasoning slightly imprecise but correct intent. → Promoted to Box 2
+- ✅ Contiguous Array (LC #525) — Recalled solidly. Said "complement search" but understood the mechanic (0→-1, first occurrence, subarray sums to 0). → Promoted to Box 2
+- ✅ Sort Characters By Frequency (LC #451) — Perfect recall. Bucket sort, List[] of size n+1, iterate right-to-left. → Promoted to Box 2
+- ✅ Product Except Self (LC #238) — Perfect recall. Prefix into answer array, running suffix variable. O(n)/O(1). → Promoted to Box 3
+- ✅ Longest Consecutive Sequence (LC #128) — Solid recall. HashSet, sequence start detection, amortized reasoning. → Promoted to Box 3
 
 ### Problems Solved Today:
-- ✅ Contiguous Array (LC #525) — 🟡 LEAN HIRE, NEW (UNSEEN CHALLENGE), zero hints, zero bugs, all 5 tests first try. Approach took ~30 min (over 25 min limit).
-- ✅ Sort Characters By Frequency (LC #451) — 🟢 HIRE, NEW (UNSEEN CHALLENGE), zero hints, zero bugs, all 5 first try. ~3 min. Bucket sort pattern transfer.
+- ✅ Valid Palindrome (LC #125) — 🟢 HIRE, NEW. Two pointers inward, skip non-alphanumeric. Zero bugs, zero hints. ~6 min.
+- ✅ 3Sum (LC #15) — 🟡 LEAN HIRE, NEW. Sort + fix one + two pointers. 2 hints (k scope, branch structure). ~20 min.
 
 ### Review Checklist:
 For each problem due:
@@ -96,12 +101,12 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 13 |
+| Total problems in system | 15 |
 | Box 1 (daily) | 2 |
 | Box 2 (3-day) | 5 |
-| Box 3 (weekly) | 6 |
+| Box 3 (weekly) | 8 |
 | Box 4 (bi-weekly) | 0 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 1 |
+| Reviews completed today | 4 |
 | Problems solved today | 2 |
-| Streak (consecutive days) | 6 |
+| Streak (consecutive days) | 7 |
