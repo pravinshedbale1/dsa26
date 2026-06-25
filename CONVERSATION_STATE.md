@@ -11,7 +11,7 @@
 > **UPDATE ALL PROGRESS FILES IMMEDIATELY AFTER EVERY SINGLE PROBLEM.**
 > Do NOT batch updates. Do NOT wait for the user to remind you.
 > The MOMENT a problem is solved (tests pass + interview summary given), your NEXT action is updating:
-> `CONVERSATION_STATE.md`, `review_schedule.md`, `problem_history.md`, `flashcards/`, `concept_knowledge/`, `pattern_library/`
+> `CONVERSATION_STATE.md`, `review_schedule.md`, `problem_history.md`, `flashcards/`, `concept_knowledge/`, `pattern_library/`, `flashcards/master_cheatsheet.md`
 > **This has been a recurring failure. The user has had to remind you multiple times. NEVER let this happen again.**
 
 
