@@ -40,6 +40,8 @@
 | 29 | "Validate grid rows/cols/boxes" for duplicates | HashSet per row, col, and box; box = (r/3)*3+(c/3) | **HashSet Validation** | `!rows[r].add(v) \|\| !cols[c].add(v) \|\| !boxes[idx].add(v)` |
 | 30 | "Count subarrays with sum = K" | Prefix sum + HashMap\<sum, count\>; check if (currentSum - k) in map | **Prefix Sum + HashMap** | `map.put(0,1); if (map.containsKey(sum-k)) count += map.get(sum-k)` |
 | 31 | "Longest subarray with equal X and Y" | Transform (0→-1, 1→1) + prefix sum; same sum at two indices = valid subarray | **Transform + Prefix Sum (Max Length)** | `map.put(0,-1); store FIRST occurrence only; maxLen = i - map.get(sum)` |
+| 32 | "Maximum area/container between two lines" | Two pointers from ends, move the SHORTER side (shorter = bottleneck for area) | **Greedy Two Pointers (Max Area)** | `area = min(h[l], h[r]) * (r-l); move shorter side` |
+| 33 | "How much water/rain trapped in elevation map" | Two pointers + track maxLeft/maxRight, process side with SMALLER max | **Two Pointers (Trapped Water)** | `water += max - height[ptr]; process side where max is smaller` |
 
 ---
 
