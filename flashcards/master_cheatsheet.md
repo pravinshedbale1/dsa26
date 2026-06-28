@@ -37,6 +37,8 @@
 | 11 | Two Pointers (Opposite) | "Sorted + pair" | `left=0, right=n-1`, move based on sum | O(n)/O(1) |
 | 12 | Greedy Two Ptr (Area) | "Max container area" | Move SHORTER side (bottleneck) | O(n)/O(1) |
 | 13 | Two Ptr (Trapped Water) | "Water on elevation map" | Process side with SMALLER max | O(n)/O(1) |
+| 14 | Two Ptr (Same Dir) | "Move/remove in-place" | Write ptr + read ptr, swap valid elements | O(n)/O(1) |
+| 15 | Dutch National Flag | "Sort 3 values" | lo/mid/hi, mid scans and routes | O(n)/O(1) |
 
 ### Patterns Learned but Need Practice (Confidence 3-4)
 
@@ -450,7 +452,71 @@ CONTAINER vs TRAPPING — COMPARISON:
   │ area = min(h) × width  │ water = max - height[bar]    │
   │ One area calculation    │ Accumulate at each bar       │
   └────────────────────────┴──────────────────────────────┘
-  Same skeleton. Different greedy reasoning.
+   Same skeleton. Different greedy reasoning.
+```
+
+---
+
+### Pattern 16: Two Pointers — Same Direction (Write Pointer)
+```
+TRIGGER:  "Move/remove elements in-place", "partition by condition"
+PROBLEMS: Move Zeroes (LC #283), Remove Duplicates, Remove Element
+
+APPROACH:
+  Two pointers both start at 0.
+  Read pointer (i) scans every element.
+  Write pointer (j) marks where next valid element goes.
+  When valid element found → swap(i, j), advance j.
+
+KEY INSIGHT:
+  ✅ The write pointer only advances for valid elements
+  ✅ Everything before j is "processed and valid"
+  ✅ Everything from j onward is "to be overwritten"
+  ✅ Same skeleton reused — only the IF condition changes per problem
+
+CODE SKELETON:
+  int j = 0;
+  for (int i = 0; i < nums.length; i++) {
+      if (nums[i] != 0) {  // ← change this condition per problem
+          swap(nums, i, j);
+          j++;
+      }
+  }
+```
+
+---
+
+### Pattern 17: Dutch National Flag (3-Way Partition)
+```
+TRIGGER:  "Sort array with 3 distinct values", "3-way partition"
+PROBLEMS: Sort Colors (LC #75)
+
+APPROACH:
+  3 pointers: lo=0, mid=0, hi=n-1
+  mid scans and decides where each element belongs:
+    nums[mid] == 0 → swap(mid, lo), lo++, mid++
+    nums[mid] == 1 → mid++
+    nums[mid] == 2 → swap(mid, hi), hi--
+
+CRITICAL RULES:
+  ✅ DON'T increment mid after swap with hi
+     → element from hi is unexamined
+  ✅ SAFE to increment mid after swap with lo
+     → lo ≤ mid always, element from lo already scanned (0 or 1)
+
+REGIONS:
+  [0..lo)     = all 0s (red)
+  [lo..mid)   = all 1s (white)
+  [mid..hi]   = unknown (being processed)
+  (hi..n-1]   = all 2s (blue)
+
+CODE SKELETON:
+  int lo = 0, mid = 0, hi = nums.length - 1;
+  while (mid <= hi) {
+      if (nums[mid] == 0)      { swap(mid, lo); lo++; mid++; }
+      else if (nums[mid] == 1) { mid++; }
+      else                     { swap(mid, hi); hi--; }
+  }
 ```
 
 ---
@@ -736,15 +802,15 @@ sb.toString();
 
 | Metric | Value |
 |--------|-------|
-| Total problems | 17 |
-| 🟢 HIRE | 14 |
+| Total problems | 19 |
+| 🟢 HIRE | 16 |
 | 🟡 LEAN HIRE | 3 |
 | 🟠 LEAN NO HIRE | 0 |
 | 🔴 NO HIRE | 0 |
-| Current streak | 12 🟢 HIRE consecutive |
+| Current streak | 14 🟢 HIRE consecutive |
 | Hardest solved | Trapping Rain Water (Hard) — flawless |
 | Fastest solve | Sort Chars By Freq — ~3 min |
 
 ---
 
-_Last updated: June 25, 2026 — Session #9_
+_Last updated: June 28, 2026 — Session #10_

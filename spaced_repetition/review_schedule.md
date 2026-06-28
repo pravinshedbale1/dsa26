@@ -23,8 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Container With Most Water (LC #11) | Greedy Two Pointers | Jun 25 | Jun 25 | Jun 26 |
-| Trapping Rain Water (LC #42) | Two Pointers (maxLeft/maxRight) | Jun 25 | Jun 25 | Jun 26 |
+| Move Zeroes (LC #283) | Two Pointers (Same Direction) | Jun 28 | Jun 28 | Jun 29 |
+| Sort Colors (LC #75) | Dutch National Flag (3-way Partition) | Jun 28 | Jun 28 | Jun 29 |
 
 ---
 
@@ -32,10 +32,8 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Valid Palindrome (LC #125) | Two Pointers (Opposite Ends) | Jun 25 | Jun 25 | Jun 28 |
-| 3Sum (LC #15) | Sort + Fix One + Two Pointers | Jun 25 | Jun 25 | Jun 28 |
-| Contiguous Array (LC #525) | Prefix Sum + HashMap (Max Length Variant) | Jun 23 | Jun 23 | Jun 26 |
-| Sort Characters By Frequency (LC #451) | Freq Count + Bucket Sort | Jun 23 | Jun 23 | Jun 26 |
+| Container With Most Water (LC #11) | Greedy Two Pointers | Jun 28 | Jun 28 | Jul 1 |
+| Trapping Rain Water (LC #42) | Two Pointers (maxLeft/maxRight) | Jun 28 | Jun 28 | Jul 1 |
 
 ---
 
@@ -48,12 +46,12 @@
 | Valid Sudoku (LC #36) | HashSet per Row/Col/Box | Jun 25 | Jun 25 | Jul 2 |
 | Product Except Self (LC #238) | Prefix/Suffix Product | Jun 23 | Jun 23 | Jun 30 |
 | Longest Consecutive Sequence (LC #128) | HashSet + Sequence Start | Jun 23 | Jun 23 | Jun 30 |
-| Two Sum (LC #1) | HashMap Complement | Jun 20 | Jun 20 | Jun 27 |
-| Contains Duplicate (LC #217) | HashSet Membership | Jun 20 | Jun 20 | Jun 27 |
-| Valid Anagram (LC #242) | Frequency Count (int[26]) | Jun 21 | Jun 21 | Jun 28 |
-| Two Sum II (LC #167) | Two Pointers (Opposite) | Jun 21 | Jun 21 | Jun 28 |
-| Group Anagrams (LC #49) | HashMap Grouping (Freq Key) | Jun 21 | Jun 21 | Jun 28 |
-| Top K Frequent (LC #347) | Freq Count + Bucket Sort | Jun 21 | Jun 21 | Jun 28 |
+| Valid Palindrome (LC #125) | Two Pointers (Opposite Ends) | Jun 28 | Jun 28 | Jul 5 |
+| 3Sum (LC #15) | Sort + Fix One + Two Pointers | Jun 28 | Jun 28 | Jul 5 |
+| Contiguous Array (LC #525) | Prefix Sum + HashMap (Max Length Variant) | Jun 28 | Jun 28 | Jul 5 |
+| Sort Characters By Frequency (LC #451) | Freq Count + Bucket Sort | Jun 28 | Jun 28 | Jul 5 |
+| Two Sum (LC #1) | HashMap Complement | Jun 28 | Jun 28 | Jul 5 |
+| Contains Duplicate (LC #217) | HashSet Membership | Jun 28 | Jun 28 | Jul 5 |
 
 ---
 
@@ -61,7 +59,10 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| _empty_ | — | — | — | — |
+| Valid Anagram (LC #242) | Frequency Count (int[26]) | Jun 28 | Jun 28 | Jul 12 |
+| Two Sum II (LC #167) | Two Pointers (Opposite) | Jun 28 | Jun 28 | Jul 12 |
+| Group Anagrams (LC #49) | HashMap Grouping (Freq Key) | Jun 28 | Jun 28 | Jul 12 |
+| Top K Frequent (LC #347) | Freq Count + Bucket Sort | Jun 28 | Jun 28 | Jul 12 |
 
 ---
 
@@ -75,18 +76,25 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: June 25, 2026
+**Date**: June 28, 2026
 
-### Due Today:
-- ✅ Valid Palindrome (LC #125) — Perfect recall. Pattern, approach (skip non-alphanumeric, compare lowercase), O(n)/O(1). → Promoted to Box 2
-- ✅ 3Sum (LC #15) — Excellent recall. All 3 prior bugs addressed in explanation (k scope, branch structure, dup skip placement). → Promoted to Box 2
-- ✅ Encode and Decode Strings (LC #271) — Solid recall. Approach correct, decode logic clear. Pattern name corrected (Length-Prefix, not two pointer). → Promoted to Box 3
-- ✅ Valid Sudoku (LC #36) — Confirmed after formula clarification (typo: row instead of 3, col instead of col/3). → Promoted to Box 3
-- ✅ Subarray Sum Equals K (LC #560) — Solid recall. Prefix Sum + HashMap, check sum-k. Minor: didn't mention {0:1} init. → Promoted to Box 3
+### Spaced Repetition Recall (12 problems):
+- ✅ Container With Most Water (LC #11) — Perfect recall. Two pointers, move shorter side, O(n)/O(1). → Promoted to Box 2
+- ✅ Trapping Rain Water (LC #42) — Solid recall. Logic correct, said "minLeft" instead of "maxLeft" (naming, not concept). → Promoted to Box 2
+- ✅ Contiguous Array (LC #525) — Excellent recall. Transform 0→-1, first-occurrence HashMap, {0:-1} init with reasoning. → Promoted to Box 3
+- ✅ Sort Characters By Frequency (LC #451) — Perfect recall. Bucket sort, List[] size n+1, iterate right-to-left. → Promoted to Box 3
+- ✅ Two Sum (LC #1) — Perfect. Check-before-insert, complement lookup. → Stays Box 3
+- ✅ Contains Duplicate (LC #217) — Perfect. !set.add() idiom. → Stays Box 3
+- ✅ Valid Palindrome (LC #125) — Perfect. Skip non-alphanumeric, compare lowercase. → Promoted to Box 3
+- ✅ 3Sum (LC #15) — Excellent. All 3 prior bugs addressed. → Promoted to Box 3
+- ✅ Valid Anagram (LC #242) — Correct approach. Missed length early-exit in chat (claims fast typing). SC said O(n) instead of O(1). → Promoted to Box 4
+- ✅ Two Sum II (LC #167) — Perfect. Sorted → two pointers, O(n)/O(1). → Promoted to Box 4
+- ✅ Group Anagrams (LC #49) — Perfect. Freq key + HashMap grouping. → Promoted to Box 4
+- ✅ Top K Frequent (LC #347) — Perfect. Bucket sort + freq map. → Promoted to Box 4
 
 ### Problems Solved Today:
-- ✅ Container With Most Water (LC #11) — 🟢 HIRE, NEW. Greedy two pointers, move shorter side. Zero bugs, zero hints. ~4 min.
-- ✅ Trapping Rain Water (LC #42) — 🟢 HIRE, NEW HARD. Two pointers, track maxLeft/maxRight, process smaller max side. Zero bugs, zero hints. ~5 min. Proactive null check.
+- ✅ Move Zeroes (LC #283) — 🟢 HIRE, NEW. Same-direction write/read pointer, swap non-zeroes forward. Zero bugs, zero hints. ~4 min.
+- ✅ Sort Colors (LC #75) — 🟢 HIRE, NEW. Dutch National Flag 3-way partition. lo/mid/hi pointers. Zero bugs, zero hints. ~6 min. Clean swap helper.
 
 ### Review Checklist:
 For each problem due:
@@ -104,12 +112,12 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 17 |
+| Total problems in system | 19 |
 | Box 1 (daily) | 2 |
 | Box 2 (3-day) | 2 |
-| Box 3 (weekly) | 13 |
-| Box 4 (bi-weekly) | 0 |
+| Box 3 (weekly) | 11 |
+| Box 4 (bi-weekly) | 4 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 5 |
+| Reviews completed today | 12 |
 | Problems solved today | 2 |
-| Streak (consecutive days) | 8 |
+| Streak (consecutive days) | 10 |

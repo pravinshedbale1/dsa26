@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 2 — Two Pointers & Sorting |
-| **Current Day** | Day 2 (June 25, 2026) — COMPLETE ✅ |
+| **Current Day** | Day 3 (June 28, 2026) — COMPLETE ✅ |
 | **Current Topic** | Two Pointers & Sorting |
-| **Current Problem** | Trapping Rain Water (LC #42) — DONE |
-| **Session Count** | 9 |
-| **Total Problems Solved** | 17 (new plan) |
+| **Current Problem** | Sort Colors (LC #75) — DONE |
+| **Session Count** | 10 |
+| **Total Problems Solved** | 19 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 108 |
+| **Days Remaining** | 105 |
 
 ---
 
@@ -384,6 +384,38 @@ TEMPLATE for each session entry:
 - 3Sum recall shows all 3 code-structure bugs from Session #8 are resolved in memory.
 - Day 2 complete! Ready for Day 3 (Move Zeroes + Sort Colors).
 
+### Session #10 — June 28, 2026 — Two Pointers & Sorting (Week 2, Day 3)
+**Status**: ✅ COMPLETE
+**Duration**: ~30 min
+
+**Spaced Repetition Recall Results (12 problems due — 4 overdue + 8 due today)**:
+- Container With Most Water (LC #11): ✅ Perfect — two pointers, move shorter side, O(n)/O(1) → **Promoted to Box 2**
+- Trapping Rain Water (LC #42): ✅ Solid — correct logic, said "minLeft" instead of "maxLeft" (naming not concept) → **Promoted to Box 2**
+- Contiguous Array (LC #525): ✅ Excellent — transform 0→-1, first-occurrence HashMap, {0:-1} init with reasoning → **Promoted to Box 3**
+- Sort Characters By Frequency (LC #451): ✅ Perfect — bucket sort, List[] n+1, right-to-left → **Promoted to Box 3**
+- Two Sum (LC #1): ✅ Perfect — check-before-insert, complement lookup → **Stays Box 3**
+- Contains Duplicate (LC #217): ✅ Perfect — !set.add() idiom → **Stays Box 3**
+- Valid Palindrome (LC #125): ✅ Perfect — skip non-alphanumeric, compare lowercase → **Promoted to Box 3**
+- 3Sum (LC #15): ✅ Excellent — all 3 prior bugs addressed in recall → **Promoted to Box 3**
+- Valid Anagram (LC #242): ✅ Correct approach. Missed length early-exit in chat (fast typing). SC said O(n) instead of O(1) → **Promoted to Box 4**
+- Two Sum II (LC #167): ✅ Perfect — sorted → two pointers, O(n)/O(1) → **Promoted to Box 4**
+- Group Anagrams (LC #49): ✅ Perfect — freq key + HashMap grouping → **Promoted to Box 4**
+- Top K Frequent (LC #347): ✅ Perfect — bucket sort + freq map → **Promoted to Box 4**
+
+**Concept Teach**: Same-direction two pointers (write/read pointer), Dutch National Flag (3-way partition with lo/mid/hi)
+
+**Problems Covered**:
+- Move Zeroes (LC #283): ✅ NEW — 🟢 HIRE. Same-direction write/read pointer. All 5 tests first try. Zero bugs, zero hints. ~4 min. Clean swap-based approach. First same-direction two pointer problem.
+- Sort Colors (LC #75): ✅ NEW — 🟢 HIRE. Dutch National Flag 3-way partition. All 5 tests first try. Zero bugs, zero hints. ~6 min. Clean swap helper method. Correctly explained why mid doesn't increment after hi swap.
+
+**Key Observations**:
+- **14-problem 🟢 HIRE streak** continues!
+- 12/12 spaced rep recalled — 4 promoted to Box 4 (first Box 4 entries!)
+- Same-direction two pointers clicked immediately — clean pattern transfer from understanding of write pointer concept
+- Dutch National Flag: understood the critical invariant (don't advance mid after hi swap) on first explanation
+- Both problems solved in under 10 min combined
+- Day 3 complete! Ready for Day 4.
+
 ---
 
 #### 📂 Pre-Reset Sessions (June 3–10, 2026)
@@ -483,16 +515,18 @@ TEMPLATE for each session entry:
 | 2 | Frequency Counting | 5 | June 17 | Valid Anagram + Group Anagrams + Top K Frequent — all locked in |
 | — | HashMap Grouping | 5 | June 17 | Group Anagrams — 🟢 HIRE, zero bugs, freq key approach |
 | — | Bucket Sort (Freq as Index) | 5 | June 17 | Top K Frequent — 🟢 HIRE, zero bugs, zero hints. Locked in. |
-| 3 | Two Pointers (Opposite Ends) | 5 | June 25 | Valid Palindrome 🟢 HIRE + Container With Most Water 🟢 HIRE |
-| — | Greedy Two Pointers (Max Area) | 5 | June 25 | Container With Most Water 🟢 HIRE — move shorter side, ~4 min |
-| — | Two Pointers (Trapped Water) | 5 | June 25 | Trapping Rain Water 🟢 HIRE (HARD) — process smaller max side, ~5 min |
+| 3 | Two Pointers (Opposite Ends) | 5 | June 28 | Valid Palindrome 🟢 HIRE + Container With Most Water 🟢 HIRE |
+| — | Greedy Two Pointers (Max Area) | 5 | June 28 | Container With Most Water 🟢 HIRE — move shorter side, ~4 min |
+| — | Two Pointers (Trapped Water) | 5 | June 28 | Trapping Rain Water 🟢 HIRE (HARD) — process smaller max side, ~5 min |
+| — | Two Pointers (Same Direction) | 5 | June 28 | Move Zeroes 🟢 HIRE — write/read pointer, ~4 min |
+| — | Dutch National Flag (3-Way Partition) | 5 | June 28 | Sort Colors 🟢 HIRE — lo/mid/hi, ~6 min |
 | — | Prefix/Suffix | 5 | June 18 | Product Except Self — 🟢 HIRE, O(1) space optimization flawless |
 | — | HashSet + Sequence Start | 4 | June 18 | Longest Consecutive Sequence — 🟢 HIRE, NEW, amortized O(n) understood |
 | — | Length-Prefix Encoding | 4 | June 21 | Encode and Decode Strings — Recalled solidly in spaced rep |
 | — | HashSet Validation (Row/Col/Box) | 5 | June 21 | Valid Sudoku — Recalled solidly in spaced rep |
 | — | Prefix Sum + HashMap | 5 | June 22 | Subarray Sum Equals K + Contiguous Array — pattern transfer proven on unseen problem |
 | — | Sort + Fix One + Two Pointers | 4 | June 25 | 3Sum — recalled perfectly in spaced rep, all 3 bugs addressed |
-| 4 | Two Pointers (Same Direction) | — | — | — |
+| 4 | Two Pointers (Same Direction) | 5 | June 28 | Move Zeroes 🟢 HIRE — write/read pointer, ~4 min |
 | 5 | Sliding Window (Fixed) | — | — | — |
 | 6 | Sliding Window (Variable) | — | — | — |
 | 7 | Monotonic Stack | — | — | — |
@@ -556,18 +590,15 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #10 (June 26) — Week 2, Day 3
+**Next**: Session #11 — Week 2, Day 4
 **Topic**: Two Pointers & Sorting
 **Plan**:
-1. ⏰ Spaced repetition check: Container With Most Water (Box 1), Trapping Rain Water (Box 1), Contiguous Array (Box 2), Sort Characters By Frequency (Box 2)
-2. 🎯 **Trapping Rain Water** (LC #42) — Hard, two pointers / prefix max arrays (CONCEPT TEACH on prefix max approach as alternative)
-3. 🎯 **Move Zeroes** (LC #283) — Easy, same-direction two pointers (write pointer)
-4. 🎯 **Sort Colors** (LC #75) — Medium, Dutch National Flag (3-way partition)
+1. ⏰ Spaced repetition check: Move Zeroes (Box 1), Sort Colors (Box 1)
+2. 🎯 New problems TBD per master plan (Day 4 problems)
 
 **Focus**:
-- Introduce same-direction two pointers / write pointer pattern (new variant)
-- Dutch National Flag — 3-way partition with lo/mid/hi pointers
-- Spaced rep: 4 problems due Jun 26
+- Spaced rep: 2 Box 1 problems due Jun 29
+- Continue two pointer mastery
 
 ---
 
@@ -576,7 +607,7 @@ TEMPLATE for each session entry:
 | Week | Problems Solved | New Patterns | Avg Confidence | Key Achievement |
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
-| W2 | 4 (in progress) | 4 | 4.5 | Valid Palindrome, 3Sum, Container, Trapping Rain Water. 3/4 🟢 HIRE. First Hard solved flawlessly! |
+| W2 | 6 (in progress) | 6 | 4.8 | Valid Palindrome, 3Sum, Container, Trapping Rain Water, Move Zeroes, Sort Colors. 5/6 🟢 HIRE. First same-dir two pointer + DNF! |
 | W3 | — | — | — | — |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |

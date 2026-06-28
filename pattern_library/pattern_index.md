@@ -42,6 +42,8 @@
 | 31 | "Longest subarray with equal X and Y" | Transform (0→-1, 1→1) + prefix sum; same sum at two indices = valid subarray | **Transform + Prefix Sum (Max Length)** | `map.put(0,-1); store FIRST occurrence only; maxLen = i - map.get(sum)` |
 | 32 | "Maximum area/container between two lines" | Two pointers from ends, move the SHORTER side (shorter = bottleneck for area) | **Greedy Two Pointers (Max Area)** | `area = min(h[l], h[r]) * (r-l); move shorter side` |
 | 33 | "How much water/rain trapped in elevation map" | Two pointers + track maxLeft/maxRight, process side with SMALLER max | **Two Pointers (Trapped Water)** | `water += max - height[ptr]; process side where max is smaller` |
+| 34 | "Move/remove elements in-place, maintain order" | Write pointer (j) at 0, read pointer (i) scans; swap valid elements to j, advance j | **Two Pointers (Same Dir — Write Pointer)** | `if (nums[i] != 0) { swap(i, j); j++; }` |
+| 35 | "Sort array with only 3 distinct values" | 3 pointers: lo, mid, hi. Mid scans. 0→swap lo, 1→skip, 2→swap hi. Don't advance mid after hi swap | **Dutch National Flag (3-Way Partition)** | `lo=0, mid=0, hi=n-1; route by nums[mid]` |
 
 ---
 

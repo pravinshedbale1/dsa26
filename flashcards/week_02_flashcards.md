@@ -71,4 +71,31 @@
 
 ---
 
+## Card 6: Two Pointers — Same Direction / Write Pointer (Move Zeroes)
+```
+🔍 TRIGGER: "Move/remove elements in-place" or "partition array by condition"
+💡 IDEA:   Write pointer (j) marks next valid position. Read pointer (i) scans all.
+           When read finds valid element → swap with write position → advance write.
+📝 CODE:   int j = 0; for (int i = 0; i < n; i++) { if (nums[i] != 0) swap(i, j); j++; }
+⏱️ TIME:   O(n)  |  SPACE: O(1)
+⚠️ REUSE:  Same skeleton for Remove Duplicates, Remove Element — only the if condition changes.
+```
+
+---
+
+## Card 7: Dutch National Flag — 3-Way Partition (Sort Colors)
+```
+🔍 TRIGGER: "Sort array with only 3 distinct values" or "3-way partition"
+💡 IDEA:   3 pointers: lo=0, mid=0, hi=n-1. Mid scans and routes elements.
+           nums[mid]==0 → swap(mid,lo), lo++, mid++
+           nums[mid]==1 → mid++
+           nums[mid]==2 → swap(mid,hi), hi--
+📝 KEY:    DON'T increment mid after swap with hi (unexamined element!)
+           Safe to increment mid after swap with lo (lo ≤ mid, already scanned)
+⏱️ TIME:   O(n) single pass  |  SPACE: O(1)
+⚠️ REGIONS: [0..lo) = 0s, [lo..mid) = 1s, [mid..hi] = unknown, (hi..n-1] = 2s
+```
+
+---
+
 _Cards grow as we solve more Week 2 problems._

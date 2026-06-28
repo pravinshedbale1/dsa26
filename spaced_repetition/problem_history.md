@@ -46,6 +46,8 @@
 | 24 | Jun 23 | 3Sum (NEW) | 15 | Medium | Sort + Fix One + Two Pointers | Brute O(n³) → Sort + 2ptr O(n²)/O(k) | O(n²) | O(k) | ⚡ | 3 | Box 1 | 🟡 LEAN HIRE. NEW. 2 hints: k scope outside loop, extra j++/k-- outside if/else. Approach correct, code structure struggled. Dup skip for i independent, j/k needed guidance. All 5 tests after fixes. ~20 min. |
 | 25 | Jun 25 | Container With Most Water (NEW) | 11 | Medium | Greedy Two Pointers | Brute O(n²) → Two Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~4 min. Greedy: move shorter side. Clean naming. |
 | 26 | Jun 25 | Trapping Rain Water (NEW) | 42 | Hard | Two Pointers (maxLeft/maxRight) | Brute O(n²) → Prefix arrays O(n)/O(n) → Two Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW HARD. All 5 tests first try. Zero bugs, zero hints. ~5 min. Articulate reasoning: smaller max = bottleneck. Proactive null check. |
+| 27 | Jun 28 | Move Zeroes (NEW) | 283 | Easy | Two Pointers (Same Direction) | Brute O(n²) → Write/Read Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~4 min. Clean swap-based write pointer. First same-direction two pointer problem. |
+| 28 | Jun 28 | Sort Colors (NEW) | 75 | Medium | Dutch National Flag (3-way Partition) | Sort O(n log n) → DNF O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~6 min. Clean swap helper. Knew not to increment mid after hi swap. |
 
 ---
 
@@ -64,5 +66,6 @@
 | **W1 TOTAL** | **13** | **11** | **2** | **0** | **0** | **4.6** | **All Arrays & Hashing patterns** |
 | W2 D1 | 2 (complete) | 1 | 1 | 0 | 0 | 4.0 | Two Pointers (Opposite) / Sort+2ptr |
 | W2 D2 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Greedy Two Pointers / Two Ptr maxL/maxR |
+| W2 D3 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Same-Dir Two Ptr / Dutch National Flag |
 | ... | — | — | — | — | — | — | — |
 
