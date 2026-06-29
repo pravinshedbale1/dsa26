@@ -48,6 +48,7 @@
 | 26 | Jun 25 | Trapping Rain Water (NEW) | 42 | Hard | Two Pointers (maxLeft/maxRight) | Brute O(n²) → Prefix arrays O(n)/O(n) → Two Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW HARD. All 5 tests first try. Zero bugs, zero hints. ~5 min. Articulate reasoning: smaller max = bottleneck. Proactive null check. |
 | 27 | Jun 28 | Move Zeroes (NEW) | 283 | Easy | Two Pointers (Same Direction) | Brute O(n²) → Write/Read Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~4 min. Clean swap-based write pointer. First same-direction two pointer problem. |
 | 28 | Jun 28 | Sort Colors (NEW) | 75 | Medium | Dutch National Flag (3-way Partition) | Sort O(n log n) → DNF O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~6 min. Clean swap helper. Knew not to increment mid after hi swap. |
+| 29 | Jun 29 | Remove Duplicates from Sorted Array (NEW) | 26 | Easy | Two Pointers (Same Dir — Write Pointer) | Brute O(n)/O(n) → Write Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. Initial off-by-one (k=3), self-debugged. Zero hints. ~3.5 min. Clean ++j overwrite. Pattern transfer from Move Zeroes. |
 
 ---
 
@@ -67,5 +68,6 @@
 | W2 D1 | 2 (complete) | 1 | 1 | 0 | 0 | 4.0 | Two Pointers (Opposite) / Sort+2ptr |
 | W2 D2 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Greedy Two Pointers / Two Ptr maxL/maxR |
 | W2 D3 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Same-Dir Two Ptr / Dutch National Flag |
+| W2 D4 | 1 (in progress) | 1 | 0 | 0 | 0 | 5.0 | Write Pointer (Remove Dups) |
 | ... | — | — | — | — | — | — | — |
 

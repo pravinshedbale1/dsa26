@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 2 — Two Pointers & Sorting |
-| **Current Day** | Day 3 (June 28, 2026) — COMPLETE ✅ |
+| **Current Day** | Day 4 (June 29, 2026) — IN PROGRESS |
 | **Current Topic** | Two Pointers & Sorting |
-| **Current Problem** | Sort Colors (LC #75) — DONE |
-| **Session Count** | 10 |
-| **Total Problems Solved** | 19 (new plan) |
+| **Current Problem** | Remove Duplicates (LC #26) — DONE, 4Sum next |
+| **Session Count** | 11 |
+| **Total Problems Solved** | 20 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 105 |
+| **Days Remaining** | 104 |
 
 ---
 

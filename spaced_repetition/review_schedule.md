@@ -23,8 +23,7 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Move Zeroes (LC #283) | Two Pointers (Same Direction) | Jun 28 | Jun 28 | Jun 29 |
-| Sort Colors (LC #75) | Dutch National Flag (3-way Partition) | Jun 28 | Jun 28 | Jun 29 |
+| Remove Duplicates (LC #26) | Two Pointers (Same Dir — Write Pointer) | Jun 29 | Jun 29 | Jun 30 |
 
 ---
 
@@ -34,6 +33,8 @@
 |---------|---------|------------|-------------|-------------|
 | Container With Most Water (LC #11) | Greedy Two Pointers | Jun 28 | Jun 28 | Jul 1 |
 | Trapping Rain Water (LC #42) | Two Pointers (maxLeft/maxRight) | Jun 28 | Jun 28 | Jul 1 |
+| Move Zeroes (LC #283) | Two Pointers (Same Direction) | Jun 29 | Jun 29 | Jul 2 |
+| Sort Colors (LC #75) | Dutch National Flag (3-way Partition) | Jun 29 | Jun 29 | Jul 2 |
 
 ---
 
@@ -76,25 +77,14 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: June 28, 2026
+**Date**: June 29, 2026
 
-### Spaced Repetition Recall (12 problems):
-- ✅ Container With Most Water (LC #11) — Perfect recall. Two pointers, move shorter side, O(n)/O(1). → Promoted to Box 2
-- ✅ Trapping Rain Water (LC #42) — Solid recall. Logic correct, said "minLeft" instead of "maxLeft" (naming, not concept). → Promoted to Box 2
-- ✅ Contiguous Array (LC #525) — Excellent recall. Transform 0→-1, first-occurrence HashMap, {0:-1} init with reasoning. → Promoted to Box 3
-- ✅ Sort Characters By Frequency (LC #451) — Perfect recall. Bucket sort, List[] size n+1, iterate right-to-left. → Promoted to Box 3
-- ✅ Two Sum (LC #1) — Perfect. Check-before-insert, complement lookup. → Stays Box 3
-- ✅ Contains Duplicate (LC #217) — Perfect. !set.add() idiom. → Stays Box 3
-- ✅ Valid Palindrome (LC #125) — Perfect. Skip non-alphanumeric, compare lowercase. → Promoted to Box 3
-- ✅ 3Sum (LC #15) — Excellent. All 3 prior bugs addressed. → Promoted to Box 3
-- ✅ Valid Anagram (LC #242) — Correct approach. Missed length early-exit in chat (claims fast typing). SC said O(n) instead of O(1). → Promoted to Box 4
-- ✅ Two Sum II (LC #167) — Perfect. Sorted → two pointers, O(n)/O(1). → Promoted to Box 4
-- ✅ Group Anagrams (LC #49) — Perfect. Freq key + HashMap grouping. → Promoted to Box 4
-- ✅ Top K Frequent (LC #347) — Perfect. Bucket sort + freq map. → Promoted to Box 4
+### Spaced Repetition Recall (2 problems):
+- ✅ Move Zeroes (LC #283) — Perfect recall. Same-dir two pointers, write/read, swap non-zero forward. O(n)/O(1). → Promoted to Box 2
+- ✅ Sort Colors (LC #75) — Excellent recall. DNF 3-way partition, lo/mid/hi, explained critical mid-increment rule with reasoning. → Promoted to Box 2
 
 ### Problems Solved Today:
-- ✅ Move Zeroes (LC #283) — 🟢 HIRE, NEW. Same-direction write/read pointer, swap non-zeroes forward. Zero bugs, zero hints. ~4 min.
-- ✅ Sort Colors (LC #75) — 🟢 HIRE, NEW. Dutch National Flag 3-way partition. lo/mid/hi pointers. Zero bugs, zero hints. ~6 min. Clean swap helper.
+- ✅ Remove Duplicates (LC #26) — 🟢 HIRE, NEW. Write pointer, overwrite with ++j. Initial off-by-one, self-debugged. Zero hints. ~3.5 min.
 
 ### Review Checklist:
 For each problem due:
@@ -112,12 +102,12 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 19 |
-| Box 1 (daily) | 2 |
-| Box 2 (3-day) | 2 |
+| Total problems in system | 20 |
+| Box 1 (daily) | 1 |
+| Box 2 (3-day) | 4 |
 | Box 3 (weekly) | 11 |
 | Box 4 (bi-weekly) | 4 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 12 |
-| Problems solved today | 2 |
-| Streak (consecutive days) | 10 |
+| Reviews completed today | 2 |
+| Problems solved today | 1 |
+| Streak (consecutive days) | 11 |
