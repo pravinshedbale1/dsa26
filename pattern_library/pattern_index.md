@@ -44,6 +44,7 @@
 | 33 | "How much water/rain trapped in elevation map" | Two pointers + track maxLeft/maxRight, process side with SMALLER max | **Two Pointers (Trapped Water)** | `water += max - height[ptr]; process side where max is smaller` |
 | 34 | "Move/remove elements in-place, maintain order" | Write pointer (j) at 0, read pointer (i) scans; swap valid elements to j, advance j | **Two Pointers (Same Dir — Write Pointer)** | `if (nums[i] != 0) { swap(i, j); j++; }` |
 | 35 | "Sort array with only 3 distinct values" | 3 pointers: lo, mid, hi. Mid scans. 0→swap lo, 1→skip, 2→swap hi. Don't advance mid after hi swap | **Dutch National Flag (3-Way Partition)** | `lo=0, mid=0, hi=n-1; route by nums[mid]` |
+| 36 | "Find all quadruplets summing to target" | Sort + fix 2 outer loops + two pointers inner. Generalize kSum: fix (k-2) + 2ptr. Watch for int overflow → use long | **Sort + Fix Two + Two Pointers (kSum)** | `for i { for j { k=j+1, l=n-1; while (k<l) }}` |
 
 ---
 

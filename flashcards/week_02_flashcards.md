@@ -98,4 +98,21 @@
 
 ---
 
+## Card 8: Sort + Fix Two + Two Pointers (4Sum)
+```
+🔍 TRIGGER: "Find all quadruplets that sum to target" or "extend 3Sum to 4 elements"
+💡 IDEA:   Sort array. Fix i and j, two-pointer k=j+1 and l=n-1 for remaining pair.
+📝 CODE:   Skip dup i: if (i > 0 && nums[i] == nums[i-1]) continue;
+           Skip dup j: if (j > i+1 && nums[j] == nums[j-1]) continue;
+           Skip dup k/l: INSIDE else block, AFTER adding quadruplet
+⏱️ TIME:   O(n³)  |  SPACE: O(k) where k = number of quadruplets
+⚠️ TRAP:   OVERFLOW! Sum of 4 ints can exceed Integer.MAX_VALUE.
+           Use long: long sum = nums[i] + nums[j]; sum += nums[k] + nums[l];
+           Or cast: (long) nums[i] + nums[j] + nums[k] + nums[l]
+🔗 GENERALIZE: kSum = fix (k-2) elements + two pointers. Each extra fix adds O(n).
+```
+
+---
+
 _Cards grow as we solve more Week 2 problems._
+

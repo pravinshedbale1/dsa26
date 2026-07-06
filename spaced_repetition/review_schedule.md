@@ -23,7 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Remove Duplicates (LC #26) | Two Pointers (Same Dir — Write Pointer) | Jun 29 | Jun 29 | Jun 30 |
+| 4Sum (LC #18) | Sort + Fix Two + Two Pointers | Jul 6 | Jul 6 | Jul 7 |
+| Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jul 6 (demoted) | Jul 6 | Jul 7 |
 
 ---
 
@@ -31,10 +32,7 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Container With Most Water (LC #11) | Greedy Two Pointers | Jun 28 | Jun 28 | Jul 1 |
-| Trapping Rain Water (LC #42) | Two Pointers (maxLeft/maxRight) | Jun 28 | Jun 28 | Jul 1 |
-| Move Zeroes (LC #283) | Two Pointers (Same Direction) | Jun 29 | Jun 29 | Jul 2 |
-| Sort Colors (LC #75) | Dutch National Flag (3-way Partition) | Jun 29 | Jun 29 | Jul 2 |
+| Remove Duplicates (LC #26) | Two Pointers (Same Dir — Write Pointer) | Jul 6 | Jul 6 | Jul 9 |
 
 ---
 
@@ -42,17 +40,10 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jun 25 | Jun 25 | Jul 2 |
-| Encode and Decode Strings (LC #271) | Length-Prefix Encoding | Jun 25 | Jun 25 | Jul 2 |
-| Valid Sudoku (LC #36) | HashSet per Row/Col/Box | Jun 25 | Jun 25 | Jul 2 |
-| Product Except Self (LC #238) | Prefix/Suffix Product | Jun 23 | Jun 23 | Jun 30 |
-| Longest Consecutive Sequence (LC #128) | HashSet + Sequence Start | Jun 23 | Jun 23 | Jun 30 |
-| Valid Palindrome (LC #125) | Two Pointers (Opposite Ends) | Jun 28 | Jun 28 | Jul 5 |
-| 3Sum (LC #15) | Sort + Fix One + Two Pointers | Jun 28 | Jun 28 | Jul 5 |
-| Contiguous Array (LC #525) | Prefix Sum + HashMap (Max Length Variant) | Jun 28 | Jun 28 | Jul 5 |
-| Sort Characters By Frequency (LC #451) | Freq Count + Bucket Sort | Jun 28 | Jun 28 | Jul 5 |
-| Two Sum (LC #1) | HashMap Complement | Jun 28 | Jun 28 | Jul 5 |
-| Contains Duplicate (LC #217) | HashSet Membership | Jun 28 | Jun 28 | Jul 5 |
+| Container With Most Water (LC #11) | Greedy Two Pointers | Jul 6 | Jul 6 | Jul 13 |
+| Trapping Rain Water (LC #42) | Two Pointers (maxLeft/maxRight) | Jul 6 | Jul 6 | Jul 13 |
+| Move Zeroes (LC #283) | Two Pointers (Same Direction) | Jul 6 | Jul 6 | Jul 13 |
+| Sort Colors (LC #75) | Dutch National Flag (3-way Partition) | Jul 6 | Jul 6 | Jul 13 |
 
 ---
 
@@ -64,6 +55,16 @@
 | Two Sum II (LC #167) | Two Pointers (Opposite) | Jun 28 | Jun 28 | Jul 12 |
 | Group Anagrams (LC #49) | HashMap Grouping (Freq Key) | Jun 28 | Jun 28 | Jul 12 |
 | Top K Frequent (LC #347) | Freq Count + Bucket Sort | Jun 28 | Jun 28 | Jul 12 |
+| Product Except Self (LC #238) | Prefix/Suffix Product | Jul 6 | Jul 6 | Jul 20 |
+| Longest Consecutive Sequence (LC #128) | HashSet + Sequence Start | Jul 6 | Jul 6 | Jul 20 |
+| Encode and Decode Strings (LC #271) | Length-Prefix Encoding | Jul 6 | Jul 6 | Jul 20 |
+| Valid Sudoku (LC #36) | HashSet per Row/Col/Box | Jul 6 | Jul 6 | Jul 20 |
+| Valid Palindrome (LC #125) | Two Pointers (Opposite Ends) | Jul 6 | Jul 6 | Jul 20 |
+| 3Sum (LC #15) | Sort + Fix One + Two Pointers | Jul 6 | Jul 6 | Jul 20 |
+| Contiguous Array (LC #525) | Prefix Sum + HashMap (Max Length Variant) | Jul 6 | Jul 6 | Jul 20 |
+| Sort Characters By Frequency (LC #451) | Freq Count + Bucket Sort | Jul 6 | Jul 6 | Jul 20 |
+| Two Sum (LC #1) | HashMap Complement | Jul 6 | Jul 6 | Jul 20 |
+| Contains Duplicate (LC #217) | HashSet Membership | Jul 6 | Jul 6 | Jul 20 |
 
 ---
 
@@ -77,14 +78,28 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: June 29, 2026
+**Date**: July 6, 2026
 
-### Spaced Repetition Recall (2 problems):
-- ✅ Move Zeroes (LC #283) — Perfect recall. Same-dir two pointers, write/read, swap non-zero forward. O(n)/O(1). → Promoted to Box 2
-- ✅ Sort Colors (LC #75) — Excellent recall. DNF 3-way partition, lo/mid/hi, explained critical mid-increment rule with reasoning. → Promoted to Box 2
+### Spaced Repetition Recall (16 overdue problems):
+- ✅ Remove Duplicates (LC #26) — Correct. Write/read pointer, overwrite non-dups. O(n)/O(1). → Promoted to Box 2
+- ✅ Container With Most Water (LC #11) — Correct. Opposite pointers, move shorter side. O(n)/O(1). → Promoted to Box 3
+- ✅ Trapping Rain Water (LC #42) — Correct. Two pointers + maxLeft/maxRight, process smaller max. O(n)/O(1). → Promoted to Box 3
+- ✅ Move Zeroes (LC #283) — Correct. Write/read pointer, swap non-zero forward. O(n)/O(1). → Promoted to Box 3
+- ✅ Sort Colors (LC #75) — Excellent. DNF 3-way partition, explained mid-increment invariant with reasoning. → Promoted to Box 3
+- ✅ Product Except Self (LC #238) — Correct. Prefix into answer array, running suffix variable. O(n)/O(1). → Promoted to Box 4
+- ✅ Longest Consecutive Sequence (LC #128) — Correct. HashSet, sequence start detection (no n-1). O(n)/O(n). → Promoted to Box 4
+- ⚠️ Subarray Sum Equals K (LC #560) — Mixed up {0:1} (count) with {0:-1} (index). → DEMOTED to Box 1
+- ✅ Encode and Decode Strings (LC #271) — Correct. Length-prefix: count#string. O(n)/O(n). → Promoted to Box 4
+- ✅ Valid Sudoku (LC #36) — Correct. HashSet per row/col/box, box formula (r/3)*3+(c/3). → Promoted to Box 4
+- ✅ Valid Palindrome (LC #125) — Correct. Two pointers inward, skip non-alphanumeric. O(n)/O(1). → Promoted to Box 4
+- ✅ 3Sum (LC #15) — Correct. Sort + fix i + two pointers j,k. Dup skip placement correct. O(n²)/O(k). → Promoted to Box 4
+- ✅ Contiguous Array (LC #525) — Correct. 0→-1, prefix sum, first occurrence only, {0:-1}. O(n)/O(n). → Promoted to Box 4
+- ✅ Sort Characters By Frequency (LC #451) — Correct. Freq map + bucket sort, List[] n+1, right-to-left. O(n)/O(n). → Promoted to Box 4
+- ✅ Two Sum (LC #1) — Correct. Check-before-insert, complement lookup. O(n)/O(n). → Promoted to Box 4
+- ✅ Contains Duplicate (LC #217) — Correct. !set.add() idiom. O(n)/O(n). → Promoted to Box 4
 
 ### Problems Solved Today:
-- ✅ Remove Duplicates (LC #26) — 🟢 HIRE, NEW. Write pointer, overwrite with ++j. Initial off-by-one, self-debugged. Zero hints. ~3.5 min.
+- ✅ 4Sum (LC #18) — 🟢 HIRE, NEW. Sort + fix two + two pointers. All 5 tests first try. Zero bugs, zero hints. ~10 min. Smart overflow handling with long split. Added to Box 1.
 
 ### Review Checklist:
 For each problem due:
@@ -102,12 +117,12 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 20 |
-| Box 1 (daily) | 1 |
-| Box 2 (3-day) | 4 |
-| Box 3 (weekly) | 11 |
-| Box 4 (bi-weekly) | 4 |
+| Total problems in system | 21 |
+| Box 1 (daily) | 2 |
+| Box 2 (3-day) | 1 |
+| Box 3 (weekly) | 4 |
+| Box 4 (bi-weekly) | 14 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 2 |
+| Reviews completed today | 16 |
 | Problems solved today | 1 |
-| Streak (consecutive days) | 11 |
+| Streak (consecutive days) | 1 (gap from Jun 29 – Jul 6) |

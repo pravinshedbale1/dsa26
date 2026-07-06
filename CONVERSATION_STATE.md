@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 2 — Two Pointers & Sorting |
-| **Current Day** | Day 4 (June 29, 2026) — IN PROGRESS |
+| **Current Day** | Day 4 (July 6, 2026) — COMPLETE |
 | **Current Topic** | Two Pointers & Sorting |
-| **Current Problem** | Remove Duplicates (LC #26) — DONE, 4Sum next |
-| **Session Count** | 11 |
-| **Total Problems Solved** | 20 (new plan) |
+| **Current Problem** | 4Sum (LC #18) — DONE, Day 5 next |
+| **Session Count** | 12 |
+| **Total Problems Solved** | 21 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 104 |
+| **Days Remaining** | 97 |
 
 ---
 
@@ -416,6 +416,57 @@ TEMPLATE for each session entry:
 - Both problems solved in under 10 min combined
 - Day 3 complete! Ready for Day 4.
 
+### Session #11 — June 29, 2026 — Two Pointers & Sorting (Week 2, Day 4 — Part 1)
+**Status**: ✅ COMPLETE
+**Duration**: ~20 min
+
+**Spaced Repetition Recall Results (2 problems due)**:
+- Move Zeroes (LC #283): ✅ Perfect — same-dir two pointers, write/read, swap non-zero forward. O(n)/O(1). → **Promoted to Box 2**
+- Sort Colors (LC #75): ✅ Excellent — DNF 3-way partition, lo/mid/hi, explained mid-increment rule with reasoning. → **Promoted to Box 2**
+
+**Problems Covered**:
+- Remove Duplicates from Sorted Array (LC #26): ✅ NEW — 🟢 HIRE. Write pointer, overwrite with ++j. Initial off-by-one, self-debugged. Zero hints. ~3.5 min.
+
+**Key Observations**:
+- **15-problem 🟢 HIRE streak** continues!
+- Pattern transfer from Move Zeroes to Remove Duplicates was instant
+- Day 4 Part 1 complete, 4Sum pending.
+
+### Session #12 — July 6, 2026 — Two Pointers & Sorting (Week 2, Day 4 — Part 2)
+**Status**: ✅ COMPLETE
+**Duration**: ~50 min (including spaced rep)
+
+**Spaced Repetition Recall Results (16 overdue problems — 1 week gap)**:
+- Remove Duplicates (LC #26): ✅ Correct → **Promoted to Box 2**
+- Container With Most Water (LC #11): ✅ Correct → **Promoted to Box 3**
+- Trapping Rain Water (LC #42): ✅ Correct → **Promoted to Box 3**
+- Move Zeroes (LC #283): ✅ Correct → **Promoted to Box 3**
+- Sort Colors (LC #75): ✅ Excellent — invariant reasoning for mid-increment → **Promoted to Box 3**
+- Product Except Self (LC #238): ✅ Correct → **Promoted to Box 4**
+- Longest Consecutive Sequence (LC #128): ✅ Correct, sequence start detection (no n-1) → **Promoted to Box 4**
+- ⚠️ Subarray Sum Equals K (LC #560): Mixed up {0:1} (count) with {0:-1} (index from Contiguous Array) → **DEMOTED to Box 1**
+- Encode and Decode Strings (LC #271): ✅ Correct → **Promoted to Box 4**
+- Valid Sudoku (LC #36): ✅ Correct, box formula correct → **Promoted to Box 4**
+- Valid Palindrome (LC #125): ✅ Correct → **Promoted to Box 4**
+- 3Sum (LC #15): ✅ Correct, all dup skip placements correct → **Promoted to Box 4**
+- Contiguous Array (LC #525): ✅ Correct, {0:-1} initialization correct → **Promoted to Box 4**
+- Sort Characters By Frequency (LC #451): ✅ Correct → **Promoted to Box 4**
+- Two Sum (LC #1): ✅ Correct, check-before-insert → **Promoted to Box 4**
+- Contains Duplicate (LC #217): ✅ Correct, !set.add() idiom → **Promoted to Box 4**
+
+**Recall Verdict**: 15/16 correct. 1 demotion (Subarray Sum Equals K — confused count-based vs index-based HashMap initialization).
+
+**Problems Covered**:
+- 4Sum (LC #18): ✅ NEW — 🟢 HIRE. Sort + fix two (i,j) + two pointers (k,l). All 5 tests first try. Zero bugs, zero hints. ~10 min. Clean extension of 3Sum. Smart overflow handling: split sum into two int pairs combined as long. Correct dup skipping for all 4 pointers (j > i+1 condition nailed).
+
+**Key Observations**:
+- **16-problem 🟢 HIRE streak** 🔥
+- 4Sum was a clean generalization of 3Sum — pattern transfer confirmed
+- Overflow awareness: proactively identified need for long when prompted about 10⁹ constraints
+- Key confusion exposed: {0:1} vs {0:-1} in Prefix Sum + HashMap problems. Must drill: count-based = {0:1}, index-based = {0:-1}
+- Despite 1-week gap, 15/16 recalled — strong long-term retention
+- Day 4 complete! Ready for Day 5 (Boats to Save People + more two-pointer).
+
 ---
 
 #### 📂 Pre-Reset Sessions (June 3–10, 2026)
@@ -525,7 +576,8 @@ TEMPLATE for each session entry:
 | — | Length-Prefix Encoding | 4 | June 21 | Encode and Decode Strings — Recalled solidly in spaced rep |
 | — | HashSet Validation (Row/Col/Box) | 5 | June 21 | Valid Sudoku — Recalled solidly in spaced rep |
 | — | Prefix Sum + HashMap | 5 | June 22 | Subarray Sum Equals K + Contiguous Array — pattern transfer proven on unseen problem |
-| — | Sort + Fix One + Two Pointers | 4 | June 25 | 3Sum — recalled perfectly in spaced rep, all 3 bugs addressed |
+| — | Sort + Fix One + Two Pointers | 5 | July 6 | 3Sum — recalled perfectly in spaced rep, promoted to Box 4 |
+| — | Sort + Fix Two + Two Pointers (kSum) | 5 | July 6 | 4Sum 🟢 HIRE — clean 3Sum extension, overflow handling, ~10 min |
 | 4 | Two Pointers (Same Direction) | 5 | June 28 | Move Zeroes 🟢 HIRE — write/read pointer, ~4 min |
 | 5 | Sliding Window (Fixed) | — | — | — |
 | 6 | Sliding Window (Variable) | — | — | — |
@@ -550,27 +602,31 @@ TEMPLATE for each session entry:
 
 ---
 
-## 📅 Spaced Repetition — Due Today
+## 📅 Spaced Repetition — Due Next
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Container With Most Water (LC #11) | Box 1 | June 25 | June 26 | 🆕 Added today |
-| Trapping Rain Water (LC #42) | Box 1 | June 25 | June 26 | 🆕 Added today |
-| Valid Palindrome (LC #125) | Box 2 | June 25 | June 28 | ✅ Promoted today |
-| 3Sum (LC #15) | Box 2 | June 25 | June 28 | ✅ Promoted today |
-| Contiguous Array (LC #525) | Box 2 | June 23 | June 26 | ⏳ Due Jun 26 |
-| Sort Characters By Frequency (LC #451) | Box 2 | June 23 | June 26 | ⏳ Due Jun 26 |
-| Subarray Sum Equals K (LC #560) | Box 3 | June 25 | July 2 | ✅ Promoted today |
-| Encode and Decode Strings (LC #271) | Box 3 | June 25 | July 2 | ✅ Promoted today |
-| Valid Sudoku (LC #36) | Box 3 | June 25 | July 2 | ✅ Promoted today |
-| Product Except Self (LC #238) | Box 3 | June 23 | June 30 | ⏳ Due Jun 30 |
-| Longest Consecutive Sequence (LC #128) | Box 3 | June 23 | June 30 | ⏳ Due Jun 30 |
-| Two Sum (LC #1) | Box 3 | June 20 | June 27 | ⏳ Due Jun 27 |
-| Contains Duplicate (LC #217) | Box 3 | June 20 | June 27 | ⏳ Due Jun 27 |
-| Valid Anagram (LC #242) | Box 3 | June 21 | June 28 | ⏳ Due Jun 28 |
-| Two Sum II (LC #167) | Box 3 | June 21 | June 28 | ⏳ Due Jun 28 |
-| Group Anagrams (LC #49) | Box 3 | June 21 | June 28 | ⏳ Due Jun 28 |
-| Top K Frequent (LC #347) | Box 3 | June 21 | June 28 | ⏳ Due Jun 28 |
+| 4Sum (LC #18) | Box 1 | Jul 6 | Jul 7 | 🆕 New |
+| Subarray Sum Equals K (LC #560) | Box 1 | Jul 6 | Jul 7 | ⚠️ Demoted |
+| Remove Duplicates (LC #26) | Box 2 | Jul 6 | Jul 9 | ✅ Promoted |
+| Valid Anagram (LC #242) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
+| Two Sum II (LC #167) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
+| Group Anagrams (LC #49) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
+| Top K Frequent (LC #347) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
+| Container With Most Water (LC #11) | Box 3 | Jul 6 | Jul 13 | ✅ Promoted |
+| Trapping Rain Water (LC #42) | Box 3 | Jul 6 | Jul 13 | ✅ Promoted |
+| Move Zeroes (LC #283) | Box 3 | Jul 6 | Jul 13 | ✅ Promoted |
+| Sort Colors (LC #75) | Box 3 | Jul 6 | Jul 13 | ✅ Promoted |
+| Product Except Self (LC #238) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
+| Longest Consecutive (LC #128) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
+| Encode and Decode Strings (LC #271) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
+| Valid Sudoku (LC #36) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
+| Valid Palindrome (LC #125) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
+| 3Sum (LC #15) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
+| Contiguous Array (LC #525) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
+| Sort Chars By Freq (LC #451) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
+| Two Sum (LC #1) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
+| Contains Duplicate (LC #217) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
 
 ---
 
@@ -590,15 +646,16 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #11 — Week 2, Day 4
+**Next**: Session #13 — Week 2, Day 5
 **Topic**: Two Pointers & Sorting
 **Plan**:
-1. ⏰ Spaced repetition check: Move Zeroes (Box 1), Sort Colors (Box 1)
-2. 🎯 New problems TBD per master plan (Day 4 problems)
+1. ⏰ Spaced repetition check: 4Sum (Box 1), Subarray Sum Equals K (Box 1) — DRILL {0:1} vs {0:-1}
+2. 🎯 New problems: Boats to Save People (LC #881) per master plan
 
 **Focus**:
-- Spaced rep: 2 Box 1 problems due Jun 29
-- Continue two pointer mastery
+- Subarray Sum Equals K: nail the initialization difference (count vs index)
+- Continue two pointer mastery — greedy pairing pattern
+- Week 2 Day 5 completes the core two-pointer curriculum
 
 ---
 
@@ -607,7 +664,7 @@ TEMPLATE for each session entry:
 | Week | Problems Solved | New Patterns | Avg Confidence | Key Achievement |
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
-| W2 | 6 (in progress) | 6 | 4.8 | Valid Palindrome, 3Sum, Container, Trapping Rain Water, Move Zeroes, Sort Colors. 5/6 🟢 HIRE. First same-dir two pointer + DNF! |
+| W2 | 8 (in progress) | 8 | 4.9 | Valid Palindrome, 3Sum, Container, Trapping Rain Water, Move Zeroes, Sort Colors, Remove Dups, 4Sum. 7/8 🟢 HIRE. kSum generalization mastered! |
 | W3 | — | — | — | — |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |

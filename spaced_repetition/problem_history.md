@@ -49,6 +49,7 @@
 | 27 | Jun 28 | Move Zeroes (NEW) | 283 | Easy | Two Pointers (Same Direction) | Brute O(n²) → Write/Read Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~4 min. Clean swap-based write pointer. First same-direction two pointer problem. |
 | 28 | Jun 28 | Sort Colors (NEW) | 75 | Medium | Dutch National Flag (3-way Partition) | Sort O(n log n) → DNF O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~6 min. Clean swap helper. Knew not to increment mid after hi swap. |
 | 29 | Jun 29 | Remove Duplicates from Sorted Array (NEW) | 26 | Easy | Two Pointers (Same Dir — Write Pointer) | Brute O(n)/O(n) → Write Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. Initial off-by-one (k=3), self-debugged. Zero hints. ~3.5 min. Clean ++j overwrite. Pattern transfer from Move Zeroes. |
+| 30 | Jul 6 | 4Sum (NEW) | 18 | Medium | Sort + Fix Two + Two Pointers | Brute O(n⁴) → Sort + Fix Two + 2ptr O(n³)/O(k) | O(n³) | O(k) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~10 min. Clean extension of 3Sum. Smart overflow handling: split sum into two int pairs combined as long. Correct dup skipping for all 4 pointers. |
 
 ---
 
@@ -68,6 +69,6 @@
 | W2 D1 | 2 (complete) | 1 | 1 | 0 | 0 | 4.0 | Two Pointers (Opposite) / Sort+2ptr |
 | W2 D2 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Greedy Two Pointers / Two Ptr maxL/maxR |
 | W2 D3 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Same-Dir Two Ptr / Dutch National Flag |
-| W2 D4 | 1 (in progress) | 1 | 0 | 0 | 0 | 5.0 | Write Pointer (Remove Dups) |
+| W2 D4 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Write Pointer + Sort+Fix Two+2ptr |
 | ... | — | — | — | — | — | — | — |
 
