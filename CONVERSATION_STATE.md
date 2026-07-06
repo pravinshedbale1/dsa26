@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 2 — Two Pointers & Sorting |
-| **Current Day** | Day 4 (July 6, 2026) — COMPLETE |
+| **Current Day** | Day 5 (July 7, 2026) — COMPLETE |
 | **Current Topic** | Two Pointers & Sorting |
-| **Current Problem** | 4Sum (LC #18) — DONE, Day 5 next |
-| **Session Count** | 12 |
-| **Total Problems Solved** | 21 (new plan) |
+| **Current Problem** | Boats to Save People (LC #881) — DONE, Day 6 next |
+| **Session Count** | 13 |
+| **Total Problems Solved** | 22 (new plan) |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 97 |
+| **Days Remaining** | 96 |
 
 ---
 
@@ -467,6 +467,24 @@ TEMPLATE for each session entry:
 - Despite 1-week gap, 15/16 recalled — strong long-term retention
 - Day 4 complete! Ready for Day 5 (Boats to Save People + more two-pointer).
 
+### Session #13 — July 7, 2026 — Two Pointers & Sorting (Week 2, Day 5)
+**Status**: ✅ COMPLETE
+**Duration**: ~15 min
+
+**Spaced Repetition Recall Results (2 Box 1 problems)**:
+- 4Sum (LC #18): ✅ Correct — Sort + fix two + two pointers, overflow handling (cast to long), O(n³)/O(k) → **Promoted to Box 2**
+- Subarray Sum Equals K (LC #560): ✅ Correct — Nailed {0:1} (count-based) vs {0:-1} (index-based) distinction. Pattern, approach, complexity all correct. → **Promoted to Box 2**
+
+**Problems Covered**:
+- Boats to Save People (LC #881): ✅ NEW — 🟢 HIRE. Sort + greedy two pointers. 1 bug (forgot Arrays.sort()), self-debugged instantly. Zero hints. ~4 min. Greedy insight: heaviest always needs a boat, pair lightest if weight fits. Clean `left <= right` handles odd-person-out.
+
+**Key Observations**:
+- **17-problem 🟢 HIRE streak** 🔥
+- Subarray Sum Equals K confusion from Session #12 is RESOLVED — correctly distinguished count-based {0:1} from index-based {0:-1}
+- Forgot sort preprocessing (same miss type as May 8 Group Anagrams) — caught in under 1 min
+- New greedy pairing pattern: "heaviest always boards, lightest joins if possible" — different flavor from Container With Most Water
+- Day 5 complete! Week 2 Day 6 is review + re-solve struggles.
+
 ---
 
 #### 📂 Pre-Reset Sessions (June 3–10, 2026)
@@ -578,6 +596,7 @@ TEMPLATE for each session entry:
 | — | Prefix Sum + HashMap | 5 | June 22 | Subarray Sum Equals K + Contiguous Array — pattern transfer proven on unseen problem |
 | — | Sort + Fix One + Two Pointers | 5 | July 6 | 3Sum — recalled perfectly in spaced rep, promoted to Box 4 |
 | — | Sort + Fix Two + Two Pointers (kSum) | 5 | July 6 | 4Sum 🟢 HIRE — clean 3Sum extension, overflow handling, ~10 min |
+| — | Sort + Greedy Two Pointers (Pairing) | 5 | July 7 | Boats to Save People 🟢 HIRE — heaviest boards, lightest pairs if fits, ~4 min |
 | 4 | Two Pointers (Same Direction) | 5 | June 28 | Move Zeroes 🟢 HIRE — write/read pointer, ~4 min |
 | 5 | Sliding Window (Fixed) | — | — | — |
 | 6 | Sliding Window (Variable) | — | — | — |
@@ -606,9 +625,10 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| 4Sum (LC #18) | Box 1 | Jul 6 | Jul 7 | 🆕 New |
-| Subarray Sum Equals K (LC #560) | Box 1 | Jul 6 | Jul 7 | ⚠️ Demoted |
+| Boats to Save People (LC #881) | Box 1 | Jul 7 | Jul 8 | 🆕 New |
 | Remove Duplicates (LC #26) | Box 2 | Jul 6 | Jul 9 | ✅ Promoted |
+| 4Sum (LC #18) | Box 2 | Jul 7 | Jul 10 | ✅ Promoted |
+| Subarray Sum Equals K (LC #560) | Box 2 | Jul 7 | Jul 10 | ✅ Promoted |
 | Valid Anagram (LC #242) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
 | Two Sum II (LC #167) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
 | Group Anagrams (LC #49) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
@@ -646,16 +666,17 @@ TEMPLATE for each session entry:
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #13 — Week 2, Day 5
-**Topic**: Two Pointers & Sorting
+**Next**: Session #14 — Week 2, Day 6
+**Topic**: Two Pointers & Sorting — Review + Re-solve Struggles
 **Plan**:
-1. ⏰ Spaced repetition check: 4Sum (Box 1), Subarray Sum Equals K (Box 1) — DRILL {0:1} vs {0:-1}
-2. 🎯 New problems: Boats to Save People (LC #881) per master plan
+1. ⏰ Spaced repetition check: Boats to Save People (Box 1)
+2. 🔄 Review + re-solve any Week 2 struggles
+3. 🧠 Prep for Day 7 Weekly Challenge (2 unseen two-pointer problems)
 
 **Focus**:
-- Subarray Sum Equals K: nail the initialization difference (count vs index)
-- Continue two pointer mastery — greedy pairing pattern
-- Week 2 Day 5 completes the core two-pointer curriculum
+- Solidify all two-pointer variants before weekly challenge
+- Review forgot-sort preprocessing miss — make it a pre-coding checklist item
+- Week 2 Day 6 is review day, Day 7 is the weekly challenge
 
 ---
 
@@ -664,7 +685,7 @@ TEMPLATE for each session entry:
 | Week | Problems Solved | New Patterns | Avg Confidence | Key Achievement |
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
-| W2 | 8 (in progress) | 8 | 4.9 | Valid Palindrome, 3Sum, Container, Trapping Rain Water, Move Zeroes, Sort Colors, Remove Dups, 4Sum. 7/8 🟢 HIRE. kSum generalization mastered! |
+| W2 | 9 (in progress) | 9 | 4.9 | Valid Palindrome, 3Sum, Container, Trapping Rain Water, Move Zeroes, Sort Colors, Remove Dups, 4Sum, Boats. 8/9 🟢 HIRE. kSum + greedy pairing mastered! |
 | W3 | — | — | — | — |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |

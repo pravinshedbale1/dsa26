@@ -114,5 +114,19 @@
 
 ---
 
+## Card 9: Sort + Greedy Two Pointers — Pairing (Boats to Save People)
+```
+🔍 TRIGGER: "Minimum boats/pairs to carry everyone" or "pair heaviest with lightest"
+💡 IDEA:   Sort. Left = lightest, Right = heaviest. Heaviest ALWAYS needs a boat.
+           If lightest + heaviest ≤ limit → pair them (left++). Heaviest boards regardless (right--).
+📝 CODE:   while (left <= right) { if (a[left]+a[right] <= limit) left++; right--; boats++; }
+⏱️ TIME:   O(n log n)  |  SPACE: O(1)
+⚠️ KEY:    left <= right (not <) to handle the single person left in the middle.
+           Don't forget Arrays.sort() before the loop!
+🔗 VS:     Container = maximize area (move shorter). Boats = minimize boats (greedy pair extremes).
+```
+
+---
+
 _Cards grow as we solve more Week 2 problems._
 

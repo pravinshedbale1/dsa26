@@ -521,7 +521,79 @@ CODE SKELETON:
 
 ---
 
+### Pattern: Sort + Fix Two + Two Pointers (kSum)
+```
+TRIGGER:  "Find all quadruplets summing to target", "extend 3Sum"
+PROBLEMS: 4Sum (LC #18)
+
+APPROACH:
+  Sort array. Fix two outer loops (i, j), two pointers (k=j+1, l=n-1).
+  Generalize: kSum = fix (k-2) elements + two pointers.
+
+DUPLICATE SKIPPING:
+  i: if (i > 0 && nums[i] == nums[i-1]) continue;
+  j: if (j > i+1 && nums[j] == nums[j-1]) continue;
+  k/l: INSIDE match block, AFTER adding quadruplet
+
+OVERFLOW TRAP:
+  Sum of 4 ints can exceed Integer.MAX_VALUE!
+  Use long: long sum = nums[i] + nums[j]; sum += nums[k] + nums[l];
+
+CODE SKELETON:
+  Arrays.sort(nums);
+  for (int i = 0; i < n; i++) {
+      if (i > 0 && nums[i] == nums[i-1]) continue;
+      for (int j = i+1; j < n; j++) {
+          if (j > i+1 && nums[j] == nums[j-1]) continue;
+          int k = j+1, l = n-1;
+          while (k < l) {
+              long sum = (long)nums[i] + nums[j] + nums[k] + nums[l];
+              if (sum == target) { add; k++; l--; skip dups; }
+              else if (sum < target) k++;
+              else l--;
+          }
+      }
+  }
+```
+
+---
+
+### Pattern: Sort + Greedy Two Pointers (Pairing)
+```
+TRIGGER:  "Minimum boats/pairs to carry everyone", "pair with weight limit"
+PROBLEMS: Boats to Save People (LC #881)
+
+APPROACH:
+  Sort array. Left = lightest, Right = heaviest.
+  Heaviest ALWAYS needs a boat. Lightest joins if their combined weight fits.
+  If fits → left++. Always → right--, boats++.
+
+KEY INSIGHT:
+  "The heaviest person always boards. The only question is:
+   can the lightest person share the boat?"
+
+CODE SKELETON:
+  Arrays.sort(people);
+  int left = 0, right = n-1, boats = 0;
+  while (left <= right) {
+      if (people[left] + people[right] <= limit) left++;
+      right--;
+      boats++;
+  }
+
+EDGE CASE:
+  left <= right (not <) — handles single person remaining in middle
+  Don't forget Arrays.sort() before the loop!
+
+VS CONTAINER WITH MOST WATER:
+  Container: maximize area → move SHORTER side (shorter = bottleneck)
+  Boats: minimize boats → greedy pair EXTREMES (heaviest + lightest)
+```
+
+---
+
 ## 🔧 Tricks & Techniques
+
 
 ### Trick 1: Early Exit — Size/Length Check
 ```

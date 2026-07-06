@@ -23,8 +23,7 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| 4Sum (LC #18) | Sort + Fix Two + Two Pointers | Jul 6 | Jul 6 | Jul 7 |
-| Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jul 6 (demoted) | Jul 6 | Jul 7 |
+| Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 7 | Jul 7 | Jul 8 |
 
 ---
 
@@ -33,6 +32,8 @@
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
 | Remove Duplicates (LC #26) | Two Pointers (Same Dir — Write Pointer) | Jul 6 | Jul 6 | Jul 9 |
+| 4Sum (LC #18) | Sort + Fix Two + Two Pointers | Jul 7 | Jul 7 | Jul 10 |
+| Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jul 7 | Jul 7 | Jul 10 |
 
 ---
 
@@ -78,28 +79,14 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: July 6, 2026
+**Date**: July 7, 2026
 
-### Spaced Repetition Recall (16 overdue problems):
-- ✅ Remove Duplicates (LC #26) — Correct. Write/read pointer, overwrite non-dups. O(n)/O(1). → Promoted to Box 2
-- ✅ Container With Most Water (LC #11) — Correct. Opposite pointers, move shorter side. O(n)/O(1). → Promoted to Box 3
-- ✅ Trapping Rain Water (LC #42) — Correct. Two pointers + maxLeft/maxRight, process smaller max. O(n)/O(1). → Promoted to Box 3
-- ✅ Move Zeroes (LC #283) — Correct. Write/read pointer, swap non-zero forward. O(n)/O(1). → Promoted to Box 3
-- ✅ Sort Colors (LC #75) — Excellent. DNF 3-way partition, explained mid-increment invariant with reasoning. → Promoted to Box 3
-- ✅ Product Except Self (LC #238) — Correct. Prefix into answer array, running suffix variable. O(n)/O(1). → Promoted to Box 4
-- ✅ Longest Consecutive Sequence (LC #128) — Correct. HashSet, sequence start detection (no n-1). O(n)/O(n). → Promoted to Box 4
-- ⚠️ Subarray Sum Equals K (LC #560) — Mixed up {0:1} (count) with {0:-1} (index). → DEMOTED to Box 1
-- ✅ Encode and Decode Strings (LC #271) — Correct. Length-prefix: count#string. O(n)/O(n). → Promoted to Box 4
-- ✅ Valid Sudoku (LC #36) — Correct. HashSet per row/col/box, box formula (r/3)*3+(c/3). → Promoted to Box 4
-- ✅ Valid Palindrome (LC #125) — Correct. Two pointers inward, skip non-alphanumeric. O(n)/O(1). → Promoted to Box 4
-- ✅ 3Sum (LC #15) — Correct. Sort + fix i + two pointers j,k. Dup skip placement correct. O(n²)/O(k). → Promoted to Box 4
-- ✅ Contiguous Array (LC #525) — Correct. 0→-1, prefix sum, first occurrence only, {0:-1}. O(n)/O(n). → Promoted to Box 4
-- ✅ Sort Characters By Frequency (LC #451) — Correct. Freq map + bucket sort, List[] n+1, right-to-left. O(n)/O(n). → Promoted to Box 4
-- ✅ Two Sum (LC #1) — Correct. Check-before-insert, complement lookup. O(n)/O(n). → Promoted to Box 4
-- ✅ Contains Duplicate (LC #217) — Correct. !set.add() idiom. O(n)/O(n). → Promoted to Box 4
+### Spaced Repetition Recall (2 Box 1 problems):
+- ✅ 4Sum (LC #18) — Correct. Sort + fix two + two pointers. Overflow handling (cast to long). O(n³)/O(k). → Promoted to Box 2
+- ✅ Subarray Sum Equals K (LC #560) — Correct! Nailed {0:1} (count-based) vs {0:-1} (index-based) distinction. O(n)/O(n). → Promoted to Box 2
 
 ### Problems Solved Today:
-- ✅ 4Sum (LC #18) — 🟢 HIRE, NEW. Sort + fix two + two pointers. All 5 tests first try. Zero bugs, zero hints. ~10 min. Smart overflow handling with long split. Added to Box 1.
+- ✅ Boats to Save People (LC #881) — 🟢 HIRE, NEW. Sort + greedy two pointers (pairing). 1 bug (forgot sort), self-debugged. Zero hints. ~4 min. Clean greedy: heaviest always boards, lightest pairs if fits. Added to Box 1.
 
 ### Review Checklist:
 For each problem due:
@@ -117,12 +104,12 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 21 |
-| Box 1 (daily) | 2 |
-| Box 2 (3-day) | 1 |
+| Total problems in system | 22 |
+| Box 1 (daily) | 1 |
+| Box 2 (3-day) | 3 |
 | Box 3 (weekly) | 4 |
 | Box 4 (bi-weekly) | 14 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 16 |
+| Reviews completed today | 2 |
 | Problems solved today | 1 |
-| Streak (consecutive days) | 1 (gap from Jun 29 – Jul 6) |
+| Streak (consecutive days) | 2 |
