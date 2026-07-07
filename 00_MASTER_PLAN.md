@@ -158,13 +158,13 @@
 | D2 | **Two Sum II (Sorted)** (LC #167) | Medium | Two pointers on sorted | Binary search → Two pointers | ✅ Solved (Jun 17) |
 | D3 | **Group Anagrams** (LC #49) | Medium | HashMap with sorted key | Brute → Sorted string key → Char count key | ✅ Solved (Jun 17) |
 | D3 | **Top K Frequent Elements** (LC #347) | Medium | HashMap + Heap/Bucket | Sort O(n log n) → Heap O(n log k) → Bucket O(n) | ✅ Solved (Jun 17) |
-| D4 | **Product of Array Except Self** (LC #238) | Medium | Prefix/Suffix | Division O(n) → Prefix+Suffix O(n) no division | 💾 Pre-plan |
-| D4 | **Longest Consecutive Sequence** (LC #128) | Medium | HashSet + sequence start | Sort O(n log n) → HashSet O(n) | |
-| D5 | **Encode and Decode Strings** (LC #271) | Medium | Delimiter design | Length-prefix encoding | |
-| D5 | **Valid Sudoku** (LC #36) | Medium | HashSet per row/col/box | Brute → Single pass with 3 HashSets | |
-| D6 | **Subarray Sum Equals K** (LC #560) | Medium | Prefix sum + HashMap | Brute O(n²) → Prefix sum HashMap O(n) | |
-| D6 | Review + weak problem re-solve | — | — | Spaced repetition of D1-D5 | |
-| D7 | **🔥 Weekly Challenge**: Solve 2 unseen problems using only patterns learned | — | — | Pattern recognition test | |
+| D4 | **Product of Array Except Self** (LC #238) | Medium | Prefix/Suffix | Division O(n) → Prefix+Suffix O(n) no division | ✅ Solved (Jun 18) |
+| D4 | **Longest Consecutive Sequence** (LC #128) | Medium | HashSet + sequence start | Sort O(n log n) → HashSet O(n) | ✅ Solved (Jun 18) |
+| D5 | **Encode and Decode Strings** (LC #271) | Medium | Delimiter design | Length-prefix encoding | ✅ Solved (Jun 20) |
+| D5 | **Valid Sudoku** (LC #36) | Medium | HashSet per row/col/box | Brute → Single pass with 3 HashSets | ✅ Solved (Jun 20) |
+| D6 | **Subarray Sum Equals K** (LC #560) | Medium | Prefix sum + HashMap | Brute O(n²) → Prefix sum HashMap O(n) | ✅ Solved (Jun 21) |
+| D6 | Review + weak problem re-solve | — | — | Spaced repetition of D1-D5 | ✅ Done (Jun 21) |
+| D7 | **🔥 Weekly Challenge**: Contiguous Array (LC #525) + Sort Chars by Freq (LC #451) | — | — | Pattern recognition test | ✅ Done (Jun 22) |
 
 ### Week 1 Implementation Templates
 - HashMap complement lookup
@@ -183,20 +183,20 @@
 
 ### Problem Progression
 
-| Day | Problem | Difficulty | Pattern | Approach Focus |
-|-----|---------|-----------|---------|---------------|
-| D1 | **Valid Palindrome** (LC #125) | Easy | Two pointers inward | Clean char handling + two pointers |
-| D1 | **Two Sum II** (LC #167) | Medium | Sorted + two pointers | Why two pointers work on sorted data |
-| D2 | **3Sum** (LC #15) | Medium | Sort + fix one + two pointers | Brute O(n³) → Sort + 2ptr O(n²) + skip duplicates |
-| D2 | **Container With Most Water** (LC #11) | Medium | Greedy two pointers | Brute O(n²) → Greedy shrink shorter side O(n) |
-| D3 | **Trapping Rain Water** (LC #42) | Hard | Two pointers / prefix max | Brute O(n²) → Prefix arrays O(n) → Two ptr O(n)/O(1) |
-| D3 | **Move Zeroes** (LC #283) | Easy | Partition / write pointer | Two pass → Single pass write pointer |
-| D4 | **Sort Colors** (LC #75) | Medium | Dutch National Flag | Count sort → 3-way partition O(n) |
-| D4 | **Remove Duplicates from Sorted Array** (LC #26) | Easy | Slow/fast write pointer | In-place with write pointer |
-| D5 | **4Sum** (LC #18) | Medium | Sort + fix two + two pointers | Extend 3Sum pattern |
-| D5 | **Boats to Save People** (LC #881) | Medium | Sort + greedy two pointers | Greedy pair heaviest with lightest |
-| D6 | Review + re-solve struggles | — | — | Spaced repetition W1 + W2 |
-| D7 | **🔥 Weekly Challenge**: 2 unseen two-pointer problems | — | — | — |
+| Day | Problem | Difficulty | Pattern | Approach Focus | Status |
+|-----|---------|-----------|---------|---------------|--------|
+| D1 | **Valid Palindrome** (LC #125) | Easy | Two pointers inward | Clean char handling + two pointers | ✅ Solved (Jun 23) |
+| D1 | **Two Sum II** (LC #167) | Medium | Sorted + two pointers | Why two pointers work on sorted data | ✅ Solved (Jun 23) |
+| D2 | **3Sum** (LC #15) | Medium | Sort + fix one + two pointers | Brute O(n³) → Sort + 2ptr O(n²) + skip duplicates | ✅ Solved (Jun 23) |
+| D2 | **Container With Most Water** (LC #11) | Medium | Greedy two pointers | Brute O(n²) → Greedy shrink shorter side O(n) | ✅ Solved (Jun 25) |
+| D3 | **Trapping Rain Water** (LC #42) | Hard | Two pointers / prefix max | Brute O(n²) → Prefix arrays O(n) → Two ptr O(n)/O(1) | ✅ Solved (Jun 25) |
+| D3 | **Move Zeroes** (LC #283) | Easy | Partition / write pointer | Two pass → Single pass write pointer | ✅ Solved (Jun 28) |
+| D4 | **Sort Colors** (LC #75) | Medium | Dutch National Flag | Count sort → 3-way partition O(n) | ✅ Solved (Jun 28) |
+| D4 | **Remove Duplicates from Sorted Array** (LC #26) | Easy | Slow/fast write pointer | In-place with write pointer | ✅ Solved (Jun 29) |
+| D5 | **4Sum** (LC #18) | Medium | Sort + fix two + two pointers | Extend 3Sum pattern | ✅ Solved (Jul 6) |
+| D5 | **Boats to Save People** (LC #881) | Medium | Sort + greedy two pointers | Greedy pair heaviest with lightest | ✅ Solved (Jul 7) |
+| D6 | Review + re-solve struggles | — | — | Spaced repetition W1 + W2 | ✅ Done (Jul 7) |
+| D7 | **🔥 Weekly Challenge**: 3Sum Closest (LC #16) + Partition Labels (LC #763) | — | — | Pattern recognition test | ✅ Done (Jul 7) |
 
 ---
 

@@ -55,12 +55,12 @@
 | Field | Value |
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
-| **Current Week** | Week 2 — Two Pointers & Sorting |
-| **Current Day** | Day 5 (July 7, 2026) — COMPLETE |
-| **Current Topic** | Two Pointers & Sorting |
-| **Current Problem** | Boats to Save People (LC #881) — DONE, Day 6 next |
-| **Session Count** | 13 |
-| **Total Problems Solved** | 22 (new plan) |
+| **Current Week** | Week 2 — Two Pointers & Sorting — ✅ COMPLETE |
+| **Current Day** | Day 7 (July 7, 2026) — COMPLETE |
+| **Current Topic** | Two Pointers & Sorting — Weekly Challenge DONE |
+| **Current Problem** | Week 2 COMPLETE — Week 3 (Sliding Window) next |
+| **Session Count** | 14 |
+| **Total Problems Solved** | 24 (new plan) + 2 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
@@ -664,19 +664,51 @@ TEMPLATE for each session entry:
 
 ---
 
+### Session #14 — July 7, 2026 — Week 2, Day 6 (Review + Re-solve)
+**Duration**: ~20 min
+**Type**: Review Day — Re-solve Struggles
+
+**Re-solves Completed**:
+- 3Sum (LC #15): 🟢 HIRE. ~5 min. Zero bugs, zero hints. Last time: 🟡 LEAN HIRE, 2 hints, ~20 min. Massive improvement — dup skipping logic flawless.
+- Contiguous Array (LC #525): 🟢 HIRE. ~6 min. 1 self-caught bug (unconditional map.put → moved to else). Zero hints. Last time: 🟡 LEAN HIRE, 45 min (over limit).
+
+**Key Observations**:
+- Both struggle problems went from LEAN HIRE → HIRE
+- Time improvement dramatic: 3Sum 20→5 min, Contiguous Array 45→6 min
+- Pattern recall is solid — approach was instant in both cases
+- Self-debugging skills improving (caught Contiguous Array bug before tests exposed it)
+
+---
+
+### Session #14 (continued) — July 7, 2026 — Week 2, Day 7 (Weekly Challenge)
+**Type**: 🔥 Weekly Challenge — 2 unseen two-pointer problems
+
+**Problems Solved**:
+- 3Sum Closest (LC #16): 🟡 LEAN HIRE. UNSEEN. ~25 min. Bug: missing Math.abs() in distance comparison — caught during interviewer dry run probe, not self-caught. Zero hints. Good pattern transfer from 3Sum. Key lesson: always use Math.abs() when comparing closeness/distance.
+- Partition Labels (LC #763): 🟢 HIRE. UNSEEN. All 5 tests first try. Zero bugs, zero hints. Optimal O(n) greedy: map char→last occurrence, extend partition end greedily, cut when i==end.
+
+**Key Observations**:
+- Pattern transfer from 3Sum → 3Sum Closest was solid (approach correct immediately)
+- Math.abs() miss is a recurring theme — need to build a mental checklist for comparison problems
+- Partition Labels showed excellent novel problem-solving — identified the greedy insight independently
+- 🎉 **WEEK 2 COMPLETE** — All 12 problems done (10 new + 2 weekly challenge)
+
+---
+
 ## ⏭️ Next Session Plan
 
-**Next**: Session #14 — Week 2, Day 6
-**Topic**: Two Pointers & Sorting — Review + Re-solve Struggles
+**Next**: Session #15 — Week 3, Day 1
+**Topic**: Sliding Window 🪟 — NEW TOPIC
 **Plan**:
-1. ⏰ Spaced repetition check: Boats to Save People (Box 1)
-2. 🔄 Review + re-solve any Week 2 struggles
-3. 🧠 Prep for Day 7 Weekly Challenge (2 unseen two-pointer problems)
+1. ⏰ Spaced repetition check: Boats to Save People, 3Sum Closest, Partition Labels (Box 1)
+2. 🧠 Concept teaching: Sliding Window technique (fixed-size vs variable-size)
+3. 🎯 Problem 1: Maximum Sum Subarray of Size K (Easy, fixed window)
+4. 🎯 Problem 2: Longest Substring Without Repeating Characters (LC #3, Medium, variable window)
 
 **Focus**:
-- Solidify all two-pointer variants before weekly challenge
-- Review forgot-sort preprocessing miss — make it a pre-coding checklist item
-- Week 2 Day 6 is review day, Day 7 is the weekly challenge
+- Learn when to use sliding window vs two pointers
+- Fixed-size window: maintain sum as window slides
+- Variable-size window: expand/shrink based on condition
 
 ---
 
@@ -685,7 +717,7 @@ TEMPLATE for each session entry:
 | Week | Problems Solved | New Patterns | Avg Confidence | Key Achievement |
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
-| W2 | 9 (in progress) | 9 | 4.9 | Valid Palindrome, 3Sum, Container, Trapping Rain Water, Move Zeroes, Sort Colors, Remove Dups, 4Sum, Boats. 8/9 🟢 HIRE. kSum + greedy pairing mastered! |
+| W2 | 11 + 2 re-solves | 11 | 4.8 | 🎉 Two Pointers & Sorting COMPLETE. 10/11 🟢 HIRE. D6: re-solves crushed (3Sum 20→5 min, Contiguous Array 45→6 min). D7: 2 unseen challenges solved. Key lesson: Math.abs() for distance comparisons. |
 | W3 | — | — | — | — |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |

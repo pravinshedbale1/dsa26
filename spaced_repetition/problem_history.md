@@ -50,7 +50,11 @@
 | 28 | Jun 28 | Sort Colors (NEW) | 75 | Medium | Dutch National Flag (3-way Partition) | Sort O(n log n) → DNF O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~6 min. Clean swap helper. Knew not to increment mid after hi swap. |
 | 29 | Jun 29 | Remove Duplicates from Sorted Array (NEW) | 26 | Easy | Two Pointers (Same Dir — Write Pointer) | Brute O(n)/O(n) → Write Ptr O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. Initial off-by-one (k=3), self-debugged. Zero hints. ~3.5 min. Clean ++j overwrite. Pattern transfer from Move Zeroes. |
 | 30 | Jul 6 | 4Sum (NEW) | 18 | Medium | Sort + Fix Two + Two Pointers | Brute O(n⁴) → Sort + Fix Two + 2ptr O(n³)/O(k) | O(n³) | O(k) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~10 min. Clean extension of 3Sum. Smart overflow handling: split sum into two int pairs combined as long. Correct dup skipping for all 4 pointers. |
-| 31 | Jul 7 | Boats to Save People (NEW) | 881 | Medium | Sort + Greedy Two Pointers (Pairing) | Brute O(n²) → Sort + Greedy 2ptr O(n log n)/O(1) | O(n log n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. 1 bug (forgot sort), self-debugged. Zero hints. ~4 min. Greedy: heaviest always boards, lightest pairs if weight fits. Clean left<=right for odd-person-out. |
+| 31 | Jul 7 | Boats to Save People (NEW) | 881 | Medium | Sort + Greedy Two Pointers (Pairing) | Brute O(n²) → Sort + Greedy 2ptr O(n log n)/O(1) | O(n log n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. 1 bug (forgot sort), self-debugged. Zero hints. ~4 min. Greedy: heaviest always boards, lightest pairs if fits. Clean left<=right for odd-person-out. |
+| 32 | Jul 7 | 3Sum (RE-SOLVE) | 15 | Medium | Sort + Fix One + Two Pointers | Sort + 2ptr O(n²)/O(k) | O(n²) | O(k) | ✅ | 5 | — | 🟢 HIRE. RE-SOLVE. ~5 min (prev 20 min). Zero bugs, zero hints. Dup skipping flawless. Massive improvement from 🟡 LEAN HIRE. |
+| 33 | Jul 7 | Contiguous Array (RE-SOLVE) | 525 | Medium | Prefix Sum + HashMap (Max Length) | Optimal O(n)/O(n) | O(n) | O(n) | ✅ | 5 | — | 🟢 HIRE. RE-SOLVE. ~6 min (prev 45 min). 1 self-caught bug (unconditional put → else). Zero hints. 7.5x faster. |
+| 34 | Jul 7 | 3Sum Closest (NEW, UNSEEN) | 16 | Medium | Sort + Fix One + Two Pointers (Closest) | Brute O(n³) → Sort + 2ptr O(n²)/O(1) | O(n²) | O(1) | ⚡ | 4 | Box 1 | 🟡 LEAN HIRE. UNSEEN challenge. Bug: missing Math.abs() in comparison (caught during dry run). Zero hints. ~25 min. Good pattern transfer from 3Sum. |
+| 35 | Jul 7 | Partition Labels (NEW, UNSEEN) | 763 | Medium | Greedy + Last Occurrence Map | Last occ map + greedy scan O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. UNSEEN challenge. All 5 tests first try. Zero bugs, zero hints. Optimal: map char→last index, greedy extend end, cut at i==end. |
 
 ---
 
@@ -72,5 +76,7 @@
 | W2 D3 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Same-Dir Two Ptr / Dutch National Flag |
 | W2 D4 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Write Pointer + Sort+Fix Two+2ptr |
 | W2 D5 | 1 (complete) | 1 | 0 | 0 | 0 | 5.0 | Sort + Greedy Two Pointers (Pairing) |
-| ... | — | — | — | — | — | — | — |
+| W2 D6 | 2 re-solves | 2 | 0 | 0 | 0 | 5.0 | 3Sum + Contiguous Array re-solves → both HIRE |
+| W2 D7 | 2 (complete) 🎉 | 1 | 1 | 0 | 0 | 4.5 | 3Sum Closest (LEAN HIRE) + Partition Labels (HIRE) |
+| **W2 TOTAL** | **11 + 2 re-solves** | **9** | **2** | **0** | **0** | **4.8** | **All Two Pointer patterns + Greedy** |
 
