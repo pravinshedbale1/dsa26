@@ -23,9 +23,7 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 7 | Jul 7 | Jul 8 |
-| 3Sum Closest (LC #16) | Sort + Fix One + Two Pointers (Closest) | Jul 7 | Jul 7 | Jul 8 |
-| Partition Labels (LC #763) | Greedy + Last Occurrence Map | Jul 7 | Jul 7 | Jul 8 |
+| _empty_ | — | — | — | — |
 
 ---
 
@@ -36,6 +34,9 @@
 | Remove Duplicates (LC #26) | Two Pointers (Same Dir — Write Pointer) | Jul 6 | Jul 6 | Jul 9 |
 | 4Sum (LC #18) | Sort + Fix Two + Two Pointers | Jul 7 | Jul 7 | Jul 10 |
 | Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jul 7 | Jul 7 | Jul 10 |
+| Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 8 | Jul 8 | Jul 11 |
+| 3Sum Closest (LC #16) | Sort + Fix One + Two Pointers (Closest) | Jul 8 | Jul 8 | Jul 11 |
+| Partition Labels (LC #763) | Greedy + Last Occurrence Map | Jul 8 | Jul 8 | Jul 11 |
 
 ---
 
@@ -81,19 +82,12 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: July 7, 2026
+**Date**: July 8, 2026
 
-### Spaced Repetition Recall (2 Box 1 problems):
-- ✅ 4Sum (LC #18) — Correct. Sort + fix two + two pointers. Overflow handling (cast to long). O(n³)/O(k). → Promoted to Box 2
-- ✅ Subarray Sum Equals K (LC #560) — Correct! Nailed {0:1} (count-based) vs {0:-1} (index-based) distinction. O(n)/O(n). → Promoted to Box 2
-
-### Re-solves Completed (D6 Review):
-- ✅ 3Sum (LC #15) — RE-SOLVE. 🟢 HIRE. ~5 min (prev 20 min, 2 hints). Zero bugs, zero hints. Dup skipping flawless.
-- ✅ Contiguous Array (LC #525) — RE-SOLVE. 🟢 HIRE. ~6 min (prev 45 min). 1 self-caught bug. Zero hints.
-
-### Weekly Challenge Problems Solved (D7):
-- 🟡 3Sum Closest (LC #16) — LEAN HIRE. UNSEEN. Bug: missing Math.abs() (caught during dry run). ~25 min. Added to Box 1.
-- ✅ Partition Labels (LC #763) — 🟢 HIRE. UNSEEN. All 5 first try. Zero bugs, zero hints. Optimal greedy. Added to Box 1.
+### Spaced Repetition Recall (3 Box 1 problems):
+- ✅ Boats to Save People (LC #881) — Correct. Sort + greedy two pointers. Approach solid, missed O(n log n) TC (said O(n)). → Promoted to Box 2
+- ✅ 3Sum Closest (LC #16) — Correct. Sort + fix one + two pointers. Math.abs() gotcha recalled! TC said O(n log n) instead of O(n²). → Promoted to Box 2
+- ✅ Partition Labels (LC #763) — Correct. Greedy + last occurrence map. Partition condition slightly imprecise (should be i == end, not lastOcc[char] == i). SC said O(n) instead of O(1). → Promoted to Box 2
 
 ### Review Checklist:
 For each problem due:
@@ -112,12 +106,12 @@ For each problem due:
 | Metric | Value |
 |--------|-------|
 | Total problems in system | 24 |
-| Box 1 (daily) | 3 |
-| Box 2 (3-day) | 3 |
+| Box 1 (daily) | 0 |
+| Box 2 (3-day) | 6 |
 | Box 3 (weekly) | 4 |
 | Box 4 (bi-weekly) | 14 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 2 |
-| Problems solved today | 3 (1 new + 2 unseen challenge) |
-| Re-solves today | 2 |
-| Streak (consecutive days) | 2 |
+| Reviews completed today | 3 |
+| Problems solved today | 0 (session in progress) |
+| Re-solves today | 0 |
+| Streak (consecutive days) | 3 |
