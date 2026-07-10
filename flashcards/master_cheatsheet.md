@@ -39,6 +39,8 @@
 | 13 | Two Ptr (Trapped Water) | "Water on elevation map" | Process side with SMALLER max | O(n)/O(1) |
 | 14 | Two Ptr (Same Dir) | "Move/remove in-place" | Write ptr + read ptr, swap valid elements | O(n)/O(1) |
 | 15 | Dutch National Flag | "Sort 3 values" | lo/mid/hi, mid scans and routes | O(n)/O(1) |
+| 16 | Fixed Sliding Window | "Subarray of fixed size K" | Add right, remove left, track max/min | O(n)/O(1) |
+| 17 | Variable Sliding Window | "Longest/shortest substring/subarray" | Expand right, shrink left until valid | O(n)/O(k) |
 
 ### Patterns Learned but Need Practice (Confidence 3-4)
 

@@ -23,7 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| _empty_ | — | — | — | — |
+| Max Sum Subarray of Size K | Fixed Sliding Window | Jul 11 | Jul 11 | Jul 12 |
+| Longest Substring Without Repeating (LC #3) | Variable Sliding Window + HashSet | Jul 11 | Jul 11 | Jul 12 |
 
 ---
 
@@ -31,11 +32,6 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Remove Duplicates (LC #26) | Two Pointers (Same Dir — Write Pointer) | Jul 6 | Jul 6 | Jul 9 |
-| 4Sum (LC #18) | Sort + Fix Two + Two Pointers | Jul 7 | Jul 7 | Jul 10 |
-| Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jul 7 | Jul 7 | Jul 10 |
-| Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 8 | Jul 8 | Jul 11 |
-| 3Sum Closest (LC #16) | Sort + Fix One + Two Pointers (Closest) | Jul 8 | Jul 8 | Jul 11 |
 | Partition Labels (LC #763) | Greedy + Last Occurrence Map | Jul 8 | Jul 8 | Jul 11 |
 
 ---
@@ -48,6 +44,11 @@
 | Trapping Rain Water (LC #42) | Two Pointers (maxLeft/maxRight) | Jul 6 | Jul 6 | Jul 13 |
 | Move Zeroes (LC #283) | Two Pointers (Same Direction) | Jul 6 | Jul 6 | Jul 13 |
 | Sort Colors (LC #75) | Dutch National Flag (3-way Partition) | Jul 6 | Jul 6 | Jul 13 |
+| Remove Duplicates (LC #26) | Two Pointers (Same Dir — Write Pointer) | Jul 11 | Jul 11 | Jul 18 |
+| 4Sum (LC #18) | Sort + Fix Two + Two Pointers | Jul 11 | Jul 11 | Jul 18 |
+| Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jul 11 | Jul 11 | Jul 18 |
+| Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 11 | Jul 11 | Jul 18 |
+| 3Sum Closest (LC #16) | Sort + Fix One + Two Pointers (Closest) | Jul 11 | Jul 11 | Jul 18 |
 
 ---
 
@@ -82,12 +83,15 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: July 8, 2026
+**Date**: July 11, 2026
 
-### Spaced Repetition Recall (3 Box 1 problems):
-- ✅ Boats to Save People (LC #881) — Correct. Sort + greedy two pointers. Approach solid, missed O(n log n) TC (said O(n)). → Promoted to Box 2
-- ✅ 3Sum Closest (LC #16) — Correct. Sort + fix one + two pointers. Math.abs() gotcha recalled! TC said O(n log n) instead of O(n²). → Promoted to Box 2
-- ✅ Partition Labels (LC #763) — Correct. Greedy + last occurrence map. Partition condition slightly imprecise (should be i == end, not lastOcc[char] == i). SC said O(n) instead of O(1). → Promoted to Box 2
+### Spaced Repetition Recall (5 Box 2 problems — overdue + due today):
+- ✅ Remove Duplicates (LC #26) — Perfect. Write/read pointer, O(n)/O(1). → **Promoted to Box 3**
+- ✅ 4Sum (LC #18) — Solid. Sort + fix two + two pointers, overflow→long, O(n³)/O(k). → **Promoted to Box 3**
+- ✅ Subarray Sum Equals K (LC #560) — Nailed it. Prefix Sum + HashMap, {0:1} count-based init correct. → **Promoted to Box 3**
+- ✅ Boats to Save People (LC #881) — Perfect. Sort + greedy pairing, O(n log n)/O(1). → **Promoted to Box 3**
+- ✅ 3Sum Closest (LC #16) — Excellent. Math.abs() gotcha recalled proactively. O(n²)/O(1). → **Promoted to Box 3**
+- ⏭️ Partition Labels (LC #763) — Deferred to next session.
 
 ### Review Checklist:
 For each problem due:
@@ -105,13 +109,13 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 24 |
-| Box 1 (daily) | 0 |
-| Box 2 (3-day) | 6 |
-| Box 3 (weekly) | 4 |
+| Total problems in system | 26 |
+| Box 1 (daily) | 2 |
+| Box 2 (3-day) | 1 |
+| Box 3 (weekly) | 9 |
 | Box 4 (bi-weekly) | 14 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 3 |
-| Problems solved today | 0 (session in progress) |
+| Reviews completed today | 5 |
+| Problems solved today | 1 (Longest Substring Without Repeating) |
 | Re-solves today | 0 |
-| Streak (consecutive days) | 3 |
+| Streak (consecutive days) | 1 |

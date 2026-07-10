@@ -55,6 +55,8 @@
 | 33 | Jul 7 | Contiguous Array (RE-SOLVE) | 525 | Medium | Prefix Sum + HashMap (Max Length) | Optimal O(n)/O(n) | O(n) | O(n) | ✅ | 5 | — | 🟢 HIRE. RE-SOLVE. ~6 min (prev 45 min). 1 self-caught bug (unconditional put → else). Zero hints. 7.5x faster. |
 | 34 | Jul 7 | 3Sum Closest (NEW, UNSEEN) | 16 | Medium | Sort + Fix One + Two Pointers (Closest) | Brute O(n³) → Sort + 2ptr O(n²)/O(1) | O(n²) | O(1) | ⚡ | 4 | Box 1 | 🟡 LEAN HIRE. UNSEEN challenge. Bug: missing Math.abs() in comparison (caught during dry run). Zero hints. ~25 min. Good pattern transfer from 3Sum. |
 | 35 | Jul 7 | Partition Labels (NEW, UNSEEN) | 763 | Medium | Greedy + Last Occurrence Map | Last occ map + greedy scan O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. UNSEEN challenge. All 5 tests first try. Zero bugs, zero hints. Optimal: map char→last index, greedy extend end, cut at i==end. |
+| 36 | Jul 11 | Max Sum Subarray of Size K (NEW) | — | Easy | Fixed Sliding Window | Brute O(n*k) → Sliding O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. First sliding window problem. Fixed window: add right, remove left, track max. Solved prior to session. |
+| 37 | Jul 11 | Longest Substring Without Repeating (NEW) | 3 | Medium | Variable Sliding Window + HashSet | Brute O(n³) → Sliding + HashSet O(n)/O(min(n, charset)) | O(n) | O(min(n,m)) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~5 min. Clean while+continue for shrinking. Amortized O(n) reasoning solid. |
 
 ---
 
@@ -79,4 +81,5 @@
 | W2 D6 | 2 re-solves | 2 | 0 | 0 | 0 | 5.0 | 3Sum + Contiguous Array re-solves → both HIRE |
 | W2 D7 | 2 (complete) 🎉 | 1 | 1 | 0 | 0 | 4.5 | 3Sum Closest (LEAN HIRE) + Partition Labels (HIRE) |
 | **W2 TOTAL** | **11 + 2 re-solves** | **9** | **2** | **0** | **0** | **4.8** | **All Two Pointer patterns + Greedy** |
+| W3 D1 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Fixed Window + Variable Window + HashSet |
 

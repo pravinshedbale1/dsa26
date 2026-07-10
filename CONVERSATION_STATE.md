@@ -55,16 +55,16 @@
 | Field | Value |
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
-| **Current Week** | Week 2 — Two Pointers & Sorting — ✅ COMPLETE |
-| **Current Day** | Day 7 (July 7, 2026) — COMPLETE |
-| **Current Topic** | Two Pointers & Sorting — Weekly Challenge DONE |
-| **Current Problem** | Week 2 COMPLETE — Week 3 (Sliding Window) next |
-| **Session Count** | 14 |
-| **Total Problems Solved** | 24 (new plan) + 2 re-solves |
+| **Current Week** | Week 3 — Sliding Window |
+| **Current Day** | Day 1 (July 11, 2026) — ✅ COMPLETE |
+| **Current Topic** | Sliding Window (Fixed + Variable) |
+| **Current Problem** | Week 3 Day 1 COMPLETE — Day 2 next |
+| **Session Count** | 15 |
+| **Total Problems Solved** | 26 (new plan) + 2 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 96 |
+| **Days Remaining** | 92 |
 
 ---
 
@@ -598,8 +598,8 @@ TEMPLATE for each session entry:
 | — | Sort + Fix Two + Two Pointers (kSum) | 5 | July 6 | 4Sum 🟢 HIRE — clean 3Sum extension, overflow handling, ~10 min |
 | — | Sort + Greedy Two Pointers (Pairing) | 5 | July 7 | Boats to Save People 🟢 HIRE — heaviest boards, lightest pairs if fits, ~4 min |
 | 4 | Two Pointers (Same Direction) | 5 | June 28 | Move Zeroes 🟢 HIRE — write/read pointer, ~4 min |
-| 5 | Sliding Window (Fixed) | — | — | — |
-| 6 | Sliding Window (Variable) | — | — | — |
+| 5 | Sliding Window (Fixed) | 5 | July 11 | Max Sum Subarray of Size K 🟢 HIRE. Add right, remove left, track max. |
+| 6 | Sliding Window (Variable) + HashSet | 5 | July 11 | Longest Substring Without Repeating 🟢 HIRE. Expand right, shrink left until valid, ~5 min. |
 | 7 | Monotonic Stack | — | — | — |
 | 8 | Fast/Slow Pointers | — | — | — |
 | 9 | Linked List Reversal | — | — | — |
@@ -625,18 +625,22 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Boats to Save People (LC #881) | Box 1 | Jul 7 | Jul 8 | 🆕 New |
-| Remove Duplicates (LC #26) | Box 2 | Jul 6 | Jul 9 | ✅ Promoted |
-| 4Sum (LC #18) | Box 2 | Jul 7 | Jul 10 | ✅ Promoted |
-| Subarray Sum Equals K (LC #560) | Box 2 | Jul 7 | Jul 10 | ✅ Promoted |
+| Max Sum Subarray of Size K | Box 1 | Jul 11 | Jul 12 | 🆕 New |
+| Longest Substring Without Repeating (LC #3) | Box 1 | Jul 11 | Jul 12 | 🆕 New |
+| Partition Labels (LC #763) | Box 2 | Jul 8 | Jul 11 | ⚠️ Deferred |
 | Valid Anagram (LC #242) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
 | Two Sum II (LC #167) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
 | Group Anagrams (LC #49) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
 | Top K Frequent (LC #347) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
-| Container With Most Water (LC #11) | Box 3 | Jul 6 | Jul 13 | ✅ Promoted |
-| Trapping Rain Water (LC #42) | Box 3 | Jul 6 | Jul 13 | ✅ Promoted |
-| Move Zeroes (LC #283) | Box 3 | Jul 6 | Jul 13 | ✅ Promoted |
-| Sort Colors (LC #75) | Box 3 | Jul 6 | Jul 13 | ✅ Promoted |
+| Container With Most Water (LC #11) | Box 3 | Jul 6 | Jul 13 | ⏳ Due Jul 13 |
+| Trapping Rain Water (LC #42) | Box 3 | Jul 6 | Jul 13 | ⏳ Due Jul 13 |
+| Move Zeroes (LC #283) | Box 3 | Jul 6 | Jul 13 | ⏳ Due Jul 13 |
+| Sort Colors (LC #75) | Box 3 | Jul 6 | Jul 13 | ⏳ Due Jul 13 |
+| Remove Duplicates (LC #26) | Box 3 | Jul 11 | Jul 18 | ✅ Promoted |
+| 4Sum (LC #18) | Box 3 | Jul 11 | Jul 18 | ✅ Promoted |
+| Subarray Sum Equals K (LC #560) | Box 3 | Jul 11 | Jul 18 | ✅ Promoted |
+| Boats to Save People (LC #881) | Box 3 | Jul 11 | Jul 18 | ✅ Promoted |
+| 3Sum Closest (LC #16) | Box 3 | Jul 11 | Jul 18 | ✅ Promoted |
 | Product Except Self (LC #238) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
 | Longest Consecutive (LC #128) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
 | Encode and Decode Strings (LC #271) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
@@ -693,22 +697,47 @@ TEMPLATE for each session entry:
 - Partition Labels showed excellent novel problem-solving — identified the greedy insight independently
 - 🎉 **WEEK 2 COMPLETE** — All 12 problems done (10 new + 2 weekly challenge)
 
+### Session #15 — July 11, 2026 — Sliding Window (Week 3, Day 1)
+**Status**: ✅ COMPLETE
+**Duration**: ~30 min
+
+**Spaced Repetition Recall Results (5 Box 2 problems — 2 overdue + 3 due today)**:
+- Remove Duplicates (LC #26): ✅ Perfect — write/read pointer, O(n)/O(1) → **Promoted to Box 3**
+- 4Sum (LC #18): ✅ Solid — sort + fix two + two pointers, overflow→long recalled → **Promoted to Box 3**
+- Subarray Sum Equals K (LC #560): ✅ Nailed — {0:1} count-based init correct, prefix sum complement search → **Promoted to Box 3**
+- Boats to Save People (LC #881): ✅ Perfect — sort + greedy pairing, O(n log n)/O(1) → **Promoted to Box 3**
+- 3Sum Closest (LC #16): ✅ Excellent — Math.abs() gotcha recalled proactively → **Promoted to Box 3**
+- ⏭️ Partition Labels (LC #763): Deferred to next session.
+
+**Recall Verdict**: 5/5 recalled. All promoted to Box 3. Partition Labels deferred (late session).
+
+**Problems Covered**:
+- Max Sum Subarray of Size K: ✅ NEW — 🟢 HIRE. Fixed sliding window. Solved prior to session (concept teach done in prior session).
+- Longest Substring Without Repeating Characters (LC #3): ✅ NEW — 🟢 HIRE. Variable sliding window + HashSet. All 5 tests first try. Zero bugs, zero hints. ~5 min. Clean while+continue approach for shrinking (no nested while loop). Amortized O(n) reasoning solid — each element enters/leaves set at most once.
+
+**Key Observations**:
+- **19-problem 🟢 HIRE streak** 🔥🔥🔥 (if counting both today's problems)
+- Sliding window pattern clicked immediately — concept teach from prior session paid off
+- Used `while` + `continue` instead of nested `while` for shrinking — elegant alternative to the template
+- Amortized reasoning transferred from Longest Consecutive Sequence (same logic: each element processed at most twice)
+- Spaced rep: 5/5 recalled despite 3-day gap. Subarray Sum Equals K {0:1} vs {0:-1} confusion is permanently resolved.
+- Day 1 complete! Ready for Day 2 (Minimum Size Subarray Sum + Permutation in String).
+
 ---
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #15 — Week 3, Day 1
-**Topic**: Sliding Window 🪟 — NEW TOPIC
+**Next**: Session #16 — Week 3, Day 2
+**Topic**: Sliding Window 🪟 — Variable Window (Shortest) + Fixed Window with Freq Match
 **Plan**:
-1. ⏰ Spaced repetition check: Boats to Save People, 3Sum Closest, Partition Labels (Box 1)
-2. 🧠 Concept teaching: Sliding Window technique (fixed-size vs variable-size)
-3. 🎯 Problem 1: Maximum Sum Subarray of Size K (Easy, fixed window)
-4. 🎯 Problem 2: Longest Substring Without Repeating Characters (LC #3, Medium, variable window)
+1. ⏰ Spaced repetition check: Max Sum Subarray, Longest Substring Without Repeating (Box 1) + Partition Labels (Box 2, deferred)
+2. 🎯 Problem 1: Minimum Size Subarray Sum (LC #209, Medium, variable window — shortest)
+3. 🎯 Problem 2: Permutation in String (LC #567, Medium, fixed window + freq match)
 
 **Focus**:
-- Learn when to use sliding window vs two pointers
-- Fixed-size window: maintain sum as window slides
-- Variable-size window: expand/shrink based on condition
+- Variable window for SHORTEST (update answer during shrinking, not after)
+- Fixed window with frequency array matching
+- int[26] comparison for fixed charset
 
 ---
 
@@ -718,7 +747,7 @@ TEMPLATE for each session entry:
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
 | W2 | 11 + 2 re-solves | 11 | 4.8 | 🎉 Two Pointers & Sorting COMPLETE. 10/11 🟢 HIRE. D6: re-solves crushed (3Sum 20→5 min, Contiguous Array 45→6 min). D7: 2 unseen challenges solved. Key lesson: Math.abs() for distance comparisons. |
-| W3 | — | — | — | — |
+| W3 | 2 | 2 | 5.0 | Sliding Window started. Fixed window + Variable window + HashSet. Both 🟢 HIRE. 19-problem HIRE streak. |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |
 | W6 | — | — | — | — |
