@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 3 — Sliding Window |
-| **Current Day** | Day 1 (July 11, 2026) — ✅ COMPLETE |
-| **Current Topic** | Sliding Window (Fixed + Variable) |
-| **Current Problem** | Week 3 Day 1 COMPLETE — Day 2 next |
-| **Session Count** | 15 |
+| **Current Day** | Day 2 (July 13, 2026) — 🔄 IN PROGRESS |
+| **Current Topic** | Sliding Window (Variable Shortest + Fixed Freq Match) |
+| **Current Problem** | Minimum Size Subarray Sum (LC #209) — next up |
+| **Session Count** | 16 |
 | **Total Problems Solved** | 26 (new plan) + 2 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 92 |
+| **Days Remaining** | 90 |
 
 ---
 
@@ -625,32 +625,32 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Max Sum Subarray of Size K | Box 1 | Jul 11 | Jul 12 | 🆕 New |
-| Longest Substring Without Repeating (LC #3) | Box 1 | Jul 11 | Jul 12 | 🆕 New |
-| Partition Labels (LC #763) | Box 2 | Jul 8 | Jul 11 | ⚠️ Deferred |
-| Valid Anagram (LC #242) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
-| Two Sum II (LC #167) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
-| Group Anagrams (LC #49) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
-| Top K Frequent (LC #347) | Box 4 | Jun 28 | Jul 12 | ⏳ Due Jul 12 |
-| Container With Most Water (LC #11) | Box 3 | Jul 6 | Jul 13 | ⏳ Due Jul 13 |
-| Trapping Rain Water (LC #42) | Box 3 | Jul 6 | Jul 13 | ⏳ Due Jul 13 |
-| Move Zeroes (LC #283) | Box 3 | Jul 6 | Jul 13 | ⏳ Due Jul 13 |
-| Sort Colors (LC #75) | Box 3 | Jul 6 | Jul 13 | ⏳ Due Jul 13 |
-| Remove Duplicates (LC #26) | Box 3 | Jul 11 | Jul 18 | ✅ Promoted |
-| 4Sum (LC #18) | Box 3 | Jul 11 | Jul 18 | ✅ Promoted |
-| Subarray Sum Equals K (LC #560) | Box 3 | Jul 11 | Jul 18 | ✅ Promoted |
-| Boats to Save People (LC #881) | Box 3 | Jul 11 | Jul 18 | ✅ Promoted |
-| 3Sum Closest (LC #16) | Box 3 | Jul 11 | Jul 18 | ✅ Promoted |
-| Product Except Self (LC #238) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
-| Longest Consecutive (LC #128) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
-| Encode and Decode Strings (LC #271) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
-| Valid Sudoku (LC #36) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
-| Valid Palindrome (LC #125) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
-| 3Sum (LC #15) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
-| Contiguous Array (LC #525) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
-| Sort Chars By Freq (LC #451) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
-| Two Sum (LC #1) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
-| Contains Duplicate (LC #217) | Box 4 | Jul 6 | Jul 20 | ✅ Promoted |
+| Max Sum Subarray of Size K | Box 2 | Jul 13 | Jul 16 | ✅ Promoted |
+| Longest Substring Without Repeating (LC #3) | Box 2 | Jul 13 | Jul 16 | ✅ Promoted |
+| Remove Duplicates (LC #26) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
+| 4Sum (LC #18) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
+| Subarray Sum Equals K (LC #560) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
+| Boats to Save People (LC #881) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
+| 3Sum Closest (LC #16) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
+| Partition Labels (LC #763) | Box 3 | Jul 13 | Jul 20 | ✅ Promoted |
+| Container With Most Water (LC #11) | Box 3 | Jul 13 | Jul 20 | ✅ Reviewed |
+| Trapping Rain Water (LC #42) | Box 3 | Jul 13 | Jul 20 | ✅ Reviewed |
+| Move Zeroes (LC #283) | Box 3 | Jul 13 | Jul 20 | ✅ Reviewed |
+| Sort Colors (LC #75) | Box 3 | Jul 13 | Jul 20 | ✅ Reviewed |
+| Product Except Self (LC #238) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
+| Longest Consecutive (LC #128) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
+| Encode and Decode Strings (LC #271) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
+| Valid Sudoku (LC #36) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
+| Valid Palindrome (LC #125) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
+| 3Sum (LC #15) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
+| Contiguous Array (LC #525) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
+| Sort Chars By Freq (LC #451) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
+| Two Sum (LC #1) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
+| Contains Duplicate (LC #217) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
+| Valid Anagram (LC #242) | Box 4 | Jul 13 | Jul 27 | ✅ Reviewed |
+| Two Sum II (LC #167) | Box 4 | Jul 13 | Jul 27 | ✅ Reviewed |
+| Group Anagrams (LC #49) | Box 4 | Jul 13 | Jul 27 | ✅ Reviewed |
+| Top K Frequent (LC #347) | Box 4 | Jul 13 | Jul 27 | ✅ Reviewed |
 
 ---
 
