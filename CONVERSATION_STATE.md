@@ -56,11 +56,11 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 3 — Sliding Window |
-| **Current Day** | Day 2 (July 13, 2026) — 🔄 IN PROGRESS |
+| **Current Day** | Day 2 (July 13, 2026) — ✅ COMPLETE |
 | **Current Topic** | Sliding Window (Variable Shortest + Fixed Freq Match) |
-| **Current Problem** | Minimum Size Subarray Sum (LC #209) — next up |
+| **Current Problem** | Week 3 Day 2 COMPLETE — Day 3 next |
 | **Session Count** | 16 |
-| **Total Problems Solved** | 26 (new plan) + 2 re-solves |
+| **Total Problems Solved** | 28 (new plan) + 2 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
@@ -598,8 +598,10 @@ TEMPLATE for each session entry:
 | — | Sort + Fix Two + Two Pointers (kSum) | 5 | July 6 | 4Sum 🟢 HIRE — clean 3Sum extension, overflow handling, ~10 min |
 | — | Sort + Greedy Two Pointers (Pairing) | 5 | July 7 | Boats to Save People 🟢 HIRE — heaviest boards, lightest pairs if fits, ~4 min |
 | 4 | Two Pointers (Same Direction) | 5 | June 28 | Move Zeroes 🟢 HIRE — write/read pointer, ~4 min |
-| 5 | Sliding Window (Fixed) | 5 | July 11 | Max Sum Subarray of Size K 🟢 HIRE. Add right, remove left, track max. |
-| 6 | Sliding Window (Variable) + HashSet | 5 | July 11 | Longest Substring Without Repeating 🟢 HIRE. Expand right, shrink left until valid, ~5 min. |
+| 5 | Sliding Window (Fixed) | 5 | July 13 | Max Sum Subarray of Size K 🟢 HIRE. Add right, remove left, track max. |
+| 6 | Sliding Window (Variable) + HashSet | 5 | July 13 | Longest Substring Without Repeating 🟢 HIRE. Expand right, shrink left until valid, ~5 min. |
+| — | Sliding Window (Variable — Shortest) | 5 | July 13 | Minimum Size Subarray Sum 🟢 HIRE. Update min DURING shrinking. Integer.MAX_VALUE init. |
+| — | Sliding Window (Fixed + Freq Match) | 5 | July 13 | Permutation in String 🟢 HIRE. Running int[26] + Arrays.equals. Don't rebuild freq each time. |
 | 7 | Monotonic Stack | — | — | — |
 | 8 | Fast/Slow Pointers | — | — | — |
 | 9 | Linked List Reversal | — | — | — |
@@ -627,6 +629,8 @@ TEMPLATE for each session entry:
 |---------|-----------|---------------|----------|--------|
 | Max Sum Subarray of Size K | Box 2 | Jul 13 | Jul 16 | ✅ Promoted |
 | Longest Substring Without Repeating (LC #3) | Box 2 | Jul 13 | Jul 16 | ✅ Promoted |
+| Minimum Size Subarray Sum (LC #209) | Box 1 | Jul 13 | Jul 14 | 🆕 New |
+| Permutation in String (LC #567) | Box 1 | Jul 13 | Jul 14 | 🆕 New |
 | Remove Duplicates (LC #26) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
 | 4Sum (LC #18) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
 | Subarray Sum Equals K (LC #560) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
@@ -723,21 +727,53 @@ TEMPLATE for each session entry:
 - Spaced rep: 5/5 recalled despite 3-day gap. Subarray Sum Equals K {0:1} vs {0:-1} confusion is permanently resolved.
 - Day 1 complete! Ready for Day 2 (Minimum Size Subarray Sum + Permutation in String).
 
+### Session #16 — July 13, 2026 — Sliding Window (Week 3, Day 2)
+**Status**: ✅ COMPLETE
+**Duration**: ~40 min
+
+**Spaced Repetition Recall Results (11 problems — 7 overdue + 4 due today)**:
+- Max Sum Subarray of Size K (Box 1): ✅ Perfect — fixed window, add/remove, track max. O(n)/O(1). → **Promoted to Box 2**
+- Longest Substring Without Repeating (Box 1): ✅ Solid — variable window + HashSet, expand/shrink. O(n)/O(n). → **Promoted to Box 2**
+- Partition Labels (Box 2, deferred): ✅ After probe — approach correct but cut condition imprecise ("cut when this char done" vs "cut when everything done"). Clarified: track end = max(end, lastOcc[char]), cut when i==end. → **Promoted to Box 3**
+- Valid Anagram (Box 4): ✅ Perfect — length early-exit FIRST. int[26]. O(n)/O(1). → **Stays Box 4**
+- Two Sum II (Box 4): ✅ Perfect — two pointers opposite, move on sum comparison. O(n)/O(1). → **Stays Box 4**
+- Group Anagrams (Box 4): ✅ Solid — freq key + HashMap grouping. O(n·k)/O(n·k). → **Stays Box 4**
+- Top K Frequent (Box 4): ✅ Perfect — bucket sort, List[] n+1, right-to-left. O(n)/O(n). → **Stays Box 4**
+- Container With Most Water (Box 3): ✅ Solid after probe — move shorter side. O(n)/O(1). → **Stays Box 3**
+- Trapping Rain Water (Box 3): ✅ Excellent — min(maxL, maxR) - h[i], process smaller max. O(n)/O(1). → **Stays Box 3**
+- Move Zeroes (Box 3): ✅ Perfect — write/read pointer, swap non-zero forward. O(n)/O(1). → **Stays Box 3**
+- Sort Colors (Box 3): ✅ Excellent — DNF lo/mid/hi, mid stays after hi swap. O(n)/O(1). → **Stays Box 3**
+
+**Recall Verdict**: 11/11 recalled. 3 promoted, 8 maintained. Zero demotions.
+
+**Problems Covered**:
+- Minimum Size Subarray Sum (LC #209): ✅ NEW — 🟢 HIRE. Variable window (shortest). All 5 tests first try. 1 typo (target vs minLength), self-caught. Zero hints. ~4 min. Key: update min DURING shrinking, init Integer.MAX_VALUE, ternary return.
+- Permutation in String (LC #567): ✅ NEW — 🟢 HIRE. Fixed window + freq match. All 5 tests first try (both versions). Initial version used helper function (O(m·k)), guided to refactor to running int[26] (O(m)). 1 hint (running freq vs rebuild). ~13 min. Clean need[]/window[] naming, Arrays.equals().
+
+**Key Observations**:
+- **21-problem 🟢 HIRE streak** 🔥🔥🔥
+- New pattern distinction locked in: LONGEST → update during expanding, SHORTEST → update during shrinking
+- Permutation in String: initially didn't connect "maintain running freq array" to the fixed sliding window pattern (same as running sum in Max Sum Subarray). After guided parallel, refactored cleanly.
+- Integer.MAX_VALUE init for min-finding is a general technique — same as using Integer.MIN_VALUE for max-finding
+- Spaced rep: 11/11 recalled despite 2-day gap. Partition Labels cut condition was the only fuzzy recall (approach was right, precision was lacking).
+- Day 2 complete! Ready for Day 3 (Minimum Window Substring + Longest Repeating Character Replacement).
+
 ---
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #16 — Week 3, Day 2
-**Topic**: Sliding Window 🪟 — Variable Window (Shortest) + Fixed Window with Freq Match
+**Next**: Session #17 — Week 3, Day 3
+**Topic**: Sliding Window 🪟 — Variable Window + Freq (Hard) + Variable Window + Max Freq
 **Plan**:
-1. ⏰ Spaced repetition check: Max Sum Subarray, Longest Substring Without Repeating (Box 1) + Partition Labels (Box 2, deferred)
-2. 🎯 Problem 1: Minimum Size Subarray Sum (LC #209, Medium, variable window — shortest)
-3. 🎯 Problem 2: Permutation in String (LC #567, Medium, fixed window + freq match)
+1. ⏰ Spaced repetition check: Minimum Size Subarray Sum, Permutation in String (Box 1) + Max Sum Subarray, Longest Substring (Box 2)
+2. 🎯 Problem 1: Minimum Window Substring (LC #76, Hard, variable window + HashMap freq)
+3. 🎯 Problem 2: Longest Repeating Character Replacement (LC #424, Medium, variable window + max freq)
 
 **Focus**:
-- Variable window for SHORTEST (update answer during shrinking, not after)
-- Fixed window with frequency array matching
-- int[26] comparison for fixed charset
+- HashMap frequency tracking for complex window validity
+- "Need" vs "have" character counts
+- Max frequency trick for character replacement
+- First Hard sliding window problem
 
 ---
 
@@ -747,7 +783,7 @@ TEMPLATE for each session entry:
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
 | W2 | 11 + 2 re-solves | 11 | 4.8 | 🎉 Two Pointers & Sorting COMPLETE. 10/11 🟢 HIRE. D6: re-solves crushed (3Sum 20→5 min, Contiguous Array 45→6 min). D7: 2 unseen challenges solved. Key lesson: Math.abs() for distance comparisons. |
-| W3 | 2 | 2 | 5.0 | Sliding Window started. Fixed window + Variable window + HashSet. Both 🟢 HIRE. 19-problem HIRE streak. |
+| W3 | 4 | 4 | 5.0 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match. All 4 🟢 HIRE. 21-problem streak. |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |
 | W6 | — | — | — | — |

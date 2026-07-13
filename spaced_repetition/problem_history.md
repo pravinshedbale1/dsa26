@@ -57,6 +57,8 @@
 | 35 | Jul 7 | Partition Labels (NEW, UNSEEN) | 763 | Medium | Greedy + Last Occurrence Map | Last occ map + greedy scan O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. UNSEEN challenge. All 5 tests first try. Zero bugs, zero hints. Optimal: map char→last index, greedy extend end, cut at i==end. |
 | 36 | Jul 11 | Max Sum Subarray of Size K (NEW) | — | Easy | Fixed Sliding Window | Brute O(n*k) → Sliding O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. First sliding window problem. Fixed window: add right, remove left, track max. Solved prior to session. |
 | 37 | Jul 11 | Longest Substring Without Repeating (NEW) | 3 | Medium | Variable Sliding Window + HashSet | Brute O(n³) → Sliding + HashSet O(n)/O(min(n, charset)) | O(n) | O(min(n,m)) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~5 min. Clean while+continue for shrinking. Amortized O(n) reasoning solid. |
+| 38 | Jul 13 | Minimum Size Subarray Sum (NEW) | 209 | Medium | Variable Sliding Window (Shortest) | Brute O(n²) → Sliding Window O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. 1 typo (target vs minLength), self-caught. Zero hints. ~4 min. Integer.MAX_VALUE init for min-finding. Update answer during shrinking. |
+| 39 | Jul 13 | Permutation in String (NEW) | 567 | Medium | Fixed Sliding Window + Freq Match | Brute O(n!·m) → Sliding + int[26] O(m)/O(1) | O(m) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs. Initial version used helper (O(m·k)), refactored to running freq array + Arrays.equals. 1 hint (running freq vs rebuild). ~13 min. |
 
 ---
 
@@ -82,4 +84,5 @@
 | W2 D7 | 2 (complete) 🎉 | 1 | 1 | 0 | 0 | 4.5 | 3Sum Closest (LEAN HIRE) + Partition Labels (HIRE) |
 | **W2 TOTAL** | **11 + 2 re-solves** | **9** | **2** | **0** | **0** | **4.8** | **All Two Pointer patterns + Greedy** |
 | W3 D1 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Fixed Window + Variable Window + HashSet |
+| W3 D2 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Variable Shortest + Fixed Freq Match |
 

@@ -23,7 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| _empty_ | — | — | — | — |
+| Minimum Size Subarray Sum (LC #209) | Variable Sliding Window (Shortest) | Jul 13 | Jul 13 | Jul 14 |
+| Permutation in String (LC #567) | Fixed Sliding Window + Freq Match | Jul 13 | Jul 13 | Jul 14 |
 
 ---
 
@@ -115,13 +116,13 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 26 |
-| Box 1 (daily) | 0 |
+| Total problems in system | 28 |
+| Box 1 (daily) | 2 |
 | Box 2 (3-day) | 2 |
 | Box 3 (weekly) | 10 |
 | Box 4 (bi-weekly) | 14 |
 | Box 5 (mastered) | 0 |
 | Reviews completed today | 11 |
-| Problems solved today | 0 (recall only so far) |
+| Problems solved today | 2 (Min Size Subarray Sum + Permutation in String) |
 | Re-solves today | 0 |
 | Streak (consecutive days) | 1 |

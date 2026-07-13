@@ -149,13 +149,21 @@ This is the same amortized reasoning as Longest Consecutive Sequence!
 
 ## Common Mistakes (Your Struggle Log)
 
-_To be filled during problem-solving sessions_
+| Date | Mistake | Fix |
+|------|---------|-----|
+| Jul 13 | Permutation in String: rebuilt freq array from scratch at each window position (O(m·k)) | Maintain RUNNING freq array — add right char, remove left char. Same as running sum in fixed window. |
+| Jul 13 | Min Size Subarray: used `target` instead of `minLength` in Math.min() (typo) | Double-check variable names in Math.min/max calls. Self-caught. |
+| Jul 13 | Initially said "update answer during expanding" for shortest window | SHORTEST → update during SHRINKING. LONGEST → update during EXPANDING. |
 
 ---
 
 ## Key Insights (Aha! Moments)
 
-_To be filled during problem-solving sessions_
+1. **Running freq array = running sum for frequencies** — just like you don't resum all k elements, don't rebuild the freq array. Add/remove as window slides.
+2. **LONGEST vs SHORTEST update timing** — Longest updates when window is valid (expanding). Shortest updates when window is still valid during shrinking.
+3. **Integer.MAX_VALUE for min-finding** — standard init. If unchanged → no valid window found → return 0.
+4. **Arrays.equals(int[], int[])** — O(26) = O(1) for fixed charset comparison. Clean alternative to manual loop.
+5. **Amortized O(n)** — same reasoning across all variable windows: each element enters/leaves at most once.
 
 ---
 
