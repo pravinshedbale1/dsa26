@@ -46,6 +46,7 @@
 | 35 | "Sort array with only 3 distinct values" | 3 pointers: lo, mid, hi. Mid scans. 0→swap lo, 1→skip, 2→swap hi. Don't advance mid after hi swap | **Dutch National Flag (3-Way Partition)** | `lo=0, mid=0, hi=n-1; route by nums[mid]` |
 | 36 | "Find all quadruplets summing to target" | Sort + fix 2 outer loops + two pointers inner. Generalize kSum: fix (k-2) + 2ptr. Watch for int overflow → use long | **Sort + Fix Two + Two Pointers (kSum)** | `for i { for j { k=j+1, l=n-1; while (k<l) }}` |
 | 37 | "Minimum boats/pairs to carry all with weight limit" | Sort + greedy pair heaviest with lightest. Heaviest always needs a slot; lightest joins if fits | **Sort + Greedy Two Pointers (Pairing)** | `sort; l=0, r=n-1; if (a[l]+a[r]<=limit) l++; r--; boats++` |
+| 38 | "Smallest window in s containing all chars of t (with counts)" | Variable window + need/window freq maps + formed/required counters (avoids full map comparison every step) | **Sliding Window + Need/Formed Counter** | `need` from t; `formed++` when `window[c]==need[c]` (exact); shrink while `formed==required`, `formed--` when `window[c]<need[c]` (strict) |
 
 ---
 

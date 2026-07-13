@@ -51,3 +51,18 @@
 ```
 
 ---
+
+## Card 5: Variable Window + Need/Formed Counter (Minimum Window Substring, LC #76)
+```
+🔍 TRIGGER: "Smallest window in s containing all chars of t (with duplicates)"
+💡 IDEA:   need[] = freq of t. window[] = running freq in [left,right]. required = distinct chars in need.
+           formed = distinct chars currently satisfied. Window valid when formed == required.
+📝 CODE:   window[c]++; if (window[c]==need[c]) formed++;
+           while (formed==required) { record min; window[left]--; if (window[left] < need[left]) formed--; left++; }
+⏱️ TIME:   O(n+m)  |  SPACE: O(k) (k = distinct chars in t; int[128] → O(1))
+⚠️ KEY:    Use EXACT equality (==) to bump formed, STRICT (<) to drop it — each fires only once,
+           at the transition moment. Using >=/<= double-counts and breaks formed==required.
+⚠️ EDGE:   t longer/has more of a char than s exists → return "". Char in t absent from s entirely.
+```
+
+---

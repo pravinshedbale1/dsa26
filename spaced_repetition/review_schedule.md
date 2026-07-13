@@ -23,8 +23,7 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Minimum Size Subarray Sum (LC #209) | Variable Sliding Window (Shortest) | Jul 13 | Jul 13 | Jul 14 |
-| Permutation in String (LC #567) | Fixed Sliding Window + Freq Match | Jul 13 | Jul 13 | Jul 14 |
+| Minimum Window Substring (LC #76) | Variable Sliding Window + Need/Formed Counter | Jul 14 | Jul 14 | Jul 15 |
 
 ---
 
@@ -34,6 +33,8 @@
 |---------|---------|------------|-------------|-------------|
 | Max Sum Subarray of Size K | Fixed Sliding Window | Jul 13 | Jul 13 | Jul 16 |
 | Longest Substring Without Repeating (LC #3) | Variable Sliding Window + HashSet | Jul 13 | Jul 13 | Jul 16 |
+| Minimum Size Subarray Sum (LC #209) | Variable Sliding Window (Shortest) | Jul 14 | Jul 14 | Jul 17 |
+| Permutation in String (LC #567) | Fixed Sliding Window + Freq Match | Jul 14 | Jul 14 | Jul 17 |
 
 ---
 
@@ -85,20 +86,24 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: July 13, 2026
+**Date**: July 14, 2026
 
-### Spaced Repetition Recall (11 problems — 7 overdue + 4 due today):
-- ✅ Max Sum Subarray of Size K — Perfect. Fixed sliding window, add/remove, track max. O(n)/O(1). → **Promoted to Box 2**
-- ✅ Longest Substring Without Repeating (LC #3) — Solid. Variable window + HashSet, expand/shrink. O(n)/O(n). → **Promoted to Box 2**
-- ✅ Partition Labels (LC #763) — Needed probe on cut condition (i==end, not just last occ of current char). Approach correct after clarification. → **Promoted to Box 3**
-- ✅ Valid Anagram (LC #242) — Perfect. Length early-exit FIRST. int[26], increment/decrement. O(n)/O(1). → **Stays Box 4**
-- ✅ Two Sum II (LC #167) — Perfect. Two pointers opposite, move based on sum comparison. O(n)/O(1). → **Stays Box 4**
-- ✅ Group Anagrams (LC #49) — Solid. Freq key + HashMap grouping. O(n·k)/O(n·k). → **Stays Box 4**
-- ✅ Top K Frequent (LC #347) — Perfect. Bucket sort, List[] n+1, collect right-to-left. O(n)/O(n). → **Stays Box 4**
-- ✅ Container With Most Water (LC #11) — Solid after probe. Move shorter side. O(n)/O(1). → **Stays Box 3**
-- ✅ Trapping Rain Water (LC #42) — Excellent. min(maxL, maxR) - h[i], process smaller max. O(n)/O(1). → **Stays Box 3**
-- ✅ Move Zeroes (LC #283) — Perfect. Write/read pointer, swap non-zero forward. O(n)/O(1). → **Stays Box 3**
-- ✅ Sort Colors (LC #75) — Excellent. DNF lo/mid/hi, mid stays after hi swap. O(n)/O(1). → **Stays Box 3**
+### Spaced Repetition Recall (2 problems — Box 1 due today):
+- ✅ Minimum Size Subarray Sum (LC #209) — Approach correct (shrink-and-update-min). Bug caught: said `sum > target` instead of `sum >= target` (counterexample: [1,4,4], target=4 — strict `>` misses the exact-match window and reports 2 instead of 1). Corrected. → **Promoted to Box 2**
+- ✅ Permutation in String (LC #567) — Perfect. need[]/window[] running freq, equality check at fixed window size, slide by remove-left/add-right. O(n)/O(1). → **Promoted to Box 2**
+
+### Previous Queue (July 13, 2026 — 11 problems — 7 overdue + 4 due):
+- ✅ Max Sum Subarray of Size K — Perfect. Fixed sliding window, add/remove, track max. O(n)/O(1). → Promoted to Box 2
+- ✅ Longest Substring Without Repeating (LC #3) — Solid. Variable window + HashSet, expand/shrink. O(n)/O(n). → Promoted to Box 2
+- ✅ Partition Labels (LC #763) — Needed probe on cut condition (i==end, not just last occ of current char). Approach correct after clarification. → Promoted to Box 3
+- ✅ Valid Anagram (LC #242) — Perfect. Length early-exit FIRST. int[26], increment/decrement. O(n)/O(1). → Stays Box 4
+- ✅ Two Sum II (LC #167) — Perfect. Two pointers opposite, move based on sum comparison. O(n)/O(1). → Stays Box 4
+- ✅ Group Anagrams (LC #49) — Solid. Freq key + HashMap grouping. O(n·k)/O(n·k). → Stays Box 4
+- ✅ Top K Frequent (LC #347) — Perfect. Bucket sort, List[] n+1, collect right-to-left. O(n)/O(n). → Stays Box 4
+- ✅ Container With Most Water (LC #11) — Solid after probe. Move shorter side. O(n)/O(1). → Stays Box 3
+- ✅ Trapping Rain Water (LC #42) — Excellent. min(maxL, maxR) - h[i], process smaller max. O(n)/O(1). → Stays Box 3
+- ✅ Move Zeroes (LC #283) — Perfect. Write/read pointer, swap non-zero forward. O(n)/O(1). → Stays Box 3
+- ✅ Sort Colors (LC #75) — Excellent. DNF lo/mid/hi, mid stays after hi swap. O(n)/O(1). → Stays Box 3
 
 ### Review Checklist:
 For each problem due:
@@ -116,13 +121,13 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 28 |
-| Box 1 (daily) | 2 |
-| Box 2 (3-day) | 2 |
+| Total problems in system | 29 |
+| Box 1 (daily) | 1 |
+| Box 2 (3-day) | 4 |
 | Box 3 (weekly) | 10 |
 | Box 4 (bi-weekly) | 14 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 11 |
-| Problems solved today | 2 (Min Size Subarray Sum + Permutation in String) |
+| Reviews completed today | 2 |
+| Problems solved today | 1 (Minimum Window Substring), pending: Longest Repeating Character Replacement |
 | Re-solves today | 0 |
-| Streak (consecutive days) | 1 |
+| Streak (consecutive days) | 2 |

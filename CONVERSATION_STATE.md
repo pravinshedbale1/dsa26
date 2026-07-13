@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 3 — Sliding Window |
-| **Current Day** | Day 2 (July 13, 2026) — ✅ COMPLETE |
-| **Current Topic** | Sliding Window (Variable Shortest + Fixed Freq Match) |
-| **Current Problem** | Week 3 Day 2 COMPLETE — Day 3 next |
-| **Session Count** | 16 |
-| **Total Problems Solved** | 28 (new plan) + 2 re-solves |
+| **Current Day** | Day 3 (July 14, 2026) — ✅ COMPLETE (1/2 — LRCR deferred) |
+| **Current Topic** | Sliding Window (Variable + Need/Formed Counter, Hard) |
+| **Current Problem** | Week 3 Day 3 partial — Day 4 next, starts with deferred LRCR |
+| **Session Count** | 17 |
+| **Total Problems Solved** | 29 (new plan) + 2 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 90 |
+| **Days Remaining** | 89 |
 
 ---
 
@@ -602,6 +602,7 @@ TEMPLATE for each session entry:
 | 6 | Sliding Window (Variable) + HashSet | 5 | July 13 | Longest Substring Without Repeating 🟢 HIRE. Expand right, shrink left until valid, ~5 min. |
 | — | Sliding Window (Variable — Shortest) | 5 | July 13 | Minimum Size Subarray Sum 🟢 HIRE. Update min DURING shrinking. Integer.MAX_VALUE init. |
 | — | Sliding Window (Fixed + Freq Match) | 5 | July 13 | Permutation in String 🟢 HIRE. Running int[26] + Arrays.equals. Don't rebuild freq each time. |
+| — | Sliding Window (Variable + Need/Formed Counter) | 5 | July 14 | Minimum Window Substring 🟢 HIRE (Hard). need/window maps, formed==required. Exact `==` to bump, strict `<` to drop — avoids double-counting. |
 | 7 | Monotonic Stack | — | — | — |
 | 8 | Fast/Slow Pointers | — | — | — |
 | 9 | Linked List Reversal | — | — | — |
@@ -758,22 +759,42 @@ TEMPLATE for each session entry:
 - Spaced rep: 11/11 recalled despite 2-day gap. Partition Labels cut condition was the only fuzzy recall (approach was right, precision was lacking).
 - Day 2 complete! Ready for Day 3 (Minimum Window Substring + Longest Repeating Character Replacement).
 
+### Session #17 — July 14, 2026 — Sliding Window (Week 3, Day 3)
+**Status**: ✅ COMPLETE (1 of 2 problems; Longest Repeating Character Replacement deferred)
+
+**Spaced Repetition Recall Results (2 Box 1 problems)**:
+- Minimum Size Subarray Sum (LC #209): ✅ Approach correct (shrink-and-update-min). Bug caught: said `sum > target` instead of `sum >= target` — counterexample [1,4,4]/target=4 shows strict `>` misses the exact-match window. Corrected. → **Promoted to Box 2**
+- Permutation in String (LC #567): ✅ Perfect — need[]/window[] running freq, equality check at fixed size, remove-left/add-right slide. O(n)/O(1). → **Promoted to Box 2**
+
+**Recall Verdict**: 2/2 recalled, 1 with correction.
+
+**Problems Covered So Far**:
+- Minimum Window Substring (LC #76): ✅ NEW HARD — 🟢 HIRE. Concept teach needed on need/window HashMap + formed/required counter (new trick — first "matching a multiset containment" problem, not just equality like Permutation in String). All 5 tests first try. Zero bugs, zero Phase-B hints. Correctly proposed `int[128]` over HashMap given bounded ASCII charset. Correctly explained why `formed` bump/drop uses exact `==` / strict `<` (avoids double-counting the same char).
+
+**Key Observations**:
+- **22-problem 🟢 HIRE streak** 🔥🔥🔥
+- First Hard-difficulty sliding window problem solved flawlessly
+- First "need/formed counter" pattern — generalizes the exact-equality-transition-moment idea from Permutation in String's Arrays.equals() to a running counter
+- Concept required a from-scratch re-explanation with a walkthrough example (shopping-cart/checklist analogy) before it clicked — first attempt at explaining the counter abstractly wasn't enough; concrete example worked
+- Longest Repeating Character Replacement (LC #424): concept teach given (window validity = `windowSize - maxFreq <= k`, stale `maxFreq` trick), but user deferred solving to next session before starting. No code file created yet.
+- Day 3 partially complete — 1 new problem solved (Hard), 1 deferred. Ready for Day 4, starting with the deferred problem.
+
 ---
 
 ## ⏭️ Next Session Plan
 
-**Next**: Session #17 — Week 3, Day 3
-**Topic**: Sliding Window 🪟 — Variable Window + Freq (Hard) + Variable Window + Max Freq
+**Next**: Session #18 — Week 3, Day 4
+**Topic**: Sliding Window 🪟 — Variable Window + Max Freq (deferred) + Variable Window + At Most K
 **Plan**:
-1. ⏰ Spaced repetition check: Minimum Size Subarray Sum, Permutation in String (Box 1) + Max Sum Subarray, Longest Substring (Box 2)
-2. 🎯 Problem 1: Minimum Window Substring (LC #76, Hard, variable window + HashMap freq)
-3. 🎯 Problem 2: Longest Repeating Character Replacement (LC #424, Medium, variable window + max freq)
+1. ⏰ Spaced repetition check: Minimum Window Substring (Box 1, due Jul 15 — likely overdue) + Minimum Size Subarray Sum, Permutation in String (Box 2, due Jul 17)
+2. 🎯 Problem 1 (carried over from Day 3): Longest Repeating Character Replacement (LC #424, Medium, variable window + max freq) — concept already taught (window valid when `windowSize - maxFreq <= k`; `maxFreq` allowed to go stale on shrink). Just needs the check-in question answered, then straight to coding.
+3. 🎯 Problem 2: Fruit Into Baskets (LC #904, variable window + at-most-K-distinct)
+4. 🎯 Problem 3 (if time): Max Consecutive Ones III (LC #1004, variable window + zero count)
 
 **Focus**:
-- HashMap frequency tracking for complex window validity
-- "Need" vs "have" character counts
-- Max frequency trick for character replacement
-- First Hard sliding window problem
+- Max frequency trick for character replacement (stale maxFreq is fine — never causes a wrong/too-large answer)
+- "At most K distinct" sliding window variant
+- Continue building toward Week 3 Day 5 (Exactly-K trick, Monotonic Deque)
 
 ---
 
@@ -783,7 +804,7 @@ TEMPLATE for each session entry:
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
 | W2 | 11 + 2 re-solves | 11 | 4.8 | 🎉 Two Pointers & Sorting COMPLETE. 10/11 🟢 HIRE. D6: re-solves crushed (3Sum 20→5 min, Contiguous Array 45→6 min). D7: 2 unseen challenges solved. Key lesson: Math.abs() for distance comparisons. |
-| W3 | 4 | 4 | 5.0 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match. All 4 🟢 HIRE. 21-problem streak. |
+| W3 | 5 | 5 | 5.0 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard). All 5 🟢 HIRE. 22-problem streak. |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |
 | W6 | — | — | — | — |

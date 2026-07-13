@@ -164,6 +164,9 @@ This is the same amortized reasoning as Longest Consecutive Sequence!
 3. **Integer.MAX_VALUE for min-finding** — standard init. If unchanged → no valid window found → return 0.
 4. **Arrays.equals(int[], int[])** — O(26) = O(1) for fixed charset comparison. Clean alternative to manual loop.
 5. **Amortized O(n)** — same reasoning across all variable windows: each element enters/leaves at most once.
+6. **need/formed counter (Jul 14, Minimum Window Substring)** — instead of comparing two full frequency maps every window position, track a running counter of how many distinct chars are currently satisfied (`formed`) vs how many need to be (`required`). Window is valid when `formed == required`.
+7. **Exact equality on the way up, strict inequality on the way down** — bump `formed` only when `window[c]` first reaches `need[c]` (`==`), drop it only when `window[c]` first falls below (`<`). Using `>=`/`<=` instead re-triggers on every subsequent add/remove of an already-(un)satisfied char, inflating/deflating the counter incorrectly. Same transition-moment logic as Arrays.equals() timing in Permutation in String, generalized to counters.
+8. **HashMap → int[128] when charset is bounded ASCII letters** — same optimization as Permutation in String's int[26], just wider range to cover upper+lower case.
 
 ---
 

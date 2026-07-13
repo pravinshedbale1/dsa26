@@ -59,6 +59,7 @@
 | 37 | Jul 11 | Longest Substring Without Repeating (NEW) | 3 | Medium | Variable Sliding Window + HashSet | Brute O(n³) → Sliding + HashSet O(n)/O(min(n, charset)) | O(n) | O(min(n,m)) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~5 min. Clean while+continue for shrinking. Amortized O(n) reasoning solid. |
 | 38 | Jul 13 | Minimum Size Subarray Sum (NEW) | 209 | Medium | Variable Sliding Window (Shortest) | Brute O(n²) → Sliding Window O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. 1 typo (target vs minLength), self-caught. Zero hints. ~4 min. Integer.MAX_VALUE init for min-finding. Update answer during shrinking. |
 | 39 | Jul 13 | Permutation in String (NEW) | 567 | Medium | Fixed Sliding Window + Freq Match | Brute O(n!·m) → Sliding + int[26] O(m)/O(1) | O(m) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs. Initial version used helper (O(m·k)), refactored to running freq array + Arrays.equals. 1 hint (running freq vs rebuild). ~13 min. |
+| 40 | Jul 14 | Minimum Window Substring (NEW) | 76 | Hard | Variable Sliding Window + HashMap (need/formed) | Brute O(n²·m) → Sliding + need/window maps O(n+m)/O(k) | O(n+m) | O(k) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW HARD. First need/formed counter problem. All 5 tests first try. Zero bugs, zero Phase-B hints (full concept walkthrough given beforehand in Phase A). Correctly proposed int[128] optimization over HashMap, and articulated why formed/decrement uses exact equality/strict inequality to avoid double-counting. |
 
 ---
 
