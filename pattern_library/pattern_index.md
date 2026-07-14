@@ -19,7 +19,7 @@
 | 8 | "Remove/move elements in-place" | Slow/fast write pointer | **Two Pointers (Same Dir)** | `writePtr` advances only when condition met |
 | 9 | "Contiguous subarray of fixed size" | Fixed sliding window | **Fixed Window** | Maintain sum, add right, remove left |
 | 10 | "Longest/shortest subarray with condition" | Variable sliding window | **Variable Window** | Expand right, shrink left when invalid |
-| 11 | "At most K distinct elements" | Sliding window + HashMap | **Window + HashMap** | Track counts, shrink when distinct > K |
+| 11 | "At most K distinct elements" | Sliding window + HashMap<value,count>; shrink when map.size() > K; remove key entirely at count 0 (not just decrement) so size() stays accurate | **Window + HashMap** | `map.put(v,cnt+1); while (map.size()>k) { if (map.get(left)==1) remove; else decrement; left++; }` (proven Jul 14 — Fruit Into Baskets) |
 | 12 | "Matching brackets / nesting" | Stack | **Stack Matching** | Push open, pop+check on close |
 | 13 | "Next greater/smaller element" | Monotonic stack | **Monotonic Stack** | Stack stores indices in decreasing order |
 | 14 | "Detect cycle in linked list" | Floyd's fast/slow pointers | **Fast/Slow Pointers** | `slow = slow.next, fast = fast.next.next` |
@@ -47,6 +47,7 @@
 | 36 | "Find all quadruplets summing to target" | Sort + fix 2 outer loops + two pointers inner. Generalize kSum: fix (k-2) + 2ptr. Watch for int overflow → use long | **Sort + Fix Two + Two Pointers (kSum)** | `for i { for j { k=j+1, l=n-1; while (k<l) }}` |
 | 37 | "Minimum boats/pairs to carry all with weight limit" | Sort + greedy pair heaviest with lightest. Heaviest always needs a slot; lightest joins if fits | **Sort + Greedy Two Pointers (Pairing)** | `sort; l=0, r=n-1; if (a[l]+a[r]<=limit) l++; r--; boats++` |
 | 38 | "Smallest window in s containing all chars of t (with counts)" | Variable window + need/window freq maps + formed/required counters (avoids full map comparison every step) | **Sliding Window + Need/Formed Counter** | `need` from t; `formed++` when `window[c]==need[c]` (exact); shrink while `formed==required`, `formed--` when `window[c]<need[c]` (strict) |
+| 39 | "Longest substring of one letter after replacing at most k chars" | Variable window; replacements needed = windowSize - maxFreq(letter). Valid when <= k. Stale maxFreq is harmless — result only grows | **Sliding Window + Max Frequency** | `maxFreq = max(maxFreq, ++freq[right]); if (windowSize - maxFreq > k) { freq[left]--; left++; }` |
 
 ---
 

@@ -24,6 +24,8 @@
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
 | Minimum Window Substring (LC #76) | Variable Sliding Window + Need/Formed Counter | Jul 14 | Jul 14 | Jul 15 |
+| Longest Repeating Character Replacement (LC #424) | Variable Sliding Window + Max Frequency | Jul 14 | Jul 14 | Jul 15 |
+| Fruit Into Baskets (LC #904) | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Jul 14 | Jul 14 | Jul 15 |
 
 ---
 
@@ -88,6 +90,11 @@
 
 **Date**: July 14, 2026
 
+### New problems solved today (not yet due for recall):
+- Minimum Window Substring (LC #76) — added to Box 1, first recall due Jul 15
+- Longest Repeating Character Replacement (LC #424) — added to Box 1, first recall due Jul 15
+- Fruit Into Baskets (LC #904) — added to Box 1, first recall due Jul 15
+
 ### Spaced Repetition Recall (2 problems — Box 1 due today):
 - ✅ Minimum Size Subarray Sum (LC #209) — Approach correct (shrink-and-update-min). Bug caught: said `sum > target` instead of `sum >= target` (counterexample: [1,4,4], target=4 — strict `>` misses the exact-match window and reports 2 instead of 1). Corrected. → **Promoted to Box 2**
 - ✅ Permutation in String (LC #567) — Perfect. need[]/window[] running freq, equality check at fixed window size, slide by remove-left/add-right. O(n)/O(1). → **Promoted to Box 2**
@@ -121,13 +128,13 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 29 |
-| Box 1 (daily) | 1 |
+| Total problems in system | 31 |
+| Box 1 (daily) | 3 |
 | Box 2 (3-day) | 4 |
 | Box 3 (weekly) | 10 |
 | Box 4 (bi-weekly) | 14 |
 | Box 5 (mastered) | 0 |
 | Reviews completed today | 2 |
-| Problems solved today | 1 (Minimum Window Substring), pending: Longest Repeating Character Replacement |
+| Problems solved today | 3 (Minimum Window Substring, Longest Repeating Character Replacement, Fruit Into Baskets) |
 | Re-solves today | 0 |
 | Streak (consecutive days) | 2 |

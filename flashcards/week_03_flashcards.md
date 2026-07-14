@@ -66,3 +66,36 @@
 ```
 
 ---
+
+## Card 6: Variable Window + Max Frequency (Longest Repeating Character Replacement, LC #424)
+```
+🔍 TRIGGER: "Longest substring of same letter after replacing at most k chars"
+💡 IDEA:   replacements needed = windowSize - maxFreq(letter in window). Valid when that <= k.
+           Expand right, track running int[26] freq + maxFreq (never decreases). If invalid, shift
+           left by exactly 1 (if, not while) — window length only ever grows or stays the same.
+📝 CODE:   maxFreq = max(maxFreq, ++freq[right]); if (windowSize - maxFreq > k) { freq[left]--; left++; }
+           result = max(result, windowSize);
+⏱️ TIME:   O(n)  |  SPACE: O(1)  (int[26] fixed)
+⚠️ KEY:    maxFreq can go STALE after a shrink (no longer the true max of current window) — harmless,
+           because result can only grow, never shrink. Staleness just makes the window "coast" at its
+           already-earned length instead of shrinking further; it can never inflate the reported answer.
+⚠️ EDGE:   k == 0 (no replacements allowed), k >= s.length() (whole string works), all same char.
+```
+
+---
+
+## Card 7: Variable Window + At-Most-K-Distinct (Fruit Into Baskets, LC #904)
+```
+🔍 TRIGGER: "Longest subarray/substring with at most K distinct values/types"
+💡 IDEA:   HashMap<value, countInWindow>. Expand right, increment count. Invalid when
+           map.size() > K. Shrink left: decrement count, REMOVE KEY ENTIRELY at count 0
+           (leaving a stale 0-count key would inflate map.size() and break the check).
+📝 CODE:   map.put(v, map.getOrDefault(v,0)+1);
+           while (map.size() > k) { if (map.get(left)==1) map.remove(left); else map.merge(left,-1,Integer::sum); left++; }
+           result = max(result, right-left+1);
+⏱️ TIME:   O(n)  |  SPACE: O(k)  (at most K+1 keys ever in map)
+⚠️ KEY:    Generalizes cleanly: swap `> 2` for `> k` for any "at most K distinct" variant.
+⚠️ EDGE:   K >= total distinct values in array (whole array is the answer), all same value.
+```
+
+---

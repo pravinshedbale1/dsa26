@@ -60,6 +60,8 @@
 | 38 | Jul 13 | Minimum Size Subarray Sum (NEW) | 209 | Medium | Variable Sliding Window (Shortest) | Brute O(n²) → Sliding Window O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. 1 typo (target vs minLength), self-caught. Zero hints. ~4 min. Integer.MAX_VALUE init for min-finding. Update answer during shrinking. |
 | 39 | Jul 13 | Permutation in String (NEW) | 567 | Medium | Fixed Sliding Window + Freq Match | Brute O(n!·m) → Sliding + int[26] O(m)/O(1) | O(m) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs. Initial version used helper (O(m·k)), refactored to running freq array + Arrays.equals. 1 hint (running freq vs rebuild). ~13 min. |
 | 40 | Jul 14 | Minimum Window Substring (NEW) | 76 | Hard | Variable Sliding Window + HashMap (need/formed) | Brute O(n²·m) → Sliding + need/window maps O(n+m)/O(k) | O(n+m) | O(k) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW HARD. First need/formed counter problem. All 5 tests first try. Zero bugs, zero Phase-B hints (full concept walkthrough given beforehand in Phase A). Correctly proposed int[128] optimization over HashMap, and articulated why formed/decrement uses exact equality/strict inequality to avoid double-counting. |
+| 41 | Jul 14 | Longest Repeating Character Replacement (NEW) | 424 | Medium | Variable Sliding Window + Max Frequency | Brute O(n²) → Sliding + running int[26] + maxFreq O(n)/O(1) | O(n) | O(1) | ✅ | 4 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints on the algorithm (concept was re-taught from scratch on request before coding). Used `if` not `while` to shrink — matches optimal template. Self-corrected time-complexity typo (O(1)→O(n)). Needed 2 probing nudges to explain why stale `maxFreq` can't cause a wrong answer — self-identified "result never decreases" but didn't fully close the argument independently. |
+| 42 | Jul 14 | Fruit Into Baskets (NEW) | 904 | Medium | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Brute O(n²) → Sliding + HashMap<type,count> O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. First at-most-K-distinct problem. All 5 tests first try. Zero bugs, zero hints. Correctly removes key entirely at count 0 (not just decrement) so map.size() stays accurate. All 3 follow-ups (complexity, why remove key, generalize to K) answered instantly with zero nudges. |
 
 ---
 
@@ -86,4 +88,6 @@
 | **W2 TOTAL** | **11 + 2 re-solves** | **9** | **2** | **0** | **0** | **4.8** | **All Two Pointer patterns + Greedy** |
 | W3 D1 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Fixed Window + Variable Window + HashSet |
 | W3 D2 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Variable Shortest + Fixed Freq Match |
+| W3 D3 | 1 (complete) | 1 | 0 | 0 | 0 | 5.0 | Variable Window + Need/Formed Counter (Hard) |
+| W3 D4 | 2 (in progress) | 2 | 0 | 0 | 0 | 4.5 | Max Frequency + At-Most-K-Distinct |
 

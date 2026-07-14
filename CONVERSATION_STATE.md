@@ -56,11 +56,11 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 3 — Sliding Window |
-| **Current Day** | Day 3 (July 14, 2026) — ✅ COMPLETE (1/2 — LRCR deferred) |
-| **Current Topic** | Sliding Window (Variable + Need/Formed Counter, Hard) |
-| **Current Problem** | Week 3 Day 3 partial — Day 4 next, starts with deferred LRCR |
+| **Current Day** | Day 4 (July 14, 2026) — 🔄 IN PROGRESS (2 done: LRCR, Fruit Into Baskets; next: Max Consecutive Ones III) |
+| **Current Topic** | Sliding Window (At-Most-K-Distinct) |
+| **Current Problem** | Max Consecutive Ones III (LC #1004) next |
 | **Session Count** | 17 |
-| **Total Problems Solved** | 29 (new plan) + 2 re-solves |
+| **Total Problems Solved** | 31 (new plan) + 2 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
@@ -560,6 +560,7 @@ TEMPLATE for each session entry:
 | Jun 23 | **Variable scope in loops** | `k` initialized outside for loop — not reset per iteration of `i` in 3Sum | 🟡 New |
 | Jun 23 | **If/else branch structure** | Extra `j++/k--` outside if/else caused double pointer movement | 🟡 New |
 | Jun 23 | **Duplicate skip placement** | Put j/k duplicate skip at top of while loop instead of inside else block after finding triplet | 🟡 New |
+| Jul 14 | **Conceptual synthesis lag** | Longest Repeating Char Replacement: executed the optimal template flawlessly (code fluency) but needed 2 nudges to explain why a stale `maxFreq` can't cause a wrong answer (conceptual fluency lagging behind code fluency) | 🟡 New — re-probe at recall |
 
 <!-- Status: 🔴 Active | 🟡 Improving | 🟢 Resolved -->
 
@@ -603,6 +604,8 @@ TEMPLATE for each session entry:
 | — | Sliding Window (Variable — Shortest) | 5 | July 13 | Minimum Size Subarray Sum 🟢 HIRE. Update min DURING shrinking. Integer.MAX_VALUE init. |
 | — | Sliding Window (Fixed + Freq Match) | 5 | July 13 | Permutation in String 🟢 HIRE. Running int[26] + Arrays.equals. Don't rebuild freq each time. |
 | — | Sliding Window (Variable + Need/Formed Counter) | 5 | July 14 | Minimum Window Substring 🟢 HIRE (Hard). need/window maps, formed==required. Exact `==` to bump, strict `<` to drop — avoids double-counting. |
+| — | Sliding Window (Variable + Max Frequency) | 4 | July 14 | Longest Repeating Char Replacement 🟢 HIRE. windowSize - maxFreq <= k, running int[26], if not while to shrink. Code flawless; "why stale maxFreq is harmless" needed 2 nudges to partially reconstruct — re-probe at recall. |
+| — | Sliding Window (At-Most-K-Distinct) | 5 | July 14 | Fruit Into Baskets 🟢 HIRE. HashMap<type,count>, shrink while size>K, remove key at count 0. Zero hints, all follow-ups (incl. generalize to K) answered instantly. |
 | 7 | Monotonic Stack | — | — | — |
 | 8 | Fast/Slow Pointers | — | — | — |
 | 9 | Linked List Reversal | — | — | — |
@@ -781,20 +784,46 @@ TEMPLATE for each session entry:
 
 ---
 
+### Session #17 (continued) — July 14, 2026 — Sliding Window (Week 3, Day 4)
+**Status**: 🔄 IN PROGRESS
+
+**Concept Re-teach**: User asked to re-teach Longest Repeating Character Replacement from scratch before coding (concept had been taught earlier same session but deferred). Gave full walkthrough trace on `"AABABBA"`, k=1 showing the window growing to size 4 genuinely, then "coasting" at size 4 with a stale `mostFrequentChar` for the rest of the string — used to explain why staleness can't inflate the final answer.
+
+**Problems Covered**:
+- Longest Repeating Character Replacement (LC #424): ✅ NEW — 🟢 HIRE. All 5 tests first try. Zero bugs, zero hints on the algorithm itself. Used `if` (not `while`) to shrink — matches optimal template exactly, window length monotonically non-decreasing. Self-corrected a time-complexity typo (said O(1), meant O(n)). Needed 2 probing nudges to explain why a stale `mostFrequentChar` can't cause a wrong answer — landed on "result can only grow, never shrink" independently, but didn't fully self-synthesize the complete argument (had to close the loop in debrief).
+
+**Key Observations**:
+- **23-problem 🟢 HIRE streak** 🔥🔥🔥
+- Clean pattern transfer from Permutation in String's running `int[26]` trick — recognized immediately, no hint needed for that part
+- New gap identified: can execute the optimal template correctly (code fluency) while not fully internalizing the correctness invariant behind WHY it's optimal (conceptual fluency lagging code fluency) — worth re-probing at spaced-rep recall specifically on the "why" rather than just approach/complexity
+
+**Problems Covered (continued)**:
+- Fruit Into Baskets (LC #904): ✅ NEW — 🟢 HIRE. First "at most K distinct" sliding window problem. All 5 tests first try. Zero bugs, zero hints. `HashMap<fruitType, count>`, shrink while `map.size() > 2`, remove key entirely at count 0 (not just decrement). All 3 follow-up questions (complexity, why remove key entirely, generalization to K baskets) answered correctly with zero nudges — sharper than the LRCR debrief.
+
+**Key Observations (Fruit Into Baskets)**:
+- **24-problem 🟢 HIRE streak** 🔥🔥🔥
+- Immediately understood why `map.size()` must reflect only truly-present distinct types — a stale zero-count key would silently break the shrink condition
+- Instant correct generalization: `basket.size() > 2` → `basket.size() > k` for arbitrary K
+- Conceptual articulation this round was crisp (contrast with LRCR needing 2 nudges) — good sign the "explain the why" muscle is warming up
+- Day 4 in progress. Next: Max Consecutive Ones III (LC #1004), if continuing today.
+
+---
+
 ## ⏭️ Next Session Plan
 
-**Next**: Session #18 — Week 3, Day 4
-**Topic**: Sliding Window 🪟 — Variable Window + Max Freq (deferred) + Variable Window + At Most K
+**Next**: Session #18 — Week 3, Day 4 (continued)
+**Topic**: Sliding Window 🪟 — Variable Window + Zero Count, then on to Day 5 (Exactly-K trick, Monotonic Deque)
 **Plan**:
-1. ⏰ Spaced repetition check: Minimum Window Substring (Box 1, due Jul 15 — likely overdue) + Minimum Size Subarray Sum, Permutation in String (Box 2, due Jul 17)
-2. 🎯 Problem 1 (carried over from Day 3): Longest Repeating Character Replacement (LC #424, Medium, variable window + max freq) — concept already taught (window valid when `windowSize - maxFreq <= k`; `maxFreq` allowed to go stale on shrink). Just needs the check-in question answered, then straight to coding.
-3. 🎯 Problem 2: Fruit Into Baskets (LC #904, variable window + at-most-K-distinct)
-4. 🎯 Problem 3 (if time): Max Consecutive Ones III (LC #1004, variable window + zero count)
+1. ⏰ Spaced repetition check: Minimum Window Substring, Longest Repeating Character Replacement, Fruit Into Baskets (all Box 1, due Jul 15) + Minimum Size Subarray Sum, Permutation in String (Box 2, due Jul 17)
+2. 🎯 Problem 1 (carried over from today): Max Consecutive Ones III (LC #1004, Medium, variable window + zero count) — close pattern-transfer cousin of both Longest Repeating Character Replacement (flip up to K elements to extend a run) and Fruit Into Baskets (at-most-K variant, but simpler: just count zeros instead of a HashMap since only 2 possible values). Consider presenting with minimal/no re-teach to test transfer.
+3. 🎯 Problem 2 (if time): Subarrays with K Different Integers (LC #992, Exactly-K trick — atMost(K) - atMost(K-1))
+4. 🎯 Problem 3 (if time): Sliding Window Maximum (LC #239, Fixed Window + Monotonic Deque) — new data structure (Deque), will need concept teach first
 
 **Focus**:
-- Max frequency trick for character replacement (stale maxFreq is fine — never causes a wrong/too-large answer)
-- "At most K distinct" sliding window variant
-- Continue building toward Week 3 Day 5 (Exactly-K trick, Monotonic Deque)
+- Zero-count variant of at-most-K sliding window (simpler than HashMap — single counter)
+- Watch specifically for whether the LRCR "why stale maxFreq/why result is monotonic" reasoning transfers cleanly here without re-explanation (flagged gap from today)
+- Exactly-K trick: reduces to atMost(K) - atMost(K-1), a new composition idea, not just a new window mechanic
+- Monotonic Deque will be a brand-new data structure — teach before problem, per standing rule 7
 
 ---
 
@@ -804,7 +833,7 @@ TEMPLATE for each session entry:
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
 | W2 | 11 + 2 re-solves | 11 | 4.8 | 🎉 Two Pointers & Sorting COMPLETE. 10/11 🟢 HIRE. D6: re-solves crushed (3Sum 20→5 min, Contiguous Array 45→6 min). D7: 2 unseen challenges solved. Key lesson: Math.abs() for distance comparisons. |
-| W3 | 5 | 5 | 5.0 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard). All 5 🟢 HIRE. 22-problem streak. |
+| W3 | 7 (in progress) | 7 | 4.9 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct. All 7 🟢 HIRE. 24-problem streak. |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |
 | W6 | — | — | — | — |
