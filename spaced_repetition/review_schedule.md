@@ -23,9 +23,7 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Minimum Window Substring (LC #76) | Variable Sliding Window + Need/Formed Counter | Jul 14 | Jul 14 | Jul 15 |
-| Longest Repeating Character Replacement (LC #424) | Variable Sliding Window + Max Frequency | Jul 14 | Jul 14 | Jul 15 |
-| Fruit Into Baskets (LC #904) | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Jul 14 | Jul 14 | Jul 15 |
+| _empty_ | — | — | — | — |
 
 ---
 
@@ -33,8 +31,9 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Max Sum Subarray of Size K | Fixed Sliding Window | Jul 13 | Jul 13 | Jul 16 |
-| Longest Substring Without Repeating (LC #3) | Variable Sliding Window + HashSet | Jul 13 | Jul 13 | Jul 16 |
+| Minimum Window Substring (LC #76) | Variable Sliding Window + Need/Formed Counter | Jul 16 | Jul 16 | Jul 19 |
+| Longest Repeating Character Replacement (LC #424) | Variable Sliding Window + Max Frequency | Jul 16 | Jul 16 | Jul 19 |
+| Fruit Into Baskets (LC #904) | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Jul 16 | Jul 16 | Jul 19 |
 | Minimum Size Subarray Sum (LC #209) | Variable Sliding Window (Shortest) | Jul 14 | Jul 14 | Jul 17 |
 | Permutation in String (LC #567) | Fixed Sliding Window + Freq Match | Jul 14 | Jul 14 | Jul 17 |
 
@@ -44,6 +43,8 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
+| Max Sum Subarray of Size K | Fixed Sliding Window | Jul 16 | Jul 16 | Jul 23 |
+| Longest Substring Without Repeating (LC #3) | Variable Sliding Window + HashSet/HashMap-Index-Jump | Jul 16 | Jul 16 | Jul 23 |
 | Partition Labels (LC #763) | Greedy + Last Occurrence Map | Jul 13 | Jul 13 | Jul 20 |
 | Container With Most Water (LC #11) | Greedy Two Pointers | Jul 6 | Jul 13 | Jul 20 |
 | Trapping Rain Water (LC #42) | Two Pointers (maxLeft/maxRight) | Jul 6 | Jul 13 | Jul 20 |
@@ -88,16 +89,18 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: July 14, 2026
+**Date**: July 16, 2026
 
-### New problems solved today (not yet due for recall):
-- Minimum Window Substring (LC #76) — added to Box 1, first recall due Jul 15
-- Longest Repeating Character Replacement (LC #424) — added to Box 1, first recall due Jul 15
-- Fruit Into Baskets (LC #904) — added to Box 1, first recall due Jul 15
+### Spaced Repetition Recall (5 problems — 3 Box 1 overdue + 2 Box 2 due today):
+- ✅ Minimum Window Substring (LC #76) — Approach/pattern perfect (need/formed counter, exact `==`/strict `<`). Complexity wrong: said O(m·n), corrected to O(m+n) time, O(1) space (bounded ASCII). → **Promoted to Box 2**
+- ✅ Longest Repeating Character Replacement (LC #424) — Perfect, including full self-synthesized "why stale maxFreq is harmless" argument (prior gap from Jul 14 now resolved — no nudges needed). → **Promoted to Box 2**
+- ✅ Fruit Into Baskets (LC #904) — Perfect. HashMap count, shrink+remove-at-zero, O(n)/O(1). → **Promoted to Box 2**
+- ✅ Max Sum Subarray of Size K — Perfect. windowSum + new - old, O(n)/O(1). → **Promoted to Box 3**
+- ✅ Longest Substring Without Repeating (LC #3) — Perfect, described the HashMap-index-jump variant (more optimal than the HashSet expand/shrink used originally) — valid alternate approach. O(n)/O(min(n,charset)). → **Promoted to Box 3**
 
-### Spaced Repetition Recall (2 problems — Box 1 due today):
-- ✅ Minimum Size Subarray Sum (LC #209) — Approach correct (shrink-and-update-min). Bug caught: said `sum > target` instead of `sum >= target` (counterexample: [1,4,4], target=4 — strict `>` misses the exact-match window and reports 2 instead of 1). Corrected. → **Promoted to Box 2**
-- ✅ Permutation in String (LC #567) — Perfect. need[]/window[] running freq, equality check at fixed window size, slide by remove-left/add-right. O(n)/O(1). → **Promoted to Box 2**
+### Previous Queue (July 14, 2026 — 2 problems — Box 1 due):
+- ✅ Minimum Size Subarray Sum (LC #209) — Approach correct (shrink-and-update-min). Bug caught: said `sum > target` instead of `sum >= target` (counterexample: [1,4,4], target=4 — strict `>` misses the exact-match window and reports 2 instead of 1). Corrected. → Promoted to Box 2
+- ✅ Permutation in String (LC #567) — Perfect. need[]/window[] running freq, equality check at fixed window size, slide by remove-left/add-right. O(n)/O(1). → Promoted to Box 2
 
 ### Previous Queue (July 13, 2026 — 11 problems — 7 overdue + 4 due):
 - ✅ Max Sum Subarray of Size K — Perfect. Fixed sliding window, add/remove, track max. O(n)/O(1). → Promoted to Box 2
@@ -129,12 +132,12 @@ For each problem due:
 | Metric | Value |
 |--------|-------|
 | Total problems in system | 31 |
-| Box 1 (daily) | 3 |
-| Box 2 (3-day) | 4 |
-| Box 3 (weekly) | 10 |
+| Box 1 (daily) | 0 |
+| Box 2 (3-day) | 5 |
+| Box 3 (weekly) | 12 |
 | Box 4 (bi-weekly) | 14 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 2 |
-| Problems solved today | 3 (Minimum Window Substring, Longest Repeating Character Replacement, Fruit Into Baskets) |
+| Reviews completed today | 5 |
+| Problems solved today | 0 (so far — new problem pending) |
 | Re-solves today | 0 |
-| Streak (consecutive days) | 2 |
+| Streak (consecutive days) | 3 |

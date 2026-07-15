@@ -56,15 +56,15 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 3 — Sliding Window |
-| **Current Day** | Day 4 (July 14, 2026) — 🔄 IN PROGRESS (2 done: LRCR, Fruit Into Baskets; next: Max Consecutive Ones III) |
-| **Current Topic** | Sliding Window (At-Most-K-Distinct) |
-| **Current Problem** | Max Consecutive Ones III (LC #1004) next |
-| **Session Count** | 17 |
-| **Total Problems Solved** | 31 (new plan) + 2 re-solves |
+| **Current Day** | Day 4 (July 16, 2026) — ✅ COMPLETE (3 done: LRCR, Fruit Into Baskets, Max Consecutive Ones III) |
+| **Current Topic** | Sliding Window (Zero Count / Exactly-K trick next) |
+| **Current Problem** | Subarrays with K Different Integers (LC #992) next, then Sliding Window Maximum (LC #239) |
+| **Session Count** | 18 |
+| **Total Problems Solved** | 32 (new plan) + 2 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
-| **Days Remaining** | 89 |
+| **Days Remaining** | 87 |
 
 ---
 
@@ -560,7 +560,8 @@ TEMPLATE for each session entry:
 | Jun 23 | **Variable scope in loops** | `k` initialized outside for loop — not reset per iteration of `i` in 3Sum | 🟡 New |
 | Jun 23 | **If/else branch structure** | Extra `j++/k--` outside if/else caused double pointer movement | 🟡 New |
 | Jun 23 | **Duplicate skip placement** | Put j/k duplicate skip at top of while loop instead of inside else block after finding triplet | 🟡 New |
-| Jul 14 | **Conceptual synthesis lag** | Longest Repeating Char Replacement: executed the optimal template flawlessly (code fluency) but needed 2 nudges to explain why a stale `maxFreq` can't cause a wrong answer (conceptual fluency lagging behind code fluency) | 🟡 New — re-probe at recall |
+| Jul 14 | **Conceptual synthesis lag** | Longest Repeating Char Replacement: executed the optimal template flawlessly (code fluency) but needed 2 nudges to explain why a stale `maxFreq` can't cause a wrong answer (conceptual fluency lagging behind code fluency) | 🟢 Resolved (Jul 16 — self-synthesized full argument at spaced-rep recall, zero nudges) |
+| Jul 16 | **Complexity articulation on need/formed problems** | Minimum Window Substring recall: said TC O(m·n) instead of O(m+n) | 🟡 New — re-probe at next recall |
 
 <!-- Status: 🔴 Active | 🟡 Improving | 🟢 Resolved -->
 
@@ -606,6 +607,7 @@ TEMPLATE for each session entry:
 | — | Sliding Window (Variable + Need/Formed Counter) | 5 | July 14 | Minimum Window Substring 🟢 HIRE (Hard). need/window maps, formed==required. Exact `==` to bump, strict `<` to drop — avoids double-counting. |
 | — | Sliding Window (Variable + Max Frequency) | 4 | July 14 | Longest Repeating Char Replacement 🟢 HIRE. windowSize - maxFreq <= k, running int[26], if not while to shrink. Code flawless; "why stale maxFreq is harmless" needed 2 nudges to partially reconstruct — re-probe at recall. |
 | — | Sliding Window (At-Most-K-Distinct) | 5 | July 14 | Fruit Into Baskets 🟢 HIRE. HashMap<type,count>, shrink while size>K, remove key at count 0. Zero hints, all follow-ups (incl. generalize to K) answered instantly. |
+| — | Sliding Window (Zero Count / Binary-Alphabet Max Freq) | 5 | July 16 | Max Consecutive Ones III 🟢 HIRE. Cold pattern transfer, zero re-teach. zeroCount <= k, if/while equivalence proven, not assumed. |
 | 7 | Monotonic Stack | — | — | — |
 | 8 | Fast/Slow Pointers | — | — | — |
 | 9 | Linked List Reversal | — | — | — |
@@ -631,10 +633,14 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Max Sum Subarray of Size K | Box 2 | Jul 13 | Jul 16 | ✅ Promoted |
-| Longest Substring Without Repeating (LC #3) | Box 2 | Jul 13 | Jul 16 | ✅ Promoted |
-| Minimum Size Subarray Sum (LC #209) | Box 1 | Jul 13 | Jul 14 | 🆕 New |
-| Permutation in String (LC #567) | Box 1 | Jul 13 | Jul 14 | 🆕 New |
+| Minimum Window Substring (LC #76) | Box 2 | Jul 16 | Jul 19 | ✅ Promoted |
+| Longest Repeating Character Replacement (LC #424) | Box 2 | Jul 16 | Jul 19 | ✅ Promoted |
+| Fruit Into Baskets (LC #904) | Box 2 | Jul 16 | Jul 19 | ✅ Promoted |
+| Max Sum Subarray of Size K | Box 3 | Jul 16 | Jul 23 | ✅ Promoted |
+| Longest Substring Without Repeating (LC #3) | Box 3 | Jul 16 | Jul 23 | ✅ Promoted |
+| Minimum Size Subarray Sum (LC #209) | Box 2 | Jul 14 | Jul 17 | ⏳ Due Jul 17 |
+| Permutation in String (LC #567) | Box 2 | Jul 14 | Jul 17 | ⏳ Due Jul 17 |
+| Max Consecutive Ones III (LC #1004) | Box 1 | Jul 16 | Jul 17 | 🆕 New |
 | Remove Duplicates (LC #26) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
 | 4Sum (LC #18) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
 | Subarray Sum Equals K (LC #560) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
@@ -809,21 +815,44 @@ TEMPLATE for each session entry:
 
 ---
 
+### Session #18 — July 16, 2026 — Sliding Window (Week 3, Day 4 — continued)
+**Status**: ✅ COMPLETE
+
+**Spaced Repetition Recall Results (5 problems — 3 Box 1 overdue + 2 Box 2 due today)**:
+- Minimum Window Substring (LC #76): ✅ Pattern/approach perfect (need/formed, exact `==`/strict `<`). Complexity wrong: said O(m·n), corrected to O(m+n) time / O(1) space (bounded ASCII int[128]). → **Promoted to Box 2**
+- Longest Repeating Character Replacement (LC #424): ✅ Excellent — fully self-synthesized the "why stale maxFreq is harmless" argument this time (Jul 14 gap needed 2 nudges; today zero nudges, landed on "result can only grow, never shrink" independently). → **Promoted to Box 2**
+- Fruit Into Baskets (LC #904): ✅ Perfect — HashMap count, shrink+remove-at-zero, O(n)/O(1). → **Promoted to Box 2**
+- Max Sum Subarray of Size K: ✅ Perfect — windowSum += new − old, O(n)/O(1). → **Promoted to Box 3**
+- Longest Substring Without Repeating (LC #3): ✅ Perfect — described HashMap-index-jump variant (last-seen-index + `left = lastIdx+1` only if inside window), a valid more-optimal alternative to the original HashSet expand/shrink. O(n)/O(min(n,charset)). → **Promoted to Box 3**
+
+**Recall Verdict**: 5/5 recalled. 1 complexity correction (Minimum Window Substring). LRCR conceptual gap from Jul 14 is now resolved.
+
+**Problems Covered**:
+- Max Consecutive Ones III (LC #1004): ✅ NEW — 🟢 HIRE. Presented with no re-teach (pattern-transfer test from LRCR/Fruit Into Baskets) — correct approach stated immediately (zeroCount counter, shrink when > k, update max during expansion). All 5 tests first try. Zero bugs, zero hints. ~5 min incl. discussion. Follow-up: claimed switching shrink from `if` to `while` would help on adversarial input; pushed back with "how many zeros can enter per iteration?" — self-corrected to recognizing `if`/`while` are provably identical here (at most one shrink step ever needed).
+
+**Key Observations**:
+- **25-problem 🟢 HIRE streak** 🔥🔥🔥
+- Pattern transfer from LRCR + Fruit Into Baskets to an entirely unseen problem was immediate and required zero concept re-teach — first "cold" transfer test of the week, passed cleanly
+- LRCR's Jul 14 conceptual gap (staleness argument) is now fully resolved — recalled independently under spaced rep, no nudges
+- New reasoning skill demonstrated: instead of accepting an interviewer's "can you do better" prompt at face value, worked out from first principles that a proposed "optimization" (`while` instead of `if`) was actually a no-op — good instinct, don't just agree with follow-up pressure
+- Debrief insight (self-articulated after one nudge): Max Consecutive Ones III is LRCR's max-frequency trick specialized to a binary alphabet — `windowSize - maxFreq <= k` collapses to `zeroCount <= k` when there are only 2 possible values
+- 🎉 **Day 4 complete!** All 3 problems done (LRCR, Fruit Into Baskets, Max Consecutive Ones III). Ready for Day 5 (Exactly-K trick + Monotonic Deque).
+
+---
+
 ## ⏭️ Next Session Plan
 
-**Next**: Session #18 — Week 3, Day 4 (continued)
-**Topic**: Sliding Window 🪟 — Variable Window + Zero Count, then on to Day 5 (Exactly-K trick, Monotonic Deque)
+**Next**: Session #19 — Week 3, Day 5
+**Topic**: Sliding Window 🪟 — Exactly-K trick, then Monotonic Deque
 **Plan**:
-1. ⏰ Spaced repetition check: Minimum Window Substring, Longest Repeating Character Replacement, Fruit Into Baskets (all Box 1, due Jul 15) + Minimum Size Subarray Sum, Permutation in String (Box 2, due Jul 17)
-2. 🎯 Problem 1 (carried over from today): Max Consecutive Ones III (LC #1004, Medium, variable window + zero count) — close pattern-transfer cousin of both Longest Repeating Character Replacement (flip up to K elements to extend a run) and Fruit Into Baskets (at-most-K variant, but simpler: just count zeros instead of a HashMap since only 2 possible values). Consider presenting with minimal/no re-teach to test transfer.
-3. 🎯 Problem 2 (if time): Subarrays with K Different Integers (LC #992, Exactly-K trick — atMost(K) - atMost(K-1))
-4. 🎯 Problem 3 (if time): Sliding Window Maximum (LC #239, Fixed Window + Monotonic Deque) — new data structure (Deque), will need concept teach first
+1. ⏰ Spaced repetition check: Max Consecutive Ones III (Box 1, due Jul 17) + Minimum Size Subarray Sum, Permutation in String (Box 2, due Jul 17)
+2. 🎯 Problem 1: Subarrays with K Different Integers (LC #992, Exactly-K trick — atMost(K) - atMost(K-1)). Builds directly on Fruit Into Baskets' at-most-K machinery, plus a new composition idea (exactly = atMost(K) − atMost(K−1)) — teach the composition trick before coding, but the at-most-K mechanic itself should need no re-teach.
+3. 🎯 Problem 2 (if time): Sliding Window Maximum (LC #239, Fixed Window + Monotonic Deque) — new data structure (Deque), will need concept teach first
 
 **Focus**:
-- Zero-count variant of at-most-K sliding window (simpler than HashMap — single counter)
-- Watch specifically for whether the LRCR "why stale maxFreq/why result is monotonic" reasoning transfers cleanly here without re-explanation (flagged gap from today)
 - Exactly-K trick: reduces to atMost(K) - atMost(K-1), a new composition idea, not just a new window mechanic
 - Monotonic Deque will be a brand-new data structure — teach before problem, per standing rule 7
+- Re-probe Minimum Window Substring complexity (O(m+n), not O(m·n)) — flagged correction from Jul 16 recall
 
 ---
 
@@ -833,7 +862,7 @@ TEMPLATE for each session entry:
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
 | W2 | 11 + 2 re-solves | 11 | 4.8 | 🎉 Two Pointers & Sorting COMPLETE. 10/11 🟢 HIRE. D6: re-solves crushed (3Sum 20→5 min, Contiguous Array 45→6 min). D7: 2 unseen challenges solved. Key lesson: Math.abs() for distance comparisons. |
-| W3 | 7 (in progress) | 7 | 4.9 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct. All 7 🟢 HIRE. 24-problem streak. |
+| W3 | 8 (in progress) | 8 | 4.9 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct, Zero Count. All 8 🟢 HIRE. 25-problem streak. Day 4 complete. |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |
 | W6 | — | — | — | — |

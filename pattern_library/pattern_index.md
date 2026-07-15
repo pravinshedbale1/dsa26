@@ -48,6 +48,8 @@
 | 37 | "Minimum boats/pairs to carry all with weight limit" | Sort + greedy pair heaviest with lightest. Heaviest always needs a slot; lightest joins if fits | **Sort + Greedy Two Pointers (Pairing)** | `sort; l=0, r=n-1; if (a[l]+a[r]<=limit) l++; r--; boats++` |
 | 38 | "Smallest window in s containing all chars of t (with counts)" | Variable window + need/window freq maps + formed/required counters (avoids full map comparison every step) | **Sliding Window + Need/Formed Counter** | `need` from t; `formed++` when `window[c]==need[c]` (exact); shrink while `formed==required`, `formed--` when `window[c]<need[c]` (strict) |
 | 39 | "Longest substring of one letter after replacing at most k chars" | Variable window; replacements needed = windowSize - maxFreq(letter). Valid when <= k. Stale maxFreq is harmless — result only grows | **Sliding Window + Max Frequency** | `maxFreq = max(maxFreq, ++freq[right]); if (windowSize - maxFreq > k) { freq[left]--; left++; }` |
+| 40 | "Longest subarray/substring with at most K distinct values" | Variable window + HashMap\<value,count\>; shrink while map.size() > K; remove key entirely at count 0 | **Sliding Window + At-Most-K-Distinct** | `map.merge(v,1,Integer::sum); while (map.size()>k) { if(map.get(l)==1) map.remove(l); else map.merge(l,-1,Integer::sum); l++; }` |
+| 41 | "Longest run of 1s after flipping at most k 0s" | Variable window; specialization of Max Frequency trick to a 2-value alphabet — track zeroCount directly instead of windowSize-maxFreq | **Sliding Window + Zero Count** | `if (nums[right]==0) zeroCount++; if (zeroCount > k) { if (nums[left]==0) zeroCount--; left++; }` |
 
 ---
 

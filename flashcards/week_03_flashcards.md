@@ -99,3 +99,19 @@
 ```
 
 ---
+
+## Card 8: Variable Window + Zero Count (Max Consecutive Ones III, LC #1004)
+```
+🔍 TRIGGER: "Longest run of 1s after flipping at most k 0s" (binary array version of LRCR)
+💡 IDEA:   Same as Card 6's max-frequency trick, but specialized to a 2-value alphabet — flipping
+           the minority element IS flipping the 0s, so track zeroCount directly instead of a
+           windowSize - maxFreq computation over a freq array.
+📝 CODE:   if (nums[right]==0) zeroCount++; if (zeroCount > k) { if (nums[left]==0) zeroCount--; left++; }
+           result = max(result, right-left+1);
+⏱️ TIME:   O(n)  |  SPACE: O(1)
+⚠️ KEY:    `if` vs `while` to shrink are IDENTICAL here — at most one zero enters per iteration of
+           the for loop, so at most one shrink step is ever needed to restore validity.
+⚠️ EDGE:   k == 0 (no flips), k >= nums.length (whole array), all 1s, all 0s.
+```
+
+---

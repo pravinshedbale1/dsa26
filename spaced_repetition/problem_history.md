@@ -62,6 +62,7 @@
 | 40 | Jul 14 | Minimum Window Substring (NEW) | 76 | Hard | Variable Sliding Window + HashMap (need/formed) | Brute O(n²·m) → Sliding + need/window maps O(n+m)/O(k) | O(n+m) | O(k) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW HARD. First need/formed counter problem. All 5 tests first try. Zero bugs, zero Phase-B hints (full concept walkthrough given beforehand in Phase A). Correctly proposed int[128] optimization over HashMap, and articulated why formed/decrement uses exact equality/strict inequality to avoid double-counting. |
 | 41 | Jul 14 | Longest Repeating Character Replacement (NEW) | 424 | Medium | Variable Sliding Window + Max Frequency | Brute O(n²) → Sliding + running int[26] + maxFreq O(n)/O(1) | O(n) | O(1) | ✅ | 4 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints on the algorithm (concept was re-taught from scratch on request before coding). Used `if` not `while` to shrink — matches optimal template. Self-corrected time-complexity typo (O(1)→O(n)). Needed 2 probing nudges to explain why stale `maxFreq` can't cause a wrong answer — self-identified "result never decreases" but didn't fully close the argument independently. |
 | 42 | Jul 14 | Fruit Into Baskets (NEW) | 904 | Medium | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Brute O(n²) → Sliding + HashMap<type,count> O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. First at-most-K-distinct problem. All 5 tests first try. Zero bugs, zero hints. Correctly removes key entirely at count 0 (not just decrement) so map.size() stays accurate. All 3 follow-ups (complexity, why remove key, generalize to K) answered instantly with zero nudges. |
+| 43 | Jul 16 | Max Consecutive Ones III (NEW) | 1004 | Medium | Variable Sliding Window + Zero Count | Brute O(n²) → Sliding + zeroCount O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW. All 5 tests first try. Zero bugs, zero hints. ~5 min incl. discussion. Correctly reasoned that `if` and `while` are equivalent for shrinking here (at most one zero enters per iteration → at most one shrink step ever needed). Debrief insight: this problem is LRCR's max-frequency trick specialized to a 2-value alphabet, collapsing `windowSize - maxFreq <= k` into a direct `zeroCount <= k` counter. |
 
 ---
 
@@ -89,5 +90,5 @@
 | W3 D1 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Fixed Window + Variable Window + HashSet |
 | W3 D2 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Variable Shortest + Fixed Freq Match |
 | W3 D3 | 1 (complete) | 1 | 0 | 0 | 0 | 5.0 | Variable Window + Need/Formed Counter (Hard) |
-| W3 D4 | 2 (in progress) | 2 | 0 | 0 | 0 | 4.5 | Max Frequency + At-Most-K-Distinct |
+| W3 D4 | 3 (complete) | 3 | 0 | 0 | 0 | 4.7 | Max Frequency + At-Most-K-Distinct + Zero Count |
 

@@ -170,6 +170,7 @@ This is the same amortized reasoning as Longest Consecutive Sequence!
 8. **HashMap → int[128] when charset is bounded ASCII letters** — same optimization as Permutation in String's int[26], just wider range to cover upper+lower case.
 9. **Stale maxFreq is harmless (Jul 14, Longest Repeating Character Replacement)** — replacements needed to make a window one repeated letter = `windowSize - maxFreq`. Track `maxFreq` as a running high-water mark (`Math.max`, never decremented on shrink). When invalid, shift left by exactly 1 (`if`, not `while`) — window length only ever grows or holds steady, never shrinks. Because `result = Math.max(result, windowSize)` is monotonic non-decreasing, a stale `maxFreq` (no longer the true max of the current window's contents) can only make the window coast at a length already bagged — it can never inflate `result` beyond what was genuinely achieved earlier. The algorithm isn't verifying "is this window valid right now" — it's only detecting "has a strictly bigger window become possible," which requires a genuine frequency increase.
 10. **HashMap.size() as the distinct-count proxy (Jul 14, Fruit Into Baskets)** — "at most K distinct values" just means shrink while `map.size() > K`. The gotcha: when a count hits 0 during shrinking, you must `remove()` the key, not just leave it at 0 — an entry with count 0 still counts toward `map.size()`, which would make the window look like it has more distinct values than it actually does and corrupt the shrink condition. Same family as Longest Substring Without Repeating (HashSet) and Minimum Window Substring (need/formed) — different data structure, same "make the validity check O(1) instead of recomputing distinctness from scratch" idea.
+11. **Max-frequency trick specialized to a binary alphabet (Jul 16, Max Consecutive Ones III)** — LRCR's `windowSize - maxFreq <= k` generalizes over any alphabet size. With only 2 possible values (0/1), "flip the minority element" is always "flip the 0s," so the max-over-26-letters computation collapses to a single `zeroCount` counter — no frequency array needed. Also: since at most one zero enters the window per iteration of the outer loop, `if` and `while` are provably identical for the shrink step (never more than one shrink needed) — a good instance of "prove the loop bound instead of defaulting to `while` out of habit."
 
 ---
 
@@ -187,7 +188,7 @@ This is the same amortized reasoning as Longest Consecutive Sequence!
 ## Related Patterns
 
 - Fixed Window → Maximum Sum Subarray of Size K, Permutation in String
-- Variable Window (Longest) → Longest Substring Without Repeating Characters, Longest Repeating Character Replacement
+- Variable Window (Longest) → Longest Substring Without Repeating Characters, Longest Repeating Character Replacement, Max Consecutive Ones III (binary-alphabet specialization of LRCR)
 - Variable Window (Shortest) → Minimum Size Subarray Sum, Minimum Window Substring
 - Variable Window + HashMap → Fruit Into Baskets, Subarrays with K Different Integers
 - Exactly K trick → atMost(K) - atMost(K-1) — for "exactly K distinct" problems
