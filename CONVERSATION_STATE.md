@@ -56,11 +56,11 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 3 — Sliding Window |
-| **Current Day** | Day 4 (July 16, 2026) — ✅ COMPLETE (3 done: LRCR, Fruit Into Baskets, Max Consecutive Ones III) |
-| **Current Topic** | Sliding Window (Zero Count / Exactly-K trick next) |
-| **Current Problem** | Subarrays with K Different Integers (LC #992) next, then Sliding Window Maximum (LC #239) |
-| **Session Count** | 18 |
-| **Total Problems Solved** | 32 (new plan) + 2 re-solves |
+| **Current Day** | Day 5 (July 17, 2026) — 🔄 IN PROGRESS (1 done: Subarrays with K Different Integers) |
+| **Current Topic** | Sliding Window (Monotonic Deque next) |
+| **Current Problem** | Sliding Window Maximum (LC #239) next |
+| **Session Count** | 19 |
+| **Total Problems Solved** | 33 (new plan) + 2 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
@@ -608,6 +608,7 @@ TEMPLATE for each session entry:
 | — | Sliding Window (Variable + Max Frequency) | 4 | July 14 | Longest Repeating Char Replacement 🟢 HIRE. windowSize - maxFreq <= k, running int[26], if not while to shrink. Code flawless; "why stale maxFreq is harmless" needed 2 nudges to partially reconstruct — re-probe at recall. |
 | — | Sliding Window (At-Most-K-Distinct) | 5 | July 14 | Fruit Into Baskets 🟢 HIRE. HashMap<type,count>, shrink while size>K, remove key at count 0. Zero hints, all follow-ups (incl. generalize to K) answered instantly. |
 | — | Sliding Window (Zero Count / Binary-Alphabet Max Freq) | 5 | July 16 | Max Consecutive Ones III 🟢 HIRE. Cold pattern transfer, zero re-teach. zeroCount <= k, if/while equivalence proven, not assumed. |
+| — | Sliding Window (Exactly-K Trick) | 5 | July 17 | Subarrays with K Different Integers 🟢 HIRE. atMost(K)-atMost(K-1), sum right-left+1 per step (not max). Needed concrete example to click, then flawless execution + strong follow-up reasoning. |
 | 7 | Monotonic Stack | — | — | — |
 | 8 | Fast/Slow Pointers | — | — | — |
 | 9 | Linked List Reversal | — | — | — |
@@ -638,9 +639,10 @@ TEMPLATE for each session entry:
 | Fruit Into Baskets (LC #904) | Box 2 | Jul 16 | Jul 19 | ✅ Promoted |
 | Max Sum Subarray of Size K | Box 3 | Jul 16 | Jul 23 | ✅ Promoted |
 | Longest Substring Without Repeating (LC #3) | Box 3 | Jul 16 | Jul 23 | ✅ Promoted |
-| Minimum Size Subarray Sum (LC #209) | Box 2 | Jul 14 | Jul 17 | ⏳ Due Jul 17 |
-| Permutation in String (LC #567) | Box 2 | Jul 14 | Jul 17 | ⏳ Due Jul 17 |
-| Max Consecutive Ones III (LC #1004) | Box 1 | Jul 16 | Jul 17 | 🆕 New |
+| Subarrays with K Different Integers (LC #992) | Box 1 | Jul 17 | Jul 18 | 🆕 New |
+| Minimum Size Subarray Sum (LC #209) | Box 3 | Jul 17 | Jul 24 | ✅ Promoted |
+| Permutation in String (LC #567) | Box 3 | Jul 17 | Jul 24 | ✅ Promoted |
+| Max Consecutive Ones III (LC #1004) | Box 2 | Jul 17 | Jul 20 | ✅ Promoted |
 | Remove Duplicates (LC #26) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
 | 4Sum (LC #18) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
 | Subarray Sum Equals K (LC #560) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
@@ -840,19 +842,42 @@ TEMPLATE for each session entry:
 
 ---
 
+### Session #19 — July 17, 2026 — Sliding Window (Week 3, Day 5)
+**Status**: 🔄 IN PROGRESS
+
+**Spaced Repetition Recall Results (3 problems — 1 Box 1 + 2 Box 2 due today)**:
+- Max Consecutive Ones III (LC #1004): ✅ Perfect — zero-count window, shrink-when-exceeds-K, max recorded during expansion, each pointer moves forward only. O(n)/O(1). → **Promoted to Box 2**
+- Minimum Size Subarray Sum (LC #209): ✅ Perfect — monotonicity of positive numbers justifies single pass, min recorded during shrinking. O(n)/O(1). → **Promoted to Box 3**
+- Permutation in String (LC #567): ✅ Perfect — fixed window, running int[26] update on slide, Arrays.equals() comparison. O(m)/O(1). → **Promoted to Box 3**
+
+**Recall Verdict**: 3/3 recalled cleanly. All promoted.
+
+**Concept Teach**: Exactly-K composition trick — `exactly(K) = atMost(K) - atMost(K-1)`. First explanation (abstract, goal-first) didn't land; user asked for a slow, concrete walkthrough without assuming the goal. Re-taught using `[1,2,1,2,3]`, K=2: manual enumeration of all 15 subarrays (ground truth = 7), then traced `atMost(2)=12` and `atMost(1)=5` step-by-step (table format, showing map state/distinct/shrink at each `right`), cross-checked `12-5=7`. Landed immediately on the second pass.
+
+**Problems Covered**:
+- Subarrays with K Different Integers (LC #992): ✅ NEW — 🟢 HIRE. First "exactly K" composition problem. Approach stated correctly before coding (HashMap count, shrink when size>k, sum `right-left+1` per step, call helper twice and subtract). All 5 tests first try. Zero bugs, zero hints in Phase B. Follow-ups: self-corrected space complexity from loose O(n) to tight O(k) (map never holds >k+1 keys mid-algorithm); explained HashMap-over-int[] tradeoff (value range tied to array length here, unlike Permutation in String's fixed 26-letter alphabet) with `.size()` convenience as a bonus reason; proactively identified that the HashMap version survives a hypothetical 10^9-range constraint where an int[] version would break.
+
+**Key Observations**:
+- **26-problem 🟢 HIRE streak** 🔥🔥🔥
+- Concept teach needed a second, concrete-example-first pass — abstract "atMost(K)-atMost(K-1)" framing alone didn't click; a full manual-enumeration ground-truth + step-by-step trace table worked immediately. Note for future concept teaches: lead with a small worked example before the abstract formula, not after.
+- Once the concept landed, code execution was flawless — no gap between conceptual and code fluency this time (contrast with LRCR's Jul 14 lag)
+- Strong constraint-driven reasoning in debrief: correctly reasoned about what breaks under a harder constraint (10^9 range) without being asked directly
+- Day 5 in progress. Next: Sliding Window Maximum (LC #239) — will need Monotonic Deque concept teach first (brand-new data structure).
+
+---
+
 ## ⏭️ Next Session Plan
 
-**Next**: Session #19 — Week 3, Day 5
-**Topic**: Sliding Window 🪟 — Exactly-K trick, then Monotonic Deque
+**Next**: Session #19 (continued) or #20 — Week 3, Day 5 (continued)
+**Topic**: Sliding Window 🪟 — Monotonic Deque
 **Plan**:
-1. ⏰ Spaced repetition check: Max Consecutive Ones III (Box 1, due Jul 17) + Minimum Size Subarray Sum, Permutation in String (Box 2, due Jul 17)
-2. 🎯 Problem 1: Subarrays with K Different Integers (LC #992, Exactly-K trick — atMost(K) - atMost(K-1)). Builds directly on Fruit Into Baskets' at-most-K machinery, plus a new composition idea (exactly = atMost(K) − atMost(K−1)) — teach the composition trick before coding, but the at-most-K mechanic itself should need no re-teach.
-3. 🎯 Problem 2 (if time): Sliding Window Maximum (LC #239, Fixed Window + Monotonic Deque) — new data structure (Deque), will need concept teach first
+1. ⏰ Spaced repetition check: whatever's due next session (check table below)
+2. 🎯 Problem: Sliding Window Maximum (LC #239, Fixed Window + Monotonic Deque) — new data structure (Deque), needs concept teach first before the problem, per standing rule 7
 
 **Focus**:
-- Exactly-K trick: reduces to atMost(K) - atMost(K-1), a new composition idea, not just a new window mechanic
 - Monotonic Deque will be a brand-new data structure — teach before problem, per standing rule 7
-- Re-probe Minimum Window Substring complexity (O(m+n), not O(m·n)) — flagged correction from Jul 16 recall
+- Lead concept teaches with a concrete small example BEFORE the abstract formula/framing — confirmed preference from today's Exactly-K re-teach
+- Re-probe Minimum Window Substring complexity (O(m+n), not O(m·n)) if it comes up due again — flagged correction from Jul 16 recall
 
 ---
 
@@ -862,7 +887,7 @@ TEMPLATE for each session entry:
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
 | W2 | 11 + 2 re-solves | 11 | 4.8 | 🎉 Two Pointers & Sorting COMPLETE. 10/11 🟢 HIRE. D6: re-solves crushed (3Sum 20→5 min, Contiguous Array 45→6 min). D7: 2 unseen challenges solved. Key lesson: Math.abs() for distance comparisons. |
-| W3 | 8 (in progress) | 8 | 4.9 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct, Zero Count. All 8 🟢 HIRE. 25-problem streak. Day 4 complete. |
+| W3 | 9 (in progress) | 9 | 4.9 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct, Zero Count, Exactly-K Trick. All 9 🟢 HIRE. 26-problem streak. Day 5 in progress. |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |
 | W6 | — | — | — | — |

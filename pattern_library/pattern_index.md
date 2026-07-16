@@ -50,6 +50,7 @@
 | 39 | "Longest substring of one letter after replacing at most k chars" | Variable window; replacements needed = windowSize - maxFreq(letter). Valid when <= k. Stale maxFreq is harmless — result only grows | **Sliding Window + Max Frequency** | `maxFreq = max(maxFreq, ++freq[right]); if (windowSize - maxFreq > k) { freq[left]--; left++; }` |
 | 40 | "Longest subarray/substring with at most K distinct values" | Variable window + HashMap\<value,count\>; shrink while map.size() > K; remove key entirely at count 0 | **Sliding Window + At-Most-K-Distinct** | `map.merge(v,1,Integer::sum); while (map.size()>k) { if(map.get(l)==1) map.remove(l); else map.merge(l,-1,Integer::sum); l++; }` |
 | 41 | "Longest run of 1s after flipping at most k 0s" | Variable window; specialization of Max Frequency trick to a 2-value alphabet — track zeroCount directly instead of windowSize-maxFreq | **Sliding Window + Zero Count** | `if (nums[right]==0) zeroCount++; if (zeroCount > k) { if (nums[left]==0) zeroCount--; left++; }` |
+| 42 | "Count subarrays with EXACTLY K distinct values" | Can't count "exactly" with one window (no threshold). Compose: exactly(K) = atMost(K) - atMost(K-1). atMost(K) = At-Most-K-Distinct shrink loop, but SUM (right-left+1) each step instead of tracking a max — every window ending at right down to `left` is valid too | **Exactly-K Trick** | `atMostKDistinct(nums,k) - atMostKDistinct(nums,k-1)`; inside helper: `count += right - left + 1` |
 
 ---
 

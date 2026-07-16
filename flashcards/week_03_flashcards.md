@@ -115,3 +115,27 @@
 ```
 
 ---
+
+## Card 9: Exactly-K Trick (Subarrays with K Different Integers, LC #992)
+```
+🔍 TRIGGER: "Count subarrays with EXACTLY K distinct" — "at most" sliding window can't
+           count this directly (no single threshold separates exactly-K from the rest).
+💡 IDEA:   exactly(K) = atMost(K) - atMost(K-1). atMost(K) counts subarrays with ≤K distinct;
+           subtracting atMost(K-1) removes everything with ≤K-1, leaving exactly K.
+           atMost(K) itself = Fruit Into Baskets' shrink loop, but instead of tracking a
+           single max, ADD (right-left+1) every step — every window [left'..right] for
+           left'=left..right is valid too (shrinking left further can't raise distinct count).
+📝 CODE:   int atMostKDistinct(nums, k) {
+             map.put/getOrDefault; while (map.size() > k) { shrink, remove key at 0 }
+             count += right - left + 1;  // NOT just a max update
+           }
+           return atMostKDistinct(nums, k) - atMostKDistinct(nums, k - 1);
+⏱️ TIME:   O(n) per call, O(n) total (2 calls)  |  SPACE: O(k) (map never holds >k+1 keys)
+⚠️ KEY:    The "sum every valid window ending at right" trick generalizes At-Most-K-Distinct
+           from "find the longest one" to "count all of them" — same shrink loop, different
+           accumulation.
+⚠️ EDGE:   k=0 passed into the helper (from exactly(1) = atMost(1)-atMost(0)) naturally
+           returns 0 — shrinking never stops until the window is empty. No special-casing needed.
+```
+
+---

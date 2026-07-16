@@ -23,7 +23,7 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| _empty_ | — | — | — | — |
+| Subarrays with K Different Integers (LC #992) | Exactly-K trick (atMost(K) − atMost(K−1)) | Jul 17 | Jul 17 | Jul 18 |
 
 ---
 
@@ -34,8 +34,7 @@
 | Minimum Window Substring (LC #76) | Variable Sliding Window + Need/Formed Counter | Jul 16 | Jul 16 | Jul 19 |
 | Longest Repeating Character Replacement (LC #424) | Variable Sliding Window + Max Frequency | Jul 16 | Jul 16 | Jul 19 |
 | Fruit Into Baskets (LC #904) | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Jul 16 | Jul 16 | Jul 19 |
-| Minimum Size Subarray Sum (LC #209) | Variable Sliding Window (Shortest) | Jul 14 | Jul 14 | Jul 17 |
-| Permutation in String (LC #567) | Fixed Sliding Window + Freq Match | Jul 14 | Jul 14 | Jul 17 |
+| Max Consecutive Ones III (LC #1004) | Variable Sliding Window + Zero Count | Jul 17 | Jul 17 | Jul 20 |
 
 ---
 
@@ -43,6 +42,8 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
+| Minimum Size Subarray Sum (LC #209) | Variable Sliding Window (Shortest) | Jul 17 | Jul 17 | Jul 24 |
+| Permutation in String (LC #567) | Fixed Sliding Window + Freq Match | Jul 17 | Jul 17 | Jul 24 |
 | Max Sum Subarray of Size K | Fixed Sliding Window | Jul 16 | Jul 16 | Jul 23 |
 | Longest Substring Without Repeating (LC #3) | Variable Sliding Window + HashSet/HashMap-Index-Jump | Jul 16 | Jul 16 | Jul 23 |
 | Partition Labels (LC #763) | Greedy + Last Occurrence Map | Jul 13 | Jul 13 | Jul 20 |
@@ -89,14 +90,19 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: July 16, 2026
+**Date**: July 17, 2026
 
-### Spaced Repetition Recall (5 problems — 3 Box 1 overdue + 2 Box 2 due today):
-- ✅ Minimum Window Substring (LC #76) — Approach/pattern perfect (need/formed counter, exact `==`/strict `<`). Complexity wrong: said O(m·n), corrected to O(m+n) time, O(1) space (bounded ASCII). → **Promoted to Box 2**
-- ✅ Longest Repeating Character Replacement (LC #424) — Perfect, including full self-synthesized "why stale maxFreq is harmless" argument (prior gap from Jul 14 now resolved — no nudges needed). → **Promoted to Box 2**
-- ✅ Fruit Into Baskets (LC #904) — Perfect. HashMap count, shrink+remove-at-zero, O(n)/O(1). → **Promoted to Box 2**
-- ✅ Max Sum Subarray of Size K — Perfect. windowSum + new - old, O(n)/O(1). → **Promoted to Box 3**
-- ✅ Longest Substring Without Repeating (LC #3) — Perfect, described the HashMap-index-jump variant (more optimal than the HashSet expand/shrink used originally) — valid alternate approach. O(n)/O(min(n,charset)). → **Promoted to Box 3**
+### Spaced Repetition Recall (3 problems — 1 Box 1 due + 2 Box 2 due today):
+- ✅ Max Consecutive Ones III (LC #1004) — Perfect. Zero-count window, shrink-when-exceeds-K, max recorded during expansion, each pointer moves forward only (O(n)/O(1)). → **Promoted to Box 2**
+- ✅ Minimum Size Subarray Sum (LC #209) — Perfect. Monotonicity of positive numbers justifies single pass; min recorded during shrinking. O(n)/O(1). → **Promoted to Box 3**
+- ✅ Permutation in String (LC #567) — Perfect. Fixed window, running int[26] update on slide, Arrays.equals() comparison. O(m)/O(1). → **Promoted to Box 3**
+
+### Previous Queue (July 16, 2026 — 5 problems — 3 Box 1 overdue + 2 Box 2 due):
+- ✅ Minimum Window Substring (LC #76) — Approach/pattern perfect (need/formed counter, exact `==`/strict `<`). Complexity wrong: said O(m·n), corrected to O(m+n) time, O(1) space (bounded ASCII). → Promoted to Box 2
+- ✅ Longest Repeating Character Replacement (LC #424) — Perfect, including full self-synthesized "why stale maxFreq is harmless" argument (prior gap from Jul 14 now resolved — no nudges needed). → Promoted to Box 2
+- ✅ Fruit Into Baskets (LC #904) — Perfect. HashMap count, shrink+remove-at-zero, O(n)/O(1). → Promoted to Box 2
+- ✅ Max Sum Subarray of Size K — Perfect. windowSum + new - old, O(n)/O(1). → Promoted to Box 3
+- ✅ Longest Substring Without Repeating (LC #3) — Perfect, described the HashMap-index-jump variant (more optimal than the HashSet expand/shrink used originally) — valid alternate approach. O(n)/O(min(n,charset)). → Promoted to Box 3
 
 ### Previous Queue (July 14, 2026 — 2 problems — Box 1 due):
 - ✅ Minimum Size Subarray Sum (LC #209) — Approach correct (shrink-and-update-min). Bug caught: said `sum > target` instead of `sum >= target` (counterexample: [1,4,4], target=4 — strict `>` misses the exact-match window and reports 2 instead of 1). Corrected. → Promoted to Box 2
@@ -131,13 +137,13 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 31 |
-| Box 1 (daily) | 0 |
-| Box 2 (3-day) | 5 |
-| Box 3 (weekly) | 12 |
+| Total problems in system | 32 |
+| Box 1 (daily) | 1 |
+| Box 2 (3-day) | 4 |
+| Box 3 (weekly) | 14 |
 | Box 4 (bi-weekly) | 14 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 5 |
-| Problems solved today | 0 (so far — new problem pending) |
+| Reviews completed today | 3 |
+| Problems solved today | 1 (Subarrays with K Different Integers) |
 | Re-solves today | 0 |
-| Streak (consecutive days) | 3 |
+| Streak (consecutive days) | 4 |
