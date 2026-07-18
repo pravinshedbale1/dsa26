@@ -41,6 +41,8 @@
 | 15 | Dutch National Flag | "Sort 3 values" | lo/mid/hi, mid scans and routes | O(n)/O(1) |
 | 16 | Fixed Sliding Window | "Subarray of fixed size K" | Add right, remove left, track max/min | O(n)/O(1) |
 | 17 | Variable Sliding Window | "Longest/shortest substring/subarray" | Expand right, shrink left until valid | O(n)/O(k) |
+| 18 | Exactly-K Trick | "Count subarrays with exactly K distinct" | exactly(K) = atMost(K) − atMost(K−1); sum right-left+1 per step | O(n)/O(k) |
+| 19 | Monotonic Deque | "Max/min of every window of size k" | Decreasing deque of indices; evict smaller from back, expire front, front = max | O(n)/O(k) |
 
 ### Patterns Learned but Need Practice (Confidence 3-4)
 

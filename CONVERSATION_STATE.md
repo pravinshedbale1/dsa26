@@ -56,11 +56,11 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 3 — Sliding Window |
-| **Current Day** | Day 5 (July 17, 2026) — 🔄 IN PROGRESS (1 done: Subarrays with K Different Integers) |
-| **Current Topic** | Sliding Window (Monotonic Deque next) |
-| **Current Problem** | Sliding Window Maximum (LC #239) next |
-| **Session Count** | 19 |
-| **Total Problems Solved** | 33 (new plan) + 2 re-solves |
+| **Current Day** | Day 5 (July 18, 2026) — ✅ COMPLETE (Subarrays with K Distinct + Sliding Window Maximum) |
+| **Current Topic** | Sliding Window — Week 3 Day 6 (review day) next |
+| **Current Problem** | Week 3 Day 6: review + re-solve struggles (per master plan) |
+| **Session Count** | 20 |
+| **Total Problems Solved** | 34 (new plan) + 2 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
@@ -562,6 +562,8 @@ TEMPLATE for each session entry:
 | Jun 23 | **Duplicate skip placement** | Put j/k duplicate skip at top of while loop instead of inside else block after finding triplet | 🟡 New |
 | Jul 14 | **Conceptual synthesis lag** | Longest Repeating Char Replacement: executed the optimal template flawlessly (code fluency) but needed 2 nudges to explain why a stale `maxFreq` can't cause a wrong answer (conceptual fluency lagging behind code fluency) | 🟢 Resolved (Jul 16 — self-synthesized full argument at spaced-rep recall, zero nudges) |
 | Jul 16 | **Complexity articulation on need/formed problems** | Minimum Window Substring recall: said TC O(m·n) instead of O(m+n) | 🟡 New — re-probe at next recall |
+| Jul 18 | **Verbal explanation lags code fluency** | Remove Duplicates: said "move j to i+1" (wrong) but wrote/knew correct code (increment j, write nums[i] there) | 🟡 New — same shape as LRCR Jul 14 gap |
+| Jul 18 | **Cold forgetting after sparse review gap** | Boats to Save People (Box 3, 11-day gap) fully forgotten — problem statement and approach both gone | 🔴 Active — demoted to Box 1, re-test tomorrow |
 
 <!-- Status: 🔴 Active | 🟡 Improving | 🟢 Resolved -->
 
@@ -609,6 +611,7 @@ TEMPLATE for each session entry:
 | — | Sliding Window (At-Most-K-Distinct) | 5 | July 14 | Fruit Into Baskets 🟢 HIRE. HashMap<type,count>, shrink while size>K, remove key at count 0. Zero hints, all follow-ups (incl. generalize to K) answered instantly. |
 | — | Sliding Window (Zero Count / Binary-Alphabet Max Freq) | 5 | July 16 | Max Consecutive Ones III 🟢 HIRE. Cold pattern transfer, zero re-teach. zeroCount <= k, if/while equivalence proven, not assumed. |
 | — | Sliding Window (Exactly-K Trick) | 5 | July 17 | Subarrays with K Different Integers 🟢 HIRE. atMost(K)-atMost(K-1), sum right-left+1 per step (not max). Needed concrete example to click, then flawless execution + strong follow-up reasoning. |
+| — | Monotonic Deque (Window Max) | 4 | July 18 | Sliding Window Maximum 🟢 HIRE (Hard). Decreasing deque of indices, front = max, amortized O(n). New DS learned same day. First draft broken (poll-on-empty), self-recovered after deflection. Confidence 4 until first successful recall. |
 | 7 | Monotonic Stack | — | — | — |
 | 8 | Fast/Slow Pointers | — | — | — |
 | 9 | Linked List Reversal | — | — | — |
@@ -639,15 +642,16 @@ TEMPLATE for each session entry:
 | Fruit Into Baskets (LC #904) | Box 2 | Jul 16 | Jul 19 | ✅ Promoted |
 | Max Sum Subarray of Size K | Box 3 | Jul 16 | Jul 23 | ✅ Promoted |
 | Longest Substring Without Repeating (LC #3) | Box 3 | Jul 16 | Jul 23 | ✅ Promoted |
-| Subarrays with K Different Integers (LC #992) | Box 1 | Jul 17 | Jul 18 | 🆕 New |
+| Subarrays with K Different Integers (LC #992) | Box 2 | Jul 18 | Jul 21 | ✅ Promoted |
 | Minimum Size Subarray Sum (LC #209) | Box 3 | Jul 17 | Jul 24 | ✅ Promoted |
 | Permutation in String (LC #567) | Box 3 | Jul 17 | Jul 24 | ✅ Promoted |
 | Max Consecutive Ones III (LC #1004) | Box 2 | Jul 17 | Jul 20 | ✅ Promoted |
-| Remove Duplicates (LC #26) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
-| 4Sum (LC #18) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
-| Subarray Sum Equals K (LC #560) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
-| Boats to Save People (LC #881) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
-| 3Sum Closest (LC #16) | Box 3 | Jul 11 | Jul 18 | ⏳ Due Jul 18 |
+| Remove Duplicates (LC #26) | Box 4 | Jul 18 | Aug 1 | ✅ Promoted |
+| 4Sum (LC #18) | Box 4 | Jul 18 | Aug 1 | ✅ Promoted |
+| Subarray Sum Equals K (LC #560) | Box 4 | Jul 18 | Aug 1 | ✅ Promoted |
+| Boats to Save People (LC #881) | Box 1 | Jul 18 | Jul 19 | 🔻 Demoted |
+| Sliding Window Maximum (LC #239) | Box 1 | Jul 18 | Jul 19 | 🆕 New |
+| 3Sum Closest (LC #16) | Box 4 | Jul 18 | Aug 1 | ✅ Promoted |
 | Partition Labels (LC #763) | Box 3 | Jul 13 | Jul 20 | ✅ Promoted |
 | Container With Most Water (LC #11) | Box 3 | Jul 13 | Jul 20 | ✅ Reviewed |
 | Trapping Rain Water (LC #42) | Box 3 | Jul 13 | Jul 20 | ✅ Reviewed |
@@ -866,18 +870,49 @@ TEMPLATE for each session entry:
 
 ---
 
+### Session #20 — July 18, 2026 — Sliding Window (Week 3, Day 5 — continued)
+**Status**: 🔄 IN PROGRESS
+
+**Spaced Repetition Recall Results (6 problems — 1 Box 1 due + 5 Box 3 due)**:
+- Subarrays with K Different Integers (LC #992): ✅ Solid on 2nd probe — first pass gave the exactly(K) formula without detail; probed for how atMost(K) itself works, got shrink-while-size>K + count += right-left+1 correctly. → **Promoted to Box 2**
+- Remove Duplicates (LC #26): ✅ Correct, but verbal explanation ("move j to i+1") didn't match the actual mechanic (increment j, then write nums[i] there). Wrote correct code when pushed, then restated verbally correctly. → **Promoted to Box 4**
+- 4Sum (LC #18): ✅ Solid — sort + fix i,j with dup-skip, two pointers k,l with dup-skip on match, O(n³)/O(1) extra. → **Promoted to Box 4**
+- Subarray Sum Equals K (LC #560): ✅ Nailed count-based {0:1} reasoning. O(n)/O(n). → **Promoted to Box 4**
+- Boats to Save People (LC #881): ❌ Forgot problem statement AND approach entirely. Given refresher (problem + solution); only repeated it back, not real recall. → **Demoted to Box 1**
+- 3Sum Closest (LC #16): ✅ Excellent — clear two-pointer-squeeze explanation, correct O(n²)/O(1). → **Promoted to Box 4**
+
+**Recall Verdict**: 5/6 recalled (1 needed a second probe to reach full precision). 1 forgotten cold (Boats to Save People) — first full demotion in several sessions.
+
+**Key Observations**:
+- Verbal explanation vs. code fluency gap resurfaced on Remove Duplicates (similar shape to LRCR's Jul 14 gap) — code was flawless, but the spoken description of what happens to `i`/`j` was imprecise until pressed for exact mechanics
+- Boats to Save People forgotten completely after an 11-day gap with no interleaved review — first clean forgettance this cycle; worth watching whether Box 3 (weekly) interval is too sparse for lower-rep-count problems
+
+**Concept Teach**: Monotonic Deque (brand-new data structure). First pass — dense step-by-step trace table on [1,3,-1,-3,5,3,6,7] — did NOT land ("i did not understood"). Second pass — slow narrative walkthrough on tiny [4,2,5,1] k=2 with the "younger and taller candidate goes home" analogy, one element at a time, comprehension checks between steps — landed immediately. This is now the SECOND confirmed instance (after Jul 17's Exactly-K re-teach) that dense/tabular-first explanations fail and small-concrete-narrative-first works. Also gave a Java Deque API cheat sheet on request (ArrayDeque, offerLast/pollLast/peekLast, pollFirst/peekFirst) — treated as free, not a hint.
+
+**Problems Covered**:
+- Sliding Window Maximum (LC #239): ✅ NEW HARD — 🟢 HIRE. First Monotonic Deque problem, data structure learned same session. Jumped to code before stating approach (pulled back); first draft structurally broken (`dq.poll()` on empty, inverted `while(dq.isEmpty())`) and asked interviewer to validate mid-write — deflected to self-trace on [4,2,5,1], then produced a clean, fully correct implementation unaided. All 5 tests first try. Zero hints. Under the 40-min Hard limit. Follow-ups both answered correctly: (1) `if` suffices for front expiry since the window slides one step per iteration; (2) `<` vs `<=` back-eviction both correct — equal-value newcomer dominates (same value + outlives), strict `<` merely keeps redundant duplicates.
+
+**Key Observations (Sliding Window Maximum)**:
+- **27-problem 🟢 HIRE streak** 🔥🔥🔥 — first Hard solved with a brand-new data structure taught the same day
+- Self-recovery arc was the story of this problem: broken first draft → deflected validation request → correct final code with zero algorithmic help. The candidate habit to break: asking the interviewer "is this true?" mid-code instead of self-tracing on a small input.
+- Teaching-style preference now firmly established (2 data points): concrete small example narrated step-by-step BEFORE any table/abstraction
+- 🎉 **Day 5 complete!** Both problems done (Subarrays with K Distinct, Sliding Window Maximum). Next: Day 6 (review + re-solve struggles).
+
+---
+
 ## ⏭️ Next Session Plan
 
-**Next**: Session #19 (continued) or #20 — Week 3, Day 5 (continued)
-**Topic**: Sliding Window 🪟 — Monotonic Deque
+**Next**: Session #21 — Week 3, Day 6 (Review Day)
+**Topic**: Sliding Window 🪟 — review + re-solve struggles
 **Plan**:
-1. ⏰ Spaced repetition check: whatever's due next session (check table below)
-2. 🎯 Problem: Sliding Window Maximum (LC #239, Fixed Window + Monotonic Deque) — new data structure (Deque), needs concept teach first before the problem, per standing rule 7
+1. ⏰ Spaced repetition check (due Jul 19): Boats to Save People (Box 1 — REAL recall test after demotion), Sliding Window Maximum (Box 1 — first recall of Monotonic Deque), Minimum Window Substring, LRCR, Fruit Into Baskets (Box 2)
+2. 🎯 Day 6 per master plan: review + re-solve Week 3 struggles. Candidates: none flagged as re-solve-worthy this week (all 🟢 HIRE) — consider a timed re-solve of Sliding Window Maximum (given broken first draft) or Subarrays with K Distinct (given concept needed 2 teach passes)
 
 **Focus**:
-- Monotonic Deque will be a brand-new data structure — teach before problem, per standing rule 7
-- Lead concept teaches with a concrete small example BEFORE the abstract formula/framing — confirmed preference from today's Exactly-K re-teach
-- Re-probe Minimum Window Substring complexity (O(m+n), not O(m·n)) if it comes up due again — flagged correction from Jul 16 recall
+- Boats to Save People was forgotten COLD (Jul 18) — tomorrow's Box 1 recall is the real test; if recalled, consider whether a code re-solve is warranted
+- Re-probe Minimum Window Substring complexity (O(m+n), not O(m·n)) — flagged correction from Jul 16 recall, due Jul 19
+- Watch the "verbal explanation lags code fluency" pattern (Remove Duplicates Jul 18, LRCR Jul 14) — when a recall answer is vague, push for exact mechanics before accepting
+- Teaching-style rule (2 confirmed data points): concrete small example narrated step-by-step FIRST, tables/abstraction after
 
 ---
 
@@ -887,7 +922,7 @@ TEMPLATE for each session entry:
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
 | W2 | 11 + 2 re-solves | 11 | 4.8 | 🎉 Two Pointers & Sorting COMPLETE. 10/11 🟢 HIRE. D6: re-solves crushed (3Sum 20→5 min, Contiguous Array 45→6 min). D7: 2 unseen challenges solved. Key lesson: Math.abs() for distance comparisons. |
-| W3 | 9 (in progress) | 9 | 4.9 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct, Zero Count, Exactly-K Trick. All 9 🟢 HIRE. 26-problem streak. Day 5 in progress. |
+| W3 | 10 (in progress) | 10 | 4.9 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct, Zero Count, Exactly-K Trick, Monotonic Deque (Hard). All 10 🟢 HIRE. 27-problem streak. Day 5 complete — Day 6 (review) + Day 7 (weekly challenge) remain. |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |
 | W6 | — | — | — | — |

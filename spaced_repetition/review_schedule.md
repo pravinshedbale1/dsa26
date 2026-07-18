@@ -23,7 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Subarrays with K Different Integers (LC #992) | Exactly-K trick (atMost(K) − atMost(K−1)) | Jul 17 | Jul 17 | Jul 18 |
+| Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 11 | Jul 18 | Jul 19 |
+| Sliding Window Maximum (LC #239) | Fixed Window + Monotonic Deque | Jul 18 | Jul 18 | Jul 19 |
 
 ---
 
@@ -35,6 +36,7 @@
 | Longest Repeating Character Replacement (LC #424) | Variable Sliding Window + Max Frequency | Jul 16 | Jul 16 | Jul 19 |
 | Fruit Into Baskets (LC #904) | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Jul 16 | Jul 16 | Jul 19 |
 | Max Consecutive Ones III (LC #1004) | Variable Sliding Window + Zero Count | Jul 17 | Jul 17 | Jul 20 |
+| Subarrays with K Different Integers (LC #992) | Exactly-K trick (atMost(K) − atMost(K−1)) | Jul 17 | Jul 18 | Jul 21 |
 
 ---
 
@@ -51,11 +53,6 @@
 | Trapping Rain Water (LC #42) | Two Pointers (maxLeft/maxRight) | Jul 6 | Jul 13 | Jul 20 |
 | Move Zeroes (LC #283) | Two Pointers (Same Direction) | Jul 6 | Jul 13 | Jul 20 |
 | Sort Colors (LC #75) | Dutch National Flag (3-way Partition) | Jul 6 | Jul 13 | Jul 20 |
-| Remove Duplicates (LC #26) | Two Pointers (Same Dir — Write Pointer) | Jul 11 | Jul 11 | Jul 18 |
-| 4Sum (LC #18) | Sort + Fix Two + Two Pointers | Jul 11 | Jul 11 | Jul 18 |
-| Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jul 11 | Jul 11 | Jul 18 |
-| Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 11 | Jul 11 | Jul 18 |
-| 3Sum Closest (LC #16) | Sort + Fix One + Two Pointers (Closest) | Jul 11 | Jul 11 | Jul 18 |
 
 ---
 
@@ -77,6 +74,10 @@
 | Sort Characters By Frequency (LC #451) | Freq Count + Bucket Sort | Jul 6 | Jul 6 | Jul 20 |
 | Two Sum (LC #1) | HashMap Complement | Jul 6 | Jul 6 | Jul 20 |
 | Contains Duplicate (LC #217) | HashSet Membership | Jul 6 | Jul 6 | Jul 20 |
+| Remove Duplicates (LC #26) | Two Pointers (Same Dir — Write Pointer) | Jul 11 | Jul 18 | Aug 1 |
+| 4Sum (LC #18) | Sort + Fix Two + Two Pointers | Jul 11 | Jul 18 | Aug 1 |
+| Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jul 11 | Jul 18 | Aug 1 |
+| 3Sum Closest (LC #16) | Sort + Fix One + Two Pointers (Closest) | Jul 11 | Jul 18 | Aug 1 |
 
 ---
 
@@ -90,7 +91,19 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: July 17, 2026
+**Date**: July 18, 2026
+
+### Spaced Repetition Recall (6 problems — 1 Box 1 due + 5 Box 3 due):
+- ✅ Subarrays with K Different Integers (LC #992) — Solid on 2nd probe. Exactly-K trick, atMost(K) computed via shrink-while-size>K + count += right-left+1. → **Promoted to Box 2**
+- ✅ Remove Duplicates (LC #26) — Correct after clarifying verbal mix-up ("move j to i+1" → actually increment j, write nums[i] there). Code was correct throughout. O(n)/O(1). → **Promoted to Box 4**
+- ✅ 4Sum (LC #18) — Solid. Sort + fix i,j (dup-skip) + two pointers k,l (dup-skip on match). O(n³)/O(1) extra. → **Promoted to Box 4**
+- ✅ Subarray Sum Equals K (LC #560) — Nailed {0:1} count-based init reasoning. O(n)/O(n). → **Promoted to Box 4**
+- ❌ Boats to Save People (LC #881) — Forgot both problem statement and approach. Given refresher; repeated it back but that's not real recall. → **Demoted to Box 1**
+- ✅ 3Sum Closest (LC #16) — Excellent conceptual walkthrough (two-finger squeeze analogy), correct O(n²)/O(1). → **Promoted to Box 4**
+
+**Recall Verdict**: 5/6 recalled (1 with a verbal mix-up, self-corrected). 1 forgotten (Boats to Save People) — demoted to Box 1.
+
+### Previous Queue (July 17, 2026 — 3 problems — 1 Box 1 due + 2 Box 2 due):
 
 ### Spaced Repetition Recall (3 problems — 1 Box 1 due + 2 Box 2 due today):
 - ✅ Max Consecutive Ones III (LC #1004) — Perfect. Zero-count window, shrink-when-exceeds-K, max recorded during expansion, each pointer moves forward only (O(n)/O(1)). → **Promoted to Box 2**
@@ -137,13 +150,13 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 32 |
-| Box 1 (daily) | 1 |
-| Box 2 (3-day) | 4 |
-| Box 3 (weekly) | 14 |
-| Box 4 (bi-weekly) | 14 |
+| Total problems in system | 33 |
+| Box 1 (daily) | 2 |
+| Box 2 (3-day) | 5 |
+| Box 3 (weekly) | 9 |
+| Box 4 (bi-weekly) | 17 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 3 |
-| Problems solved today | 1 (Subarrays with K Different Integers) |
+| Reviews completed today | 6 |
+| Problems solved today | 1 (Sliding Window Maximum LC #239 — Hard, 🟢 HIRE) |
 | Re-solves today | 0 |
-| Streak (consecutive days) | 4 |
+| Streak (consecutive days) | 5 |

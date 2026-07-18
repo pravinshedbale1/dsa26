@@ -67,6 +67,8 @@
 
 ---
 
+| 45 | Jul 18 | Sliding Window Maximum (NEW) | 239 | Hard | Fixed Window + Monotonic Deque | Brute O(n·k) rescan → Monotonic decreasing deque of indices O(n)/O(k) | O(n) | O(k) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW data structure (Deque) taught same session — first teach attempt (trace table) didn't land, slow narrative walkthrough on [4,2,5,1] with "younger and taller candidate" analogy clicked. First code draft was broken (poll-on-empty, inverted isEmpty loop) and asked interviewer to validate — deflected to self-trace, then produced clean correct code unaided. All 5 tests first try. Zero bugs at test time, zero hints (deque API cheat sheet free). Follow-ups: if-vs-while front expiry (correct — window slides by 1), strict `<` vs `<=` back-pop with duplicates (correct — equal newer copy dominates, both work). Under 40-min Hard limit. |
+
 ## Weekly Aggregates
 
 | Week | Problems Solved | ✅ | ⚡ | 🔄 | ❌ | Avg Confidence | Top Pattern |
@@ -92,5 +94,5 @@
 | W3 D2 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Variable Shortest + Fixed Freq Match |
 | W3 D3 | 1 (complete) | 1 | 0 | 0 | 0 | 5.0 | Variable Window + Need/Formed Counter (Hard) |
 | W3 D4 | 3 (complete) | 3 | 0 | 0 | 0 | 4.7 | Max Frequency + At-Most-K-Distinct + Zero Count |
-| W3 D5 | 1 (so far) | 1 | 0 | 0 | 0 | 5.0 | Exactly-K trick (atMost(K) − atMost(K−1)) |
+| W3 D5 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Exactly-K trick + Monotonic Deque (Hard) |
 

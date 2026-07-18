@@ -139,3 +139,25 @@
 ```
 
 ---
+
+## Card 10: Fixed Window + Monotonic Deque (Sliding Window Maximum, LC #239)
+```
+🔍 TRIGGER: "Max (or min) of every window of size k" — brute O(n·k) rescan is too slow.
+💡 IDEA:   Deque of INDICES, values decreasing front→back. Front = current window max.
+           New element evicts everything smaller than it from the BACK ("younger and
+           taller" — the newcomer is ≥ them AND outlives them, so they're dead forever).
+           Front retires only when its index slides out of the window.
+📝 CODE:   if (!dq.isEmpty() && dq.peekFirst() <= right-k) dq.pollFirst();   // expire front
+           while (!dq.isEmpty() && nums[dq.peekLast()] < nums[right]) dq.pollLast(); // evict back
+           dq.offerLast(right);
+           if (right >= k-1) ans[right-k+1] = nums[dq.peekFirst()];
+⏱️ TIME:   O(n) amortized — each index pushed once, popped at most once (≤2n ops total)
+   SPACE:  O(k) — deque never spans more than one window
+⚠️ KEY:    Store indices, not values — you need them to detect front expiry.
+           `if` (not `while`) suffices for front expiry: window slides 1 per step.
+           `<` vs `<=` on back-evict: both correct; `<=` also evicts equal (newer copy dominates).
+⚠️ EDGE:   k=1 (answer = nums), k=n (single window), strictly decreasing array (front
+           expires every step), duplicates.
+```
+
+---
