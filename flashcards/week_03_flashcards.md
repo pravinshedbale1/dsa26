@@ -158,6 +158,25 @@
            `<` vs `<=` on back-evict: both correct; `<=` also evicts equal (newer copy dominates).
 ⚠️ EDGE:   k=1 (answer = nums), k=n (single window), strictly decreasing array (front
            expires every step), duplicates.
+✅ RE-SOLVE (Jul 20): Clean on first attempt, zero bugs — no repeat of the original
+           broken draft (poll-on-empty, inverted while). Confidence 5.
+```
+
+---
+
+## Card 11: Composition Bugs That Cancel Out (Subarrays with K Distinct re-solve)
+```
+🔍 TRIGGER: Any solution shaped like f(a) - f(b), where f is a helper called twice.
+💡 IDEA:   A systematic bug inside f that adds the SAME constant to every call is
+           invisible in the subtracted result — it cancels. Driver tests on the
+           composed answer will pass even though f itself is wrong.
+📝 EXAMPLE: Moving `right++` before `count += right-left+1` in atMostKDistinct makes
+           every call return trueValue + nums.length. atMost(K) and atMost(K-1) are
+           BOTH inflated by the same +n, so exactly(K) = atMost(K)-atMost(K-1) is
+           still correct — but atMostKDistinct(arr, k) alone is wrong.
+⚠️ KEY:    Whenever you build exactly(K) = atMost(K) - atMost(K-1) (or any f(a)-f(b)
+           composition), hand-trace or assert f in isolation on a small case BEFORE
+           trusting that the composed driver tests passing means f is correct.
 ```
 
 ---

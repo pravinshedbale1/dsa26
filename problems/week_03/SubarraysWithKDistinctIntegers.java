@@ -32,32 +32,28 @@ public class SubarraysWithKDistinctIntegers {
     }
 
     // ========================================
-    // TODO: Implement this method
+    // TODO: Implement this method (re-solve — Day 6 review, timer 25 min)
     // Count the number of subarrays with AT MOST k distinct integers.
     // ========================================
     private static int atMostKDistinct(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         int right = 0;
         int left = 0;
-
-        int count = 0;
-
-        while (right < nums.length) {
-            map.put(nums[right], map.getOrDefault(nums[right], 0) + 1);
-
-            while (map.size() > k) {
-                if (map.get(nums[left]) == 1) {
-                    map.remove(nums[left]);
-                } else {
-                    map.put(nums[left], map.get(nums[left])-1);
+        int ans = 0;
+        while(right < nums.length) {
+                map.put(nums[right], map.getOrDefault(nums[right], 0)+1);
+                while(map.size()>k){
+                        if(map.get(nums[left])==1) {
+                                map.remove(nums[left]);
+                        } else {
+                                map.put(nums[left], map.get(nums[left])-1);
+                        }
+                        left++;
                 }
-                left++;
-            }
-            count+=right-left+1;
-            right++;
+                ans+=right-left+1;
+                right++;
         }
-
-        return count;
+        return ans;
     }
 
     // ========================================
@@ -83,6 +79,8 @@ public class SubarraysWithKDistinctIntegers {
         // Test 5: Edge case — single element array
         assert subarraysWithKDistinct(new int[] { 1 }, 1) == 1
                 : "Test 5 failed: expected 1";
+
+        assert atMostKDistinct(new int[]{1,2,1,2,3}, 1) == 5 : "Test 6 failed: expected 5";
 
         System.out.println("All tests passed! ✅");
     }

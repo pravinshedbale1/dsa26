@@ -23,8 +23,7 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 11 | Jul 18 | Jul 19 |
-| Sliding Window Maximum (LC #239) | Fixed Window + Monotonic Deque | Jul 18 | Jul 18 | Jul 19 |
+| _empty_ | — | — | — | — |
 
 ---
 
@@ -32,9 +31,8 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Minimum Window Substring (LC #76) | Variable Sliding Window + Need/Formed Counter | Jul 16 | Jul 16 | Jul 19 |
-| Longest Repeating Character Replacement (LC #424) | Variable Sliding Window + Max Frequency | Jul 16 | Jul 16 | Jul 19 |
-| Fruit Into Baskets (LC #904) | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Jul 16 | Jul 16 | Jul 19 |
+| Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 19 | Jul 19 | Jul 22 |
+| Sliding Window Maximum (LC #239) | Fixed Window + Monotonic Deque | Jul 19 | Jul 19 | Jul 22 |
 | Max Consecutive Ones III (LC #1004) | Variable Sliding Window + Zero Count | Jul 17 | Jul 17 | Jul 20 |
 | Subarrays with K Different Integers (LC #992) | Exactly-K trick (atMost(K) − atMost(K−1)) | Jul 17 | Jul 18 | Jul 21 |
 
@@ -44,8 +42,11 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
+| Minimum Window Substring (LC #76) | Variable Sliding Window + Need/Formed Counter | Jul 19 | Jul 19 | Jul 26 |
 | Minimum Size Subarray Sum (LC #209) | Variable Sliding Window (Shortest) | Jul 17 | Jul 17 | Jul 24 |
 | Permutation in String (LC #567) | Fixed Sliding Window + Freq Match | Jul 17 | Jul 17 | Jul 24 |
+| Longest Repeating Character Replacement (LC #424) | Variable Sliding Window + Max Frequency | Jul 19 | Jul 19 | Jul 26 |
+| Fruit Into Baskets (LC #904) | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Jul 19 | Jul 19 | Jul 26 |
 | Max Sum Subarray of Size K | Fixed Sliding Window | Jul 16 | Jul 16 | Jul 23 |
 | Longest Substring Without Repeating (LC #3) | Variable Sliding Window + HashSet/HashMap-Index-Jump | Jul 16 | Jul 16 | Jul 23 |
 | Partition Labels (LC #763) | Greedy + Last Occurrence Map | Jul 13 | Jul 13 | Jul 20 |
@@ -91,7 +92,20 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: July 18, 2026
+**Date**: July 19, 2026
+
+### Spaced Repetition Recall (5 problems — 2 Box 1 due + 3 Box 2 due):
+- ✅ Boats to Save People (LC #881) — REAL recall test after Jul 18 cold forgetting: PASSED. Problem statement, sort + greedy pairing (heaviest always boards, lightest joins if fits), left==right edge case all recalled unprompted. O(n log n)/O(1) correct but only after TWO probes — complexity was skipped twice. → **Promoted to Box 2**
+- ✅ Sliding Window Maximum (LC #239) — First recall of Monotonic Deque: PASSED. Decreasing deque + back-eviction recalled unprompted; needed 3 probes for precision (stores indices not values, peekFirst-to-record vs pollFirst-on-expiry distinction, amortized O(n) argument) — all 3 answered correctly once probed. → **Promoted to Box 2**
+- ✅ Minimum Window Substring (LC #76) — Textbook recall: need/window arrays, formed/required with exact-`==` bump and about-to-break drop, O(m+n)/O(1). Flagged Jul 16 complexity gap CLEARED — gave the full amortized argument unprompted-quality ("two people on a one-way road, ≤2n total steps; O(m·n) trap needs an inner loop that resets — left never resets"). → **Promoted to Box 3**
+- ✅ Longest Repeating Character Replacement (LC #424) — Excellent, fully self-synthesized: never-shrink/only-slide mechanic, stale-maxFreq safety argument, validity formula `windowSize - maxFreq <= k` with all terms defined correctly. → **Promoted to Box 3**
+- ✅ Fruit Into Baskets (LC #904) — Correct pattern/approach/remove-at-zero reasoning. Minor notation nit: said space complexity "O(3)" instead of "O(1)" (bounded-constant should use O(1), not the literal bound). → **Promoted to Box 3**
+
+**Recall Verdict (Jul 19 queue): 5/5 recalled, zero demotions. Box 1 is now EMPTY for the first time this cycle.**
+- ⏳ Longest Repeating Character Replacement (LC #424) — pending
+- ⏳ Fruit Into Baskets (LC #904) — pending
+
+### Previous Queue (July 18, 2026):
 
 ### Spaced Repetition Recall (6 problems — 1 Box 1 due + 5 Box 3 due):
 - ✅ Subarrays with K Different Integers (LC #992) — Solid on 2nd probe. Exactly-K trick, atMost(K) computed via shrink-while-size>K + count += right-left+1. → **Promoted to Box 2**
@@ -151,12 +165,12 @@ For each problem due:
 | Metric | Value |
 |--------|-------|
 | Total problems in system | 33 |
-| Box 1 (daily) | 2 |
-| Box 2 (3-day) | 5 |
-| Box 3 (weekly) | 9 |
+| Box 1 (daily) | 0 |
+| Box 2 (3-day) | 4 |
+| Box 3 (weekly) | 12 |
 | Box 4 (bi-weekly) | 17 |
 | Box 5 (mastered) | 0 |
-| Reviews completed today | 6 |
-| Problems solved today | 1 (Sliding Window Maximum LC #239 — Hard, 🟢 HIRE) |
+| Reviews completed today (Jul 19) | 5 of 5 |
+| Problems solved today | 0 |
 | Re-solves today | 0 |
-| Streak (consecutive days) | 5 |
+| Streak (consecutive days) | 6 |

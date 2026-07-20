@@ -56,11 +56,11 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 3 — Sliding Window |
-| **Current Day** | Day 5 (July 18, 2026) — ✅ COMPLETE (Subarrays with K Distinct + Sliding Window Maximum) |
-| **Current Topic** | Sliding Window — Week 3 Day 6 (review day) next |
-| **Current Problem** | Week 3 Day 6: review + re-solve struggles (per master plan) |
-| **Session Count** | 20 |
-| **Total Problems Solved** | 34 (new plan) + 2 re-solves |
+| **Current Day** | Day 6 (July 19-20, 2026) — ✅ COMPLETE (5/5 spaced rep recalled, Box 1 emptied, 2 timed re-solves) |
+| **Current Topic** | Sliding Window — Week 3 Day 7 (weekly challenge) next |
+| **Current Problem** | Week 3 Day 7: 2 unseen sliding-window problems, cold pattern-transfer test |
+| **Session Count** | 21 |
+| **Total Problems Solved** | 34 (new plan) + 4 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
@@ -563,7 +563,9 @@ TEMPLATE for each session entry:
 | Jul 14 | **Conceptual synthesis lag** | Longest Repeating Char Replacement: executed the optimal template flawlessly (code fluency) but needed 2 nudges to explain why a stale `maxFreq` can't cause a wrong answer (conceptual fluency lagging behind code fluency) | 🟢 Resolved (Jul 16 — self-synthesized full argument at spaced-rep recall, zero nudges) |
 | Jul 16 | **Complexity articulation on need/formed problems** | Minimum Window Substring recall: said TC O(m·n) instead of O(m+n) | 🟡 New — re-probe at next recall |
 | Jul 18 | **Verbal explanation lags code fluency** | Remove Duplicates: said "move j to i+1" (wrong) but wrote/knew correct code (increment j, write nums[i] there) | 🟡 New — same shape as LRCR Jul 14 gap |
-| Jul 18 | **Cold forgetting after sparse review gap** | Boats to Save People (Box 3, 11-day gap) fully forgotten — problem statement and approach both gone | 🔴 Active — demoted to Box 1, re-test tomorrow |
+| Jul 18 | **Cold forgetting after sparse review gap** | Boats to Save People (Box 3, 11-day gap) fully forgotten — problem statement and approach both gone | 🟢 Resolved (Jul 19 — full recall on the real 24hr retest, refresher re-anchored it) |
+| Jul 19 | **Complexity articulation defaults to a loose bound** | Boats to Save People needed 2 probes to state complexity at all; Sliding Window Maximum said O(n) space instead of tight O(k); Subarrays w/ K Distinct said O(1) instead of O(k) | 🟡 New — recurring across 3 problems same session, watch closely |
+| Jul 19-20 | **Composition bugs invisible to composed tests** | Subarrays with K Distinct re-solve: moved `right++` before the count line in `atMostKDistinct`, overcounting every call by `n` — invisible in `atMost(k)-atMost(k-1)` since both calls are inflated identically and cancel. All 5 driver tests passed on the buggy version. Only caught when asked to hand-trace/assert the helper in isolation. | 🟡 New — general lesson: probe sub-functions of any `f(a)-f(b)` composition directly, not just the composed result |
 
 <!-- Status: 🔴 Active | 🟡 Improving | 🟢 Resolved -->
 
@@ -611,7 +613,9 @@ TEMPLATE for each session entry:
 | — | Sliding Window (At-Most-K-Distinct) | 5 | July 14 | Fruit Into Baskets 🟢 HIRE. HashMap<type,count>, shrink while size>K, remove key at count 0. Zero hints, all follow-ups (incl. generalize to K) answered instantly. |
 | — | Sliding Window (Zero Count / Binary-Alphabet Max Freq) | 5 | July 16 | Max Consecutive Ones III 🟢 HIRE. Cold pattern transfer, zero re-teach. zeroCount <= k, if/while equivalence proven, not assumed. |
 | — | Sliding Window (Exactly-K Trick) | 5 | July 17 | Subarrays with K Different Integers 🟢 HIRE. atMost(K)-atMost(K-1), sum right-left+1 per step (not max). Needed concrete example to click, then flawless execution + strong follow-up reasoning. |
-| — | Monotonic Deque (Window Max) | 4 | July 18 | Sliding Window Maximum 🟢 HIRE (Hard). Decreasing deque of indices, front = max, amortized O(n). New DS learned same day. First draft broken (poll-on-empty), self-recovered after deflection. Confidence 4 until first successful recall. |
+| — | Monotonic Deque (Window Max) | 5 | July 20 | Sliding Window Maximum 🟢 HIRE (re-solve, Hard). Clean first attempt — no repeat of the Jul 18 broken draft. Recall + re-solve both clean same cycle → confidence raised to 5. |
+| — | Sort + Greedy Two Pointers (Pairing) | 5 | July 19 | Boats to Save People — full recall recovery after Jul 18 cold forgetting; refresher fully re-anchored it. |
+| — | Sliding Window (Exactly-K Trick) | 4 | July 20 | Subarrays with K Distinct 🟡 LEAN HIRE (re-solve). Concept solid, but re-solve exposed a real composition bug (count-line ordering) invisible to composed driver tests — held at 4 until a clean re-solve with no bugs. |
 | 7 | Monotonic Stack | — | — | — |
 | 8 | Fast/Slow Pointers | — | — | — |
 | 9 | Linked List Reversal | — | — | — |
@@ -900,19 +904,43 @@ TEMPLATE for each session entry:
 
 ---
 
+### Session #21 — July 19-20, 2026 — Sliding Window (Week 3, Day 6 — Review Day)
+**Status**: ✅ COMPLETE
+
+**Spaced Repetition Recall Results (5 problems — 2 Box 1 + 3 Box 2 due)**:
+- Boats to Save People (LC #881): ✅ REAL recall test after Jul 18 cold forgetting — PASSED. Problem statement, sort + greedy pairing, left==right edge case all recalled unprompted. Complexity (O(n log n)/O(1)) only came out after 2 probes — skipped it twice. → **Promoted Box 1 → Box 2**
+- Sliding Window Maximum (LC #239): ✅ First recall of Monotonic Deque — PASSED. Decreasing deque + back-eviction recalled unprompted; needed 3 probes for precision (indices-not-values, peekFirst-to-record vs pollFirst-on-expiry, amortized O(n) argument) — all answered correctly once probed. → **Promoted Box 1 → Box 2**
+- Minimum Window Substring (LC #76): ✅ Textbook — need/window arrays, exact-`==`/about-to-break mechanics, and the flagged Jul 16 complexity gap fully CLEARED with a self-generated amortized argument ("two people on a one-way road, ≤2n steps; O(m·n) trap needs an inner loop that resets"). → **Promoted Box 2 → Box 3**
+- Longest Repeating Character Replacement (LC #424): ✅ Excellent — never-shrink/only-slide mechanic and stale-maxFreq safety argument both fully self-synthesized, plus exact validity formula `windowSize - maxFreq <= k` with correct term definitions. → **Promoted Box 2 → Box 3**
+- Fruit Into Baskets (LC #904): ✅ Correct pattern/approach/remove-at-zero reasoning. Minor notation nit: said space complexity "O(3)" instead of "O(1)" for a bounded-constant map size. → **Promoted Box 2 → Box 3**
+
+**Recall Verdict: 5/5 recalled, zero demotions. Box 1 is now EMPTY for the first time this cycle.**
+
+**Phase B — Timed Re-solves**:
+- Sliding Window Maximum (LC #239, Hard, 40-min limit): 🟢 HIRE. Clean on the first attempt this time — no repeat of yesterday's broken first draft (poll-on-empty, inverted while). All 5 tests first try, zero bugs, zero hints, well under time. Complexity needed one nudge: said O(n) space, corrected to the tighter O(k) (deque never holds more than k elements regardless of array size, even when k==n).
+- Subarrays with K Different Integers (LC #992, Medium, 25-min limit): 🟡 LEAN HIRE. All 5 driver tests passed on the FIRST attempt too — but the first attempt had a real bug: `right++` was moved before `ans += right-left+1`, which overcounts every `atMostKDistinct(nums, k)` call by exactly `nums.length`. This bug is invisible to the given tests because `exactly(k) = atMost(k) - atMost(k-1)` — both calls are inflated by the identical constant, which cancels out in the subtraction. Caught only because the interviewer asked for a direct hand-trace of `atMostKDistinct` in isolation (`assert atMostKDistinct(arr, 1) == 5`), not because a test failed. Self-corrected immediately once probed (moved the count line back above `right++`). Complexity: TC O(n) correct; SC said O(1), corrected to O(k) after a nudge (map bounded by k, not constant).
+
+**Key Observations**:
+- 🎉 **Box 1 emptied** — every problem currently in the system has been recalled successfully at least once past its most recent demotion/introduction.
+- New struggle category identified (Subarrays with K Distinct re-solve): a bug that passes ALL given tests because of how the problem composes two calls to the same buggy helper — the errors cancel in the subtraction. This is a materially different failure mode from prior "tests catch it" bugs — the fix here required probing the helper in isolation, not just running the driver. **General interview lesson**: when a solution decomposes into `f(a) - f(b)` or similar composition, test the sub-function `f` directly, not just the composed result — composition can hide systematic bugs.
+- Complexity articulation continues to need a nudge across multiple problems this session (Boats to Save People, Sliding Window Maximum's O(n)→O(k), Subarrays' O(1)→O(k)) — pattern: default instinct is a looser/safer bound; needs to actively check for the tighter one.
+- 🎉 **WEEK 3 COMPLETE** (Day 6 review done). Day 7 (weekly challenge, 2 unseen sliding-window problems) remains.
+
+---
+
 ## ⏭️ Next Session Plan
 
-**Next**: Session #21 — Week 3, Day 6 (Review Day)
-**Topic**: Sliding Window 🪟 — review + re-solve struggles
+**Next**: Session #22 — Week 3, Day 7 (🔥 Weekly Challenge)
+**Topic**: Sliding Window 🪟 — 2 unseen problems, no concept teach, cold pattern-transfer test
 **Plan**:
-1. ⏰ Spaced repetition check (due Jul 19): Boats to Save People (Box 1 — REAL recall test after demotion), Sliding Window Maximum (Box 1 — first recall of Monotonic Deque), Minimum Window Substring, LRCR, Fruit Into Baskets (Box 2)
-2. 🎯 Day 6 per master plan: review + re-solve Week 3 struggles. Candidates: none flagged as re-solve-worthy this week (all 🟢 HIRE) — consider a timed re-solve of Sliding Window Maximum (given broken first draft) or Subarrays with K Distinct (given concept needed 2 teach passes)
+1. ⏰ Spaced repetition check for whatever comes due (check review_schedule.md at session start)
+2. 🎯 Day 7 per master plan: present 2 unseen sliding-window problems cold, Phase B interview pressure throughout, no hints beyond the standard 2/problem cap
 
 **Focus**:
-- Boats to Save People was forgotten COLD (Jul 18) — tomorrow's Box 1 recall is the real test; if recalled, consider whether a code re-solve is warranted
-- Re-probe Minimum Window Substring complexity (O(m+n), not O(m·n)) — flagged correction from Jul 16 recall, due Jul 19
-- Watch the "verbal explanation lags code fluency" pattern (Remove Duplicates Jul 18, LRCR Jul 14) — when a recall answer is vague, push for exact mechanics before accepting
-- Teaching-style rule (2 confirmed data points): concrete small example narrated step-by-step FIRST, tables/abstraction after
+- New composition-bug lesson from today: when a solution is built as `f(a) - f(b)`, probe `f` in isolation before trusting the driver tests — the given tests may only exercise the composed result and miss a systematic bug in `f` itself. Watch for this pattern again in future composed/helper-based solutions.
+- Complexity default-to-loose-bound habit (O(n) over O(k), O(1) over O(k)) surfaced 3x this session — keep nudging toward "what's the TIGHTEST bound, not just a valid one" until it becomes reflexive.
+- Say complexity unprompted, first thing, without being asked — flagged twice today (Boats to Save People, general pattern) as a communication gap that would read poorly in a real interview.
+- After Week 3 Day 7, Week 4 begins — check 00_MASTER_PLAN.md for the next topic.
 
 ---
 
@@ -922,7 +950,7 @@ TEMPLATE for each session entry:
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
 | W2 | 11 + 2 re-solves | 11 | 4.8 | 🎉 Two Pointers & Sorting COMPLETE. 10/11 🟢 HIRE. D6: re-solves crushed (3Sum 20→5 min, Contiguous Array 45→6 min). D7: 2 unseen challenges solved. Key lesson: Math.abs() for distance comparisons. |
-| W3 | 10 (in progress) | 10 | 4.9 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct, Zero Count, Exactly-K Trick, Monotonic Deque (Hard). All 10 🟢 HIRE. 27-problem streak. Day 5 complete — Day 6 (review) + Day 7 (weekly challenge) remain. |
+| W3 | 10 + 2 re-solves | 10 | 4.9 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct, Zero Count, Exactly-K Trick, Monotonic Deque (Hard). All 10 🟢 HIRE. D6: Box 1 emptied (5/5 recalled), re-solves: Sliding Window Maximum 🟢 HIRE (clean vs. yesterday's broken draft), Subarrays w/ K Distinct 🟡 LEAN HIRE (found a test-invisible composition bug). Day 7 (weekly challenge) remains. |
 | W4 | — | — | — | — |
 | W5 | — | — | — | — |
 | W6 | — | — | — | — |

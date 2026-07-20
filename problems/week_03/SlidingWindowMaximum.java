@@ -39,14 +39,11 @@ import java.util.*;
 
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
-        int size = nums.length;
-        int[] maxArray = new int[size-k+1];
-
-        int right = 0;
-
+        // TODO: implement (re-solve — Day 6 review, timer 40 min)
+        int[] result = new int[nums.length-k+1];
         Deque<Integer> dq = new ArrayDeque<>();
-
-        while(right < size ){
+        int right = 0;
+        while(right < nums.length) {
                 if(!dq.isEmpty() && dq.peekFirst()<=right-k) {
                         dq.pollFirst();
                 }
@@ -54,14 +51,14 @@ class Solution {
                         dq.pollLast();
                 }
                 dq.offerLast(right);
-                if(right >= k-1) {
-                        maxArray[right-k+1] = nums[dq.peekFirst()];
+                if(right>=k-1) {
+                        result[right-k+1] = nums[dq.peekFirst()];
                 }
                 right++;
         }
-        return  maxArray;
+        return result;
     }
-}       
+}
 
 public class SlidingWindowMaximum {
     public static void main(String[] args) {
