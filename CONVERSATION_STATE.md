@@ -55,11 +55,11 @@
 | Field | Value |
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
-| **Current Week** | Week 3 — Sliding Window |
-| **Current Day** | Day 6 (July 19-20, 2026) — ✅ COMPLETE (5/5 spaced rep recalled, Box 1 emptied, 2 timed re-solves) |
-| **Current Topic** | Sliding Window — Week 3 Day 7 (weekly challenge) next |
-| **Current Problem** | Week 3 Day 7: 2 unseen sliding-window problems, cold pattern-transfer test |
-| **Session Count** | 21 |
+| **Current Week** | Week 3 — Sliding Window — 🎉 COMPLETE |
+| **Current Day** | Day 7 (July 20-21, 2026) — ✅ COMPLETE (2/2 unseen weekly-challenge problems, both 🟢 HIRE) |
+| **Current Topic** | Week 4 — Stack & Queue starts next session |
+| **Current Problem** | Week 4 Day 1: Valid Parentheses (LC #20) + Min Stack (LC #155) |
+| **Session Count** | 22 |
 | **Total Problems Solved** | 34 (new plan) + 4 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
@@ -641,40 +641,42 @@ TEMPLATE for each session entry:
 
 | Problem | Box Level | Last Reviewed | Due Date | Status |
 |---------|-----------|---------------|----------|--------|
-| Minimum Window Substring (LC #76) | Box 2 | Jul 16 | Jul 19 | ✅ Promoted |
-| Longest Repeating Character Replacement (LC #424) | Box 2 | Jul 16 | Jul 19 | ✅ Promoted |
-| Fruit Into Baskets (LC #904) | Box 2 | Jul 16 | Jul 19 | ✅ Promoted |
-| Max Sum Subarray of Size K | Box 3 | Jul 16 | Jul 23 | ✅ Promoted |
-| Longest Substring Without Repeating (LC #3) | Box 3 | Jul 16 | Jul 23 | ✅ Promoted |
-| Subarrays with K Different Integers (LC #992) | Box 2 | Jul 18 | Jul 21 | ✅ Promoted |
-| Minimum Size Subarray Sum (LC #209) | Box 3 | Jul 17 | Jul 24 | ✅ Promoted |
-| Permutation in String (LC #567) | Box 3 | Jul 17 | Jul 24 | ✅ Promoted |
-| Max Consecutive Ones III (LC #1004) | Box 2 | Jul 17 | Jul 20 | ✅ Promoted |
-| Remove Duplicates (LC #26) | Box 4 | Jul 18 | Aug 1 | ✅ Promoted |
-| 4Sum (LC #18) | Box 4 | Jul 18 | Aug 1 | ✅ Promoted |
-| Subarray Sum Equals K (LC #560) | Box 4 | Jul 18 | Aug 1 | ✅ Promoted |
-| Boats to Save People (LC #881) | Box 1 | Jul 18 | Jul 19 | 🔻 Demoted |
-| Sliding Window Maximum (LC #239) | Box 1 | Jul 18 | Jul 19 | 🆕 New |
-| 3Sum Closest (LC #16) | Box 4 | Jul 18 | Aug 1 | ✅ Promoted |
-| Partition Labels (LC #763) | Box 3 | Jul 13 | Jul 20 | ✅ Promoted |
-| Container With Most Water (LC #11) | Box 3 | Jul 13 | Jul 20 | ✅ Reviewed |
-| Trapping Rain Water (LC #42) | Box 3 | Jul 13 | Jul 20 | ✅ Reviewed |
-| Move Zeroes (LC #283) | Box 3 | Jul 13 | Jul 20 | ✅ Reviewed |
-| Sort Colors (LC #75) | Box 3 | Jul 13 | Jul 20 | ✅ Reviewed |
-| Product Except Self (LC #238) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
-| Longest Consecutive (LC #128) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
-| Encode and Decode Strings (LC #271) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
-| Valid Sudoku (LC #36) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
-| Valid Palindrome (LC #125) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
-| 3Sum (LC #15) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
-| Contiguous Array (LC #525) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
-| Sort Chars By Freq (LC #451) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
-| Two Sum (LC #1) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
-| Contains Duplicate (LC #217) | Box 4 | Jul 6 | Jul 20 | ⏳ Due Jul 20 |
+| Boats to Save People (LC #881) | Box 2 | Jul 19 | Jul 22 | ✅ Reviewed |
+| Sliding Window Maximum (LC #239) | Box 2 | Jul 19 | Jul 22 | ✅ Reviewed |
+| Subarrays with K Different Integers (LC #992) | Box 2 | Jul 18 | Jul 21 | ✅ Reviewed |
+| Minimum Window Substring (LC #76) | Box 3 | Jul 19 | Jul 26 | ✅ Reviewed |
+| Longest Repeating Character Replacement (LC #424) | Box 3 | Jul 19 | Jul 26 | ✅ Reviewed |
+| Fruit Into Baskets (LC #904) | Box 3 | Jul 19 | Jul 26 | ✅ Reviewed |
+| Max Sum Subarray of Size K | Box 3 | Jul 16 | Jul 23 | ✅ Reviewed |
+| Longest Substring Without Repeating (LC #3) | Box 3 | Jul 16 | Jul 23 | ✅ Reviewed |
+| Minimum Size Subarray Sum (LC #209) | Box 3 | Jul 17 | Jul 24 | ✅ Reviewed |
+| Permutation in String (LC #567) | Box 3 | Jul 17 | Jul 24 | ✅ Reviewed |
+| Max Consecutive Ones III (LC #1004) | Box 3 | Jul 20 | Jul 27 | ✅ Promoted |
+| Partition Labels (LC #763) | Box 4 | Jul 20 | Aug 3 | ✅ Promoted |
+| Container With Most Water (LC #11) | Box 4 | Jul 20 | Aug 3 | ✅ Promoted |
+| Trapping Rain Water (LC #42) | Box 4 | Jul 20 | Aug 3 | ✅ Promoted |
+| Move Zeroes (LC #283) | Box 4 | Jul 20 | Aug 3 | ✅ Promoted |
+| Sort Colors (LC #75) | Box 4 | Jul 20 | Aug 3 | ✅ Promoted |
+| Remove Duplicates (LC #26) | Box 4 | Jul 18 | Aug 1 | ✅ Reviewed |
+| 4Sum (LC #18) | Box 4 | Jul 18 | Aug 1 | ✅ Reviewed |
+| Subarray Sum Equals K (LC #560) | Box 4 | Jul 18 | Aug 1 | ✅ Reviewed |
+| 3Sum Closest (LC #16) | Box 4 | Jul 18 | Aug 1 | ✅ Reviewed |
 | Valid Anagram (LC #242) | Box 4 | Jul 13 | Jul 27 | ✅ Reviewed |
 | Two Sum II (LC #167) | Box 4 | Jul 13 | Jul 27 | ✅ Reviewed |
 | Group Anagrams (LC #49) | Box 4 | Jul 13 | Jul 27 | ✅ Reviewed |
 | Top K Frequent (LC #347) | Box 4 | Jul 13 | Jul 27 | ✅ Reviewed |
+| Product Except Self (LC #238) | Box 5 | Jul 20 | Aug 19 | 🎓 Mastered |
+| Longest Consecutive (LC #128) | Box 5 | Jul 20 | Aug 19 | 🎓 Mastered |
+| Encode and Decode Strings (LC #271) | Box 5 | Jul 20 | Aug 19 | 🎓 Mastered |
+| Valid Sudoku (LC #36) | Box 5 | Jul 20 | Aug 19 | 🎓 Mastered |
+| Valid Palindrome (LC #125) | Box 5 | Jul 20 | Aug 19 | 🎓 Mastered |
+| 3Sum (LC #15) | Box 5 | Jul 20 | Aug 19 | 🎓 Mastered |
+| Contiguous Array (LC #525) | Box 5 | Jul 20 | Aug 19 | 🎓 Mastered |
+| Sort Chars By Freq (LC #451) | Box 5 | Jul 20 | Aug 19 | 🎓 Mastered |
+| Two Sum (LC #1) | Box 5 | Jul 20 | Aug 19 | 🎓 Mastered |
+| Contains Duplicate (LC #217) | Box 5 | Jul 20 | Aug 19 | 🎓 Mastered |
+| Subarray Product Less Than K (LC #713) | Box 1 | Jul 20 | Jul 21 | 🆕 New |
+| Minimum Operations to Reduce X to Zero (LC #1658) | Box 1 | Jul 20 | Jul 21 | 🆕 New |
 
 ---
 
@@ -928,19 +930,39 @@ TEMPLATE for each session entry:
 
 ---
 
+### Session #22 — July 20-21, 2026 — Sliding Window (Week 3, Day 7 — 🔥 Weekly Challenge)
+**Status**: ✅ COMPLETE — 🎉 **WEEK 3 COMPLETE**
+
+**Spaced Repetition Recall Results (16 problems — 1 Box 2 + 5 Box 3 + 10 Box 4 due, first-ever Box 5 promotions)**:
+All 16 recalled successfully, zero demotions. Full detail logged in `spaced_repetition/review_schedule.md` under "Today's Review Queue (Jul 20)". Highlights: Partition Labels' cut condition landed clean and unprompted this time (needed a probe on Jul 13); Trapping Rain Water's two-pointer bottleneck argument (`height[left] < height[right] ⟹ rightMax ≥ height[right] > height[left]`) self-derived precisely; Sort Colors' "why mid doesn't increment after a high-swap" self-derived precisely. 10 problems (Product Except Self, Longest Consecutive, Encode/Decode Strings, Valid Sudoku, Valid Palindrome, 3Sum, Contiguous Array, Sort Chars By Freq, Two Sum, Contains Duplicate) hit **Box 5 (mastered)** for the first time this cycle.
+
+**Recall Verdict: 16/16, zero demotions. Box 5 populated for the first time (10 problems).**
+
+**Problems Covered (both UNSEEN, cold, no concept teach)**:
+- Subarray Product Less Than K (LC #713): ✅ NEW — 🟢 HIRE. Approach (incl. `k==0` early-return) stated correctly before coding. All 5 tests first try, zero bugs, zero hints. Correctly reasoned that a zero element would break the division-based shrink (product frozen at 0), though ruled out by constraints. One complexity notation nit ("space 0" → O(1)).
+- Minimum Operations to Reduce X to Zero (LC #1658): ✅ NEW — 🟢 HIRE. The core insight — reframing prefix+suffix removal as "find the longest middle subarray summing to `total - x`" — was **fully self-derived, unprompted**, including the caveat that it breaks under negative numbers. All 5 tests first try, zero bugs. One good self-correction: initially proposed unnecessary explicit checks for `target < 0`/`target == 0` after a probe about sentinel safety, then hand-traced the actual code (unprompted-quality) and correctly concluded no special-casing was needed — window length is bounded at 0, never negative, so the `-1` sentinel can't collide with a real result.
+
+**Key Observations**:
+- **29-problem solved streak, 26 of those clean 🟢 HIRE** 🔥🔥🔥
+- This week's real test — cold transfer to problems that don't scream "sliding window" — was passed cleanly. LC #1658 in particular required recognizing a non-obvious reframe with zero hints.
+- New good habit: when challenged on a hunch (sentinel-collision question), default was to propose an unnecessary fix rather than first re-verifying against the actual code/trace — but self-corrected immediately once asked to trace it. Worth reinforcing: **check the real code/trace before assuming a fix is needed**, not just when told a bug exists.
+- 🎉 **WEEK 3 COMPLETE** — all 12 new problems + weekly challenge done, avg confidence 5.0, zero LEAN HIRE or worse on any new problem this week.
+
+---
+
 ## ⏭️ Next Session Plan
 
-**Next**: Session #22 — Week 3, Day 7 (🔥 Weekly Challenge)
-**Topic**: Sliding Window 🪟 — 2 unseen problems, no concept teach, cold pattern-transfer test
+**Next**: Session #23 — Week 4, Day 1 (Stack & Queue)
+**Topic**: Stack for matching/nesting — first two stack problems
 **Plan**:
-1. ⏰ Spaced repetition check for whatever comes due (check review_schedule.md at session start)
-2. 🎯 Day 7 per master plan: present 2 unseen sliding-window problems cold, Phase B interview pressure throughout, no hints beyond the standard 2/problem cap
+1. ⏰ Spaced repetition check for whatever comes due (check review_schedule.md at session start — note Box 1 now has 2 problems due Jul 21 for the first time in a while)
+2. 📚 Concept teach: Stack basics (LIFO, push/pop/peek) if needed, then Monotonic Stack preview (used later this week) — lead with a small concrete example first, not the abstract mechanism (established preference, confirmed 3x: Exactly-K trick, Monotonic Deque, this pattern holds)
+3. 🎯 Day 1 per master plan: Valid Parentheses (LC #20, Easy) + Min Stack (LC #155, Medium)
 
 **Focus**:
-- New composition-bug lesson from today: when a solution is built as `f(a) - f(b)`, probe `f` in isolation before trusting the driver tests — the given tests may only exercise the composed result and miss a systematic bug in `f` itself. Watch for this pattern again in future composed/helper-based solutions.
-- Complexity default-to-loose-bound habit (O(n) over O(k), O(1) over O(k)) surfaced 3x this session — keep nudging toward "what's the TIGHTEST bound, not just a valid one" until it becomes reflexive.
-- Say complexity unprompted, first thing, without being asked — flagged twice today (Boats to Save People, general pattern) as a communication gap that would read poorly in a real interview.
-- After Week 3 Day 7, Week 4 begins — check 00_MASTER_PLAN.md for the next topic.
+- Carry forward: when challenged on a hunch, re-verify against the actual code/trace before proposing a fix (surfaced this session on the Minimum Operations sentinel question).
+- Say complexity unprompted, first thing — still an occasional gap (minor notation slip this session on Subarray Product Less Than K, "space 0" vs O(1)).
+- This is a brand-new topic (Stack) — expect first-exposure friction on Day 1, same as Monotonic Deque's rocky first teach on Jul 18. Small-concrete-example-first is the confirmed working style for new data structures/concepts.
 
 ---
 
@@ -950,8 +972,8 @@ TEMPLATE for each session entry:
 |------|----------------|-------------|----------------|-----------------|
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
 | W2 | 11 + 2 re-solves | 11 | 4.8 | 🎉 Two Pointers & Sorting COMPLETE. 10/11 🟢 HIRE. D6: re-solves crushed (3Sum 20→5 min, Contiguous Array 45→6 min). D7: 2 unseen challenges solved. Key lesson: Math.abs() for distance comparisons. |
-| W3 | 10 + 2 re-solves | 10 | 4.9 | Sliding Window: Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct, Zero Count, Exactly-K Trick, Monotonic Deque (Hard). All 10 🟢 HIRE. D6: Box 1 emptied (5/5 recalled), re-solves: Sliding Window Maximum 🟢 HIRE (clean vs. yesterday's broken draft), Subarrays w/ K Distinct 🟡 LEAN HIRE (found a test-invisible composition bug). Day 7 (weekly challenge) remains. |
-| W4 | — | — | — | — |
+| W3 | 12 + 2 re-solves | 12 | 5.0 | 🎉 Sliding Window COMPLETE. Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct, Zero Count, Exactly-K Trick, Monotonic Deque (Hard), Count-Subarrays, Reframe-as-Window. All 12 new problems 🟢 HIRE (zero LEAN HIRE or worse). D6: Box 1 emptied, re-solves (1 HIRE, 1 LEAN HIRE — test-invisible composition bug found). D7: 2 unseen weekly-challenge problems, both clean HIRE, cold pattern transfer including a non-obvious reframe. First-ever Box 5 (mastered) promotions — 10 problems. |
+| W4 | — | — | — | Stack & Queue — starts Session #23 |
 | W5 | — | — | — | — |
 | W6 | — | — | — | — |
 | W7 | — | — | — | — |

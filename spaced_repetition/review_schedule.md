@@ -23,7 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| _empty_ | — | — | — | — |
+| Subarray Product Less Than K (LC #713) | Sliding Window — Count Subarrays | Jul 20 | Jul 20 | Jul 21 |
+| Minimum Operations to Reduce X to Zero (LC #1658) | Reframe as Longest-Subarray Window | Jul 20 | Jul 20 | Jul 21 |
 
 ---
 
@@ -33,7 +34,6 @@
 |---------|---------|------------|-------------|-------------|
 | Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 19 | Jul 19 | Jul 22 |
 | Sliding Window Maximum (LC #239) | Fixed Window + Monotonic Deque | Jul 19 | Jul 19 | Jul 22 |
-| Max Consecutive Ones III (LC #1004) | Variable Sliding Window + Zero Count | Jul 17 | Jul 17 | Jul 20 |
 | Subarrays with K Different Integers (LC #992) | Exactly-K trick (atMost(K) − atMost(K−1)) | Jul 17 | Jul 18 | Jul 21 |
 
 ---
@@ -49,11 +49,7 @@
 | Fruit Into Baskets (LC #904) | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Jul 19 | Jul 19 | Jul 26 |
 | Max Sum Subarray of Size K | Fixed Sliding Window | Jul 16 | Jul 16 | Jul 23 |
 | Longest Substring Without Repeating (LC #3) | Variable Sliding Window + HashSet/HashMap-Index-Jump | Jul 16 | Jul 16 | Jul 23 |
-| Partition Labels (LC #763) | Greedy + Last Occurrence Map | Jul 13 | Jul 13 | Jul 20 |
-| Container With Most Water (LC #11) | Greedy Two Pointers | Jul 6 | Jul 13 | Jul 20 |
-| Trapping Rain Water (LC #42) | Two Pointers (maxLeft/maxRight) | Jul 6 | Jul 13 | Jul 20 |
-| Move Zeroes (LC #283) | Two Pointers (Same Direction) | Jul 6 | Jul 13 | Jul 20 |
-| Sort Colors (LC #75) | Dutch National Flag (3-way Partition) | Jul 6 | Jul 13 | Jul 20 |
+| Max Consecutive Ones III (LC #1004) | Variable Sliding Window + Zero Count | Jul 20 | Jul 20 | Jul 27 |
 
 ---
 
@@ -65,20 +61,15 @@
 | Two Sum II (LC #167) | Two Pointers (Opposite) | Jun 28 | Jul 13 | Jul 27 |
 | Group Anagrams (LC #49) | HashMap Grouping (Freq Key) | Jun 28 | Jul 13 | Jul 27 |
 | Top K Frequent (LC #347) | Freq Count + Bucket Sort | Jun 28 | Jul 13 | Jul 27 |
-| Product Except Self (LC #238) | Prefix/Suffix Product | Jul 6 | Jul 6 | Jul 20 |
-| Longest Consecutive Sequence (LC #128) | HashSet + Sequence Start | Jul 6 | Jul 6 | Jul 20 |
-| Encode and Decode Strings (LC #271) | Length-Prefix Encoding | Jul 6 | Jul 6 | Jul 20 |
-| Valid Sudoku (LC #36) | HashSet per Row/Col/Box | Jul 6 | Jul 6 | Jul 20 |
-| Valid Palindrome (LC #125) | Two Pointers (Opposite Ends) | Jul 6 | Jul 6 | Jul 20 |
-| 3Sum (LC #15) | Sort + Fix One + Two Pointers | Jul 6 | Jul 6 | Jul 20 |
-| Contiguous Array (LC #525) | Prefix Sum + HashMap (Max Length Variant) | Jul 6 | Jul 6 | Jul 20 |
-| Sort Characters By Frequency (LC #451) | Freq Count + Bucket Sort | Jul 6 | Jul 6 | Jul 20 |
-| Two Sum (LC #1) | HashMap Complement | Jul 6 | Jul 6 | Jul 20 |
-| Contains Duplicate (LC #217) | HashSet Membership | Jul 6 | Jul 6 | Jul 20 |
 | Remove Duplicates (LC #26) | Two Pointers (Same Dir — Write Pointer) | Jul 11 | Jul 18 | Aug 1 |
 | 4Sum (LC #18) | Sort + Fix Two + Two Pointers | Jul 11 | Jul 18 | Aug 1 |
 | Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jul 11 | Jul 18 | Aug 1 |
 | 3Sum Closest (LC #16) | Sort + Fix One + Two Pointers (Closest) | Jul 11 | Jul 18 | Aug 1 |
+| Partition Labels (LC #763) | Greedy + Last Occurrence Map | Jul 20 | Jul 20 | Aug 3 |
+| Container With Most Water (LC #11) | Greedy Two Pointers | Jul 20 | Jul 20 | Aug 3 |
+| Trapping Rain Water (LC #42) | Two Pointers (maxLeft/maxRight) | Jul 20 | Jul 20 | Aug 3 |
+| Move Zeroes (LC #283) | Two Pointers (Same Direction) | Jul 20 | Jul 20 | Aug 3 |
+| Sort Colors (LC #75) | Dutch National Flag (3-way Partition) | Jul 20 | Jul 20 | Aug 3 |
 
 ---
 
@@ -86,13 +77,44 @@
 
 | Problem | Pattern | Mastered Date | Last Review | Next Review |
 |---------|---------|---------------|-------------|-------------|
-| _empty_ | — | — | — | — |
+| Product Except Self (LC #238) | Prefix/Suffix Product | Jul 20 | Jul 20 | Aug 19 |
+| Longest Consecutive Sequence (LC #128) | HashSet + Sequence Start | Jul 20 | Jul 20 | Aug 19 |
+| Encode and Decode Strings (LC #271) | Length-Prefix Encoding | Jul 20 | Jul 20 | Aug 19 |
+| Valid Sudoku (LC #36) | HashSet per Row/Col/Box | Jul 20 | Jul 20 | Aug 19 |
+| Valid Palindrome (LC #125) | Two Pointers (Opposite Ends) | Jul 20 | Jul 20 | Aug 19 |
+| 3Sum (LC #15) | Sort + Fix One + Two Pointers | Jul 20 | Jul 20 | Aug 19 |
+| Contiguous Array (LC #525) | Prefix Sum + HashMap (Max Length Variant) | Jul 20 | Jul 20 | Aug 19 |
+| Sort Characters By Frequency (LC #451) | Freq Count + Bucket Sort | Jul 20 | Jul 20 | Aug 19 |
+| Two Sum (LC #1) | HashMap Complement | Jul 20 | Jul 20 | Aug 19 |
+| Contains Duplicate (LC #217) | HashSet Membership | Jul 20 | Jul 20 | Aug 19 |
 
 ---
 
 ## 🔔 Today's Review Queue
 
-**Date**: July 19, 2026
+**Date**: July 20, 2026
+
+### Spaced Repetition Recall (16 problems — 1 Box 2 + 5 Box 3 + 10 Box 4 due):
+- ✅ Max Consecutive Ones III (LC #1004) — Perfect. Zero-count expand, shrink when count > k, track max window size. O(n)/O(1). → **Promoted to Box 3**
+- ✅ Partition Labels (LC #763) — Cut condition (`i == end`) recalled clean and unprompted (needed a probe last time, Jul 13). Complexity needed 2 probes to reach O(1) space (bounded by 26-letter alphabet, not O(n)). → **Promoted to Box 4**
+- ✅ Container With Most Water (LC #11) — Perfect, immediate. O(n)/O(1). → **Promoted to Box 4**
+- ✅ Trapping Rain Water (LC #42) — Solid two-pointer approach; probed on WHY `height[left] < height[right]` guarantees `min(leftMax,rightMax)==leftMax` — nailed the argument unprompted-quality (right wall guaranteed ≥ height[right] > height[left], so right can't be the bottleneck). O(n)/O(1). → **Promoted to Box 4**
+- ✅ Move Zeroes (LC #283) — Perfect, immediate. O(n)/O(1). → **Promoted to Box 4**
+- ✅ Sort Colors (LC #75) — Perfect, including unprompted-quality explanation of why `mid` doesn't increment after a `high` swap (unexamined element could still be a 0). O(n)/O(1). → **Promoted to Box 4**
+- ✅ Product Except Self (LC #238) — Perfect. O(n)/O(1). → **Promoted to Box 5 (mastered)**
+- ✅ Longest Consecutive Sequence (LC #128) — Perfect, including the "only start counting at sequence starters" optimization argument. O(n)/O(n). → **Promoted to Box 5**
+- ✅ Encode and Decode Strings (LC #271) — Perfect, including why length-prefix avoids delimiter ambiguity. O(n)/O(1) aux. → **Promoted to Box 5**
+- ✅ Valid Sudoku (LC #36) — Perfect. Correctly called out O(1)/O(1) despite the "9x9 grid feel". → **Promoted to Box 5**
+- ✅ Valid Palindrome (LC #125) — Perfect. O(n)/O(1). → **Promoted to Box 5**
+- ✅ 3Sum (LC #15) — Perfect, including sort's own space overhead caveat. O(n²)/O(1). → **Promoted to Box 5**
+- ✅ Contiguous Array (LC #525) — Perfect. O(n)/O(n). → **Promoted to Box 5**
+- ✅ Sort Characters By Frequency (LC #451) — Perfect. O(n)/O(n). → **Promoted to Box 5**
+- ✅ Two Sum (LC #1) — Perfect. O(n)/O(n). → **Promoted to Box 5**
+- ✅ Contains Duplicate (LC #217) — Perfect. O(n)/O(n). → **Promoted to Box 5**
+
+**Recall Verdict (Jul 20 queue): 16/16 recalled, zero demotions. First problems ever to reach Box 5 (mastered) — 10 of them in one day.**
+
+### Previous Queue (July 19, 2026):
 
 ### Spaced Repetition Recall (5 problems — 2 Box 1 due + 3 Box 2 due):
 - ✅ Boats to Save People (LC #881) — REAL recall test after Jul 18 cold forgetting: PASSED. Problem statement, sort + greedy pairing (heaviest always boards, lightest joins if fits), left==right edge case all recalled unprompted. O(n log n)/O(1) correct but only after TWO probes — complexity was skipped twice. → **Promoted to Box 2**
@@ -164,13 +186,13 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 33 |
-| Box 1 (daily) | 0 |
-| Box 2 (3-day) | 4 |
-| Box 3 (weekly) | 12 |
-| Box 4 (bi-weekly) | 17 |
-| Box 5 (mastered) | 0 |
-| Reviews completed today (Jul 19) | 5 of 5 |
-| Problems solved today | 0 |
+| Total problems in system | 35 |
+| Box 1 (daily) | 2 |
+| Box 2 (3-day) | 3 |
+| Box 3 (weekly) | 8 |
+| Box 4 (bi-weekly) | 12 |
+| Box 5 (mastered) | 10 |
+| Reviews completed today (Jul 20) | 16 of 16 |
+| Problems solved today | 2 (both NEW, UNSEEN, 🟢 HIRE) |
 | Re-solves today | 0 |
-| Streak (consecutive days) | 6 |
+| Streak (consecutive days) | 7 |

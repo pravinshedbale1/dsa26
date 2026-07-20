@@ -68,6 +68,8 @@
 ---
 
 | 45 | Jul 18 | Sliding Window Maximum (NEW) | 239 | Hard | Fixed Window + Monotonic Deque | Brute O(n·k) rescan → Monotonic decreasing deque of indices O(n)/O(k) | O(n) | O(k) | ✅ | 5 | Box 1 | 🟢 HIRE. NEW data structure (Deque) taught same session — first teach attempt (trace table) didn't land, slow narrative walkthrough on [4,2,5,1] with "younger and taller candidate" analogy clicked. First code draft was broken (poll-on-empty, inverted isEmpty loop) and asked interviewer to validate — deflected to self-trace, then produced clean correct code unaided. All 5 tests first try. Zero bugs at test time, zero hints (deque API cheat sheet free). Follow-ups: if-vs-while front expiry (correct — window slides by 1), strict `<` vs `<=` back-pop with duplicates (correct — equal newer copy dominates, both work). Under 40-min Hard limit. |
+| 46 | Jul 20 | Subarray Product Less Than K (NEW, UNSEEN) | 713 | Medium | Sliding Window — Count Subarrays | Brute O(n²) → Variable window + count += right-left+1 O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. UNSEEN weekly challenge. Approach (incl. k==0 early return) stated correctly before coding. All 5 tests first try. Zero bugs, zero hints. Complexity notation nit only ("space 0" → corrected to O(1)). Correctly reasoned that a zero in nums would break the division-based shrink (product frozen at 0, infinite loop / left runs off), though problem constraints rule it out. |
+| 47 | Jul 20 | Minimum Operations to Reduce X to Zero (NEW, UNSEEN) | 1658 | Medium/Hard | Reframe as Longest-Subarray Window | Brute O(n²) → reframe as longest subarray summing to (total-x), variable window O(n)/O(1) | O(n) | O(1) | ✅ | 5 | Box 1 | 🟢 HIRE. UNSEEN weekly challenge — the reframe (prefix+suffix removal = one leftover middle slice; maximize it) was fully self-derived, unprompted, including the "breaks under negative numbers" caveat. All 5 tests first try, zero bugs. When probed on whether the `-1` sentinel could collide with a real window length, initially proposed unnecessary explicit checks for target<0/target==0; self-corrected after being asked to hand-trace the existing code, and independently confirmed window length is bounded at 0 (never negative) so no collision is possible. |
 
 ## Weekly Aggregates
 
@@ -95,4 +97,7 @@
 | W3 D3 | 1 (complete) | 1 | 0 | 0 | 0 | 5.0 | Variable Window + Need/Formed Counter (Hard) |
 | W3 D4 | 3 (complete) | 3 | 0 | 0 | 0 | 4.7 | Max Frequency + At-Most-K-Distinct + Zero Count |
 | W3 D5 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Exactly-K trick + Monotonic Deque (Hard) |
+| W3 D6 | 2 re-solves | 2 | 0 | 0 | 0 | 5.0 | Sliding Window Maximum HIRE (clean vs. broken draft) + Subarrays w/ K Distinct LEAN HIRE (test-invisible composition bug) |
+| W3 D7 | 2 (complete) 🎉 | 2 | 0 | 0 | 0 | 5.0 | Subarray Product Less Than K + Minimum Ops to Reduce X to Zero (both UNSEEN, cold transfer) |
+| **W3 TOTAL** | **12 + 2 re-solves** | **12** | **0** | **0** | **0** | **5.0** | **All Sliding Window patterns: Fixed, Variable, Need/Formed (Hard), Max Freq, At-Most-K, Zero Count, Exactly-K, Monotonic Deque (Hard), Count-Subarrays, Reframe-as-Window** |
 

@@ -180,3 +180,47 @@
 ```
 
 ---
+
+## Card 12: Variable Window — Count Subarrays (Subarray Product Less Than K, LC #713)
+```
+🔍 TRIGGER: "Count subarrays where product/sum satisfies a threshold" (positive elements)
+💡 IDEA:   Expand right, multiply into running product. While product >= k, shrink left,
+           dividing back out. Every window ending at `right` from `left..right` is valid
+           → add (right-left+1) to count each step (same accumulation trick as the
+           Exactly-K helper, Card 9).
+📝 CODE:   product *= nums[right]; while (product >= k) { product /= nums[left]; left++; }
+           count += right - left + 1;
+⏱️ TIME:   O(n) amortized  |  SPACE: O(1)
+⚠️ KEY:    k == 0 needs an explicit early return (positive product can never be < 0).
+⚠️ EDGE:   Breaks if any nums[i] == 0 (division by zero, window can't recover) — safe
+           only because this problem's constraints guarantee nums[i] >= 1.
+```
+
+---
+
+## Card 13: Reframe as Longest-Subarray Window (Minimum Operations to Reduce X to Zero, LC #1658)
+```
+🔍 TRIGGER: "Remove elements from the left/right ends to hit an exact target" — not
+           obviously a sliding window until you reframe what's LEFT OVER.
+💡 IDEA:   Removing a prefix + a suffix leaves one untouched contiguous middle slice.
+           If total = sum(nums), that middle slice must sum to (total - x). Maximizing
+           the middle slice minimizes end-removals. So: find the LONGEST subarray with
+           sum == total - x using a standard variable window (works because all values
+           are positive → window sum is monotonic). Answer = n - longestWindow, or -1
+           if no window ever hits the target.
+📝 CODE:   target = total - x;
+           while (right < n) { sum += nums[right];
+             while (sum > target) { sum -= nums[left]; left++; }
+             if (sum == target) best = max(best, right-left+1);
+             right++; }
+           return best == -1 ? -1 : n - best;
+⏱️ TIME:   O(n)  |  SPACE: O(1)
+⚠️ KEY:    No special-casing needed for target==0 or target<0 — the general loop already
+           handles both (window length is bounded at 0, never negative, so the -1
+           sentinel can never collide with a real result). Verify with a trace before
+           assuming a fix is needed.
+⚠️ EDGE:   Breaks under negative numbers (monotonicity of window sum is what justifies
+           skipping recomputation from scratch).
+```
+
+---

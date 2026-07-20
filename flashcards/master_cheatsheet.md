@@ -878,15 +878,15 @@ sb.toString();
 
 | Metric | Value |
 |--------|-------|
-| Total problems | 19 |
-| 🟢 HIRE | 16 |
+| Total problems (verdicted) | 29 |
+| 🟢 HIRE | 26 |
 | 🟡 LEAN HIRE | 3 |
 | 🟠 LEAN NO HIRE | 0 |
 | 🔴 NO HIRE | 0 |
-| Current streak | 14 🟢 HIRE consecutive |
-| Hardest solved | Trapping Rain Water (Hard) — flawless |
+| Current streak | 29 consecutive solved (no failures), 26 of those clean 🟢 HIRE |
+| Hardest solved | Minimum Window Substring / Sliding Window Maximum (both Hard) — flawless |
 | Fastest solve | Sort Chars By Freq — ~3 min |
 
 ---
 
-_Last updated: June 28, 2026 — Session #10_
+_Last updated: July 20-21, 2026 — Session #22 (Week 3 Day 7, weekly challenge — Sliding Window COMPLETE)_
