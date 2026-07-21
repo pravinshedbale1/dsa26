@@ -25,6 +25,8 @@
 |---------|---------|------------|-------------|-------------|
 | Subarray Product Less Than K (LC #713) | Sliding Window — Count Subarrays | Jul 20 | Jul 20 | Jul 21 |
 | Minimum Operations to Reduce X to Zero (LC #1658) | Reframe as Longest-Subarray Window | Jul 20 | Jul 20 | Jul 21 |
+| Valid Parentheses (LC #20) | Stack for Matching/Nesting | Jul 21 | Jul 21 | Jul 22 |
+| Min Stack (LC #155) | Auxiliary Stack (Running Min) | Jul 21 | Jul 21 | Jul 22 |
 
 ---
 
@@ -186,8 +188,8 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 35 |
-| Box 1 (daily) | 2 |
+| Total problems in system | 37 |
+| Box 1 (daily) | 4 |
 | Box 2 (3-day) | 3 |
 | Box 3 (weekly) | 8 |
 | Box 4 (bi-weekly) | 12 |

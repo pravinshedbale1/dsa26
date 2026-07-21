@@ -55,11 +55,11 @@
 | Field | Value |
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
-| **Current Week** | Week 3 — Sliding Window — 🎉 COMPLETE |
-| **Current Day** | Day 7 (July 20-21, 2026) — ✅ COMPLETE (2/2 unseen weekly-challenge problems, both 🟢 HIRE) |
-| **Current Topic** | Week 4 — Stack & Queue starts next session |
-| **Current Problem** | Week 4 Day 1: Valid Parentheses (LC #20) + Min Stack (LC #155) |
-| **Session Count** | 22 |
+| **Current Week** | Week 4 — Stack & Queue |
+| **Current Day** | Day 1 — ✅ COMPLETE (Valid Parentheses + Min Stack, both 🟢 HIRE) |
+| **Current Topic** | Week 4 Day 2 next — Evaluate RPN + Daily Temperatures (first Monotonic Stack) |
+| **Current Problem** | Week 4 Day 2: Evaluate Reverse Polish Notation (LC #150) |
+| **Session Count** | 23 |
 | **Total Problems Solved** | 34 (new plan) + 4 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
@@ -677,6 +677,8 @@ TEMPLATE for each session entry:
 | Contains Duplicate (LC #217) | Box 5 | Jul 20 | Aug 19 | 🎓 Mastered |
 | Subarray Product Less Than K (LC #713) | Box 1 | Jul 20 | Jul 21 | 🆕 New |
 | Minimum Operations to Reduce X to Zero (LC #1658) | Box 1 | Jul 20 | Jul 21 | 🆕 New |
+| Valid Parentheses (LC #20) | Box 1 | Jul 21 | Jul 22 | 🆕 New |
+| Min Stack (LC #155) | Box 1 | Jul 21 | Jul 22 | 🆕 New |
 
 ---
 
@@ -950,19 +952,34 @@ All 16 recalled successfully, zero demotions. Full detail logged in `spaced_repe
 
 ---
 
+### Session #23 — July 21, 2026 — Stack & Queue (Week 4, Day 1)
+**Status**: 🔄 IN PROGRESS
+
+**Concept Teach**: Stack (LIFO push/pop/peek) taught with the "stack of plates" analogy first, then a small concrete trace ([3,7,2] → pop → push(9)) with a comprehension check (answered correctly: peek()==9). Then Min Stack's auxiliary-stack trick taught with a concrete push-by-push trace ([5],[5,3],[5,3,3]...) — comprehension check on what `minStack` looks like after pushing a 4th element (4): got the min value right (3) but initially gave a 3-element answer instead of 4 (missed that `minStack` must grow 1:1 with `main` on every push, not just when the min changes) — corrected on the spot. No re-teach needed, unlike Monotonic Deque's rocky first pass on Jul 18 — this concept landed on the first narrative-first pass.
+
+**Problems Covered**:
+- Valid Parentheses (LC #20): ✅ NEW — 🟢 HIRE. First stack problem. Approach stated correctly (stack + close→open map) before coding. All 6 tests first try, zero bugs, zero hints (all follow-ups were reasoning probes on already-passing code, not fixes). Used an unconventional but correct sentinel-stack design (push `'z'` at the bottom to avoid `isEmpty()` checks) — on mismatch, the code doesn't fail fast, it falls through and pushes the closing bracket; still correct because a wrongly-pushed closer can never be matched later (the map only maps closers→openers). Follow-ups: correctly explained why `'z'` is safe only because constraints guarantee a bracket-only alphabet; correctly identified the fail-fast improvement (return false immediately on a top-mismatch) when asked "can you do better?"
+- Min Stack (LC #155): ✅ NEW — 🟢 HIRE. Auxiliary stack, applied the `>=` tie-handling rule from the concept walkthrough correctly and without prompting. All 5 tests first try, zero bugs, zero hints. Precise per-operation complexity (push O(1); space O(n), 2n worst case on strictly descending input). Follow-up (why not a single `minSoFar` variable): correctly explained the lost-history problem — once the element that set the current min is popped, a bare variable can't recover the prior min without a rescan.
+
+**Key Observations**:
+- **31-problem solved streak, 29 of those clean 🟢 HIRE** 🔥🔥🔥 — first day of a brand-new topic (Stack), both problems clean, zero re-teach needed on Min Stack (unlike Monotonic Deque's rocky first pass on Jul 18 — this concept landed first try)
+- Notable non-fail-fast-but-still-correct design pattern surfaced on Valid Parentheses: pushing a "wrong" element that can structurally never be matched later is a valid (if unconventional) way to defer failure detection to the end — worth recognizing this shape again, though fail-fast is cleaner practice for a real interview
+- 🎉 **Day 1 complete!** Both problems done (Valid Parentheses, Min Stack). Next: Day 2 — Evaluate RPN + Daily Temperatures (first Monotonic Stack problem, new concept).
+
+---
+
 ## ⏭️ Next Session Plan
 
-**Next**: Session #23 — Week 4, Day 1 (Stack & Queue)
-**Topic**: Stack for matching/nesting — first two stack problems
+**Next**: Session #24 — Week 4, Day 2
+**Topic**: Stack for expression evaluation + first Monotonic Stack problem
 **Plan**:
-1. ⏰ Spaced repetition check for whatever comes due (check review_schedule.md at session start — note Box 1 now has 2 problems due Jul 21 for the first time in a while)
-2. 📚 Concept teach: Stack basics (LIFO, push/pop/peek) if needed, then Monotonic Stack preview (used later this week) — lead with a small concrete example first, not the abstract mechanism (established preference, confirmed 3x: Exactly-K trick, Monotonic Deque, this pattern holds)
-3. 🎯 Day 1 per master plan: Valid Parentheses (LC #20, Easy) + Min Stack (LC #155, Medium)
+1. ⏰ Spaced repetition check — Box 1 now has 4 problems due Jul 22 (Subarray Product Less Than K, Minimum Operations to Reduce X to Zero, Valid Parentheses, Min Stack)
+2. 📚 Concept teach: Monotonic Stack (new) — lead with a small concrete example first, not the abstract mechanism (confirmed working style: Exactly-K trick, Monotonic Deque, Min Stack all landed via concrete-first)
+3. 🎯 Day 2 per master plan: Evaluate Reverse Polish Notation (LC #150, Medium) + Daily Temperatures (LC #739, Medium, first Monotonic Stack)
 
 **Focus**:
-- Carry forward: when challenged on a hunch, re-verify against the actual code/trace before proposing a fix (surfaced this session on the Minimum Operations sentinel question).
-- Say complexity unprompted, first thing — still an occasional gap (minor notation slip this session on Subarray Product Less Than K, "space 0" vs O(1)).
-- This is a brand-new topic (Stack) — expect first-exposure friction on Day 1, same as Monotonic Deque's rocky first teach on Jul 18. Small-concrete-example-first is the confirmed working style for new data structures/concepts.
+- Carry forward: when challenged on a hunch, re-verify against the actual code/trace before proposing a fix (confirmed on Minimum Operations sentinel question, Jul 20).
+- Monotonic Stack is conceptually close to Week 3's Monotonic Deque (Sliding Window Maximum) — worth drawing the parallel explicitly if it helps: same "evict what can never win again" idea, minus the front-expiry/window-size complication.
 
 ---
 
