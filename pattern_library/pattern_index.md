@@ -55,6 +55,7 @@
 | 44 | "Count subarrays where product/sum meets a threshold" (positive elements) | Variable window; shrink while invalid; every window ending at right is valid down to left → add (right-left+1) each step, don't just track a max | **Sliding Window — Count Subarrays** | `product *= nums[right]; while (product >= k) { product /= nums[left]; left++; } count += right-left+1;` |
 | 45 | "Remove elements from BOTH ends to hit an exact target" | Reframe: what's left over after removing a prefix+suffix is one contiguous middle slice. Find the LONGEST subarray summing to (total - target) via a normal variable window; answer = n - longestWindow | **Reframe as Longest-Subarray Window** | `target = total - x; expand/shrink to find sum == target; return n - maxLen (or -1)` |
 | 46 | "Design a stack/structure with O(1) getMin/getMax" | Auxiliary stack running in parallel: push the new value if it's a new min, else repeat the current min (use >=, not >, so ties repeat too); pop both together so they never desync | **Auxiliary Stack (Running Min/Max)** | `if (minStack.isEmpty() \|\| minStack.peek() >= v) minStack.push(v); stack.push(v);` |
+| 47 | "Evaluate postfix/prefix expression" | Push operands. On an operator, pop twice (second pop = left operand, first pop = right operand — order matters for - and /), apply, push result back. Stack removes the need for parens/precedence since ops always combine the two most recent operands | **Stack for Expression Evaluation** | `if (isOp(t)) { b=pop(); a=pop(); push(apply(a,t,b)); } else push(parseInt(t));` |
 
 ---
 

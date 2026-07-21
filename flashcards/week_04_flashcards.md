@@ -44,3 +44,53 @@
 ```
 
 ---
+
+## Card 3: Stack for Expression Evaluation (Evaluate RPN, LC #150)
+```
+🔍 TRIGGER: Postfix/prefix expression evaluation, or any "process left-to-right, combine
+           the two most recent pending operands when an operator shows up" problem.
+💡 IDEA:   Push numbers. On an operator, pop TWICE — second pop is the left operand,
+           first pop is the right operand (order matters for - and /). Apply the op,
+           push the result back. At the end, the stack holds exactly one value: the answer.
+📝 CODE:   for (String t : tokens) {
+             if (isOperator(t)) { int b = stack.pop(); int a = stack.pop();
+               stack.push(apply(a, t, b)); }
+             else stack.push(Integer.parseInt(t));
+           }
+           return stack.pop();
+⏱️ TIME:   O(n)  |  SPACE: O(n) worst case, but tight bound is ~(n+1)/2 (still O(n) in Big-O —
+           constants drop out). n = 2k+1 for k operators; each op is net -1 on stack depth.
+⚠️ KEY:    Prefer checking token against the literal operator strings/chars over relying on
+           parseInt throwing — a broad catch can silently swallow unrelated bugs in production.
+           Operand order for pop: first pop = right-hand operand, second pop = left-hand.
+⚠️ EDGE:   Negative number tokens (don't misparse "-11" as the '-' operator), division
+           truncates toward zero (not floor — matters for negative results).
+```
+
+---
+
+## Card 4: Monotonic Stack (Daily Temperatures, LC #739)
+```
+🔍 TRIGGER: "Next greater/warmer/larger element" — for each index, find the next index
+           to the right with a bigger value.
+💡 IDEA:   Keep a stack of indices whose temps are DECREASING bottom→top. When a new
+           value beats the top, that top index just found its answer — pop it, record
+           `i - poppedIndex`, and keep popping while the new value beats the new top.
+           Once nothing left to pop (or nothing beats the new value), push i.
+📝 CODE:   for (i = 0; i < n; i++) {
+             while (!stack.isEmpty() && temp[stack.peek()] < temp[i]) {
+               int idx = stack.pop(); result[idx] = i - idx;
+             }
+             stack.push(i);
+           }
+⏱️ TIME:   O(n) amortized — each index pushed once, popped at most once |  SPACE: O(n)
+⚠️ KEY:    No separate "push" branch needed — the while loop's own condition already
+           no-ops when the top is bigger, so just always fall through to push after the
+           while. Same "evict what can never win again" idea as Monotonic Deque, minus
+           the front-expiry/window-size complication.
+⚠️ EDGE:   Strictly increasing input (every element resolves the very next day), strictly
+           decreasing (nothing ever resolves, all zeros), all-equal values (strict `<`
+           means equal values never pop each other — correctly stay 0 until a real rise).
+```
+
+---

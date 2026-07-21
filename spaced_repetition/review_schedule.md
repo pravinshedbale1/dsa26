@@ -23,10 +23,10 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Subarray Product Less Than K (LC #713) | Sliding Window — Count Subarrays | Jul 20 | Jul 20 | Jul 21 |
-| Minimum Operations to Reduce X to Zero (LC #1658) | Reframe as Longest-Subarray Window | Jul 20 | Jul 20 | Jul 21 |
 | Valid Parentheses (LC #20) | Stack for Matching/Nesting | Jul 21 | Jul 21 | Jul 22 |
 | Min Stack (LC #155) | Auxiliary Stack (Running Min) | Jul 21 | Jul 21 | Jul 22 |
+| Evaluate Reverse Polish Notation (LC #150) | Stack for Expression Evaluation | Jul 22 | Jul 22 | Jul 23 |
+| Daily Temperatures (LC #739) | Monotonic Stack | Jul 22 | Jul 22 | Jul 23 |
 
 ---
 
@@ -36,7 +36,8 @@
 |---------|---------|------------|-------------|-------------|
 | Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 19 | Jul 19 | Jul 22 |
 | Sliding Window Maximum (LC #239) | Fixed Window + Monotonic Deque | Jul 19 | Jul 19 | Jul 22 |
-| Subarrays with K Different Integers (LC #992) | Exactly-K trick (atMost(K) − atMost(K−1)) | Jul 17 | Jul 18 | Jul 21 |
+| Subarray Product Less Than K (LC #713) | Sliding Window — Count Subarrays | Jul 21 | Jul 21 | Jul 24 |
+| Minimum Operations to Reduce X to Zero (LC #1658) | Reframe as Longest-Subarray Window | Jul 21 | Jul 21 | Jul 24 |
 
 ---
 
@@ -52,6 +53,7 @@
 | Max Sum Subarray of Size K | Fixed Sliding Window | Jul 16 | Jul 16 | Jul 23 |
 | Longest Substring Without Repeating (LC #3) | Variable Sliding Window + HashSet/HashMap-Index-Jump | Jul 16 | Jul 16 | Jul 23 |
 | Max Consecutive Ones III (LC #1004) | Variable Sliding Window + Zero Count | Jul 20 | Jul 20 | Jul 27 |
+| Subarrays with K Different Integers (LC #992) | Exactly-K trick (atMost(K) − atMost(K−1)) | Jul 17 | Jul 21 | Jul 28 |
 
 ---
 
@@ -94,7 +96,16 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: July 20, 2026
+**Date**: July 21, 2026 (session ran into Jul 22)
+
+### Spaced Repetition Recall (3 problems — 2 Box 1 + 1 Box 2 due):
+- ✅ Subarray Product Less Than K (LC #713) — Solid. Variable window, product/=nums[left] while product>=k, count+=right-left+1. Probed on k==1 edge case: correctly reasoned all nums[i]>=1 means product never <1, so the window logic naturally counts 0 without needing a special case. TC O(n)/SC O(1). → **Promoted to Box 2**
+- ✅ Minimum Operations to Reduce X to Zero (LC #1658) — Solid. Reframe as longest subarray summing to total-x, target<0 → -1. Correctly re-derived why -1 sentinel can't collide with a real window length (min real length is 0, from Math.max). TC O(n)/SC O(1). → **Promoted to Box 2**
+- ✅ Subarrays with K Different Integers (LC #992) — Exactly-K trick recalled well, but skipped the atMostKDistinct mechanics on first pass (the exact spot that caused the invisible bug last time) — had to be asked again explicitly. On re-ask, gave the correct order (add → repair-while-shrink → count) and corrected space to tight O(k) instead of O(n). → **Promoted to Box 3**
+
+**Recall Verdict: 3/3 recalled. One needed a second ask on mechanics (992) — same area flagged last session, worth a closer look next recall.**
+
+### Previous Queue (July 20, 2026):
 
 ### Spaced Repetition Recall (16 problems — 1 Box 2 + 5 Box 3 + 10 Box 4 due):
 - ✅ Max Consecutive Ones III (LC #1004) — Perfect. Zero-count expand, shrink when count > k, track max window size. O(n)/O(1). → **Promoted to Box 3**
@@ -188,13 +199,13 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 37 |
+| Total problems in system | 39 |
 | Box 1 (daily) | 4 |
-| Box 2 (3-day) | 3 |
-| Box 3 (weekly) | 8 |
+| Box 2 (3-day) | 4 |
+| Box 3 (weekly) | 9 |
 | Box 4 (bi-weekly) | 12 |
 | Box 5 (mastered) | 10 |
-| Reviews completed today (Jul 20) | 16 of 16 |
-| Problems solved today | 2 (both NEW, UNSEEN, 🟢 HIRE) |
+| Reviews completed today (Jul 21) | 3 of 3 |
+| Problems solved today | 2 (Evaluate RPN, Daily Temperatures — both NEW, both 🟢 HIRE) |
 | Re-solves today | 0 |
-| Streak (consecutive days) | 7 |
+| Streak (consecutive days) | 8 |
