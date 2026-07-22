@@ -94,3 +94,60 @@
 ```
 
 ---
+
+## Card 5: Monotonic Stack + HashMap (Next Greater Element I, LC #496)
+```
+🔍 TRIGGER: "Next greater element for each query value, in another array" — nums1 is a
+           subset of nums2, all distinct. Answer -1 if none to the right.
+💡 IDEA:   Decouple from the queries: PRECOMPUTE next-greater for EVERY value in nums2 in
+           one decreasing-stack pass, storing value→answer in a HashMap. Then just look
+           up each nums1[i]. The stack resolves a waiting value the moment a bigger one
+           appears (same pop-and-resolve as Daily Temperatures); leftovers on the stack
+           never got a bigger element → default -1 via getOrDefault.
+📝 CODE:   for (int n : nums2) {
+             while (!stack.isEmpty() && stack.peek() < n)
+               nextGreater.put(stack.pop(), n);
+             stack.push(n);
+           }
+           for (i..) result[i] = nextGreater.getOrDefault(nums1[i], -1);
+⏱️ TIME:   O(n1 + n2)  |  SPACE: O(n2)
+⚠️ KEY:    Map is keyed by VALUE — only valid because nums2 is DISTINCT. If duplicates were
+           allowed, one key can't stand for two positions with two answers → key by INDEX
+           instead. This is the "what breaks if the guarantee is dropped" gotcha.
+⚠️ NOTE:   Prefer ArrayDeque over java.util.Stack in production (Stack is legacy/synchronized,
+           extends Vector). Same monotonic-stack skeleton as Daily Temps, but resolve into a
+           map (values as keys) instead of an index-keyed result array.
+```
+
+---
+
+## Card 6: Monotonic (Increasing) Stack — Boundaries (Largest Rectangle in Histogram, LC #84)
+```
+🔍 TRIGGER: "Largest rectangle in a histogram" / for each bar find how far it extends left
+           and right until a SHORTER bar. Any "max area/width bounded by nearest smaller
+           on both sides" problem.
+💡 IDEA:   Keep an INCREASING stack of indices. When a bar arrives that's shorter than the
+           top, the top bar's rectangle is finalized: pop it. Its RIGHT boundary = current i;
+           its LEFT boundary = the new stack top after popping (nearest shorter to the left).
+           width = i - stack.peek() - 1  (or = i if stack becomes empty / hits -1 sentinel).
+           area = heights[popped] * width. Keep popping while top > current.
+📝 CODE:   Deque<Integer> st = new ArrayDeque<>(); st.push(-1);   // bottom sentinel
+           for (int i = 0; i <= n; i++) {
+             int curr = (i == n) ? -1 : heights[i];              // right sentinel drains stack
+             while (st.peek() != -1 && heights[st.peek()] > curr) {
+               int h = heights[st.pop()];
+               int w = i - st.peek() - 1;
+               max = Math.max(max, h * w);
+             }
+             st.push(i);
+           }
+⏱️ TIME:   O(n) amortized (each index pushed once, popped once)  |  SPACE: O(n)
+⚠️ KEY:    TWO sentinels. (1) Bottom `-1` index = virtual left wall so width formula works when
+           nothing shorter is to the left (empty → width = i). (2) Right virtual height `-1` at
+           i==n forces every remaining bar to pop. Sentinel VALUE must be < min possible height
+           (heights>=0 → use -1, NOT 0 or 1: [1,1,1]+sentinel 1 wrongly returns 0).
+⚠️ WHY EQUAL OK: strict `>` means equal bars don't pop each other; the LEFTMOST of an equal run
+           pops last and gets the full width → widest rectangle still counted.
+```
+
+---

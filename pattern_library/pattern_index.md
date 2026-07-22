@@ -22,6 +22,8 @@
 | 11 | "At most K distinct elements" | Sliding window + HashMap<value,count>; shrink when map.size() > K; remove key entirely at count 0 (not just decrement) so size() stays accurate | **Window + HashMap** | `map.put(v,cnt+1); while (map.size()>k) { if (map.get(left)==1) remove; else decrement; left++; }` (proven Jul 14 — Fruit Into Baskets) |
 | 12 | "Matching brackets / nesting" | Stack | **Stack Matching** | Push open, pop+check on close |
 | 13 | "Next greater/smaller element" | Monotonic stack | **Monotonic Stack** | Stack stores indices in decreasing order |
+| 13a | "Next greater element for query values in another array" | Decreasing monotonic stack over the source array, resolve each popped value into a value→answer HashMap, then O(1) lookups per query | **Monotonic Stack + HashMap** | `while(!st.empty && st.peek()<n) map.put(st.pop(), n); st.push(n);` then `getOrDefault(q,-1)`. Value-key valid ONLY if distinct (Jul 23 — Next Greater Element I) |
+| 13b | "Largest rectangle / max area bounded by nearest smaller on both sides" | Increasing monotonic stack of indices; shorter newcomer finalizes taller pending bars; left bound = new top after pop, right bound = i | **Monotonic (Increasing) Stack — Boundaries** | `width = i - st.peek() - 1`; dual sentinels (bottom index -1, right virtual height -1 at i==n); sentinel value < min height (Jul 23 — Largest Rectangle in Histogram, Hard) |
 | 14 | "Detect cycle in linked list" | Floyd's fast/slow pointers | **Fast/Slow Pointers** | `slow = slow.next, fast = fast.next.next` |
 | 15 | "Reverse linked list" | 3-pointer technique | **Linked List Reversal** | `prev, curr, next` pointer dance |
 | 16 | "Merge K sorted things" | Min-heap of size K | **K-Way Merge** | PriorityQueue with K heads |

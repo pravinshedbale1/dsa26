@@ -23,10 +23,10 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Valid Parentheses (LC #20) | Stack for Matching/Nesting | Jul 21 | Jul 21 | Jul 22 |
-| Min Stack (LC #155) | Auxiliary Stack (Running Min) | Jul 21 | Jul 21 | Jul 22 |
 | Evaluate Reverse Polish Notation (LC #150) | Stack for Expression Evaluation | Jul 22 | Jul 22 | Jul 23 |
 | Daily Temperatures (LC #739) | Monotonic Stack | Jul 22 | Jul 22 | Jul 23 |
+| Next Greater Element I (LC #496) | Monotonic Stack + HashMap | Jul 23 | Jul 23 | Jul 24 |
+| Largest Rectangle in Histogram (LC #84) | Monotonic (Increasing) Stack | Jul 23 | Jul 23 | Jul 24 |
 
 ---
 
@@ -34,8 +34,8 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 19 | Jul 19 | Jul 22 |
-| Sliding Window Maximum (LC #239) | Fixed Window + Monotonic Deque | Jul 19 | Jul 19 | Jul 22 |
+| Valid Parentheses (LC #20) | Stack for Matching/Nesting | Jul 22 | Jul 22 | Jul 25 |
+| Min Stack (LC #155) | Auxiliary Stack (Running Min) | Jul 22 | Jul 22 | Jul 25 |
 | Subarray Product Less Than K (LC #713) | Sliding Window — Count Subarrays | Jul 21 | Jul 21 | Jul 24 |
 | Minimum Operations to Reduce X to Zero (LC #1658) | Reframe as Longest-Subarray Window | Jul 21 | Jul 21 | Jul 24 |
 
@@ -54,6 +54,8 @@
 | Longest Substring Without Repeating (LC #3) | Variable Sliding Window + HashSet/HashMap-Index-Jump | Jul 16 | Jul 16 | Jul 23 |
 | Max Consecutive Ones III (LC #1004) | Variable Sliding Window + Zero Count | Jul 20 | Jul 20 | Jul 27 |
 | Subarrays with K Different Integers (LC #992) | Exactly-K trick (atMost(K) − atMost(K−1)) | Jul 17 | Jul 21 | Jul 28 |
+| Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 22 | Jul 22 | Jul 29 |
+| Sliding Window Maximum (LC #239) | Fixed Window + Monotonic Deque | Jul 22 | Jul 22 | Jul 29 |
 
 ---
 
@@ -199,13 +201,13 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 39 |
+| Total problems in system | 41 |
 | Box 1 (daily) | 4 |
 | Box 2 (3-day) | 4 |
-| Box 3 (weekly) | 9 |
+| Box 3 (weekly) | 11 |
 | Box 4 (bi-weekly) | 12 |
 | Box 5 (mastered) | 10 |
-| Reviews completed today (Jul 21) | 3 of 3 |
-| Problems solved today | 2 (Evaluate RPN, Daily Temperatures — both NEW, both 🟢 HIRE) |
+| Reviews completed today (Jul 23) | 4 of 4 (Jul 22 queue) |
+| Problems solved today | 2 (Next Greater Element I + Largest Rectangle in Histogram — both NEW, both 🟢 HIRE) |
 | Re-solves today | 0 |
-| Streak (consecutive days) | 8 |
+| Streak (consecutive days) | 9 |

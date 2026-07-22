@@ -43,6 +43,9 @@
 | 17 | Variable Sliding Window | "Longest/shortest substring/subarray" | Expand right, shrink left until valid | O(n)/O(k) |
 | 18 | Exactly-K Trick | "Count subarrays with exactly K distinct" | exactly(K) = atMost(K) − atMost(K−1); sum right-left+1 per step | O(n)/O(k) |
 | 19 | Monotonic Deque | "Max/min of every window of size k" | Decreasing deque of indices; evict smaller from back, expire front, front = max | O(n)/O(k) |
+| 20 | Monotonic Stack (Next Greater) | "Next greater/warmer element" | Decreasing stack of indices; newcomer that beats top resolves it (pop + record) | O(n)/O(n) |
+| 21 | Monotonic Stack + HashMap | "Next greater for query values in another array" | Precompute all next-greaters into value→answer map, then O(1) lookups (value-key needs distinct) | O(n)/O(n) |
+| 22 | Monotonic (Increasing) Stack — Boundaries | "Largest rectangle / nearest-smaller both sides" | Shorter newcomer finalizes taller bars; width = i − peek − 1; dual sentinels | O(n)/O(n) |
 
 ### Patterns Learned but Need Practice (Confidence 3-4)
 

@@ -116,6 +116,23 @@ push 76                → [76]
 - Auxiliary Stack → Min Stack
 - Stack for Expression Evaluation → Evaluate RPN
 - Monotonic Stack → Daily Temperatures
+- Monotonic Stack + HashMap → Next Greater Element I (precompute answers into a value→answer map)
+- Monotonic (Increasing) Stack for boundaries → Largest Rectangle in Histogram
+
+---
+
+## Monotonic Stack — Two Flavors (Jul 23 insight)
+
+Both flavors share ONE core move: **when a new element arrives, evict everything on the stack that can never win again, and resolve each evicted element's answer at the moment it's popped.** What differs is *what gets recorded on pop*:
+
+1. **Next-greater / next-warmer (decreasing stack)** — Daily Temperatures, Next Greater Element I.
+   - Stack holds elements *waiting* for a bigger value. The newcomer that beats them IS their answer.
+   - Next Greater Element I twist: decouple queries from the scan — precompute the answer for *every* value of nums2 into a `value→answer` HashMap in one pass, then O(1) lookups. **The value-as-key only works because values are distinct** — with duplicates, key by index. (Classic "what breaks if the guarantee is dropped" interview probe.)
+
+2. **Nearest-smaller-on-both-sides / max area (increasing stack)** — Largest Rectangle in Histogram.
+   - When a *shorter* bar arrives, every taller pending bar is finalized: its **right boundary** is the newcomer, its **left boundary** is the new stack top after popping. `width = i - stack.peek() - 1`.
+   - **Dual sentinels** make the edges uniform: a bottom index `-1` (virtual left wall, so width = i when the stack empties) and a right virtual height `-1` at `i==n` (drains the stack). The sentinel *value* must be strictly below the minimum possible bar height — heights ≥ 0 → use `-1`, never 0 or 1 (`[1,1,1]` + sentinel 1 wrongly returns 0). *(Code-ahead-of-why note: wrote `-1` correctly but couldn't justify it under probing — the "why" lags the "what" here.)*
+   - **Strict `>` pop** lets equal bars sit unresolved; the leftmost of an equal run pops last and captures the full width, so no wide rectangle is missed.
 
 ---
 
@@ -127,3 +144,5 @@ push 76                → [76]
 | D1 | Min Stack (LC #155) | Auxiliary Stack | ✅ Two-stack, push repeat on tie (`>=`), correct first try |
 | D2 | Evaluate Reverse Polish Notation (LC #150) | Stack for Expression Evaluation | ✅ try/catch for operand/operator split, tight (n+1)/2 depth derived |
 | D2 | Daily Temperatures (LC #739) | Monotonic Stack | ✅ First Monotonic Stack problem, clean transfer from Monotonic Deque concept |
+| D3 | Next Greater Element I (LC #496) | Monotonic Stack + HashMap | ✅ Precompute all next-greaters into value→answer map; value-key valid only because distinct |
+| D3 | Largest Rectangle in Histogram (LC #84) | Monotonic (Increasing) Stack | ✅ Hard, same-session concept. Dual sentinels, width = i - peek - 1. 6/6 first try |
