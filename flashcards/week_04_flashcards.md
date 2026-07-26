@@ -142,12 +142,103 @@
              st.push(i);
            }
 ⏱️ TIME:   O(n) amortized (each index pushed once, popped once)  |  SPACE: O(n)
-⚠️ KEY:    TWO sentinels. (1) Bottom `-1` index = virtual left wall so width formula works when
-           nothing shorter is to the left (empty → width = i). (2) Right virtual height `-1` at
-           i==n forces every remaining bar to pop. Sentinel VALUE must be < min possible height
-           (heights>=0 → use -1, NOT 0 or 1: [1,1,1]+sentinel 1 wrongly returns 0).
+⚠️ KEY:    TWO sentinels, and they are DIFFERENT things — don't conflate them.
+           (1) LEFT sentinel = the INDEX `-1` parked at the bottom of the stack. It stands in
+               for "nearest smaller on the left" when the stack would otherwise empty, so
+               width = i - (-1) - 1 = i with no isEmpty() special case. It must be -1 because
+               0 is a REAL index — using 0 would chop one bar off every width. Think of it as
+               an imaginary height-(-∞) bar at position -1 that never pops.
+           (2) RIGHT sentinel = a virtual HEIGHT at i==n that drains the stack. Both `0` and
+               `-1` work: pop is strict `>`, so every leftover bar of height > 0 is forced off,
+               and a height-0 bar left unresolved is harmless (its area is 0 anyway).
+               `1` is what FAILS — [1,1,1] pops nothing and wrongly returns 0.
+           (Jul 23 note said the right sentinel "must be -1, not 0" — that was WRONG; 0 is the
+            standard LC choice. Corrected Jul 26. Rule: right sentinel <= 0.)
 ⚠️ WHY EQUAL OK: strict `>` means equal bars don't pop each other; the LEFTMOST of an equal run
            pops last and gets the full width → widest rectangle still counted.
+```
+
+---
+
+## Card 7: Sort + Monotonic Stack — "Absorb" Flavor (Car Fleet, LC #853)
+```
+🔍 TRIGGER: Elements move along a line and can BLOCK / merge into the one ahead of them —
+           cars that can't pass, tasks that queue behind a slower one, anything where a
+           faster follower is capped by a slower leader. Also: "count the groups that form."
+💡 IDEA:   1. Convert each element to the quantity that decides merging — here
+              ETA = (target - position) / speed  ("when do I finish, unobstructed").
+           2. SORT into dependency order — by position DESCENDING (closest to target first).
+              The sort IS the algorithm, not preprocessing: a car only ever interacts with
+              what is AHEAD of it, so you must sweep in that order.
+           3. Sweep back-to-front keeping a stack of fleet ETAs. If curr ETA <= stack top,
+              this car catches the fleet ahead → ABSORBED, skip it (the fleet keeps the
+              SLOWER/larger ETA, which is already on top). Else push — a new fleet.
+           4. Answer = stack.size().
+📝 CODE:   int[][] cars = new int[n][2];                    // (position, speed) pairs
+           for (int i = 0; i < n; i++) { cars[i][0]=position[i]; cars[i][1]=speed[i]; }
+           Arrays.sort(cars, (a, b) -> b[0] - a[0]);        // position DESC
+           Deque<Double> stack = new ArrayDeque<>();
+           for (int i = 0; i < n; i++) {
+             double eta = (double)(target - cars[i][0]) / cars[i][1];
+             if (!stack.isEmpty() && stack.peek() >= eta) continue;   // absorbed
+             stack.push(eta);                                        // new fleet
+           }
+           return stack.size();
+⏱️ TIME:   O(n log n) — dominated by the sort  |  SPACE: O(n) — pairs array + TimSort aux
+⚠️ NO STACK NEEDED: you only ever read peek() and never pop, and you only push when the new
+           ETA is LARGER → the top is just "max ETA so far". Replace with one `double maxEta`
+           + a counter. That drops the stack to O(1); total stays O(n) because of cars[][].
+⚠️ WHY `>=` NOT `>`: equal ETA = they meet EXACTLY at the destination, which the problem
+           counts as ONE fleet. Counterexample for strict `>`:
+           target=10, position=[0,5], speed=[2,1] → both ETA 5 → answer 1, strict `>` gives 2.
+⚠️ FLOAT SAFETY: doubles ARE safe here. Two distinct ETAs differ by >= 1/(s1*s2) >= 1e-12,
+           while double error at this magnitude is ~1e-16. Formal bound: safe while
+           num1*den2 + num2*den1 < 2^53 (~9e15); here <= 2e12.
+           Integer-only version: never divide — cross-multiply the fractions in `long`
+           (max product 10^6 * 10^6 = 10^12, nowhere near overflow).
+⚠️ CONTRAST: Daily Temps / NGE = POP-AND-RESOLVE (the newcomer answers the popped element).
+           Car Fleet = ABSORB (the newcomer vanishes into what's already there). Same
+           monotonic skeleton, opposite direction of information flow.
+🔗 SIBLING: Boats to Save People — same skeleton (sort first, then a greedy local rule
+           collapses the sequence). In both, the sort is the insight, not the setup.
+```
+
+---
+
+## Card 8: Two-Stack Lazy Transfer (Implement Queue using Stacks, LC #232)
+```
+🔍 TRIGGER: "Build a FIFO queue out of LIFO stacks" / any design problem where the
+           natural operation order is the REVERSE of what you need. More generally:
+           "make an expensive reordering amortized cheap."
+💡 IDEA:   Pouring stack A into stack B reverses it. Give the two stacks FIXED roles:
+           `in`  — every push goes here, no exceptions.
+           `out` — every pop/peek is served from here.
+           Drain `in` into `out` ONLY when `out` is empty. Never at any other time.
+           `out` is effectively a cache of already-reversed elements; you refill it
+           only when it runs dry, and no element is ever reversed twice.
+📝 CODE:   push(x): in.push(x);
+           peek():  if (out.isEmpty()) while (!in.isEmpty()) out.push(in.pop());
+                    return out.peek();
+           pop():   peek(); return out.pop();       // delegate → transfer logic in ONE place
+           empty(): return in.isEmpty() && out.isEmpty();   // BOTH must be empty
+⏱️ TIME:   push O(1) | pop/peek AMORTIZED O(1), worst case O(n) on the draining call
+           empty O(1)  |  SPACE: O(n)
+⚠️ THE CONDITION IS THE PROBLEM: `if (out.isEmpty())`. Transfer while `out` is
+           non-empty and newly pushed elements land ON TOP of older ones → FIFO breaks.
+           Killer test: push 1,2 → pop (=1) → push 3,4 → pop MUST be 2, not 3.
+⚠️ AMORTIZED PROOF (say it like this): each element causes <= 4 stack ops in its whole
+           lifetime — push to `in`, pop from `in`, push to `out`, pop from `out` — and it
+           never moves back. <= m elements over m ops → <= 4m total → 4m/m = 4 = O(1).
+⚠️ AMORTIZED != AVERAGE-CASE: amortized is a WORST-CASE guarantee over ANY sequence
+           (no adversarial input breaks it); average-case is a claim about input
+           distributions. Interviewers ask. Lead with amortized O(1), then volunteer
+           the O(n) worst case unprompted.
+⚠️ JAVA API TRAP (cost a point on Jul 26): with ArrayDeque, `peek()` on empty returns
+           NULL — an int-returning method then throws NullPointerException via unboxing.
+           EmptyStackException belongs to java.util.Stack; NoSuchElementException is what
+           ArrayDeque.pop()/element() throw. Know which class you're actually holding.
+🔗 SIBLING: same accounting as a monotonic stack ("each index pushed once, popped once")
+           and dynamic-array doubling. Defer expensive work, then do it in bulk.
 ```
 
 ---

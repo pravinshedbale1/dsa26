@@ -23,10 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Evaluate Reverse Polish Notation (LC #150) | Stack for Expression Evaluation | Jul 22 | Jul 22 | Jul 23 |
-| Daily Temperatures (LC #739) | Monotonic Stack | Jul 22 | Jul 22 | Jul 23 |
-| Next Greater Element I (LC #496) | Monotonic Stack + HashMap | Jul 23 | Jul 23 | Jul 24 |
-| Largest Rectangle in Histogram (LC #84) | Monotonic (Increasing) Stack | Jul 23 | Jul 23 | Jul 24 |
+| Car Fleet (LC #853) | Sort + Monotonic Stack (Absorb / Rear-to-Front) | Jul 26 | Jul 26 | Jul 27 |
+| Implement Queue using Stacks (LC #232) | Two-Stack Lazy Transfer (Amortized O(1)) | Jul 26 | Jul 26 | Jul 27 |
 
 ---
 
@@ -34,10 +32,8 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Valid Parentheses (LC #20) | Stack for Matching/Nesting | Jul 22 | Jul 22 | Jul 25 |
-| Min Stack (LC #155) | Auxiliary Stack (Running Min) | Jul 22 | Jul 22 | Jul 25 |
-| Subarray Product Less Than K (LC #713) | Sliding Window — Count Subarrays | Jul 21 | Jul 21 | Jul 24 |
-| Minimum Operations to Reduce X to Zero (LC #1658) | Reframe as Longest-Subarray Window | Jul 21 | Jul 21 | Jul 24 |
+| Next Greater Element I (LC #496) | Monotonic Stack + HashMap | Jul 26 | Jul 26 | Jul 29 |
+| Largest Rectangle in Histogram (LC #84) | Monotonic (Increasing) Stack | Jul 26 | Jul 26 | Jul 29 |
 
 ---
 
@@ -45,13 +41,12 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
-| Minimum Window Substring (LC #76) | Variable Sliding Window + Need/Formed Counter | Jul 19 | Jul 19 | Jul 26 |
-| Minimum Size Subarray Sum (LC #209) | Variable Sliding Window (Shortest) | Jul 17 | Jul 17 | Jul 24 |
-| Permutation in String (LC #567) | Fixed Sliding Window + Freq Match | Jul 17 | Jul 17 | Jul 24 |
-| Longest Repeating Character Replacement (LC #424) | Variable Sliding Window + Max Frequency | Jul 19 | Jul 19 | Jul 26 |
-| Fruit Into Baskets (LC #904) | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Jul 19 | Jul 19 | Jul 26 |
-| Max Sum Subarray of Size K | Fixed Sliding Window | Jul 16 | Jul 16 | Jul 23 |
-| Longest Substring Without Repeating (LC #3) | Variable Sliding Window + HashSet/HashMap-Index-Jump | Jul 16 | Jul 16 | Jul 23 |
+| Valid Parentheses (LC #20) | Stack for Matching/Nesting | Jul 26 | Jul 26 | Aug 2 |
+| Min Stack (LC #155) | Auxiliary Stack (Running Min) | Jul 26 | Jul 26 | Aug 2 |
+| Subarray Product Less Than K (LC #713) | Sliding Window — Count Subarrays | Jul 26 | Jul 26 | Aug 2 |
+| Minimum Operations to Reduce X to Zero (LC #1658) | Reframe as Longest-Subarray Window | Jul 26 | Jul 26 | Aug 2 |
+| Evaluate Reverse Polish Notation (LC #150) | Stack for Expression Evaluation | Jul 26 | Jul 26 | Aug 2 |
+| Daily Temperatures (LC #739) | Monotonic Stack | Jul 26 | Jul 26 | Aug 2 |
 | Max Consecutive Ones III (LC #1004) | Variable Sliding Window + Zero Count | Jul 20 | Jul 20 | Jul 27 |
 | Subarrays with K Different Integers (LC #992) | Exactly-K trick (atMost(K) − atMost(K−1)) | Jul 17 | Jul 21 | Jul 28 |
 | Boats to Save People (LC #881) | Sort + Greedy Two Pointers (Pairing) | Jul 22 | Jul 22 | Jul 29 |
@@ -63,10 +58,17 @@
 
 | Problem | Pattern | Moved Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
+| Minimum Window Substring (LC #76) | Variable Sliding Window + Need/Formed Counter | Jul 26 | Jul 26 | Aug 9 |
+| Minimum Size Subarray Sum (LC #209) | Variable Sliding Window (Shortest) | Jul 26 | Jul 26 | Aug 9 |
+| Permutation in String (LC #567) | Fixed Sliding Window + Freq Match | Jul 26 | Jul 26 | Aug 9 |
+| Longest Repeating Character Replacement (LC #424) | Variable Sliding Window + Max Frequency | Jul 26 | Jul 26 | Aug 9 |
+| Fruit Into Baskets (LC #904) | Variable Sliding Window + At-Most-K-Distinct (HashMap) | Jul 26 | Jul 26 | Aug 9 |
 | Valid Anagram (LC #242) | Frequency Count (int[26]) | Jun 28 | Jul 13 | Jul 27 |
 | Two Sum II (LC #167) | Two Pointers (Opposite) | Jun 28 | Jul 13 | Jul 27 |
 | Group Anagrams (LC #49) | HashMap Grouping (Freq Key) | Jun 28 | Jul 13 | Jul 27 |
 | Top K Frequent (LC #347) | Freq Count + Bucket Sort | Jun 28 | Jul 13 | Jul 27 |
+| Max Sum Subarray of Size K | Fixed Sliding Window | Jul 16 | Jul 23 | Aug 6 |
+| Longest Substring Without Repeating (LC #3) | Variable Sliding Window + HashMap-Index-Jump | Jul 16 | Jul 23 | Aug 6 |
 | Remove Duplicates (LC #26) | Two Pointers (Same Dir — Write Pointer) | Jul 11 | Jul 18 | Aug 1 |
 | 4Sum (LC #18) | Sort + Fix Two + Two Pointers | Jul 11 | Jul 18 | Aug 1 |
 | Subarray Sum Equals K (LC #560) | Prefix Sum + HashMap | Jul 11 | Jul 18 | Aug 1 |
@@ -98,7 +100,36 @@
 
 ## 🔔 Today's Review Queue
 
-**Date**: July 21, 2026 (session ran into Jul 22)
+**Date**: July 26, 2026 (Session #26 — Week 4, Day 4)
+
+### Spaced Repetition Recall (13 problems — 2 Box 1 overdue + 6 Box 2 + 5 Box 3):
+- ✅ Next Greater Element I (LC #496) — Clean. Monotonic decreasing stack over nums2, pop-and-map when a bigger value arrives, leftovers → -1, then O(1) lookups for nums1. Tight O(n+m)/O(n). Only nit: didn't name the pattern out loud. Probe passed: value-keyed map is only safe because nums2 is distinct; with duplicates the key is overwritten and the question is ambiguous — fix is to key by index. → **Promoted to Box 2**
+- ✅ Largest Rectangle in Histogram (LC #84) — **Jul 23 gap CLOSED.** Full justification of the `-1` left sentinel unprompted: it stands in for "nearest smaller on the left" when the stack empties so `i - (-1) - 1 = i` needs no isEmpty special case, and it can't be `0` because `0` is a real index (would chop one bar off every width). Framed it as an imaginary height-(-∞) bar at position -1 that never pops. Right sentinel probe also passed: fake bar of height `0` at `i == n`. TC O(n)/SC O(n), brute O(n²)/O(1) offered for contrast. → **Promoted to Box 2**
+- ✅ Valid Parentheses (LC #20) — Clean. Pushes the *expected closer* (no lookup on the pop side). Final `isEmpty()` check stated unprompted — the exact nudge needed on Jul 22. TC O(n)/SC O(n). → **Promoted to Box 3**
+- ✅ Min Stack (LC #155) — **Complexity slip fixed.** Said O(1) per operation first time, unprompted (said O(n) on Jul 22). Two-stack 1:1 growth, pop both together. Volunteered the `2*val - min` single-stack O(1)-space encoding *and* its overflow caveat. Gap: `minStack.peek()` on the first push throws — needs an isEmpty guard. → **Promoted to Box 3**
+- ✅ Subarray Product Less Than K (LC #713) — Solid. Led with the monotonicity argument (all nums ≥ 1 ⇒ expanding only grows the product) as the reason two pointers are valid at all. `count += right-left+1`, TC O(n)/SC O(1). **Corrected own Jul 21 reasoning**: previously argued `k == 1` resolves itself with no special case — it doesn't (the shrink loop divides past `right`, empty product 1 >= 1, runs off the array). Stated the `k <= 1` guard explicitly today. → **Promoted to Box 3**
+- ✅ Minimum Operations to Reduce X to Zero (LC #1658) — Textbook. Reframe stated as the first move (longest middle summing to `total - x`), `target < 0` → -1 guard, answer `n - maxLen`. TC O(n)/SC O(1). → **Promoted to Box 3**
+- ✅ Evaluate Reverse Polish Notation (LC #150) — Clean. Operand order flagged unprompted (second pop = left operand, matters for `-` and `/`). TC O(n)/SC O(n). → **Promoted to Box 3**
+- ✅ Daily Temperatures (LC #739) — **Jul 23 nudge CLOSED.** Said `ans[popped] = i - popped` (day gap) correctly first time — last cycle this bled over to "temperature at current index". Named it as Next Greater Element storing distance instead of value. TC O(n)/SC O(n). → **Promoted to Box 3**
+- ✅ Minimum Size Subarray Sum (LC #209) — Solid. `sum >= target` (the Jul 14 strict-`>` bug stays fixed), min recorded *during* shrinking, positivity cited as what makes shrinking safe. TC O(n)/SC O(1). → **Promoted to Box 4**
+- ✅ Permutation in String (LC #567) — Solid. Running int[26] update over rebuilding, plus the `matches` counter refinement for an O(1) check. SC correctly O(1) (bounded alphabet). Nit: no `s1.length() > s2.length()` early guard. → **Promoted to Box 4**
+- ✅ Minimum Window Substring (LC #76) — Textbook. Exact-`==`-to-bump `formed` and the going-back-above-zero drop, both correct. TC O(n+m)/SC O(k) ≤ 128 ⇒ effectively O(1). Jul 16 complexity gap stays closed. → **Promoted to Box 4**
+- ✅ Longest Repeating Character Replacement (LC #424) — Excellent. `windowSize - maxFreq <= k`, if-not-while slide, and the stale-`maxFreq` safety argument self-synthesized again (a stale max only *stops* growth; the answer only ever grows). TC O(n)/SC O(1). → **Promoted to Box 4**
+- ✅ Fruit Into Baskets (LC #904) — Clean. Recognized it as at-most-2-distinct in costume, remove-key-at-zero, SC O(1) stated properly (map ≤ 3 keys — no repeat of the Jul 19 "O(3)" notation nit). Volunteered the at-most-K generalization. → **Promoted to Box 4**
+
+**Recall Verdict: 13/13 recalled, ZERO demotions, ZERO nudges needed. Box 1 emptied. Three long-standing gaps closed in one pass: the Largest Rectangle `-1` sentinel justification (code-ahead-of-why, 3rd instance), Min Stack O(1)-per-op (complexity-loose-bound habit), and Daily Temperatures' day-gap answer value. User also self-corrected a previously-recorded wrong reasoning (LC #713 `k <= 1`).**
+
+⚠️ **Note correction to the Jul 23 record**: that entry claimed the Largest Rectangle *right* sentinel "must be -1 since min height is 0". That was wrong — `0` is the standard and correct choice, because the pop condition is strict `>`: any leftover bar of height > 0 is forced off, and a height-0 bar left on the stack is harmless (area 0). A sentinel of `1` is what fails (`[1,1,1]` pops nothing → returns 0).
+
+### Previous Queue (July 23, 2026 — 4 problems — 2 Box 1 + 2 Box 3 due):
+- ✅ Evaluate Reverse Polish Notation (LC #150) — Clean. Stack; operator → pop two operands, apply, push; operand → push; return top. Operand-order probe passed: first pop = right operand (op2), second pop = left (op1), so `["4","2","/"]` → `4/2 = 2`. TC O(n)/SC O(n). → **Promoted to Box 2**
+- ✅ Daily Temperatures (LC #739) — Recalled with a nudge. Decreasing stack of indices, pop-while-warmer, correct. Initially said the answer value is "temp at current index" (bleed-over from recently-solved variants where actual temperature is returned) — self-corrected to `i - j` (day gap) on one probe. TC O(n)/SC O(n). → **Promoted to Box 2**
+- ✅ Max Sum Subarray of Size K — Perfect. Fixed window, running sum (subtract outgoing / add incoming), track max. TC O(n)/SC O(1). → **Promoted to Box 4**
+- ✅ Longest Substring Without Repeating (LC #3) — Textbook. HashMap last-index + jump `left = storedIdx+1` only when `storedIdx >= left` (stale-index guard nailed), max = right-left+1. TC O(n)/SC O(min(n,m)). → **Promoted to Box 4**
+
+**Recall Verdict: 4/4 recalled. One nudge on Daily Temperatures answer-value (variant cross-contamination, not a pattern gap).**
+
+### Previous Queue (July 21, 2026 — session ran into Jul 22):
 
 ### Spaced Repetition Recall (3 problems — 2 Box 1 + 1 Box 2 due):
 - ✅ Subarray Product Less Than K (LC #713) — Solid. Variable window, product/=nums[left] while product>=k, count+=right-left+1. Probed on k==1 edge case: correctly reasoned all nums[i]>=1 means product never <1, so the window logic naturally counts 0 without needing a special case. TC O(n)/SC O(1). → **Promoted to Box 2**
@@ -201,13 +232,13 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 41 |
-| Box 1 (daily) | 4 |
-| Box 2 (3-day) | 4 |
-| Box 3 (weekly) | 11 |
-| Box 4 (bi-weekly) | 12 |
+| Total problems in system | 44 |
+| Box 1 (daily) | 2 (Car Fleet + Implement Queue using Stacks — both new today; Box 1 was emptied by the Jul 26 recall sweep) |
+| Box 2 (3-day) | 2 |
+| Box 3 (weekly) | 10 |
+| Box 4 (bi-weekly) | 20 |
 | Box 5 (mastered) | 10 |
-| Reviews completed today (Jul 23) | 4 of 4 (Jul 22 queue) |
-| Problems solved today | 2 (Next Greater Element I + Largest Rectangle in Histogram — both NEW, both 🟢 HIRE) |
+| Reviews completed (Jul 26, Session #26 queue) | 13 of 13 — zero demotions |
+| Problems solved today | 2 — Car Fleet (#853) 🟢 HIRE + Implement Queue using Stacks (#232) 🟢 HIRE — Day 4 COMPLETE |
 | Re-solves today | 0 |
-| Streak (consecutive days) | 9 |
+| Streak (consecutive days) | 10 |

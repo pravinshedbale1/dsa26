@@ -45,7 +45,9 @@
 | 19 | Monotonic Deque | "Max/min of every window of size k" | Decreasing deque of indices; evict smaller from back, expire front, front = max | O(n)/O(k) |
 | 20 | Monotonic Stack (Next Greater) | "Next greater/warmer element" | Decreasing stack of indices; newcomer that beats top resolves it (pop + record) | O(n)/O(n) |
 | 21 | Monotonic Stack + HashMap | "Next greater for query values in another array" | Precompute all next-greaters into value→answer map, then O(1) lookups (value-key needs distinct) | O(n)/O(n) |
-| 22 | Monotonic (Increasing) Stack — Boundaries | "Largest rectangle / nearest-smaller both sides" | Shorter newcomer finalizes taller bars; width = i − peek − 1; dual sentinels | O(n)/O(n) |
+| 22 | Monotonic (Increasing) Stack — Boundaries | "Largest rectangle / nearest-smaller both sides" | Shorter newcomer finalizes taller bars; width = i − peek − 1; dual sentinels (left = index −1, right = height ≤ 0) | O(n)/O(n) |
+| 23 | Sort + Monotonic Stack (Absorb) | "Elements block / merge into the one ahead — count the groups" (cars that can't pass, jobs behind a slower one) | Transform to the deciding quantity (ETA), **sort into dependency order** (position DESC), sweep and absorb: `peek() >= eta` → merges, else push. Count = answer. Stack degenerates to one max variable | O(n log n)/O(n) |
+| 24 | Two-Stack Lazy Transfer | "Build a FIFO queue from LIFO stacks" / any design where the natural order is the reverse of what you need | `in` takes every push, `out` serves every pop/peek; drain `in`→`out` **only when `out` is empty**. `pop()` delegates to `peek()`. Each element moves ≤4 times, never back → ≤4m ops over m calls | push O(1), pop/peek **amortized O(1)** (worst case O(n)) / O(n) |
 
 ### Patterns Learned but Need Practice (Confidence 3-4)
 

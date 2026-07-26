@@ -107,4 +107,7 @@
 | W3 D7 | 2 (complete) 🎉 | 2 | 0 | 0 | 0 | 5.0 | Subarray Product Less Than K + Minimum Ops to Reduce X to Zero (both UNSEEN, cold transfer) |
 | **W3 TOTAL** | **12 + 2 re-solves** | **12** | **0** | **0** | **0** | **5.0** | **All Sliding Window patterns: Fixed, Variable, Need/Formed (Hard), Max Freq, At-Most-K, Zero Count, Exactly-K, Monotonic Deque (Hard), Count-Subarrays, Reframe-as-Window** |
 | W4 D1 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Stack for Matching/Nesting + Auxiliary Stack (Valid Parentheses, Min Stack) |
+| W4 D2 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Stack for Expression Evaluation + Monotonic Stack (Evaluate RPN, Daily Temperatures) |
+| W4 D3 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Monotonic Stack + HashMap + Monotonic (Increasing) Stack Boundaries (Next Greater Element I, Largest Rectangle in Histogram — Hard) |
+| W4 D4 | 2 (complete) | 2 | 0 | 0 | 0 | 5.0 | Sort + Monotonic Stack (Absorb) + Two-Stack Lazy Transfer (Car Fleet, Implement Queue using Stacks — first DESIGN problem) |
 

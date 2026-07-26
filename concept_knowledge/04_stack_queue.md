@@ -121,9 +121,9 @@ push 76                → [76]
 
 ---
 
-## Monotonic Stack — Two Flavors (Jul 23 insight)
+## Monotonic Stack — Three Flavors (Jul 23 insight, extended Jul 26)
 
-Both flavors share ONE core move: **when a new element arrives, evict everything on the stack that can never win again, and resolve each evicted element's answer at the moment it's popped.** What differs is *what gets recorded on pop*:
+The first two flavors share ONE core move: **when a new element arrives, evict everything on the stack that can never win again, and resolve each evicted element's answer at the moment it's popped.** What differs is *what gets recorded on pop*. The third flavor inverts the direction of information flow entirely.
 
 1. **Next-greater / next-warmer (decreasing stack)** — Daily Temperatures, Next Greater Element I.
    - Stack holds elements *waiting* for a bigger value. The newcomer that beats them IS their answer.
@@ -131,8 +131,32 @@ Both flavors share ONE core move: **when a new element arrives, evict everything
 
 2. **Nearest-smaller-on-both-sides / max area (increasing stack)** — Largest Rectangle in Histogram.
    - When a *shorter* bar arrives, every taller pending bar is finalized: its **right boundary** is the newcomer, its **left boundary** is the new stack top after popping. `width = i - stack.peek() - 1`.
-   - **Dual sentinels** make the edges uniform: a bottom index `-1` (virtual left wall, so width = i when the stack empties) and a right virtual height `-1` at `i==n` (drains the stack). The sentinel *value* must be strictly below the minimum possible bar height — heights ≥ 0 → use `-1`, never 0 or 1 (`[1,1,1]` + sentinel 1 wrongly returns 0). *(Code-ahead-of-why note: wrote `-1` correctly but couldn't justify it under probing — the "why" lags the "what" here.)*
+   - **Dual sentinels** make the edges uniform, and they are two *different* devices:
+     - **Left sentinel = an INDEX** (`-1`) parked at the bottom of the stack. It stands in for "nearest smaller on the left" when the stack would otherwise empty, so `width = i - (-1) - 1 = i` falls out of the same formula with no `isEmpty()` branch. It must be `-1` because `0` is a **real index** — using `0` would silently chop one bar off every width. Mental model: an imaginary bar of height −∞ sitting at position −1, so nothing is ever smaller and it never pops.
+     - **Right sentinel = a virtual HEIGHT** at `i == n` that drains the stack. Both `0` and `-1` work here, because the pop test is strict `>`: every leftover bar taller than 0 is forced off, and a height-0 bar left unresolved is harmless since its area is 0. `1` is the value that **fails** — `[1,1,1]` pops nothing and returns 0. Rule: right sentinel ≤ 0.
+     - *(Correction, Jul 26: the Jul 23 note claimed the right sentinel "must be -1, not 0". That was wrong — `0` is the standard LC choice. The `-1`-must-not-be-`0` argument belongs to the **left/index** sentinel, not the height one. The two got conflated.)*
+     - *(Recall status: the full left-sentinel justification was reproduced unprompted on Jul 26 — the Jul 23 code-ahead-of-why gap is now closed.)*
    - **Strict `>` pop** lets equal bars sit unresolved; the leftmost of an equal run pops last and captures the full width, so no wide rectangle is missed.
+
+3. **Sort + collapse / "absorb" (Jul 26)** — Car Fleet.
+   - The first two flavors *resolve*: the newcomer supplies the answer for whatever it pops. This one *absorbs*: the newcomer merges into what's already on the stack and disappears. Information flows the opposite way.
+   - Preconditions differ too. Daily Temps and Largest Rectangle sweep the array **as given** — index order *is* the dependency order. Here the input order is meaningless, so **you must sort first**: by position descending, because a car only ever interacts with what is ahead of it. The sort is not preprocessing, it is the algorithm. (This is exactly the step that was missing from the first verbal pass on Jul 26 — the ETA transform came instantly, the ordering had to be probed for.)
+   - Because you only ever compare against the top and never pop, the stack top is just a **running maximum**. The stack is therefore optional — one `double maxEta` plus a counter does the same job. Recognizing that a monotonic structure has degenerated to a single variable is a real interview signal.
+   - **Boundary semantics matter**: `>=` not `>`, because equal ETAs mean the cars meet *exactly at* the destination, which the problem counts as one fleet.
+
+**Generalized trigger for flavor 3**: elements travel along a line and can *block* or *merge into* the one ahead — cars that can't pass, jobs queued behind a slower one, anything asking "how many groups form". Sort into dependency order, then let a local rule collapse the chain. Same skeleton as **Boats to Save People** (Week 2) — sort first, then a greedy local rule collapses the sequence.
+
+---
+
+## Floating Point in Comparison Problems (Jul 26)
+
+Car Fleet computes `ETA = (target - position) / speed` as a `double`. When is that safe, and how do you *prove* it rather than hope?
+
+- **The gap argument**: two distinct ETAs are fractions `a/s1` and `b/s2`. If they differ at all, they differ by at least `1/(s1·s2)`. With speeds ≤ 10⁶ that floor is 10⁻¹². Double precision at these magnitudes carries error ~10⁻¹⁶ — four orders of magnitude smaller than the smallest real gap, so a comparison can never flip.
+- **The formal bound**: comparing `a/s1` vs `b/s2` by cross-multiplication is exact while `a·s2 + b·s1 < 2^53` (≈9×10¹⁵). Here it's ≤ 2×10¹². Comfortable.
+- **The escape hatch**: don't divide at all. Compare fractions by cross-multiplying in `long` — `(target-p1)*s2` vs `(target-p2)*s1`. Max product 10⁶ × 10⁶ = 10¹², nowhere near `long` overflow. Zero float risk.
+
+Transferable rule: whenever a problem makes you divide to compare, either (a) bound the smallest possible gap against the precision floor, or (b) cross-multiply into integers and sidestep the question. Saying "doubles are probably fine" is not an answer.
 
 ---
 
@@ -146,3 +170,45 @@ Both flavors share ONE core move: **when a new element arrives, evict everything
 | D2 | Daily Temperatures (LC #739) | Monotonic Stack | ✅ First Monotonic Stack problem, clean transfer from Monotonic Deque concept |
 | D3 | Next Greater Element I (LC #496) | Monotonic Stack + HashMap | ✅ Precompute all next-greaters into value→answer map; value-key valid only because distinct |
 | D3 | Largest Rectangle in Histogram (LC #84) | Monotonic (Increasing) Stack | ✅ Hard, same-session concept. Dual sentinels, width = i - peek - 1. 6/6 first try |
+| D4 | Car Fleet (LC #853) | Sort + Monotonic Stack (Absorb) | ✅ ETA transform + sort by position DESC. 5/5 first try, 0 hints. Stack collapses to one variable. Float-safety proven via 2^53 bound |
+| D4 | Implement Queue using Stacks (LC #232) | Two-Stack Lazy Transfer | ✅ First DESIGN problem. 5/5 first try, 0 hints. `pop()` delegates to `peek()`. Rigorous amortized proof (≤4 ops/element → 4m/m). Missed the ArrayDeque-vs-Stack exception semantics |
+
+---
+
+## Amortized Analysis as a Design Tool (Jul 26)
+
+Week 4 has now hit amortized O(1) from two different directions, and it's worth naming the shared shape.
+
+**The pattern**: an individual operation is occasionally expensive, but the expensive work is *paid for* by cheap operations that preceded it, and no unit of work is ever repeated. Count total work across the whole sequence, divide by the number of operations, and the per-operation cost is constant.
+
+| Where it showed up | The accounting |
+|---|---|
+| Monotonic stack (Daily Temps, Largest Rectangle, NGE I) | Each index is pushed once and popped once → ≤ 2n stack ops over n iterations |
+| Two-stack queue (Implement Queue using Stacks) | Each element moves ≤ 4 times (into `in`, out of `in`, into `out`, out of `out`) and never back → ≤ 4m ops over m calls |
+| Dynamic array doubling (background) | Copies are geometric; total copy work is ≤ 2n over n appends |
+
+**How to state it in an interview** (the version that landed on Jul 26):
+> "Each element causes at most 4 stack operations in its entire lifetime, and it never moves back. With at most m elements over m operations, total work is ≤ 4m, so 4m/m = 4 — constant. Amortized O(1)."
+
+Count it. Don't say "it averages out."
+
+**The distinction interviewers probe**: *amortized* is a **worst-case guarantee over any sequence** — no adversarial input can break it. *Average-case* is a claim about input distributions and says nothing about the worst input. They are not synonyms.
+
+**How to present it**: lead with the amortized bound, then volunteer the worst-case single-operation cost unprompted. Giving both without being asked signals that you understand the structure rather than having memorized a number.
+
+---
+
+## Java API Precision — Empty-Collection Semantics (Jul 26)
+
+A miss worth keeping visible: on the LC #232 follow-up, the empty-queue behavior was answered as `EmptyStackException` for code that uses `ArrayDeque`. Verified behavior:
+
+| Call on empty | Result |
+|---|---|
+| `ArrayDeque.peek()` | returns **`null`** — no exception. In an `int`-returning method this becomes **`NullPointerException`** via auto-unboxing, from a line that never mentions null |
+| `ArrayDeque.pop()` | `java.util.NoSuchElementException` |
+| `ArrayDeque.element()` | `java.util.NoSuchElementException` |
+| `java.util.Stack.peek()` | `java.util.EmptyStackException` |
+
+Two lessons:
+1. **`peek()` returning null instead of throwing** is the genuinely surprising one — the failure surfaces as an NPE at an unboxing site, which reads like an unrelated bug.
+2. **Name the class before reasoning about its contract.** Having correctly switched from `Stack` to `ArrayDeque` for good reasons, the reasoning still ran against `Stack`'s API out of habit. Same shape as the Car Fleet ordering miss the same session: the concept was right, the specific was assumed rather than checked.

@@ -56,11 +56,11 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 4 — Stack & Queue |
-| **Current Day** | Day 3 — ✅ COMPLETE (Next Greater Element I + Largest Rectangle in Histogram, both 🟢 HIRE) |
-| **Current Topic** | Week 4 Day 4 next |
-| **Current Problem** | TBD — Week 4 Day 4 (Car Fleet LC #853 + Implement Queue using Stacks LC #232) |
-| **Session Count** | 25 |
-| **Total Problems Solved** | 38 (new plan) + 4 re-solves |
+| **Current Day** | Day 4 — ✅ COMPLETE (Car Fleet + Implement Queue using Stacks, both 🟢 HIRE) |
+| **Current Topic** | Week 4 Day 5 next |
+| **Current Problem** | TBD — Week 4 Day 5 (Asteroid Collision LC #735 + Maximal Rectangle LC #85 — Hard) |
+| **Session Count** | 26 |
+| **Total Problems Solved** | 40 (new plan) + 4 re-solves |
 | **Plan Start Date** | June 15, 2026 |
 | **Original Start Date** | May 10, 2026 |
 | **Target Date** | October 11, 2026 |
@@ -566,7 +566,10 @@ TEMPLATE for each session entry:
 | Jul 18 | **Cold forgetting after sparse review gap** | Boats to Save People (Box 3, 11-day gap) fully forgotten — problem statement and approach both gone | 🟢 Resolved (Jul 19 — full recall on the real 24hr retest, refresher re-anchored it) |
 | Jul 19 | **Complexity articulation defaults to a loose bound** | Boats to Save People needed 2 probes to state complexity at all; Sliding Window Maximum said O(n) space instead of tight O(k); Subarrays w/ K Distinct said O(1) instead of O(k) | 🟡 New — recurring across 3 problems same session, watch closely |
 | Jul 19-20 | **Composition bugs invisible to composed tests** | Subarrays with K Distinct re-solve: moved `right++` before the count line in `atMostKDistinct`, overcounting every call by `n` — invisible in `atMost(k)-atMost(k-1)` since both calls are inflated identically and cancel. All 5 driver tests passed on the buggy version. Only caught when asked to hand-trace/assert the helper in isolation. | 🟡 New — general lesson: probe sub-functions of any `f(a)-f(b)` composition directly, not just the composed result |
-| Jul 23 | **Code fluency ahead of the "why" (recurring)** | Largest Rectangle: wrote the correct `-1` right-sentinel but couldn't justify why `-1` (vs 0/1) when probed — the value must undercut the min possible bar height (0). Same shape as LRCR staleness (Jul 14) and Remove Duplicates verbal mix-up (Jul 18). | 🟡 Recurring — re-probe the "why -1" at next recall; keep pushing on the justification behind correct code |
+| Jul 23 | **Code fluency ahead of the "why" (recurring)** | Largest Rectangle: wrote the correct `-1` sentinel but couldn't justify why `-1` (vs 0/1) when probed. Same shape as LRCR staleness (Jul 14) and Remove Duplicates verbal mix-up (Jul 18). | 🟢 **Resolved (Jul 26)** — full justification reproduced unprompted at recall: left sentinel must be index `-1` because `0` is a real index and would chop a bar off every width; framed it as an imaginary height-(-∞) bar at position -1. Also answered the right-sentinel follow-up correctly. _(Note: the Jul 23 entry's own claim that the RIGHT sentinel "must be -1, not 0" was itself wrong — `0` is standard and correct under strict `>` pop. Corrected across flashcards/concept notes Jul 26.)_ |
+| Jul 19 | **Complexity articulation defaults to a loose bound** | Min Stack said O(n) instead of O(1)/op (Jul 22); Boats said O(n) not O(n log n); SWM said O(n) space not O(k) | 🟢 **Resolved (Jul 26)** — 13/13 recall with tight bounds stated first time, zero nudges. Min Stack O(1)-per-op unprompted; Fruit Into Baskets O(1) (no repeat of the "O(3)" notation nit); Min Window O(k)≤128⇒O(1) |
+| Jul 26 | **Processing order stated late on ordering-dependent problems** | Car Fleet: ETA transform came instantly and unprompted, but "sort by position descending" only surfaced after being probed for the sweep order — and the sort IS the algorithm here, not preprocessing | 🟡 New — on any monotonic-stack/greedy-collapse problem, name the processing order in the FIRST sentence of the approach |
+| Jul 26 | **Reasoning runs against the assumed specific, not the actual one** | Two instances same session: (a) Car Fleet processing order assumed rather than stated; (b) LC #232 follow-up answered `EmptyStackException` for code using `ArrayDeque` — real behavior is `peek()` returns null → NPE on unboxing (`EmptyStackException` is `java.util.Stack`; `NoSuchElementException` is `ArrayDeque.pop()`). Had correctly switched to `ArrayDeque` for good reasons, then reasoned about `Stack`'s API out of habit | 🟡 New — when a question turns on library/API behavior, name the class first, THEN its contract. Verify rather than recall |
 
 <!-- Status: 🔴 Active | 🟡 Improving | 🟢 Resolved -->
 
@@ -619,7 +622,9 @@ TEMPLATE for each session entry:
 | — | Sliding Window (Exactly-K Trick) | 4 | July 20 | Subarrays with K Distinct 🟡 LEAN HIRE (re-solve). Concept solid, but re-solve exposed a real composition bug (count-line ordering) invisible to composed driver tests — held at 4 until a clean re-solve with no bugs. |
 | 7 | Monotonic Stack | 5 | July 23 | Daily Temperatures 🟢 HIRE + Next Greater Element I 🟢 HIRE. Decreasing stack of indices/values, pop-and-resolve when a bigger element arrives. |
 | — | Monotonic Stack + HashMap | 5 | July 23 | Next Greater Element I 🟢 HIRE — precompute next-greater for all of nums2 into a value→answer map, then O(1) lookups. Value-key only valid because distinct. |
-| — | Monotonic (Increasing) Stack — Boundaries | 5 | July 23 | Largest Rectangle in Histogram 🟢 HIRE (Hard) — pop-and-resolve, width = i - peek - 1, dual sentinels. Nearest-smaller-on-both-sides as area bound. |
+| — | Monotonic (Increasing) Stack — Boundaries | 5 | July 26 | Largest Rectangle in Histogram 🟢 HIRE (Hard) — pop-and-resolve, width = i - peek - 1, dual sentinels. Jul 26 recall: full sentinel justification unprompted — code-ahead-of-why gap closed. |
+| — | Sort + Monotonic Stack (Absorb) | 5 | July 26 | Car Fleet 🟢 HIRE — ETA transform, sort by position DESC, absorb-if-`peek() >= eta`. 5/5 first run, 0 hints. Recognized the stack degenerates to a single max variable; proved float-safety via the 2^53 bound and offered the cross-multiply integer alternative. |
+| — | Two-Stack Lazy Transfer (Amortized O(1)) | 5 | July 26 | Implement Queue using Stacks 🟢 HIRE — first DESIGN problem. `in`/`out` fixed roles, drain only when `out` empty, `pop()` delegates to `peek()`. 5/5 first run, 0 hints. Amortized proof stated rigorously (≤4 ops/element → 4m/m = constant) plus the amortized-vs-average-case distinction. Held at 5 despite the `ArrayDeque` exception-semantics miss — that's an API gap, not a pattern gap. |
 | 8 | Fast/Slow Pointers | — | — | — |
 | 9 | Linked List Reversal | — | — | — |
 | 10 | Binary Search (Classic) | — | — | — |
@@ -1019,15 +1024,49 @@ All 16 recalled successfully, zero demotions. Full detail logged in `spaced_repe
 
 ---
 
+### Session #26 — July 26, 2026 — Stack & Queue (Week 4, Day 4)
+**Status**: ✅ COMPLETE — Day 4 done, both problems 🟢 HIRE
+**Note**: 3-day gap since Jul 23 — review queue had backed up to 13 problems.
+
+**Spaced Repetition Recall Results (13 problems — 2 Box 1 overdue + 6 Box 2 + 5 Box 3)**:
+- Next Greater Element I (#496) ✅ → Box 2 · Largest Rectangle (#84) ✅ → Box 2
+- Valid Parentheses (#20) ✅ · Min Stack (#155) ✅ · Subarray Product Less Than K (#713) ✅ · Min Ops to Reduce X to Zero (#1658) ✅ · Evaluate RPN (#150) ✅ · Daily Temperatures (#739) ✅ → all Box 3
+- Min Size Subarray Sum (#209) ✅ · Permutation in String (#567) ✅ · Minimum Window Substring (#76) ✅ · Longest Repeating Char Replacement (#424) ✅ · Fruit Into Baskets (#904) ✅ → all Box 4
+
+**Recall Verdict: 13/13, ZERO demotions, ZERO nudges — the cleanest sweep of the plan so far. Box 1 emptied.** Three long-standing gaps closed in one pass:
+1. **Largest Rectangle `-1` sentinel** — full justification unprompted (the Jul 23 code-ahead-of-why gap, 3rd instance of that shape). 🟢 Resolved.
+2. **Complexity-loose-bound habit** — every one of the 13 stated tight bounds on the first attempt, no nudges. 🟢 Resolved.
+3. **Daily Temperatures answer value** — `i - popped` (day gap) correct first time, no bleed-over from variants.
+
+Also **self-corrected a previously-recorded wrong reasoning**: on Jul 21 the log had them arguing LC #713's `k == 1` case resolves itself with no special case. It doesn't (the shrink loop divides past `right`, empty product `1 >= 1`, runs off the array). Stated the `k <= 1` guard explicitly today.
+
+⚠️ **Correction pushed to flashcards + concept notes**: the Jul 23 entry claimed Largest Rectangle's *right* sentinel "must be -1, not 0". Wrong — `0` is the standard and correct choice under a strict `>` pop (leftover bars taller than 0 are forced off; a height-0 bar left unresolved has area 0 anyway). `1` is the value that fails (`[1,1,1]` → 0). The "-1, never 0" argument belongs to the **left/index** sentinel. The two had been conflated.
+
+**Problems Covered**:
+- Car Fleet (LC #853): ✅ NEW — 🟢 HIRE. First "absorb"-flavor monotonic stack. ETA transform (`(target-position)/speed`) surfaced instantly and unprompted. All 5 tests first run, zero bugs, zero hints (one approach-level probe on processing order). `ArrayDeque` over `Stack` carried forward from Jul 23 feedback without reminder. **Follow-ups all three nailed**: (1) recognized the stack is unnecessary — only ever peeked, never popped, so the top is a running max → collapses to one `double` + counter, and correctly kept *total* space at O(n) because of `cars[n][2]` + TimSort aux rather than over-claiming O(1); (2) **proved** double-comparison safety via the gap argument (distinct ETAs differ by ≥ 1/(s1·s2) ≥ 1e-12 vs ~1e-16 double error) and the formal `2^53` bound, then volunteered the cross-multiply-in-`long` integer alternative; (3) defended `>=` over `>` with the exact problem sentence plus a counterexample (`target=10, position=[0,5], speed=[2,1]`).
+
+- Implement Queue using Stacks (LC #232): ✅ NEW — 🟢 HIRE. **First DESIGN problem of the plan** (deliverable is a data structure, not an algorithm over an input). Concept taught first per rule 7 (two-stack lazy transfer + amortized accounting). Design, both complexity bounds, AND which bound to lead with all delivered before writing a line. All 5 test groups first run, zero bugs, zero hints — including the interleaving trap (push 1,2 → pop → push 3,4 → next pop must be 2). `pop()` delegates to `peek()` unprompted, keeping the transfer loop in one place. **Amortized proof was rigorous, not gestural**: "each element causes ≤4 stack ops in its lifetime and never moves back; ≤m elements over m ops → ≤4m total → 4m/m = 4 = constant." ❌ **One miss**: on the dropped-guarantee follow-up, said empty `peek()` throws `EmptyStackException` — that's `java.util.Stack`, but the code uses `ArrayDeque`, whose `peek()` returns **null**, so an `int`-returning method throws **NPE via auto-unboxing** (verified by running it). The *fix* proposed was structurally correct (guard in `peek()`, `pop()` inherits it).
+
+**Key Observations**:
+- **37-problem solved streak, 35 clean 🟢 HIRE** 🔥 — Week 4 is 8/8 HIRE.
+- Third distinct monotonic-stack flavor this week: pop-and-**resolve** (Daily Temps, NGE I) → **boundaries** (Largest Rectangle) → **absorb** (Car Fleet). The taxonomy is now explicit in `concept_knowledge/04_stack_queue.md`.
+- The float-safety answer was the strongest reasoning of the session — reached for a formal precision bound (2^53) instead of "doubles are probably fine", then offered the way to remove the risk entirely. Senior-level.
+- **Amortized analysis is now a genuine tool, not a recited phrase.** Stated rigorously for LC #232 and correctly connected to the monotonic stack's "each index pushed once, popped once". Also volunteered the amortized-vs-average-case distinction correctly.
+- **New gap (minor, but it appeared TWICE today)**: reasoning applied to the remembered/assumed specific rather than the one actually in front of them — (a) processing order described only after being probed for on Car Fleet, (b) `EmptyStackException` named for an `ArrayDeque`. Concept right, specific unchecked. Same shape both times.
+- 🎉 **Day 4 complete!** Next: Day 5 — Asteroid Collision (LC #735) + Maximal Rectangle (LC #85, Hard).
+
+---
+
 ## ⏭️ Next Session Plan
 
-**Next**: Session #26 — Week 4, Day 4 (Car Fleet LC #853 + Implement Queue using Stacks LC #232)
+**Next**: Session #27 — Week 4, Day 5 (Asteroid Collision LC #735 + Maximal Rectangle LC #85 — Hard)
 **Focus**:
-- **Re-probe the "why -1 sentinel" on Largest Rectangle** at recall — code was right, verbal justification faltered (code-ahead-of-why gap, 3rd instance).
-- Watch Subarrays with K Different Integers (992) mechanics recall again next cycle — needed a second explicit probe (Jul 21).
-- Complexity-defaults-to-loose-bound still surfacing in recall (Min Stack, Boats on Jul 22) — self-corrected on one nudge each; keep an eye on it.
-- Car Fleet needs a sort + stack/monotonic idea (sort by position, merge by arrival time); Implement Queue using Stacks needs the two-stack amortized-O(1) lazy-transfer concept teach.
-- Spaced repetition due Jul 24: Next Greater Element I, Largest Rectangle in Histogram (Box 1); Subarray Product Less Than K, Minimum Operations to Reduce X to Zero (Box 2); Min Size Subarray Sum, Permutation in String (Box 3).
+- **Maximal Rectangle (LC #85, Hard)** builds directly on Largest Rectangle in Histogram: build a heights array per row, run the histogram algorithm on each. The Jul 26 recall showed the histogram sentinels are solid, so this should be a pattern-extension rather than a re-teach.
+- **Asteroid Collision** is stack simulation with genuinely fiddly collision rules (equal sizes annihilate both; direction matters). Watch the loop/branch structure — the Jun 23 "each if/else branch should be self-contained" struggle is the relevant one here.
+- **New watch item (appeared twice on Jul 26)**: reasoning against the assumed specific rather than the actual one — name the processing order in the first sentence; name the class before reasoning about its API.
+- Watch Subarrays with K Different Integers (#992) mechanics at its next recall (Jul 28) — needed a second explicit probe on Jul 21.
+- Two struggle-log entries closed Jul 26 (code-ahead-of-why, complexity-loose-bound). Confirm they stay closed rather than assuming — re-probe opportunistically.
+- Spaced repetition due Jul 27: Car Fleet + Implement Queue using Stacks (Box 1); Max Consecutive Ones III (Box 3); Valid Anagram, Two Sum II, Group Anagrams, Top K Frequent (Box 4).
 
 ---
 
@@ -1038,7 +1077,7 @@ All 16 recalled successfully, zero demotions. Full detail logged in `spaced_repe
 | W1 | 13 | 11 | 4.7 | 🎉 Arrays & Hashing COMPLETE. 10/13 HIRE. 2 unseen challenges solved. Bucket sort + Prefix Sum patterns mastered. |
 | W2 | 11 + 2 re-solves | 11 | 4.8 | 🎉 Two Pointers & Sorting COMPLETE. 10/11 🟢 HIRE. D6: re-solves crushed (3Sum 20→5 min, Contiguous Array 45→6 min). D7: 2 unseen challenges solved. Key lesson: Math.abs() for distance comparisons. |
 | W3 | 12 + 2 re-solves | 12 | 5.0 | 🎉 Sliding Window COMPLETE. Fixed, Variable (Longest/Shortest), Fixed+Freq Match, Need/Formed Counter (Hard), Max Frequency, At-Most-K-Distinct, Zero Count, Exactly-K Trick, Monotonic Deque (Hard), Count-Subarrays, Reframe-as-Window. All 12 new problems 🟢 HIRE (zero LEAN HIRE or worse). D6: Box 1 emptied, re-solves (1 HIRE, 1 LEAN HIRE — test-invisible composition bug found). D7: 2 unseen weekly-challenge problems, both clean HIRE, cold pattern transfer including a non-obvious reframe. First-ever Box 5 (mastered) promotions — 10 problems. |
-| W4 | 6 so far | 6 | 5.0 | Stack & Queue in progress. D1: Valid Parentheses + Min Stack. D2: Evaluate RPN + Daily Temperatures (first Monotonic Stack). D3: Next Greater Element I + Largest Rectangle in Histogram (Hard, same-session concept). All 6 🟢 HIRE. |
+| W4 | 8 so far | 8 | 5.0 | Stack & Queue in progress. D1: Valid Parentheses + Min Stack. D2: Evaluate RPN + Daily Temperatures (first Monotonic Stack). D3: Next Greater Element I + Largest Rectangle in Histogram (Hard, same-session concept). D4: Car Fleet (third monotonic flavor — "absorb") + Implement Queue using Stacks (first DESIGN problem, amortized O(1)). All 8 🟢 HIRE. Jul 26: 13/13 recall sweep, zero demotions, Box 1 emptied, two struggle-log entries closed. |
 | W5 | — | — | — | — |
 | W6 | — | — | — | — |
 | W7 | — | — | — | — |
