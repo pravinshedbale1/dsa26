@@ -23,6 +23,8 @@
 
 | Problem | Pattern | Added Date | Last Review | Next Review |
 |---------|---------|------------|-------------|-------------|
+| Two Sum (LC #1) | HashMap Complement | 2026-09-29 | 2026-09-29 | 2026-09-30 |
+| Contains Duplicate (LC #217) | HashSet Membership | 2026-09-29 | 2026-09-29 | 2026-09-30 |
 
 ---
 
@@ -56,7 +58,7 @@
 
 ## 🔔 Today's Review Queue
 
-_Nothing due._
+**Next due 2026-09-30:** Two Sum (LC #1), Contains Duplicate (LC #217)
 
 ### Review Checklist:
 For each problem due:
@@ -74,10 +76,10 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 0 |
-| Box 1 (daily) | 0 |
+| Total problems in system | 2 |
+| Box 1 (daily) | 2 |
 | Box 2 (3-day) | 0 |
 | Box 3 (weekly) | 0 |
 | Box 4 (bi-weekly) | 0 |
 | Box 5 (mastered) | 0 |
-| Streak (consecutive days) | 0 |
+| Streak (consecutive days) | 1 |

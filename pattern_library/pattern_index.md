@@ -9,8 +9,8 @@
 
 | # | When You See... | Think... | Pattern Name | Template |
 |---|----------------|----------|-------------|----------|
-| 1 | "Find pair that sums to target" | Store complement in HashMap | **HashMap Complement** | `map.get(target - nums[i])` |
-| 2 | "Check for duplicates" | HashSet for O(1) lookup | **HashSet Membership** | `set.add(x)` returns false if exists |
+| 1 | "Find pair that sums to target" | Store complement in HashMap | **HashMap Complement** | `map.get(target - nums[i])` — **check BEFORE put** (handles `[3,3]`, avoids reusing same index). ✅ Two Sum (W1D1) |
+| 2 | "Check for duplicates" | HashSet for O(1) lookup | **HashSet Membership** | `set.add(x)` returns false if exists. Small known value range → `boolean[range]` (no hashing/boxing). ✅ Contains Duplicate (W1D1) |
 | 3 | "Count frequency of elements" | HashMap<element, count> or int[26] | **Frequency Count** | `map.merge(key, 1, Integer::sum)` |
 | 4 | "Group elements by property" | HashMap<property, list> | **HashMap Grouping** | `map.computeIfAbsent(key, k -> new ArrayList<>()).add(val)` |
 | 5 | "Find something in sorted array" | Binary search | **Binary Search** | `lo + (hi - lo) / 2` |

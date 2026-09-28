@@ -150,8 +150,8 @@
 
 | Day | Problem | Difficulty | Pattern | Approach Focus | Status |
 |-----|---------|-----------|---------|---------------|--------|
-| D1 | **Two Sum** (LC #1) | Easy | HashMap complement | Brute O(n²) → HashMap O(n) | ⬜ |
-| D1 | **Contains Duplicate** (LC #217) | Easy | HashSet | Sort O(n log n) → HashSet O(n) | ⬜ |
+| D1 | **Two Sum** (LC #1) | Easy | HashMap complement | Brute O(n²) → HashMap O(n) | ✅ |
+| D1 | **Contains Duplicate** (LC #217) | Easy | HashSet | Sort O(n log n) → HashSet O(n) | ✅ |
 | D2 | **Valid Anagram** (LC #242) | Easy | Frequency array | Sort → Frequency count (int[26]) | ⬜ |
 | D2 | **Find All Duplicates in an Array** (LC #442) | Medium | HashSet → index marking | HashSet O(n) space → Negate-at-index O(1) space | ⬜ |
 | D3 | **Group Anagrams** (LC #49) | Medium | HashMap with sorted key | Brute → Sorted string key → Char count key | ⬜ |

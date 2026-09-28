@@ -19,6 +19,7 @@
    - File location: `problems/week_XX/ProblemName.java`
    - File must contain: problem description in comments, constraints, pattern, brute vs optimal complexity
    - Must have a **Solution class** with the method stub (empty body, user fills it in)
+   - Solution must be a `static class Solution` **nested inside** the public class, so files in the same folder don't clash over a top-level `Solution` class
    - Must have **driver code** (`main` method) with 4-5 test cases including edge cases
    - User should ONLY need to complete the method — everything else is ready
 2. **After user completes the method**, run the file to verify with `javac && java -ea`
@@ -34,6 +35,7 @@
    - `flashcards/week_XX_flashcards.md` — add/update flashcard for new pattern learned
    - `concept_knowledge/XX_topic.md` — update with new insights and aha moments
    - `pattern_library/pattern_index.md` — update if new pattern variation discovered
+9a. **🔴 BRIEF CONCEPT/PATTERN LESSON BEFORE EVERY PROBLEM** (user request, 2026-09-29): Before stating any problem, give a short teach-first primer (Phase A) on the concepts, data structures and pattern it relies on: what the pattern is, when to recognise it, the template/core idea, and typical complexity. Keep it brief and **do not give away the problem's solution**. Skip it only if the user says otherwise for that problem/session.
 9. **🔴 NEVER SKIP FLASHCARD/KNOWLEDGE UPDATES**: Flashcards, concept knowledge notes, and pattern library MUST be updated after each question or session. This is NON-NEGOTIABLE.
 
 ### 🔴 INTERVIEW PRESSURE MODE (Rules 10-18) — NON-NEGOTIABLE
@@ -57,14 +59,14 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 1 — Arrays & Hashing |
-| **Current Day** | Day 1 — not started |
+| **Current Day** | Day 1 — complete ✅ |
 | **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Two Sum (LC #1) + Contains Duplicate (LC #217) |
-| **Session Count** | 0 |
-| **Total Problems Solved** | 0 |
+| **Current Problem** | Next: Valid Anagram (LC #242) — Week 1, Day 2 |
+| **Session Count** | 1 |
+| **Total Problems Solved** | 2 |
 | **Plan Start Date** | September 28, 2026 |
 | **Target Date** | January 24, 2027 |
-| **Days Remaining** | 119 |
+| **Days Remaining** | 117 |
 
 > ⚠️ _Full reset on September 28, 2026. All prior progress cleared (still available in git history)._
 
@@ -72,7 +74,15 @@
 
 ## 🧠 Session Log
 
-_No sessions yet._
+### Session #1 — 2026-09-28/29 — Arrays & Hashing (Week 1, Day 1)
+**Duration**: ~20 min interview time
+**Problems**: Two Sum (LC #1) — 🟢 HIRE — ~8/15 min — 0 hints
+**Problems**: Contains Duplicate (LC #217) — 🟢 HIRE — ~6.5/15 min — 0 hints
+**Key Concepts Learned**:
+- Warm-up: HashMap internals solid (hashCode→bucket, equals, treeify in Java 8+). Added: resize at 0.75 load factor, amortized O(1).
+- HashMap complement, check before put. Sorted variant → two pointers.
+- HashSet membership via `set.add()` return value. Sort alternative: O(n log n), not truly O(1) space (dual-pivot quicksort O(log n) stack; TimSort O(n) for objects), and it mutates the input. Bounded range → `boolean[]`.
+- Communication improved from P1 to P2, but still dropping second halves of multi-part questions.
 
 <!-- Template:
 ### Session #N — [Date] — [Topic] (Week X, Day Y)
@@ -88,12 +98,14 @@ _No sessions yet._
 
 | Date | Problem | Struggle | Fix / Insight |
 |------|---------|----------|---------------|
+| 2026-09-29 | Two Sum | Communication: skipped sub-questions (space, `[3,3]` trace, overflow "why") until pushed | Answer every sub-question; state the reasoning unprompted |
+| 2026-09-29 | Contains Duplicate | Again dropped part of multi-part questions (sort side effects at first, cost of the bounded array) | Before answering, repeat the question's parts back and tick each one off |
 
 ---
 
 ## 🎯 Focus Areas
 
-_None yet._
+- **Interview communication**: answer all parts of a question and justify claims (e.g. overflow bounds) without being prompted.
 
 ---
 
@@ -101,18 +113,20 @@ _None yet._
 
 | Pattern | Problems Seen | Confidence (1-5) | Last Practiced |
 |---------|---------------|------------------|----------------|
+| HashMap Complement | 1 | 4 | 2026-09-29 |
+| HashSet Membership | 1 | 5 | 2026-09-29 |
 
 ---
 
 ## 📅 Spaced Repetition — Due Next
 
-_Nothing due._
+- 2026-09-30: Two Sum (Box 1), Contains Duplicate (Box 1)
 
 ---
 
 ## ⏭️ Next Session Plan
 
-- Week 1, Day 1: Two Sum (LC #1) + Contains Duplicate (LC #217)
+- Week 1, Day 2: Valid Anagram (LC #242) + Find All Duplicates (LC #442); review Two Sum first
 
 ---
 
@@ -120,3 +134,4 @@ _Nothing due._
 
 | Week | Problems Solved | HIRE | LEAN HIRE | LEAN NO HIRE | NO HIRE | Notes |
 |------|-----------------|------|-----------|--------------|---------|-------|
+| W1 (in progress) | 2 | 2 | 0 | 0 | 0 | Comms is the main gap |
