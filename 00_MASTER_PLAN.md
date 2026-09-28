@@ -153,7 +153,7 @@
 | D1 | **Two Sum** (LC #1) | Easy | HashMap complement | Brute O(n²) → HashMap O(n) | ⬜ |
 | D1 | **Contains Duplicate** (LC #217) | Easy | HashSet | Sort O(n log n) → HashSet O(n) | ⬜ |
 | D2 | **Valid Anagram** (LC #242) | Easy | Frequency array | Sort → Frequency count (int[26]) | ⬜ |
-| D2 | **Two Sum II (Sorted)** (LC #167) | Medium | Two pointers on sorted | Binary search → Two pointers | ⬜ |
+| D2 | **Find All Duplicates in an Array** (LC #442) | Medium | HashSet → index marking | HashSet O(n) space → Negate-at-index O(1) space | ⬜ |
 | D3 | **Group Anagrams** (LC #49) | Medium | HashMap with sorted key | Brute → Sorted string key → Char count key | ⬜ |
 | D3 | **Top K Frequent Elements** (LC #347) | Medium | HashMap + Heap/Bucket | Sort O(n log n) → Heap O(n log k) → Bucket O(n) | ⬜ |
 | D4 | **Product of Array Except Self** (LC #238) | Medium | Prefix/Suffix | Division O(n) → Prefix+Suffix O(n) no division | ⬜ |
@@ -384,7 +384,7 @@
 
 ---
 
-# 🔴 PHASE 3 — DP, HARD PATTERNS & INTERVIEW SIMULATION (Weeks 13-18)
+# 🔴 PHASE 3 — DP, HARD PATTERNS & INTERVIEW SIMULATION (Weeks 13-17)
 
 > **Goal**: Master DP, tackle any Hard, and build interview-day muscle memory.
 
@@ -436,24 +436,22 @@
 
 ## Week 17: Mock Interview Marathon + Final Polish (January 18 – January 24)
 
+### Mock Interviews (Jan 18 – Jan 21)
+
 | Day | Focus |
 |-----|-------|
 | D1 | **Mock 1**: 2 problems (45 min each) — Any pattern, timed, explain aloud |
 | D2 | **Mock 2**: 2 problems — Focus on weak patterns identified in state file |
-| D3 | **Mock 3**: 2 hard problems — Full interview simulation with edge cases |
-| D4 | **Mock 4**: Company-tagged problems (Google/Amazon/Meta style) |
-| D5 | **Mock 5**: Speed round — 4 mediums in 60 minutes |
-| D6 | **Mock 6**: Full interview day simulation — 2 coding rounds back to back |
-| D7 | Review all mocks, identify final weak spots |
+| D3 | **Mock 3**: 2 hard company-tagged problems (Google/Amazon/Meta style) — Full simulation with edge cases |
+| D4 | **Mock 4**: Full interview day simulation — 2 coding rounds back to back |
 
-### Final Polish Days (Jan 21 – Jan 24)
+### Final Polish (Jan 22 – Jan 24)
 
 | Day | Focus |
 |-----|-------|
-| D5 | **Weak Area Blitz**: Re-solve problems from the struggle log |
-| D6 | **Speed Drills**: 3 mediums per hour, pattern recognition in <2 min |
-| D7 | **Pattern Review**: Walk through entire pattern_index.md from memory |
-| D8 | **Light review only** — Re-read flashcards, rest, build confidence |
+| D5 | **Weak Area Blitz + Speed Drills**: Re-solve struggle-log problems, pattern recognition in <2 min |
+| D6 | **Pattern Review**: Walk through entire pattern_index.md from memory |
+| D7 | **Light review only** — Re-read flashcards, rest, build confidence |
 
 ---
 

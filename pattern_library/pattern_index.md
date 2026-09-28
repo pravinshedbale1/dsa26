@@ -1,7 +1,7 @@
 # 🧩 PATTERN INDEX — "When You See X, Think Y"
 
 > This is your **interview cheat sheet**. Before every problem, scan this table.
-> As we cover new patterns, this grows. By Week 18, this is your ultimate weapon.
+> As we cover new patterns, this grows. By Week 17, this is your ultimate weapon.
 
 ---
 
