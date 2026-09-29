@@ -46,10 +46,17 @@ public class TwoSum {
 
     private static void check(Solution s, int[] nums, int target) {
         int[] res = s.twoSum(nums.clone(), target);
-        assert res != null && res.length == 2 : "Expected 2 indices, got " + Arrays.toString(res);
-        assert res[0] != res[1] : "Same index used twice: " + Arrays.toString(res);
-        assert nums[res[0]] + nums[res[1]] == target
-                : "Wrong pair " + Arrays.toString(res) + " for " + Arrays.toString(nums) + ", target " + target;
+        if (res == null || res.length != 2)
+            fail("Expected 2 indices, got " + Arrays.toString(res));
+        if (res[0] == res[1])
+            fail("Same index used twice: " + Arrays.toString(res));
+        if (nums[res[0]] + nums[res[1]] != target)
+            fail("Wrong pair " + Arrays.toString(res) + " for " + Arrays.toString(nums) + ", target " + target);
         System.out.println("PASS " + Arrays.toString(nums) + " target=" + target + " -> " + Arrays.toString(res));
+    }
+
+    private static void fail(String msg) {
+        System.out.println("FAIL " + msg);
+        System.exit(1);
     }
 }

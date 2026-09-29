@@ -21,6 +21,7 @@
    - Must have a **Solution class** with the method stub (empty body, user fills it in)
    - Solution must be a `static class Solution` **nested inside** the public class, so files in the same folder don't clash over a top-level `Solution` class
    - Must have **driver code** (`main` method) with 4-5 test cases including edge cases
+   - Test harness must NOT use `assert` (silently passes without `-ea`). Use explicit `if (...) fail(msg)` where `fail` prints FAIL and `System.exit(1)`
    - User should ONLY need to complete the method — everything else is ready
 2. **After user completes the method**, run the file to verify with `javac && java -ea`
 3. **After each problem**, create/update the analysis markdown in the same folder (`problem_name_analysis.md`)
@@ -35,7 +36,8 @@
    - `flashcards/week_XX_flashcards.md` — add/update flashcard for new pattern learned
    - `concept_knowledge/XX_topic.md` — update with new insights and aha moments
    - `pattern_library/pattern_index.md` — update if new pattern variation discovered
-9a. **🔴 BRIEF CONCEPT/PATTERN LESSON BEFORE EVERY PROBLEM** (user request, 2026-09-29): Before stating any problem, give a short teach-first primer (Phase A) on the concepts, data structures and pattern it relies on: what the pattern is, when to recognise it, the template/core idea, and typical complexity. Keep it brief and **do not give away the problem's solution**. Skip it only if the user says otherwise for that problem/session.
+9a. **🔴 BRIEF CONCEPT/PATTERN LESSON BEFORE EVERY PROBLEM** (user request, 2026-09-29): Before stating any problem, give a short teach-first primer (Phase A) on the concepts, data structures and pattern it relies on: what the pattern is, when to recognise it, the template/core idea, and typical complexity. Keep it brief and **do not give away the problem's solution**. Always include a **worked example**: an analogy plus a step-by-step trace table on a sample input (preferably from a related problem, not the one about to be asked). Skip it only if the user says otherwise for that problem/session.
+9b. **🔴 COMMIT + PUSH ON DAY COMPLETION** (user request, 2026-09-29): When a day's problems are done and all tracking files are updated, `git add -A && git commit` (message like "Week X Day Y: <problems>") and `git push`. No need to ask.
 9. **🔴 NEVER SKIP FLASHCARD/KNOWLEDGE UPDATES**: Flashcards, concept knowledge notes, and pattern library MUST be updated after each question or session. This is NON-NEGOTIABLE.
 
 ### 🔴 INTERVIEW PRESSURE MODE (Rules 10-18) — NON-NEGOTIABLE
@@ -59,11 +61,11 @@
 |-------|---------|
 | **Current Phase** | Phase 1 — Foundation & Pattern Recognition |
 | **Current Week** | Week 1 — Arrays & Hashing |
-| **Current Day** | Day 1 — complete ✅ |
+| **Current Day** | Day 2 — complete ✅ |
 | **Current Topic** | Arrays & Hashing |
-| **Current Problem** | Next: Valid Anagram (LC #242) — Week 1, Day 2 |
+| **Current Problem** | Next: Group Anagrams (LC #49) — Week 1, Day 3 |
 | **Session Count** | 1 |
-| **Total Problems Solved** | 2 |
+| **Total Problems Solved** | 4 |
 | **Plan Start Date** | September 28, 2026 |
 | **Target Date** | January 24, 2027 |
 | **Days Remaining** | 117 |
@@ -84,6 +86,16 @@
 - HashSet membership via `set.add()` return value. Sort alternative: O(n log n), not truly O(1) space (dual-pivot quicksort O(log n) stack; TimSort O(n) for objects), and it mutates the input. Bounded range → `boolean[]`.
 - Communication improved from P1 to P2, but still dropping second halves of multi-part questions.
 
+**Day 2 (same session)**
+**Problems**: Valid Anagram (LC #242) — 🟡 LEAN HIRE — ~11/15 min — 0 hints (missed length check; test caught it)
+- Phase A lesson: frequency counting, int[26] vs HashMap, `c - 'a'`, Unicode → HashMap.
+- Correctness argument: equal lengths + never going negative means all counts end at 0 (non-negative values summing to 0).
+- User pushback: probing `toCharArray()` space was too nitpicky. Drop pedantic probes; focus on correctness reasoning.
+
+**Problems**: Find All Duplicates (LC #442) — 🟢 HIRE — ~5/25 min — 0 hints
+- Phase A lesson: array as its own hash table (index marking via sign flip). User needed a second, worked-example explanation (locker analogy + step table), then a trace on their own array, before it clicked. **Teach new techniques with a full trace table first.**
+- Follow-ups: restore pass (O(n)/O(1)); a value appearing 3× gives double-add → Set or +n counter trick.
+
 <!-- Template:
 ### Session #N — [Date] — [Topic] (Week X, Day Y)
 **Duration**: ~X min
@@ -100,6 +112,7 @@
 |------|---------|----------|---------------|
 | 2026-09-29 | Two Sum | Communication: skipped sub-questions (space, `[3,3]` trace, overflow "why") until pushed | Answer every sub-question; state the reasoning unprompted |
 | 2026-09-29 | Contains Duplicate | Again dropped part of multi-part questions (sort side effects at first, cost of the bounded array) | Before answering, repeat the question's parts back and tick each one off |
+| 2026-09-29 | Valid Anagram | Missed `s.length() != t.length()` check; imprecise first complexity claims (O(n) vs O(m+n), sort "~O(1)" space) | Length mismatch is the first edge case for any two-string comparison. Name every input's size |
 
 ---
 
@@ -115,18 +128,21 @@
 |---------|---------------|------------------|----------------|
 | HashMap Complement | 1 | 4 | 2026-09-29 |
 | HashSet Membership | 1 | 5 | 2026-09-29 |
+| Index Marking (array as hash table) | 1 | 4 | 2026-09-29 |
+| Frequency Count | 1 | 4 | 2026-09-29 |
 
 ---
 
 ## 📅 Spaced Repetition — Due Next
 
-- 2026-09-30: Two Sum (Box 1), Contains Duplicate (Box 1)
+- 2026-09-30: Two Sum (Box 1), Contains Duplicate (Box 1), Valid Anagram (Box 1), Find All Duplicates (Box 1)
 
 ---
 
 ## ⏭️ Next Session Plan
 
-- Week 1, Day 2: Valid Anagram (LC #242) + Find All Duplicates (LC #442); review Two Sum first
+- Review (Box 1): Two Sum, Contains Duplicate, Valid Anagram, Find All Duplicates
+- Week 1, Day 3: Group Anagrams (LC #49) + Top K Frequent Elements (LC #347). Top K needs a Heap/bucket sort lesson first
 
 ---
 
@@ -134,4 +150,4 @@
 
 | Week | Problems Solved | HIRE | LEAN HIRE | LEAN NO HIRE | NO HIRE | Notes |
 |------|-----------------|------|-----------|--------------|---------|-------|
-| W1 (in progress) | 2 | 2 | 0 | 0 | 0 | Comms is the main gap |
+| W1 (in progress) | 4 | 3 | 1 | 0 | 0 | Comms improving; first-pass edge cases |

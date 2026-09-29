@@ -25,6 +25,8 @@
 |---------|---------|------------|-------------|-------------|
 | Two Sum (LC #1) | HashMap Complement | 2026-09-29 | 2026-09-29 | 2026-09-30 |
 | Contains Duplicate (LC #217) | HashSet Membership | 2026-09-29 | 2026-09-29 | 2026-09-30 |
+| Valid Anagram (LC #242) | Frequency Count | 2026-09-29 | 2026-09-29 | 2026-09-30 |
+| Find All Duplicates (LC #442) | Index Marking | 2026-09-29 | 2026-09-29 | 2026-09-30 |
 
 ---
 
@@ -58,7 +60,7 @@
 
 ## 🔔 Today's Review Queue
 
-**Next due 2026-09-30:** Two Sum (LC #1), Contains Duplicate (LC #217)
+**Next due 2026-09-30:** Two Sum (LC #1), Contains Duplicate (LC #217), Valid Anagram (LC #242), Find All Duplicates (LC #442)
 
 ### Review Checklist:
 For each problem due:
@@ -76,8 +78,8 @@ For each problem due:
 
 | Metric | Value |
 |--------|-------|
-| Total problems in system | 2 |
-| Box 1 (daily) | 2 |
+| Total problems in system | 4 |
+| Box 1 (daily) | 4 |
 | Box 2 (3-day) | 0 |
 | Box 3 (weekly) | 0 |
 | Box 4 (bi-weekly) | 0 |

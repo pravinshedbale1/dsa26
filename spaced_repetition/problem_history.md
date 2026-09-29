@@ -22,9 +22,11 @@
 |---|------|---------|-----|-----------|-------------|-------------------|------|-------|--------|------------------|---------------|-------|
 | 1 | 2026-09-29 | Two Sum | 1 | Easy | HashMap Complement | Brute O(n²)/O(1) → HashMap O(n)/O(n); sorted variant → two pointers | O(n) | O(n) | ✅ | 4 | Box 1 | 🟢 HIRE, ~8 min, 0 hints. Comms gap: had to be asked 3x for space/trace/overflow reasoning |
 | 2 | 2026-09-29 | Contains Duplicate | 217 | Easy | HashSet Membership | Brute O(n²)/O(1) → Sort O(n log n)/O(log n) → HashSet O(n)/O(n); bounded range → boolean[] | O(n) | O(n) | ✅ | 5 | Box 1 | 🟢 HIRE, ~6.5 min, 0 hints. Excellent sort-space and side-effect answer |
+| 3 | 2026-09-29 | Valid Anagram | 242 | Easy | Frequency Count | Sort O(n log n)/O(n) (Java strings immutable) → int[26] inc/dec O(n)/O(1) | O(n) | O(1) | ⚡ | 4 | Box 1 | 🟡 LEAN HIRE, ~11 min, 0 hints. Missed length check (test caught it) |
+| 4 | 2026-09-29 | Find All Duplicates in an Array | 442 | Medium | Index Marking (sign flip) | HashSet O(n)/O(n) → negate nums[|v|-1], negative = seen O(n)/O(1) | O(n) | O(1) | ✅ | 4 | Box 1 | 🟢 HIRE, ~5/25 min, 0 hints. Needed a worked example to grasp the technique in Phase A |
 
 ## Weekly Aggregates
 
 | Week | Problems Solved | ✅ | ⚡ | 🔄 | ❌ | Avg Confidence | Top Pattern |
 |------|----------------|----|----|----|----|----------------|------------|
-| W1 (in progress) | 2 | 2 | 0 | 0 | 0 | 4.5 | HashMap / HashSet |
+| W1 (in progress) | 4 | 3 | 1 | 0 | 0 | 4.25 | HashMap / HashSet / Freq / Index Marking |

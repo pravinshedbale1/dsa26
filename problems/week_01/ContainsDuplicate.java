@@ -40,8 +40,13 @@ public class ContainsDuplicate {
 
     private static void check(Solution s, int[] nums, boolean expected) {
         boolean res = s.containsDuplicate(nums.clone());
-        assert res == expected
-                : "Expected " + expected + " but got " + res + " for " + Arrays.toString(nums);
+        if (res != expected)
+            fail("Expected " + expected + " but got " + res + " for " + Arrays.toString(nums));
         System.out.println("PASS " + Arrays.toString(nums) + " -> " + res);
+    }
+
+    private static void fail(String msg) {
+        System.out.println("FAIL " + msg);
+        System.exit(1);
     }
 }

@@ -11,8 +11,9 @@
 |---|----------------|----------|-------------|----------|
 | 1 | "Find pair that sums to target" | Store complement in HashMap | **HashMap Complement** | `map.get(target - nums[i])` — **check BEFORE put** (handles `[3,3]`, avoids reusing same index). ✅ Two Sum (W1D1) |
 | 2 | "Check for duplicates" | HashSet for O(1) lookup | **HashSet Membership** | `set.add(x)` returns false if exists. Small known value range → `boolean[range]` (no hashing/boxing). ✅ Contains Duplicate (W1D1) |
-| 3 | "Count frequency of elements" | HashMap<element, count> or int[26] | **Frequency Count** | `map.merge(key, 1, Integer::sum)` |
+| 3 | "Count frequency of elements" | HashMap<element, count> or int[26] | **Frequency Count** | `map.merge(key, 1, Integer::sum)`; fixed alphabet → `int[26]` with `c - 'a'`. Compare two collections → +1 for one, −1 for the other. ✅ Valid Anagram (W1D2) |
 | 4 | "Group elements by property" | HashMap<property, list> | **HashMap Grouping** | `map.computeIfAbsent(key, k -> new ArrayList<>()).add(val)` |
+| 2a | "Values in [1, n]" + "O(1) extra space" + duplicates/missing | Use the array as its own hash table | **Index Marking (sign flip)** | `v = abs(nums[i]); if (nums[v-1] < 0) dup; else nums[v-1] *= -1`. Need counts → `nums[(nums[i]-1) % n] += n`. ✅ Find All Duplicates (W1D2) |
 | 5 | "Find something in sorted array" | Binary search | **Binary Search** | `lo + (hi - lo) / 2` |
 | 6 | "Minimum/maximum that satisfies condition" | Binary search on answer space | **Binary Search on Answer** | Define `canAchieve(mid)`, search [lo, hi] |
 | 7 | "Sorted array + find pair/triplet" | Two pointers from both ends | **Two Pointers (Opposite)** | `left = 0, right = n-1` |
